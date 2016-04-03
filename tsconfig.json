@@ -1,6 +1,6 @@
 {
   "moduleResolution": "node",
-  "files": [ "app/bootstrap/bootstrap.js", "typings/index.d.ts" ],
+  "files": [ "app/bootstrap/bootstrap.ts", "typings/index.d.ts" ],
   "compilerOptions": {
     "allowJs": true,
     "emitDecoratorMetadata": true,
