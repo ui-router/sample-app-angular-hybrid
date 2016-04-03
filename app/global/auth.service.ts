@@ -1,13 +1,11 @@
+import {AppConfig} from "./appConfig.service";
 /**
  * This service emulates an Authentication Service.
  */
 export class AuthService {
-  constructor(AppConfig, $q, $timeout) {
-    this.AppConfig = AppConfig;
-    this.$q = $q;
-    this.$timeout = $timeout;
-    this.usernames = ['myself@angular.dev', 'devgal@angular.dev', 'devguy@angular.dev'];
-  }
+  usernames: string[] = ['myself@angular.dev', 'devgal@angular.dev', 'devguy@angular.dev'];
+  
+  constructor(public AppConfig: AppConfig, public $q, public $timeout) { }
 
   /**
    * Returns true if the user is currently authenticated, else false

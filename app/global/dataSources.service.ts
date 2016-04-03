@@ -1,4 +1,5 @@
 import {SessionStorage} from "../util/sessionStorage"
+import {AppConfig} from "./appConfig.service";
 
 /**
  * Fake REST Services (Contacts, Folders, Messages) used in the mymessages submodule.
@@ -18,7 +19,7 @@ import {SessionStorage} from "../util/sessionStorage"
 
 /** A fake Contacts REST client API */
 export class Contacts extends SessionStorage {
-  constructor($http, $timeout, $q, AppConfig) {
+  constructor($http, $timeout, $q, AppConfig: AppConfig) {
     // http://beta.json-generator.com/api/json/get/V1g6UwwGx
     super($http, $timeout, $q, "contacts", "data/contacts.json", AppConfig);
   }
@@ -33,7 +34,7 @@ export class Folders extends SessionStorage {
 
 /** A fake Messages REST client API */
 export class Messages extends SessionStorage {
-  constructor($http, $timeout, $q, AppConfig) {
+  constructor($http, $timeout, $q, public AppConfig: AppConfig) {
     // http://beta.json-generator.com/api/json/get/VJl5GbIze
     super($http, $timeout, $q, 'messages', 'data/messages.json', AppConfig);
   }

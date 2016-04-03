@@ -2,10 +2,11 @@
  * This service stores and retrieves user preferences in session storage
  */
 export class AppConfig {
+  sort: string = '+date';
+  emailAddress: string = undefined;
+  restDelay: number = 100;
+  
   constructor() {
-    this.sort = '+date';
-    this.emailAddress = undefined;
-    this.restDelay = 100;
     this.load();
   }
 
