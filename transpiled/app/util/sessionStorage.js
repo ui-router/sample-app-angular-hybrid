@@ -25,6 +25,10 @@ var SessionStorage = (function () {
      */
     function SessionStorage($http, $timeout, $q, sessionStorageKey, sourceUrl, AppConfig) {
         var _this = this;
+        this.$timeout = $timeout;
+        this.$q = $q;
+        this.sessionStorageKey = sessionStorageKey;
+        this.AppConfig = AppConfig;
         var data, fromSession = sessionStorage.getItem(sessionStorageKey);
         // A promise for *all* of the data.
         this._data = undefined;
@@ -32,11 +36,6 @@ var SessionStorage = (function () {
         this._idProp = "_id";
         // A basic triple-equals equality checker for two values
         this._eqFn = function (l, r) { return l[_this._idProp] === r[_this._idProp]; };
-        // Services required to implement the fake REST API
-        this.$q = $q;
-        this.$timeout = $timeout;
-        this.sessionStorageKey = sessionStorageKey;
-        this.AppConfig = AppConfig; // Used to get the REST latency simulator,
         if (fromSession) {
             try {
                 // Try to parse the existing data from the Session Storage API

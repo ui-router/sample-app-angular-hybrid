@@ -7,6 +7,7 @@ var AuthService = (function () {
         this.AppConfig = AppConfig;
         this.$q = $q;
         this.$timeout = $timeout;
+        // data
         this.usernames = ['myself@angular.dev', 'devgal@angular.dev', 'devguy@angular.dev'];
     }
     /**

@@ -1,5 +1,7 @@
 "use strict";
-require("../global/dialog.service");
+var contact_component_1 = require("./contact.component");
+var contacts_component_1 = require("./contacts.component");
+var editContact_component_1 = require("./editContact.component");
 /**
  * This state displays the contact list.
  * It also provides a nested ui-view (viewport) for child states to fill in.
@@ -15,7 +17,7 @@ exports.contactsState = {
         contacts: function (Contacts) { return Contacts.all(); }
     },
     data: { requiresAuth: true },
-    component: 'contacts'
+    component: contacts_component_1.Contacts
 };
 /**
  * This state displays a single contact.
@@ -29,7 +31,7 @@ exports.viewContactState = {
         // The resolved contact is provided to the contactComponent's contact binding
         contact: function (Contacts, $transition$) { return Contacts.get($transition$.params().contactId); }
     },
-    component: 'contactView'
+    component: contact_component_1.Contact
 };
 /**
  * This state allows a user to edit a contact
@@ -48,7 +50,7 @@ exports.editContactState = {
         // Or, this could also have been written using absolute ui-view addressing: !$default.$default.$default
         '^.^.$default': {
             bindings: { pristineContact: "contact" },
-            component: 'editContact'
+            component: editContact_component_1.EditContact
         }
     }
 };
@@ -60,6 +62,9 @@ exports.editContactState = {
 exports.newContactState = {
     name: 'contacts.new',
     url: '/new',
-    component: 'editContact'
+    resolve: {
+        pristineContact: function () { return ({ name: {}, address: {} }); }
+    },
+    component: editContact_component_1.EditContact
 };
 //# sourceMappingURL=contacts.states.js.map

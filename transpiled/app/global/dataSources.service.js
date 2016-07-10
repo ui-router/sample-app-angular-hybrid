@@ -39,12 +39,12 @@ var Folders = (function (_super) {
     return Folders;
 }(sessionStorage_1.SessionStorage));
 exports.Folders = Folders;
-/** A fake Messages REST client API */
 var Messages = (function (_super) {
     __extends(Messages, _super);
     function Messages($http, $timeout, $q, AppConfig) {
         // http://beta.json-generator.com/api/json/get/VJl5GbIze
         _super.call(this, $http, $timeout, $q, 'messages', 'data/messages.json', AppConfig);
+        this.AppConfig = AppConfig;
     }
     Messages.prototype.byFolder = function (folder) {
         var searchObject = { folder: folder._id };

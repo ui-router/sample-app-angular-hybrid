@@ -17,6 +17,9 @@
  *   - Run and Config blocks
  *     - Transition Hooks
  * - 3rd party Libraries and angular1 module
+ *
+ * Then this module creates the ng-upgrade adapter
+ * and bootstraps the hybrid application
  */
 "use strict";
 // Import the angular1 module
@@ -49,4 +52,18 @@ require("font-awesome/css/font-awesome.css!");
 require("bootstrap/css/bootstrap.css!");
 // Google analytics
 require('../util/ga');
+// ============================================================
+// Create upgrade adapter and bootstrap the hybrid ng1/ng2 app
+// ============================================================
+var upgrade_1 = require('@angular/upgrade');
+exports.upgradeAdapter = new upgrade_1.UpgradeAdapter();
+// Supply the ui-router with the upgrade adapter
+var ui_router_ng1_to_ng2_1 = require("ui-router-ng1-to-ng2");
+ui_router_ng1_to_ng2_1.uiRouterNgUpgrade.setUpgradeAdapter(exports.upgradeAdapter);
+// Register some ng1 services as ng2 providers
+exports.upgradeAdapter.upgradeNg1Provider('$state');
+exports.upgradeAdapter.upgradeNg1Provider('DialogService');
+exports.upgradeAdapter.upgradeNg1Provider('Contacts');
+// Manually bootstrap the app with the Upgrade Adapter (instead of ng-app)
+exports.upgradeAdapter.bootstrap(document.body, ['demo']);
 //# sourceMappingURL=bootstrap.js.map
