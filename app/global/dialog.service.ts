@@ -1,6 +1,8 @@
 import * as angular from "angular";
 
 export class DialogService {
+  confirm;
+  
   constructor($document, $compile, $rootScope) {
     let body = $document.find("body");
     let elem = angular.element("<div class='dialog' dialog='opts'></div>");

@@ -8,11 +8,11 @@ import * as angular from "angular";
 import uiRouter from "angular-ui-router";
 import {visualizer} from "ui-router-visualizer";
 
-// Create the angular module "demo".
+// Create the angular 1 module "demo".
 //
 // Since it is exported, other parts of the application (in other files) can then import it and register things.
 // In bootstrap.js, the module is imported, and the components, services, and states are registered.
-export const ngmodule = angular.module("demo", [uiRouter]);
+export const ngmodule = angular.module("demo", [uiRouter, 'ui.router.upgrade']);
 
 // Show ui-router-visualizer
 ngmodule.run(ng1UIRouter => visualizer(ng1UIRouter));

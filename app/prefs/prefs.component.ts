@@ -2,9 +2,10 @@
  * The controller for the prefs component.
  */
 class PrefsController {
-  constructor(AppConfig) {
-    this.AppConfig = AppConfig
-  }
+  // data
+  prefs;
+  
+  constructor(public AppConfig) { }
 
   $onInit() {
     this.prefs = {

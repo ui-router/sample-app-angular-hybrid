@@ -1,4 +1,6 @@
-import "../global/dialog.service";
+import {Contact} from "./contact.component";
+import {Contacts} from "./contacts.component";
+import {EditContact} from "./editContact.component";
 
 /**
  * This state displays the contact list.
@@ -15,7 +17,7 @@ export const contactsState = {
     contacts: (Contacts) => Contacts.all()
   },
   data: { requiresAuth: true },
-  component: 'contacts'
+  component: Contacts
 };
 
 /**
@@ -30,7 +32,7 @@ export const viewContactState = {
     // The resolved contact is provided to the contactComponent's contact binding
     contact: (Contacts, $transition$) => Contacts.get($transition$.params().contactId)
   },
-  component: 'contactView'
+  component: Contact
 };
 
 
@@ -51,7 +53,7 @@ export const editContactState = {
     // Or, this could also have been written using absolute ui-view addressing: !$default.$default.$default
     '^.^.$default': {
       bindings: { pristineContact: "contact" },
-      component: 'editContact'
+      component: EditContact
     }
   }
 };
@@ -64,5 +66,8 @@ export const editContactState = {
 export const newContactState = {
   name: 'contacts.new',
   url: '/new',
-  component: 'editContact'
+  resolve: {
+    pristineContact: () => ({ name: {}, address: {} })
+  },
+  component: EditContact
 };

@@ -5,7 +5,7 @@ export class AppConfig {
   sort: string = '+date';
   emailAddress: string = undefined;
   restDelay: number = 100;
-  
+
   constructor() {
     this.load();
   }

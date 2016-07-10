@@ -2,10 +2,11 @@
  * The controller for the `app` component.
  */
 class AuthedController {
-  constructor(AppConfig, AuthService, $state) {
-    this.AuthService = AuthService;
-    this.$state = $state;
+  //data
+  emailAddress;
+  isAuthenticated;
 
+  constructor(AppConfig, public AuthService, public $state) {
     this.emailAddress = AppConfig.emailAddress;
     this.isAuthenticated = AuthService.isAuthenticated();
   }
@@ -53,4 +54,4 @@ export const app = {
     
     <div ui-view/>
 `
-}
+};

@@ -2,12 +2,16 @@
  * The controller for the Compose component
  */
 class ComposeController {
-  constructor($state, DialogService, AppConfig, Messages) {
-    this.$state = $state;
-    this.DialogService = DialogService;
-    this.AppConfig = AppConfig;
-    this.Messages = Messages;
-  }
+  // bound
+  $stateParams;
+  $transition$;
+  
+  // data
+  pristineMessage;
+  message;
+  canExit: boolean;
+
+  constructor(public $state, public DialogService, public AppConfig, public Messages) { }
 
   /**
    * Create our message's model using the current user's email address as 'message.from'

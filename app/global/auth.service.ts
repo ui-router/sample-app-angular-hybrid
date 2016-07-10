@@ -3,8 +3,9 @@ import {AppConfig} from "./appConfig.service";
  * This service emulates an Authentication Service.
  */
 export class AuthService {
+  // data
   usernames: string[] = ['myself@angular.dev', 'devgal@angular.dev', 'devguy@angular.dev'];
-  
+
   constructor(public AppConfig: AppConfig, public $q, public $timeout) { }
 
   /**

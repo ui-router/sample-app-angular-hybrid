@@ -28,11 +28,15 @@ const makeResponseMsg = (subjectPrefix, origMsg) => ({
  * The controller for the Message component
  */
 class MessageController {
-  constructor($state, DialogService, Messages) {
-    this.$state = $state;
-    this.DialogService = DialogService;
-    this.Messages = Messages;
-  }
+  // bound
+  folder;
+  message;
+  nextMessageGetter;
+  
+  // data
+  actions;
+
+  constructor(public $state, public DialogService, public Messages) { }
 
   /**
    * When the user views a message, mark it as read and save (PUT) the resource.

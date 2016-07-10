@@ -13,6 +13,11 @@ import {pushToArr, guid, setProp} from "./util";
  * For an example, please see dataSources.js
  */
 export class SessionStorage {
+  // data
+  _data;
+  _idProp;
+  _eqFn;
+  
   /**
    * Creates a new SessionStorage object
    *
@@ -23,7 +28,7 @@ export class SessionStorage {
    * @param sourceUrl The url that contains the initial data.
    * @param AppConfig Pass in the AppConfig object
    */
-  constructor($http, $timeout, $q, sessionStorageKey, sourceUrl, AppConfig) {
+  constructor($http, public $timeout, public $q, public sessionStorageKey, sourceUrl, public AppConfig) {
     let data, fromSession = sessionStorage.getItem(sessionStorageKey);
     // A promise for *all* of the data.
     this._data = undefined;
@@ -33,12 +38,6 @@ export class SessionStorage {
 
     // A basic triple-equals equality checker for two values
     this._eqFn = (l, r) => l[this._idProp] === r[this._idProp];
-
-    // Services required to implement the fake REST API
-    this.$q = $q;
-    this.$timeout = $timeout;
-    this.sessionStorageKey = sessionStorageKey;
-    this.AppConfig = AppConfig; // Used to get the REST latency simulator,
 
     if (fromSession) {
       try {

@@ -32,7 +32,6 @@ export class Folders extends SessionStorage {
   }
 }
 
-/** A fake Messages REST client API */
 export class Messages extends SessionStorage {
   constructor($http, $timeout, $q, public AppConfig: AppConfig) {
     // http://beta.json-generator.com/api/json/get/VJl5GbIze

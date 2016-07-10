@@ -1,9 +1,6 @@
 /** Provides services related to a message list */
 export class MessageListUI {
-  constructor($filter, AppConfig) {
-    this.$filter = $filter;
-    this.AppConfig = AppConfig;
-  }
+  constructor(public $filter, public AppConfig) { }
 
   /** This is a UI helper which finds the nearest messageId in the messages list to the messageId parameter */
   proximalMessageId(messages, messageId) {

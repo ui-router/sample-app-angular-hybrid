@@ -1,8 +1,3 @@
-import {appTemplate, appController} from "./app.component";
-import {welcomeTemplate, welcomeController} from "./welcome.component";
-import {homeTemplate} from "./home.component";
-import {loginTemplate, loginController} from "./login.component";
-
 /**
  * This is the parent state for the entire application.
  *
@@ -63,7 +58,7 @@ export const loginState = {
  * they were redirected from.  Otherwise, if they transitioned directly, return the fromState/params.  Otherwise
  * return the main "app" state.
  */
-function returnTo ($transition$) {
+function returnTo ($transition$): any {
   let redirectedFrom = $transition$.previous();
   // The user was redirected to the login state (via the requiresAuth hook)
   if (redirectedFrom != null) {
