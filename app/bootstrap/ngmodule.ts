@@ -15,4 +15,10 @@ import {visualizer} from "ui-router-visualizer";
 export const ngmodule = angular.module("demo", [uiRouter, 'ui.router.upgrade']);
 
 // Show ui-router-visualizer
-ngmodule.run(ng1UIRouter => visualizer(ng1UIRouter));
+ngmodule.run(['$injector', ($injector) => {
+  if ($injector.has('ng1UIRouter')) {
+    visualizer($injector.get('ng1UIRouter'));
+  } else if ($injector.has('$uiRouter')) {
+    visualizer($injector.get('$uiRouter'));
+  }
+}]);
