@@ -1,4 +1,4 @@
-import {UIROUTER_DIRECTIVES, TransitionService, UIView} from "ui-router-ng2";
+import {TransitionService, UIView} from "ui-router-ng2";
 import {Component, Input, Inject, Optional} from "@angular/core";
 
 /**
@@ -22,7 +22,6 @@ import {Component, Input, Inject, Optional} from "@angular/core";
  */
 @Component({
   selector: 'edit-contact',
-  directives: [UIROUTER_DIRECTIVES],
   template: `
     <div class="contact">
       <div class="details">

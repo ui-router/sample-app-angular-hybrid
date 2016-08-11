@@ -1,12 +1,10 @@
 import {Component, Input} from "@angular/core";
-import {UIROUTER_DIRECTIVES} from "ui-router-ng2";
 
 /**
  * This component renders a read only view of the details for a single contact.
  */
 @Component({
   selector: 'contact-detail',
-  directives: [UIROUTER_DIRECTIVES],
   template: `
   <div class="flex-h">
     <div class="details">

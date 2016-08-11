@@ -1,4 +1,3 @@
-import {UIROUTER_DIRECTIVES} from "ui-router-ng2";
 import {Component, Input} from "@angular/core";
 
 /**
@@ -9,7 +8,6 @@ import {Component, Input} from "@angular/core";
  */
 @Component({
   selector: 'contact-list',
-  directives: [UIROUTER_DIRECTIVES],
   template: `
   <ul class="selectlist list-unstyled">
     <li>

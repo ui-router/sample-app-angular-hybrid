@@ -3,7 +3,7 @@ var packages = {
 };
 
 var ng2PackageNames = [
-  'common', 'compiler', 'core', 'http', 'platform-browser', 'platform-browser-dynamic', 'testing', 'upgrade'
+  'common', 'compiler', 'core', 'forms', 'http', 'platform-browser', 'platform-browser-dynamic', 'testing', 'upgrade'
 ];
 
 // add package entries for angular packages in the form '@angular/common': { main: 'index.js', defaultExtension: 'js' }

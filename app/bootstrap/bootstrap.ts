@@ -30,7 +30,7 @@ import {ngmodule} from "./ngmodule";
 // import all the sub module definitions
 import {GLOBAL_MODULE} from "../global/index";
 import {MAIN_MODULE} from "../main/index";
-import {CONTACTS_MODULE} from "../contacts/index";
+import {CONTACTS_MODULE, ContactsModule} from "../contacts/index";
 import {MYMESSAGES_MODULE} from "../mymessages/index";
 import {PREFS_MODULE} from "../prefs/index";
 
@@ -60,15 +60,23 @@ import "bootstrap/css/bootstrap.css!"
 // Google analytics
 import '../util/ga';
 
+import {UpgradeAdapter} from '@angular/upgrade';
+import {uiRouterNgUpgrade} from "ui-router-ng1-to-ng2";
+import {NgModule} from "@angular/core";
+import {BrowserModule} from "@angular/platform-browser";
+import {UIRouterModule} from "./uirouter";
+
+// Create an AppModule for the ng2 portion of the hybrid app
+@NgModule({
+  imports: [BrowserModule, UIRouterModule, ContactsModule],
+}) class SampleApp {}
 
 // ============================================================
 // Create upgrade adapter and bootstrap the hybrid ng1/ng2 app
 // ============================================================
-import {UpgradeAdapter} from '@angular/upgrade';
-export const upgradeAdapter = new UpgradeAdapter();
+export const upgradeAdapter = new UpgradeAdapter(SampleApp);
 
 // Supply the ui-router with the upgrade adapter
-import {uiRouterNgUpgrade} from "ui-router-ng1-to-ng2";
 uiRouterNgUpgrade.setUpgradeAdapter(upgradeAdapter);
 
 // Register some ng1 services as ng2 providers
@@ -77,4 +85,4 @@ upgradeAdapter.upgradeNg1Provider('DialogService');
 upgradeAdapter.upgradeNg1Provider('Contacts');
 
 // Manually bootstrap the app with the Upgrade Adapter (instead of ng-app)
-upgradeAdapter.bootstrap(document.body, ['demo']);
+upgradeAdapter.bootstrap(document.body, ['demo'])

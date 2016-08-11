@@ -1,6 +1,4 @@
-import {ContactDetail} from "./contactDetail.component";
 import {Component, Input} from "@angular/core";
-import {UIROUTER_DIRECTIVES} from "ui-router-ng2";
 
 /**
  * This component renders details for a single contact
@@ -10,7 +8,6 @@ import {UIROUTER_DIRECTIVES} from "ui-router-ng2";
  */
 @Component({
   selector: 'contact',
-  directives: [ContactDetail, UIROUTER_DIRECTIVES],
   template: `
     <div class="contact">
       <contact-detail [contact]="contact"></contact-detail>
