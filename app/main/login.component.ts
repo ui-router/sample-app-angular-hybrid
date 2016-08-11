@@ -1,3 +1,4 @@
+import {TargetState} from "angular-ui-router/commonjs/ng1";
 /**
  * The controller for the `login` component
  *
@@ -5,7 +6,7 @@
  * Then it sends the user back to the `returnTo` state, which is provided as a resolve data.
  */
 class LoginController {
-  returnTo;
+  returnTo: TargetState;
   
   usernames;
   credentials;
@@ -25,8 +26,15 @@ class LoginController {
     this.login = (credentials) => {
       this.authenticating = true;
 
-      const returnToOriginalState = () => $state.go(this.returnTo.state, this.returnTo.params, { reload: true });
-      const showError = (errorMessage) => this.errorMessage = errorMessage;
+      const returnToOriginalState = () => {
+        let state = this.returnTo.state();
+        let params = this.returnTo.params();
+        let options = Object.assign({}, this.returnTo.options(), { reload: true });
+        $state.go(state, params, options);
+      };
+
+      const showError = (errorMessage) =>
+          this.errorMessage = errorMessage;
 
       AuthService.authenticate(credentials.username, credentials.password)
           .then(returnToOriginalState)

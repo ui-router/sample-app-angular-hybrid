@@ -1,6 +1,4 @@
-import {UIROUTER_DIRECTIVES} from "ui-router-ng2";
 import {Component, Input} from "@angular/core";
-import {ContactList} from "./contactList.component";
 
 /**
  * This component renders the contacts submodule.
@@ -10,7 +8,6 @@ import {ContactList} from "./contactList.component";
  */
 @Component({
   selector: 'contacts',
-  directives: [ContactList, UIROUTER_DIRECTIVES],
   template: `
     <div class="my-contacts flex-h">
     
