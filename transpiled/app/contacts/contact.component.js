@@ -8,9 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var contactDetail_component_1 = require("./contactDetail.component");
 var core_1 = require("@angular/core");
-var ui_router_ng2_1 = require("ui-router-ng2");
 /**
  * This component renders details for a single contact
  *
@@ -27,7 +25,6 @@ var Contact = (function () {
     Contact = __decorate([
         core_1.Component({
             selector: 'contact',
-            directives: [contactDetail_component_1.ContactDetail, ui_router_ng2_1.UIROUTER_DIRECTIVES],
             template: "\n    <div class=\"contact\">\n      <contact-detail [contact]=\"contact\"></contact-detail>\n    \n      <!-- This button has an ui-sref to the mymessages.compose state. The ui-sref provides the mymessages.compose\n           state with an non-url parameter, which is used as the initial message model -->\n      <button class=\"btn btn-primary\" uiSref=\"mymessages.compose\" [uiParams]=\"{ message: { to: contact.email } }\">\n        <i class=\"fa fa-envelope\"></i><span>Message</span>\n      </button>\n    \n      <!-- This button has a relative ui-sref to the contacts.contact.edit state. -->\n      <button class=\"btn btn-primary\" uiSref=\".edit\">\n        <i class=\"fa fa-pencil\"></i><span>Edit Contact</span>\n      </button>\n      <ui-view></ui-view>\n    </div>\n" }), 
         __metadata('design:paramtypes', [])
     ], Contact);

@@ -22,43 +22,62 @@
  * and bootstraps the hybrid application
  */
 "use strict";
-// Import the angular1 module
-var ngmodule_1 = require("./ngmodule");
-//////////////////// MODULES ///////////////
-// import all the sub module definitions
-var index_1 = require("../global/index");
-var index_2 = require("../main/index");
-var index_3 = require("../contacts/index");
-var index_4 = require("../mymessages/index");
-var index_5 = require("../prefs/index");
-var BLANK_MODULE = {
-    states: [], components: {}, directives: {}, services: {}, filters: {}, configBlocks: [], runBlocks: []
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-// make sure all modules have all the keys from BLANK_MODULE.
-var MODULES = [index_1.GLOBAL_MODULE, index_2.MAIN_MODULE, index_3.CONTACTS_MODULE, index_4.MYMESSAGES_MODULE, index_5.PREFS_MODULE]
-    .map(function (module) { return Object.assign({}, BLANK_MODULE, module); });
-// Register each module's states, directives, components, filters, services, and config/run blocks
-MODULES.forEach(function (module) {
-    ngmodule_1.ngmodule.config(function ($stateProvider) { return module.states.forEach(function (state) { return $stateProvider.state(state); }); });
-    Object.keys(module.components).forEach(function (name) { return ngmodule_1.ngmodule.component(name, module.components[name]); });
-    Object.keys(module.directives).forEach(function (name) { return ngmodule_1.ngmodule.directive(name, module.directives[name]); });
-    Object.keys(module.services).forEach(function (name) { return ngmodule_1.ngmodule.service(name, module.services[name]); });
-    Object.keys(module.filters).forEach(function (name) { return ngmodule_1.ngmodule.filter(name, module.filters[name]); });
-    module.configBlocks.forEach(function (configBlock) { return ngmodule_1.ngmodule.config(configBlock); });
-    module.runBlocks.forEach(function (runBlock) { return ngmodule_1.ngmodule.run(runBlock); });
-});
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+//////////////////// APP MODULES ///////////////
+// Create the angular 1 module for the application
+require("./ngmodule");
+// import all the sub module definitions
+// This registers each app module's states, directives, components, filters,
+// services, and config/run blocks with the ngmodule
+require("../global/index");
+require("../main/index");
+require("../mymessages/index");
+require("../prefs/index");
+require("../contacts/contacts.futurestate");
 // Import CSS (SystemJS will inject it into the document)
 require("font-awesome/css/font-awesome.css!");
 require("bootstrap/css/bootstrap.css!");
 // Google analytics
 require('../util/ga');
-// ============================================================
-// Create upgrade adapter and bootstrap the hybrid ng1/ng2 app
-// ============================================================
+////////////// HYBRID BOOTSTRAP ///////////////
+var core_1 = require("@angular/core");
 var upgrade_1 = require('@angular/upgrade');
-exports.upgradeAdapter = new upgrade_1.UpgradeAdapter();
-// Supply the ui-router with the upgrade adapter
+var platform_browser_1 = require("@angular/platform-browser");
+var ui_router_ng2_1 = require("ui-router-ng2");
 var ui_router_ng1_to_ng2_1 = require("ui-router-ng1-to-ng2");
+// Create an NgModule for the ng2 portion of the hybrid app
+//
+// Use @UIRouterModule instead of @NgModule to allow use of the UIRouter directives
+// and add the UIRouter providers to the root ng2 injector
+//
+// import the Ng1ToNg2Module to supply the ng1-to-ng2 directives
+var SampleAppModule = (function () {
+    function SampleAppModule() {
+    }
+    SampleAppModule = __decorate([
+        ui_router_ng2_1.UIRouterModule({
+            imports: [platform_browser_1.BrowserModule, ui_router_ng1_to_ng2_1.Ng1ToNg2Module],
+            providers: [
+                { provide: core_1.NgModuleFactoryLoader, useClass: core_1.SystemJsNgModuleLoader }
+            ]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], SampleAppModule);
+    return SampleAppModule;
+}());
+// Create ngUpgrade adapter
+exports.upgradeAdapter = new upgrade_1.UpgradeAdapter(SampleAppModule);
+// Supply ui-router-ng1-to-ng1 with the upgrade adapter.
+// This adds glue to the ui-router instance for angular 1 (ng1 hosts the app)
+// which allows it to route to ng2 components
 ui_router_ng1_to_ng2_1.uiRouterNgUpgrade.setUpgradeAdapter(exports.upgradeAdapter);
 // Register some ng1 services as ng2 providers
 exports.upgradeAdapter.upgradeNg1Provider('$state');
