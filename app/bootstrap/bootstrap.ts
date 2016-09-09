@@ -22,36 +22,21 @@
  * and bootstraps the hybrid application
  */
 
-// Import the angular1 module
-import {ngmodule} from "./ngmodule";
 
-//////////////////// MODULES ///////////////
+//////////////////// APP MODULES ///////////////
+// Create the angular 1 module for the application
+import "./ngmodule";
 
 // import all the sub module definitions
-import {GLOBAL_MODULE} from "../global/index";
-import {MAIN_MODULE} from "../main/index";
-import {CONTACTS_MODULE, ContactsModule} from "../contacts/index";
-import {MYMESSAGES_MODULE} from "../mymessages/index";
-import {PREFS_MODULE} from "../prefs/index";
+// This registers each app module's states, directives, components, filters,
+// services, and config/run blocks with the ngmodule
+import "../global/index";
+import "../main/index";
+import "../mymessages/index";
+import "../prefs/index";
+import "../contacts/contacts.futurestate";
 
-const BLANK_MODULE = {
-  states: [], components: {}, directives: {}, services: {}, filters: {}, configBlocks: [], runBlocks: []
-};
 
-// make sure all modules have all the keys from BLANK_MODULE.
-let MODULES = [GLOBAL_MODULE, MAIN_MODULE, CONTACTS_MODULE, MYMESSAGES_MODULE, PREFS_MODULE]
-    .map(module => Object.assign({}, BLANK_MODULE, module));
-
-// Register each module's states, directives, components, filters, services, and config/run blocks
-MODULES.forEach(module => {
-  ngmodule.config($stateProvider => module.states.forEach(state => $stateProvider.state(state)));
-  Object.keys(module.components).forEach(name => ngmodule.component(name, module.components[name]));
-  Object.keys(module.directives).forEach(name => ngmodule.directive(name, module.directives[name]));
-  Object.keys(module.services).forEach(name => ngmodule.service(name, module.services[name]));
-  Object.keys(module.filters).forEach(name => ngmodule.filter(name, module.filters[name]));
-  module.configBlocks.forEach(configBlock => ngmodule.config(configBlock));
-  module.runBlocks.forEach(runBlock => ngmodule.run(runBlock));
-});
 
 // Import CSS (SystemJS will inject it into the document)
 import "font-awesome/css/font-awesome.css!"
@@ -60,23 +45,35 @@ import "bootstrap/css/bootstrap.css!"
 // Google analytics
 import '../util/ga';
 
+
+////////////// HYBRID BOOTSTRAP ///////////////
+
+import {NgModuleFactoryLoader, SystemJsNgModuleLoader} from "@angular/core";
 import {UpgradeAdapter} from '@angular/upgrade';
-import {uiRouterNgUpgrade} from "ui-router-ng1-to-ng2";
-import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
-import {UIRouterModule} from "./uirouter";
 
-// Create an AppModule for the ng2 portion of the hybrid app
-@NgModule({
-  imports: [BrowserModule, UIRouterModule, ContactsModule],
-}) class SampleApp {}
+import {UIRouterModule} from "ui-router-ng2";
+import {uiRouterNgUpgrade, Ng1ToNg2Module} from "ui-router-ng1-to-ng2";
 
-// ============================================================
-// Create upgrade adapter and bootstrap the hybrid ng1/ng2 app
-// ============================================================
-export const upgradeAdapter = new UpgradeAdapter(SampleApp);
+// Create an NgModule for the ng2 portion of the hybrid app
+//
+// Use @UIRouterModule instead of @NgModule to allow use of the UIRouter directives
+// and add the UIRouter providers to the root ng2 injector
+//
+// import the Ng1ToNg2Module to supply the ng1-to-ng2 directives
+@UIRouterModule({
+  imports: [BrowserModule, Ng1ToNg2Module],
+  providers: [
+    { provide: NgModuleFactoryLoader, useClass: SystemJsNgModuleLoader }
+  ]
+}) class SampleAppModule {}
 
-// Supply the ui-router with the upgrade adapter
+// Create ngUpgrade adapter
+export const upgradeAdapter = new UpgradeAdapter(SampleAppModule);
+
+// Supply ui-router-ng1-to-ng1 with the upgrade adapter.
+// This adds glue to the ui-router instance for angular 1 (ng1 hosts the app)
+// which allows it to route to ng2 components
 uiRouterNgUpgrade.setUpgradeAdapter(upgradeAdapter);
 
 // Register some ng1 services as ng2 providers
@@ -85,4 +82,4 @@ upgradeAdapter.upgradeNg1Provider('DialogService');
 upgradeAdapter.upgradeNg1Provider('Contacts');
 
 // Manually bootstrap the app with the Upgrade Adapter (instead of ng-app)
-upgradeAdapter.bootstrap(document.body, ['demo'])
+upgradeAdapter.bootstrap(document.body, ['demo']);

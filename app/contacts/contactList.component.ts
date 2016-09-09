@@ -24,7 +24,7 @@ import {Component, Input} from "@angular/core";
     <!-- Highlight the selected contact:
         When the current state matches the ui-sref's state (and its parameters)
         ui-sref-active applies the 'selected' class to the li element -->
-    <li *ngFor="#contact of contacts" >
+    <li *ngFor="let contact of contacts" >
       <a uiSref=".contact" [uiParams]="{contactId: contact._id}" uiSrefActive="selected">
         {{contact.name.first}} {{contact.name.last}}
       </a>

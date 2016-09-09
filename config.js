@@ -20,7 +20,8 @@ System.config({
   paths: { "npm:*": "node_modules/*" },
 
   meta: {
-    "npm:angular/angular": { format: "global", exports: "angular" }
+    "npm:angular/angular": { format: "global", exports: "angular" },
+    "ui-router-ng2": { format: "cjs" }
   },
 
   map: {
@@ -28,7 +29,7 @@ System.config({
     "@angular": "npm:@angular",
     "rxjs": "npm:rxjs",
     "angular-ui-router": "npm:angular-ui-router/release/angular-ui-router",
-    "ui-router-ng2": "npm:ui-router-ng2/_bundles/ui-router-ng2.js",
+    "ui-router-ng2": "npm:ui-router-ng2/_bundles/ui-router-ng2",
     "bootstrap": "npm:bootstrap/dist",
     "css": "npm:systemjs-plugin-css/css",
     "d3": "npm:d3/d3.min",

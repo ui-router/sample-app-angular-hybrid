@@ -1,21 +1,15 @@
-import {contactsState, editContactState, newContactState, viewContactState} from "./contacts.states";
-import {NgModule} from "@angular/core";
 import {FormsModule}   from '@angular/forms';
-import {BrowserModule} from "@angular/platform-browser";
-import {Contact} from "./contact.component";
+import {CommonModule} from "@angular/common";
+import {UIRouterModule} from "ui-router-ng2";
+
+import {contactsState, editContactState, newContactState, viewContactState} from "./contacts.states";
 import {ContactDetail} from "./contactDetail.component";
 import {ContactList} from "./contactList.component";
-import {Contacts} from "./contacts.component";
-import {EditContact} from "./editContact.component";
-import {UIRouterModule} from "../bootstrap/uirouter";
 
-export const CONTACTS_MODULE = {
+/** The NgModule for Contacts feature */
+@UIRouterModule({
+  imports: [CommonModule, FormsModule],
+  declarations: [ContactList, ContactDetail], // non routed components
   states: [contactsState, newContactState, viewContactState, editContactState]
-};
-
-@NgModule({
-  imports: [BrowserModule, FormsModule, UIRouterModule],
-  declarations: [Contact, ContactDetail, ContactList, Contacts, EditContact],
-  entryComponents: [Contact, ContactDetail, ContactList, Contacts, EditContact],
 })
-export class ContactsModule {}
+export default class ContactsModule {}

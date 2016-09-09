@@ -1,6 +1,9 @@
+import {Ng2StateDeclaration} from "ui-router-ng2";
+
 import {Contact} from "./contact.component";
 import {Contacts} from "./contacts.component";
 import {EditContact} from "./editContact.component";
+
 
 /**
  * This state displays the contact list.
@@ -8,7 +11,7 @@ import {EditContact} from "./editContact.component";
  *
  * The contacts are fetched using a resolve.
  */
-export const contactsState = {
+export const contactsState: Ng2StateDeclaration = {
   parent: 'app', // declares that 'contacts' is a child of 'app'
   name: "contacts",
   url: "/contacts",
@@ -24,7 +27,7 @@ export const contactsState = {
  * This state displays a single contact.
  * The contact to display is fetched using a resolve, based on the `contactId` parameter.
  */
-export const viewContactState = {
+export const viewContactState: Ng2StateDeclaration = {
   name: 'contacts.contact',
   url: '/:contactId',
   resolve: {
@@ -44,7 +47,7 @@ export const viewContactState = {
  * This state uses view targeting to replace the parent ui-view (which would normally be filled
  * by 'contacts.contact') with the edit contact template/controller
  */
-export const editContactState = {
+export const editContactState: Ng2StateDeclaration = {
   name: 'contacts.contact.edit',
   url: '/edit',
   views: {
@@ -63,7 +66,7 @@ export const editContactState = {
  *
  * The contact data to edit is injected into the component from the parent state's resolve.
  */
-export const newContactState = {
+export const newContactState: Ng2StateDeclaration = {
   name: 'contacts.new',
   url: '/new',
   resolve: {

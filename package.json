@@ -1,5 +1,5 @@
 {
-  "name": "ui-router-architecture",
+  "name": "sample-app-ng1-to-ng2",
   "description": "Architecture overview demo for Angular UI-Router",
   "version": "1.0.1",
   "scripts": {
@@ -18,22 +18,22 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ui-router/sample-app.git"
+    "url": "https://github.com/ui-router/sample-app-ng1-to-ng2.git"
   },
   "dependencies": {
-    "@angular/common": "^2.0.0-rc.5",
-    "@angular/compiler": "^2.0.0-rc.5",
-    "@angular/core": "^2.0.0-rc.5",
+    "@angular/common": "=2.0.0-rc.5",
+    "@angular/compiler": "=2.0.0-rc.5",
+    "@angular/core": "=2.0.0-rc.5",
     "@angular/forms": "^0.3.0",
-    "@angular/http": "^2.0.0-rc.5",
-    "@angular/platform-browser": "^2.0.0-rc.5",
-    "@angular/platform-browser-dynamic": "^2.0.0-rc.5",
-    "@angular/upgrade": "^2.0.0-rc.5",
+    "@angular/http": "=2.0.0-rc.5",
+    "@angular/platform-browser": "=2.0.0-rc.5",
+    "@angular/platform-browser-dynamic": "=2.0.0-rc.5",
+    "@angular/upgrade": "=2.0.0-rc.5",
     "angular": "<2",
     "angular-ui-router": "^1.0.0-beta.1",
     "es6-shim": "^0.35.0",
     "reflect-metadata": "0.1.2",
-    "rxjs": "=5.0.0-beta.6",
+    "rxjs": "^5.0.0-beta.6",
     "ui-router-ng1-to-ng2": "^1.0.10",
     "ui-router-ng2": "^1.0.0-beta.1",
     "zone.js": "^0.6.8"
@@ -42,10 +42,10 @@
     "bootstrap": "^3.3.6",
     "d3": "^3.5.16",
     "font-awesome": "^4.5.0",
+    "lite-server": "^2.2.2",
     "systemjs": "^0.19.24",
     "systemjs-plugin-css": "^0.1.20",
     "typescript": "^1.8.7",
-    "ui-router-visualizer": "^2.0.7",
-    "lite-server": "^2.2.2"
+    "ui-router-visualizer": "^2.0.7"
   }
 }
