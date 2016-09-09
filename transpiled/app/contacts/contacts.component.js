@@ -8,9 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var ui_router_ng2_1 = require("ui-router-ng2");
 var core_1 = require("@angular/core");
-var contactList_component_1 = require("./contactList.component");
 /**
  * This component renders the contacts submodule.
  *
@@ -27,7 +25,6 @@ var Contacts = (function () {
     Contacts = __decorate([
         core_1.Component({
             selector: 'contacts',
-            directives: [contactList_component_1.ContactList, ui_router_ng2_1.UIROUTER_DIRECTIVES],
             template: "\n    <div class=\"my-contacts flex-h\">\n    \n      <contact-list [contacts]=\"contacts\" class=\"flex nogrow\"></contact-list>\n    \n      <div ui-view>\n        <!-- This default content is displayed when the ui-view is not filled in by a child state -->\n        <h4 style=\"margin: 1em 2em;\">Select a contact</h4>\n      </div>\n    </div>\n" }), 
         __metadata('design:paramtypes', [])
     ], Contacts);
