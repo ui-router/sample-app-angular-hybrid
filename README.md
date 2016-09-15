@@ -1,4 +1,4 @@
-## UI-Router 1.0 Sample Application
+## UI-Router 1.0 Hybrid Angular1/2 Sample Application
 
 http://ui-router.github.io/sample-app/#/mymessages/inbox/5648b50cc586cac4aed6836f
 
@@ -10,6 +10,7 @@ This sample app is intended to demonstrate a non-trivial ui-router application.
 - Authentication (simulated)
 - Authenticated and unauthenticated states
 - REST data retrieval (simulated)
+- Lazy loaded sub module (Contacts)
 
 ---
 
