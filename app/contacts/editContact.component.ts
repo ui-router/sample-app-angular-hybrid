@@ -4,6 +4,8 @@ import {Component, Input, Inject, Optional} from "@angular/core";
 /**
  * The EditContact component
  *
+ * This component is used by both `contacts.contact.edit` and `contacts.new` states.
+ *
  * The component makes a copy of the contqct data for editing.
  * The new copy and original (pristine) copy are used to determine if the contact is "dirty" or not.
  * If the user navigates to some other state while the contact is "dirty", the `uiCanExit` component
@@ -17,7 +19,9 @@ import {Component, Input, Inject, Optional} from "@angular/core";
  *
  * The Save Contact button is wired to the `save` method which:
  * - saves the REST resource (PUT or POST, depending)
- * - navigates back to the read-only view of the contact using relative addressing `^`
+ * - navigates back to the parent state using relative addressing `^`.
+ *   when editing an existing contact, this returns to the `contacts.contact` "view contact" state
+ *   when creating a new contact, this returns to the `contacts` list.
  *   the `reload: true` option re-fetches the contacts resolve data from the server
  */
 @Component({
@@ -91,7 +95,7 @@ export class EditContact {
         .then(() => this.$state.go("^.^", null, { reload: true }));
   }
 
-  /** Save the contact, then go to the grandparent state ('contacts') */
+  /** Save the contact, then go to the parent state (either 'contacts' or 'contacts.contact') */
   save(contact) {
     this.Contacts.save(contact)
         .then(() => this.canExit = true)
