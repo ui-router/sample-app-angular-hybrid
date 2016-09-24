@@ -1,19 +1,19 @@
 {
-  "moduleResolution": "node",
   "files": [
     "app/bootstrap/bootstrap.ts",
-    "app/contacts/index.ts", // lazy loaded; not reachable from bootstrap.ts
-    "typings/index.d.ts"
+    "app/contacts/index.ts"
   ],
   "compilerOptions": {
     "allowJs": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "module": "commonjs",
+    "moduleResolution": "node",
     "target": "es5",
     "rootDir": "app",
     "outDir": "transpiled/app",
     "declaration": false,
-    "sourceMap": true
+    "sourceMap": true,
+    "lib": ["es6", "dom"]
   }
 }

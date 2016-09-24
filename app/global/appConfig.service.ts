@@ -1,3 +1,5 @@
+import * as angular from "angular";
+
 /**
  * This service stores and retrieves user preferences in session storage
  */

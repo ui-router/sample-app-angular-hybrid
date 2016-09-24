@@ -1,3 +1,5 @@
+import * as angular from "angular";
+
 /**
  * The controller for the Compose component
  */

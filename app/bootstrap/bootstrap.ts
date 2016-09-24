@@ -48,7 +48,7 @@ import '../util/ga';
 
 ////////////// HYBRID BOOTSTRAP ///////////////
 
-import {NgModuleFactoryLoader, SystemJsNgModuleLoader} from "@angular/core";
+import {NgModuleFactoryLoader, SystemJsNgModuleLoader, NgModule} from "@angular/core";
 import {UpgradeAdapter} from '@angular/upgrade';
 import {BrowserModule} from "@angular/platform-browser";
 
@@ -61,7 +61,7 @@ import {uiRouterNgUpgrade, Ng1ToNg2Module} from "ui-router-ng1-to-ng2";
 // and add the UIRouter providers to the root ng2 injector
 //
 // import the Ng1ToNg2Module to supply the ng1-to-ng2 directives
-@UIRouterModule({
+@NgModule({
   imports: [BrowserModule, Ng1ToNg2Module],
   providers: [
     { provide: NgModuleFactoryLoader, useClass: SystemJsNgModuleLoader }

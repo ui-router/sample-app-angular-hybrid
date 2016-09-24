@@ -1,3 +1,4 @@
+import * as angular from "angular";
 import {TransitionService, UIView} from "ui-router-ng2";
 import {Component, Input, Inject, Optional} from "@angular/core";
 

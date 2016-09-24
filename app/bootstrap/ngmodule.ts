@@ -9,11 +9,14 @@ import uiRouter from "angular-ui-router";
 import {visualizer} from "ui-router-visualizer";
 
 import {IInjectable, Ng1StateDeclaration} from "angular-ui-router";
-import ComponentDefinition = angular.ComponentDefinition;
+// Types from @types/angular
+import ComponentDefinition = angular.IComponentOptions;
 import IDirective = angular.IDirective;
 import IServiceProvider = angular.IServiceProvider;
 import IAngularBootstrapConfig = angular.IAngularBootstrapConfig;
 import IModule = angular.IModule;
+import IDirectiveFactory = angular.IDirectiveFactory;
+import Injectable = angular.Injectable;
 
 // Create the angular 1 module "demo".
 //
@@ -29,7 +32,7 @@ ngmodule.run(['$uiRouter', ($uiRouter) => visualizer($uiRouter) ]);
 export interface AppModule {
   states?: Ng1StateDeclaration[];
   components?: { [name: string]: ComponentDefinition };
-  directives?: { [name: string]: IDirective };
+  directives?: { [name: string]: Injectable<IDirectiveFactory> };
   services?: { [name: string]: IInjectable };
   filters?: { [name: string]: IInjectable };
   configBlocks?: IInjectable[];
