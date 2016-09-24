@@ -51,7 +51,6 @@ require('../util/ga');
 var core_1 = require("@angular/core");
 var upgrade_1 = require('@angular/upgrade');
 var platform_browser_1 = require("@angular/platform-browser");
-var ui_router_ng2_1 = require("ui-router-ng2");
 var ui_router_ng1_to_ng2_1 = require("ui-router-ng1-to-ng2");
 // Create an NgModule for the ng2 portion of the hybrid app
 //
@@ -63,7 +62,7 @@ var SampleAppModule = (function () {
     function SampleAppModule() {
     }
     SampleAppModule = __decorate([
-        ui_router_ng2_1.UIRouterModule({
+        core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, ui_router_ng1_to_ng2_1.Ng1ToNg2Module],
             providers: [
                 { provide: core_1.NgModuleFactoryLoader, useClass: core_1.SystemJsNgModuleLoader }

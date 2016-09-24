@@ -1,4 +1,5 @@
 "use strict";
+var angular = require("angular");
 /**
  * A directive (for a table header) which changes the app's sort order
  */

@@ -11,10 +11,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
+var angular = require("angular");
 var ui_router_ng2_1 = require("ui-router-ng2");
 var core_1 = require("@angular/core");
 /**
  * The EditContact component
+ *
+ * This component is used by both `contacts.contact.edit` and `contacts.new` states.
  *
  * The component makes a copy of the contqct data for editing.
  * The new copy and original (pristine) copy are used to determine if the contact is "dirty" or not.
@@ -29,7 +32,9 @@ var core_1 = require("@angular/core");
  *
  * The Save Contact button is wired to the `save` method which:
  * - saves the REST resource (PUT or POST, depending)
- * - navigates back to the read-only view of the contact using relative addressing `^`
+ * - navigates back to the parent state using relative addressing `^`.
+ *   when editing an existing contact, this returns to the `contacts.contact` "view contact" state
+ *   when creating a new contact, this returns to the `contacts` list.
  *   the `reload: true` option re-fetches the contacts resolve data from the server
  */
 var EditContact = (function () {
@@ -66,7 +71,7 @@ var EditContact = (function () {
             .then(function () { return _this.canExit = true; })
             .then(function () { return _this.$state.go("^.^", null, { reload: true }); });
     };
-    /** Save the contact, then go to the grandparent state ('contacts') */
+    /** Save the contact, then go to the parent state (either 'contacts' or 'contacts.contact') */
     EditContact.prototype.save = function (contact) {
         var _this = this;
         this.Contacts.save(contact)

@@ -1,4 +1,5 @@
 "use strict";
+var angular = require("angular");
 /**
  * This service stores and retrieves user preferences in session storage
  */

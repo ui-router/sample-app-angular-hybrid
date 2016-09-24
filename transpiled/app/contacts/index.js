@@ -10,19 +10,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var forms_1 = require('@angular/forms');
 var common_1 = require("@angular/common");
+var core_1 = require("@angular/core");
 var ui_router_ng2_1 = require("ui-router-ng2");
 var contacts_states_1 = require("./contacts.states");
 var contactDetail_component_1 = require("./contactDetail.component");
 var contactList_component_1 = require("./contactList.component");
+var contact_component_1 = require("./contact.component");
+var contacts_component_1 = require("./contacts.component");
+var editContact_component_1 = require("./editContact.component");
+var CONTACTS_STATES = [contacts_states_1.contactsState, contacts_states_1.newContactState, contacts_states_1.viewContactState, contacts_states_1.editContactState];
 /** The NgModule for Contacts feature */
 var ContactsModule = (function () {
     function ContactsModule() {
     }
     ContactsModule = __decorate([
-        ui_router_ng2_1.UIRouterModule({
-            imports: [common_1.CommonModule, forms_1.FormsModule],
-            declarations: [contactList_component_1.ContactList, contactDetail_component_1.ContactDetail],
-            states: [contacts_states_1.contactsState, contacts_states_1.newContactState, contacts_states_1.viewContactState, contacts_states_1.editContactState]
+        core_1.NgModule({
+            imports: [
+                common_1.CommonModule,
+                forms_1.FormsModule,
+                ui_router_ng2_1.UIRouterModule.forChild({ states: CONTACTS_STATES })
+            ],
+            declarations: [contact_component_1.Contact, contactDetail_component_1.ContactDetail, contactList_component_1.ContactList, contacts_component_1.Contacts, editContact_component_1.EditContact],
         }), 
         __metadata('design:paramtypes', [])
     ], ContactsModule);

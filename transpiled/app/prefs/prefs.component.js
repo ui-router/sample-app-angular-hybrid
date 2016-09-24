@@ -1,4 +1,5 @@
 "use strict";
+var angular = require("angular");
 /**
  * The controller for the prefs component.
  */
