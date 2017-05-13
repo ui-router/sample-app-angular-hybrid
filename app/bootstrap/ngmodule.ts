@@ -5,10 +5,10 @@
 
 // External dependencies
 import * as angular from "angular";
-import uiRouter from "angular-ui-router";
-import {visualizer} from "ui-router-visualizer";
+import uiRouter from "@uirouter/angularjs";
+import {visualizer} from "@uirouter/visualizer";
 
-import {IInjectable, Ng1StateDeclaration} from "angular-ui-router";
+import {IInjectable, Ng1StateDeclaration} from "@uirouter/angularjs";
 // Types from @types/angular
 import ComponentDefinition = angular.IComponentOptions;
 import IDirective = angular.IDirective;

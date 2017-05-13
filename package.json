@@ -21,22 +21,22 @@
     "url": "https://github.com/ui-router/sample-app-ng1-to-ng2.git"
   },
   "dependencies": {
-    "@angular/common": "~2.0.1",
-    "@angular/compiler": "~2.0.1",
-    "@angular/core": "~2.0.1",
-    "@angular/forms": "^2.0.1",
-    "@angular/http": "~2.0.1",
-    "@angular/platform-browser": "~2.0.1",
-    "@angular/platform-browser-dynamic": "~2.0.1",
-    "@angular/upgrade": "~2.0.1",
+    "@angular/common": "^4.0.0",
+    "@angular/compiler": "^4.0.0",
+    "@angular/core": "^4.0.0",
+    "@angular/forms": "^4.0.0",
+    "@angular/http": "^4.0.0",
+    "@angular/platform-browser": "^4.0.0",
+    "@angular/platform-browser-dynamic": "^4.0.0",
+    "@angular/router": "^4.0.0",
+    "@angular/upgrade": "^4.0.0",
+    "@uirouter/angular-hybrid": "^2.0.0",
+    "@uirouter/visualizer": "^4.0.0",
     "angular": "<2",
-    "angular-ui-router": "^1.0.0-beta.1",
     "es6-shim": "^0.35.0",
     "reflect-metadata": "0.1.2",
     "rxjs": "^5.0.0-beta.6",
-    "ui-router-ng1-to-ng2": "^1.0.10",
-    "ui-router-ng2": "^1.0.0-beta.1",
-    "zone.js": "^0.6.25"
+    "zone.js": "^0.8.10"
   },
   "devDependencies": {
     "@types/angular": "^1.5.16",
@@ -48,7 +48,6 @@
     "lite-server": "^2.2.2",
     "systemjs": "^0.19.24",
     "systemjs-plugin-css": "^0.1.20",
-    "typescript": "^2.0.2",
-    "ui-router-visualizer": "^2.0.7"
+    "typescript": "^2.3.2"
   }
 }

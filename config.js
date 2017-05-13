@@ -3,7 +3,7 @@ var packages = {
 };
 
 var ng2PackageNames = [
-  'common', 'compiler', 'core', 'forms', 'http', 'platform-browser', 'platform-browser-dynamic', 'testing', 'upgrade'
+  'common', 'compiler', 'core', 'forms', 'http', 'platform-browser', 'platform-browser-dynamic', 'testing', 'upgrade', 'router'
 ];
 
 // add package entries for angular packages in the form '@angular/common': { main: 'index.js', defaultExtension: 'js' }
@@ -21,20 +21,21 @@ System.config({
 
   meta: {
     "npm:angular/angular": { format: "global", exports: "angular" },
-    "ui-router-ng2": { format: "cjs" }
   },
 
   map: {
     "angular": "npm:angular/angular",
     "@angular": "npm:@angular",
     "rxjs": "npm:rxjs",
-    "angular-ui-router": "npm:angular-ui-router/release/angular-ui-router",
-    "ui-router-ng2": "npm:ui-router-ng2/_bundles/ui-router-ng2",
+    "@uirouter/core": "npm:@uirouter/core/_bundles/ui-router-core",
+    "@uirouter/angular-hybrid": "npm:@uirouter/angular-hybrid/_bundles/ui-router-angular-hybrid",
+    "@uirouter/angularjs": "npm:@uirouter/angularjs/release/ui-router-angularjs",
+    "@uirouter/angular": "npm:@uirouter/angular/_bundles/ui-router-ng2",
+    "@uirouter/rx": "npm:@uirouter/rx/_bundles/ui-router-rx",
+    "@uirouter/visualizer": "npm:@uirouter/visualizer/bundles/visualizer.min",
     "bootstrap": "npm:bootstrap/dist",
     "css": "npm:systemjs-plugin-css/css",
     "d3": "npm:d3/d3.min",
     "font-awesome": "npm:font-awesome",
-    "ui-router-ng1-to-ng2": "npm:ui-router-ng1-to-ng2/ng1-to-ng2",
-    "ui-router-visualizer": "npm:ui-router-visualizer/release/visualizer.min"
   }
 });

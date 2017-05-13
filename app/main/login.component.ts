@@ -1,4 +1,4 @@
-import {TargetState} from "angular-ui-router/commonjs/ng1";
+import {TargetState} from "@uirouter/core";
 /**
  * The controller for the `login` component
  *

@@ -52,8 +52,7 @@ import {NgModuleFactoryLoader, SystemJsNgModuleLoader, NgModule} from "@angular/
 import {UpgradeAdapter} from '@angular/upgrade';
 import {BrowserModule} from "@angular/platform-browser";
 
-import {UIRouterModule} from "ui-router-ng2";
-import {uiRouterNgUpgrade, Ng1ToNg2Module} from "ui-router-ng1-to-ng2";
+import {uiRouterNgUpgrade, Ng1ToNg2Module} from "@uirouter/angular-hybrid";
 
 // Create an NgModule for the ng2 portion of the hybrid app
 //

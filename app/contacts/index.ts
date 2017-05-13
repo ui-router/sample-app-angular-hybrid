@@ -1,7 +1,7 @@
 import {FormsModule}   from '@angular/forms';
 import {CommonModule} from "@angular/common";
 import {NgModule} from "@angular/core";
-import {UIRouterModule} from "ui-router-ng2";
+import {UIRouterModule} from "@uirouter/angular";
 
 import {contactsState, editContactState, newContactState, viewContactState} from "./contacts.states";
 import {ContactDetail} from "./contactDetail.component";
