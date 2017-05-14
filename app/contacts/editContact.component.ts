@@ -1,6 +1,6 @@
 import * as angular from "angular";
 import {UIView} from "@uirouter/angular";
-import {TransitionService} from "@uirouter/core";
+import {StateService, TransitionService} from "@uirouter/core";
 import {Component, Input, Inject, Optional} from "@angular/core";
 
 /**
@@ -61,7 +61,8 @@ export class EditContact {
   deregister;
   canExit: boolean;
 
-  constructor(@Inject('$state') public $state,
+  // Note: you can inject StateService from @uirouter/core
+  constructor(public $state: StateService,
               @Inject('DialogService') public DialogService,
               @Inject('Contacts') public Contacts,
               @Optional() @Inject(UIView.PARENT_INJECT) view,

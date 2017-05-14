@@ -21,4 +21,6 @@ let CONTACTS_STATES = [contactsState, newContactState, viewContactState, editCon
   ],
   declarations: [Contact, ContactDetail, ContactList, Contacts, EditContact],
 })
-export default class ContactsModule {}
+class ContactsModule {}
+
+export {ContactsModule};

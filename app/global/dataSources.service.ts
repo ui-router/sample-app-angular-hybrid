@@ -21,21 +21,21 @@ import {AppConfig} from "./appConfig.service";
 export class Contacts extends SessionStorage {
   constructor($http, $timeout, $q, AppConfig: AppConfig) {
     // http://beta.json-generator.com/api/json/get/V1g6UwwGx
-    super($http, $timeout, $q, "contacts", "data/contacts.json", AppConfig);
+    super($http, $timeout, $q, "contacts", "/data/contacts.json", AppConfig);
   }
 }
 
 /** A fake Folders REST client API */
 export class Folders extends SessionStorage {
   constructor($http, $timeout, $q, AppConfig) {
-    super($http, $timeout, $q, 'folders', 'data/folders.json', AppConfig);
+    super($http, $timeout, $q, 'folders', '/data/folders.json', AppConfig);
   }
 }
 
 export class Messages extends SessionStorage {
   constructor($http, $timeout, $q, public AppConfig: AppConfig) {
     // http://beta.json-generator.com/api/json/get/VJl5GbIze
-    super($http, $timeout, $q, 'messages', 'data/messages.json', AppConfig);
+    super($http, $timeout, $q, 'messages', '/data/messages.json', AppConfig);
   }
 
   byFolder(folder) {

@@ -36,18 +36,13 @@ import "../mymessages/index";
 import "../prefs/index";
 import "../contacts/contacts.futurestate";
 
-
-
-// Import CSS (SystemJS will inject it into the document)
-import "font-awesome/css/font-awesome.css!"
-import "bootstrap/css/bootstrap.css!"
-
 // Google analytics
 import '../util/ga';
 
 
 ////////////// HYBRID BOOTSTRAP ///////////////
 
+import * as angular from 'angular';
 import {NgModuleFactoryLoader, SystemJsNgModuleLoader, NgModule} from "@angular/core";
 import {UpgradeAdapter} from '@angular/upgrade';
 import {BrowserModule} from "@angular/platform-browser";
@@ -80,5 +75,7 @@ upgradeAdapter.upgradeNg1Provider('$state');
 upgradeAdapter.upgradeNg1Provider('DialogService');
 upgradeAdapter.upgradeNg1Provider('Contacts');
 
-// Manually bootstrap the app with the Upgrade Adapter (instead of ng-app)
-upgradeAdapter.bootstrap(document.body, ['demo']);
+angular.element(document).ready(function () {
+  // Manually bootstrap the app with the Upgrade Adapter (instead of ng-app)
+  upgradeAdapter.bootstrap(document.body, ['demo']);
+});
