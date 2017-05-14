@@ -1,25 +1,19 @@
 <html>
 <head>
-    <!-- 1. Load required NG2 libraries -->
-    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
-    <script src="node_modules/zone.js/dist/zone.js"></script>
     <script src="node_modules/reflect-metadata/Reflect.js"></script>
-    <script src="node_modules/systemjs/dist/system.src.js"></script>
 
-    <!-- 2. Load the systemjs config for module loading from node_modules, etc -->
-    <script src="config.js"></script>
+    <!-- load webpack bundles -->
+    <script src="bundles/vendor.bundle.js"></script>
+    <script src="bundles/sampleapp.js"></script>
 
-    <!-- 3. Load our application bootstrap code -->
-    <script> System.import('transpiled/app/bootstrap/bootstrap'); </script>
-
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/app.css">
 </head>
 <body>
     <!-- the app will fill this ui-view -->
-    <div ui-view></div>
-
-    <script type='text/javascript' id="__bs_script__">//<![CDATA[
-    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.10.0.js'><\/script>".replace("HOST", location.hostname));
-    //]]></script>
+    <ui-view></ui-view>
 </body>
 </html>
