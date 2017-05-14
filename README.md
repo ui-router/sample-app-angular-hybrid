@@ -1,4 +1,4 @@
-## UI-Router 1.0 Hybrid Angular1/2 Sample Application
+## UI-Router 1.0 Hybrid Angular/AngularJS Sample Application
 
 http://ui-router.github.io/sample-app/#/mymessages/inbox/5648b50cc586cac4aed6836f
 
@@ -14,6 +14,11 @@ This sample app is intended to demonstrate a non-trivial ui-router application.
 
 ---
 
+### Running
+
+`npm install`
+`npm start`
+
 ### Visualizer
 
 We're using the [State and Transition Visualizer](http://github.com/ui-router/visualizer) to visually represent 
@@ -26,9 +31,13 @@ Note how states are _entered_ when they were previously not active, _exited_ and
 
 ### Structure
 
-The application is written in ES6, and utilizes ES6 modules.  We are loading the modules using SystemJS and es6-module-loader in the browser _(note: currently, we are also transpiling in the browser, but will be transpiling at build-time in the future for better performance/smaller payload)_.
+The application is written in Typescript and utilizes ES6 modules.
+We are loading and bundling modules using webpack.
 
-There are many ways to structure a ui-router app.  We aren't super opinionated on application structure.  Use what works for you.  We organized ours in the following way:
+There are many ways to structure a ui-router app.
+We aren't super opinionated on application structure.
+Use what works for you.
+We organized ours in the following way:
 
 - Sub-module (feature) organization
   - Each feature gets its own directory. 
@@ -69,4 +78,5 @@ There are many ways to structure a ui-router app.  We aren't super opinionated o
   - The state is _entered_ when the data is ready
   - The resolved data is injected into the components
   - The resolve data remains loaded until the state is exited
- 
+- Lazy Loading
+   - The contacts module is an Angular `NgModule`.  It is defined as a "future state", and lazy loaded just before any contacts state is activated.
