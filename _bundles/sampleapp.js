@@ -392,7 +392,7 @@ var Contacts = (function (_super) {
     __extends(Contacts, _super);
     function Contacts($http, $timeout, $q, AppConfig) {
         // http://beta.json-generator.com/api/json/get/V1g6UwwGx
-        return _super.call(this, $http, $timeout, $q, "contacts", "/data/contacts.json", AppConfig) || this;
+        return _super.call(this, $http, $timeout, $q, "contacts", "data/contacts.json", AppConfig) || this;
     }
     return Contacts;
 }(sessionStorage_1.SessionStorage));
@@ -401,7 +401,7 @@ exports.Contacts = Contacts;
 var Folders = (function (_super) {
     __extends(Folders, _super);
     function Folders($http, $timeout, $q, AppConfig) {
-        return _super.call(this, $http, $timeout, $q, 'folders', '/data/folders.json', AppConfig) || this;
+        return _super.call(this, $http, $timeout, $q, 'folders', 'data/folders.json', AppConfig) || this;
     }
     return Folders;
 }(sessionStorage_1.SessionStorage));
@@ -411,7 +411,7 @@ var Messages = (function (_super) {
     function Messages($http, $timeout, $q, AppConfig) {
         var _this = 
         // http://beta.json-generator.com/api/json/get/VJl5GbIze
-        _super.call(this, $http, $timeout, $q, 'messages', '/data/messages.json', AppConfig) || this;
+        _super.call(this, $http, $timeout, $q, 'messages', 'data/messages.json', AppConfig) || this;
         _this.AppConfig = AppConfig;
         return _this;
     }
