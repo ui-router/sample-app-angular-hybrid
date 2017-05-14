@@ -1,5 +1,4 @@
-/**
- * This file is the main entry point for the entire app.
+/** * This file is the main entry point for the entire app.
  *
  * If the application is being bundled, this is where the bundling process
  * starts.  If the application is being loaded by an es6 module loader, this
@@ -30,11 +29,11 @@ import "./ngmodule";
 // import all the sub module definitions
 // This registers each app module's states, directives, components, filters,
 // services, and config/run blocks with the ngmodule
-import "../global/index";
-import "../main/index";
-import "../mymessages/index";
-import "../prefs/index";
-import "../contacts/contacts.futurestate";
+import '../global/index';
+import '../main/index';
+import '../mymessages/index';
+import '../prefs/index';
+import '../contacts/contacts.futurestate';
 
 // Google analytics
 import '../util/ga';
@@ -43,11 +42,11 @@ import '../util/ga';
 ////////////// HYBRID BOOTSTRAP ///////////////
 
 import * as angular from 'angular';
-import {NgModuleFactoryLoader, SystemJsNgModuleLoader, NgModule} from "@angular/core";
+import {NgModuleFactoryLoader, SystemJsNgModuleLoader, NgModule} from '@angular/core';
 import {UpgradeAdapter} from '@angular/upgrade';
-import {BrowserModule} from "@angular/platform-browser";
+import {BrowserModule} from '@angular/platform-browser';
 
-import {uiRouterNgUpgrade, Ng1ToNg2Module} from "@uirouter/angular-hybrid";
+import {uiRouterNgUpgrade, Ng1ToNg2Module} from '@uirouter/angular-hybrid';
 
 // Create an NgModule for the ng2 portion of the hybrid app
 //
@@ -71,7 +70,6 @@ export const upgradeAdapter = new UpgradeAdapter(SampleAppModule);
 uiRouterNgUpgrade.setUpgradeAdapter(upgradeAdapter);
 
 // Register some ng1 services as ng2 providers
-upgradeAdapter.upgradeNg1Provider('$state');
 upgradeAdapter.upgradeNg1Provider('DialogService');
 upgradeAdapter.upgradeNg1Provider('Contacts');
 

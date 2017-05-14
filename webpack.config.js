@@ -30,8 +30,8 @@ module.exports = {
   devtool: 'cheap-module-source-map',
 
   output: {
-    path: path.join(__dirname, "bundles"),
-    publicPath: 'bundles/',
+    path: path.join(__dirname, "_bundles"),
+    publicPath: '_bundles/',
     filename: "[name].js",
   },
 
