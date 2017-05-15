@@ -1,6 +1,59 @@
 webpackJsonp([1],{
 
-/***/ 127:
+/***/ 128:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(8);
+var PrefsComponent = (function () {
+    function PrefsComponent(AppConfig) {
+        this.AppConfig = AppConfig;
+    }
+    PrefsComponent.prototype.ngOnInit = function () {
+        this.prefs = {
+            restDelay: this.AppConfig.restDelay
+        };
+    };
+    /** Clear out the session storage */
+    PrefsComponent.prototype.reset = function () {
+        sessionStorage.clear();
+        document.location.reload(true);
+    };
+    /** After saving preferences to session storage, reload the entire application */
+    PrefsComponent.prototype.savePrefs = function () {
+        Object.assign(this.AppConfig, { restDelay: this.prefs.restDelay }).save();
+        document.location.reload(true);
+    };
+    return PrefsComponent;
+}());
+PrefsComponent = __decorate([
+    core_1.Component({
+        selector: 'prefs-component',
+        template: "\n      <div>\n          <button class=\"btn btn-primary\" (click)=\"reset()\"><i class=\"fa fa-recycle\"></i> <span>Reset All Data</span></button>\n      </div>\n\n      <div>\n          <label for=\"restDelay\">Simulated REST API delay (ms)</label>\n          <input type=\"text\" name=\"restDelay\" [(ngModel)]=\"prefs.restDelay\">\n          <button class=\"btn btn-primary\" (click)=\"savePrefs()\">Save</button>\n      </div>\n  ",
+    }),
+    __param(0, core_1.Inject('AppConfig')),
+    __metadata("design:paramtypes", [Object])
+], PrefsComponent);
+exports.PrefsComponent = PrefsComponent;
+
+
+/***/ }),
+
+/***/ 129:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17,14 +70,14 @@ exports.guid = function () { return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".split
 
 /***/ }),
 
-/***/ 172:
+/***/ 174:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var ngmodule_1 = __webpack_require__(24);
-var angular_1 = __webpack_require__(45);
+var ngmodule_1 = __webpack_require__(27);
+var angular_1 = __webpack_require__(33);
 // Add Future State to lazy load the Contacts ng2 module
 ngmodule_1.ngmodule.config(function ($stateProvider) {
     $stateProvider.state({
@@ -38,19 +91,19 @@ ngmodule_1.ngmodule.config(function ($stateProvider) {
 
 /***/ }),
 
-/***/ 173:
+/***/ 175:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var ngmodule_1 = __webpack_require__(24);
-var appConfig_service_1 = __webpack_require__(215);
-var auth_service_1 = __webpack_require__(216);
-var dataSources_service_1 = __webpack_require__(217);
-var dialog_directive_1 = __webpack_require__(218);
-var dialog_service_1 = __webpack_require__(219);
-var requiresAuth_hook_1 = __webpack_require__(220);
+var ngmodule_1 = __webpack_require__(27);
+var appConfig_service_1 = __webpack_require__(216);
+var auth_service_1 = __webpack_require__(217);
+var dataSources_service_1 = __webpack_require__(218);
+var dialog_directive_1 = __webpack_require__(219);
+var dialog_service_1 = __webpack_require__(220);
+var requiresAuth_hook_1 = __webpack_require__(221);
 var globalAppModule = {
     directives: { dialog: dialog_directive_1.dialog },
     services: { AppConfig: appConfig_service_1.AppConfig, AuthService: auth_service_1.AuthService, Contacts: dataSources_service_1.Contacts, Folders: dataSources_service_1.Folders, Messages: dataSources_service_1.Messages, DialogService: dialog_service_1.DialogService },
@@ -61,19 +114,19 @@ ngmodule_1.loadNg1AppModule(ngmodule_1.ngmodule, globalAppModule);
 
 /***/ }),
 
-/***/ 174:
+/***/ 176:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var ngmodule_1 = __webpack_require__(24);
-var app_component_1 = __webpack_require__(221);
-var welcome_component_1 = __webpack_require__(226);
-var login_component_1 = __webpack_require__(225);
-var home_component_1 = __webpack_require__(224);
-var app_states_1 = __webpack_require__(223);
-var app_config_1 = __webpack_require__(222);
+var ngmodule_1 = __webpack_require__(27);
+var app_component_1 = __webpack_require__(222);
+var welcome_component_1 = __webpack_require__(227);
+var login_component_1 = __webpack_require__(226);
+var home_component_1 = __webpack_require__(225);
+var app_states_1 = __webpack_require__(224);
+var app_config_1 = __webpack_require__(223);
 var mainAppModule = {
     components: { app: app_component_1.app, welcome: welcome_component_1.welcome, login: login_component_1.login, home: home_component_1.home },
     states: [app_states_1.appState, app_states_1.homeState, app_states_1.loginState, app_states_1.welcomeState],
@@ -85,23 +138,23 @@ ngmodule_1.loadNg1AppModule(ngmodule_1.ngmodule, mainAppModule);
 
 /***/ }),
 
-/***/ 175:
+/***/ 177:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var ngmodule_1 = __webpack_require__(24);
-var compose_component_1 = __webpack_require__(227);
-var folderList_component_1 = __webpack_require__(228);
-var message_component_1 = __webpack_require__(232);
-var messageList_component_1 = __webpack_require__(233);
-var mymessages_component_1 = __webpack_require__(234);
-var messageTable_component_1 = __webpack_require__(229);
-var sortMessages_directive_1 = __webpack_require__(230);
-var messageBody_filter_1 = __webpack_require__(231);
-var messagesListUI_service_1 = __webpack_require__(236);
-var mymessages_states_1 = __webpack_require__(235);
+var ngmodule_1 = __webpack_require__(27);
+var compose_component_1 = __webpack_require__(228);
+var folderList_component_1 = __webpack_require__(229);
+var message_component_1 = __webpack_require__(233);
+var messageList_component_1 = __webpack_require__(234);
+var mymessages_component_1 = __webpack_require__(235);
+var messageTable_component_1 = __webpack_require__(230);
+var sortMessages_directive_1 = __webpack_require__(231);
+var messageBody_filter_1 = __webpack_require__(232);
+var messagesListUI_service_1 = __webpack_require__(237);
+var mymessages_states_1 = __webpack_require__(236);
 var mymessagesAppModule = {
     directives: { sortMessages: sortMessages_directive_1.sortMessages },
     components: { compose: compose_component_1.compose, folderList: folderList_component_1.folderList, message: message_component_1.message, messageList: messageList_component_1.messageList, mymessages: mymessages_component_1.mymessages, messageTable: messageTable_component_1.messageTable },
@@ -114,31 +167,13 @@ ngmodule_1.loadNg1AppModule(ngmodule_1.ngmodule, mymessagesAppModule);
 
 /***/ }),
 
-/***/ 176:
+/***/ 178:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var ngmodule_1 = __webpack_require__(24);
-var prefs_component_1 = __webpack_require__(237);
-var prefs_states_1 = __webpack_require__(238);
-var prefsAppModule = {
-    components: { prefs: prefs_component_1.prefs },
-    states: [prefs_states_1.prefsState]
-};
-ngmodule_1.loadNg1AppModule(ngmodule_1.ngmodule, prefsAppModule);
-
-
-/***/ }),
-
-/***/ 177:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var ngmodule_1 = __webpack_require__(24);
+var ngmodule_1 = __webpack_require__(27);
 /** Google analytics */
 (function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
@@ -174,7 +209,7 @@ ngmodule_1.ngmodule.config(function ($transitionsProvider) {
 
 /***/ }),
 
-/***/ 214:
+/***/ 215:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -210,23 +245,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 //////////////////// APP MODULES ///////////////
 // Create the angular 1 module for the application
-__webpack_require__(24);
+__webpack_require__(27);
 // import all the sub module definitions
 // This registers each app module's states, directives, components, filters,
 // services, and config/run blocks with the ngmodule
-__webpack_require__(173);
-__webpack_require__(174);
 __webpack_require__(175);
 __webpack_require__(176);
-__webpack_require__(172);
-// Google analytics
 __webpack_require__(177);
+__webpack_require__(70);
+__webpack_require__(174);
+// Google analytics
+__webpack_require__(178);
 ////////////// HYBRID BOOTSTRAP ///////////////
 var angular = __webpack_require__(16);
 var core_1 = __webpack_require__(8);
 var upgrade_1 = __webpack_require__(68);
-var platform_browser_1 = __webpack_require__(25);
+var platform_browser_1 = __webpack_require__(24);
 var angular_hybrid_1 = __webpack_require__(69);
+var index_1 = __webpack_require__(70);
 // Create an NgModule for the ng2 portion of the hybrid app
 //
 // Use @UIRouterModule instead of @NgModule to allow use of the UIRouter directives
@@ -240,7 +276,7 @@ var SampleAppModule = (function () {
 }());
 SampleAppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, angular_hybrid_1.Ng1ToNg2Module],
+        imports: [platform_browser_1.BrowserModule, angular_hybrid_1.Ng1ToNg2Module, index_1.PrefsModule],
         providers: [
             { provide: core_1.NgModuleFactoryLoader, useClass: core_1.SystemJsNgModuleLoader }
         ]
@@ -263,7 +299,7 @@ angular.element(document).ready(function () {
 
 /***/ }),
 
-/***/ 215:
+/***/ 216:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -297,7 +333,7 @@ exports.AppConfig = AppConfig;
 
 /***/ }),
 
-/***/ 216:
+/***/ 217:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -355,7 +391,7 @@ exports.AuthService = AuthService;
 
 /***/ }),
 
-/***/ 217:
+/***/ 218:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -428,7 +464,7 @@ exports.Messages = Messages;
 
 /***/ }),
 
-/***/ 218:
+/***/ 219:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -450,7 +486,7 @@ exports.dialog = function ($timeout, $q) {
 
 /***/ }),
 
-/***/ 219:
+/***/ 220:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -477,7 +513,7 @@ exports.DialogService = DialogService;
 
 /***/ }),
 
-/***/ 220:
+/***/ 221:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -513,7 +549,7 @@ exports.authHookRunBlock = authHookRunBlock;
 
 /***/ }),
 
-/***/ 221:
+/***/ 222:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -551,7 +587,7 @@ exports.app = {
 
 /***/ }),
 
-/***/ 222:
+/***/ 223:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -568,7 +604,7 @@ exports.traceRunBlock = ['$trace', function ($trace) { $trace.enable(1); }];
 
 /***/ }),
 
-/***/ 223:
+/***/ 224:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -647,7 +683,7 @@ function returnTo($transition$) {
 
 /***/ }),
 
-/***/ 224:
+/***/ 225:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -662,7 +698,7 @@ exports.home = {
 
 /***/ }),
 
-/***/ 225:
+/***/ 226:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -716,7 +752,7 @@ exports.login = {
 
 /***/ }),
 
-/***/ 226:
+/***/ 227:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -729,7 +765,7 @@ exports.welcome = {
 
 /***/ }),
 
-/***/ 227:
+/***/ 228:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -816,7 +852,7 @@ exports.compose = {
 
 /***/ }),
 
-/***/ 228:
+/***/ 229:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -833,7 +869,7 @@ exports.folderList = {
 
 /***/ }),
 
-/***/ 229:
+/***/ 230:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -861,7 +897,7 @@ exports.messageTable = {
 
 /***/ }),
 
-/***/ 230:
+/***/ 231:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -892,7 +928,7 @@ exports.sortMessages = function (AppConfig) {
 
 /***/ }),
 
-/***/ 231:
+/***/ 232:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -909,13 +945,13 @@ exports.messageBody = function ($sce) {
 
 /***/ }),
 
-/***/ 232:
+/***/ 233:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var util_1 = __webpack_require__(127);
+var util_1 = __webpack_require__(129);
 /** Helper function to prefix a message with "fwd: " or "re: " */
 var prefixSubject = function (prefix, message) { return prefix + message.subject; };
 /** Helper function which quotes an email message */
@@ -1006,7 +1042,7 @@ exports.message = {
 
 /***/ }),
 
-/***/ 233:
+/***/ 234:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1023,7 +1059,7 @@ exports.messageList = {
 
 /***/ }),
 
-/***/ 234:
+/***/ 235:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1044,7 +1080,7 @@ exports.mymessages = {
 
 /***/ }),
 
-/***/ 235:
+/***/ 236:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1134,7 +1170,7 @@ exports.messageListState = {
 
 /***/ }),
 
-/***/ 236:
+/***/ 237:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1160,54 +1196,13 @@ exports.MessageListUI = MessageListUI;
 
 /***/ }),
 
-/***/ 237:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var angular = __webpack_require__(16);
-/**
- * The controller for the prefs component.
- */
-var PrefsController = (function () {
-    function PrefsController(AppConfig) {
-        this.AppConfig = AppConfig;
-    }
-    PrefsController.prototype.$onInit = function () {
-        this.prefs = {
-            restDelay: this.AppConfig.restDelay
-        };
-    };
-    /** Clear out the session storage */
-    PrefsController.prototype.reset = function () {
-        sessionStorage.clear();
-        document.location.reload(true);
-    };
-    /** After saving preferences to session storage, reload the entire application */
-    PrefsController.prototype.savePrefs = function () {
-        angular.extend(this.AppConfig, { restDelay: this.prefs.restDelay }).save();
-        document.location.reload(true);
-    };
-    return PrefsController;
-}());
-/**
- * A component which shows and updates app preferences
- */
-exports.prefs = {
-    controller: PrefsController,
-    template: "\n    <div>\n      <button class=\"btn btn-primary\" ng-click=\"$ctrl.reset()\"><i class=\"fa fa-recycle\"></i> <span>Reset All Data</span></button>\n    </div>\n    \n    <div>\n      <label for=\"restDelay\">Simulated REST API delay (ms)</label>\n      <input type=\"text\" name=\"restDelay\" ng-model=\"$ctrl.prefs.restDelay\">\n      <button class=\"btn btn-primary\" ng-click=\"$ctrl.savePrefs()\">Save</button>\n    </div>\n"
-};
-
-
-/***/ }),
-
 /***/ 238:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+var prefs_component_1 = __webpack_require__(128);
 /**
  * This state allows the user to set their application preferences
  */
@@ -1215,7 +1210,7 @@ exports.prefsState = {
     parent: 'app',
     name: 'prefs',
     url: '/prefs',
-    component: 'prefs',
+    component: prefs_component_1.PrefsComponent,
     // Mark this state as requiring authentication.  See ../global/requiresAuth.hook.js.
     data: { requiresAuth: true }
 };
@@ -1229,7 +1224,7 @@ exports.prefsState = {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var util_1 = __webpack_require__(127);
+var util_1 = __webpack_require__(129);
 /**
  * This class simulates a RESTful resource, but the API calls fetch data from
  * Session Storage instead of an HTTP call.
@@ -1353,7 +1348,7 @@ exports.SessionStorage = SessionStorage;
 
 /***/ }),
 
-/***/ 24:
+/***/ 27:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1366,7 +1361,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // External dependencies
 var angular = __webpack_require__(16);
 var angularjs_1 = __webpack_require__(66);
-var visualizer_1 = __webpack_require__(92);
+var visualizer_1 = __webpack_require__(94);
 // Create the angular 1 module "demo".
 //
 // Since it is exported, other parts of the application (in other files) can then import it and register things.
@@ -1404,7 +1399,47 @@ function loadNg1AppModule(ngModule, appModule) {
 exports.loadNg1AppModule = loadNg1AppModule;
 
 
+/***/ }),
+
+/***/ 70:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var prefs_component_1 = __webpack_require__(128);
+var prefs_states_1 = __webpack_require__(238);
+var core_1 = __webpack_require__(8);
+var common_1 = __webpack_require__(17);
+var forms_1 = __webpack_require__(71);
+var angular_1 = __webpack_require__(33);
+var PREFS_STATES = [prefs_states_1.prefsState];
+/** The NgModule for the Preferences feature */
+var PrefsModule = (function () {
+    function PrefsModule() {
+    }
+    return PrefsModule;
+}());
+PrefsModule = __decorate([
+    core_1.NgModule({
+        imports: [
+            common_1.CommonModule,
+            forms_1.FormsModule,
+            angular_1.UIRouterModule.forChild({ states: PREFS_STATES })
+        ],
+        declarations: [prefs_component_1.PrefsComponent],
+    })
+], PrefsModule);
+exports.PrefsModule = PrefsModule;
+
+
 /***/ })
 
-},[214]);
+},[215]);
 //# sourceMappingURL=sampleapp.js.map
