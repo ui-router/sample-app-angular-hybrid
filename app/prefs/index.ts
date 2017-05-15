@@ -1,11 +1,22 @@
-import {ngmodule, loadNg1AppModule} from "../bootstrap/ngmodule";
+import { PrefsComponent } from './prefs.component';
+import { prefsState } from './prefs.states';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { UIRouterModule } from '@uirouter/angular';
 
-import {prefs} from "./prefs.component";
-import {prefsState} from "./prefs.states";
 
-const prefsAppModule = {
-  components: {prefs},
-  states: [prefsState]
-};
+let PREFS_STATES = [ prefsState ];
 
-loadNg1AppModule(ngmodule, prefsAppModule);
+/** The NgModule for the Preferences feature */
+@NgModule({
+  imports: [
+    CommonModule,
+    FormsModule,
+    UIRouterModule.forChild({ states: PREFS_STATES })
+  ],
+  declarations: [ PrefsComponent ],
+})
+class PrefsModule {}
+
+export {PrefsModule};

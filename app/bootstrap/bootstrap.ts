@@ -17,7 +17,7 @@
  *     - Transition Hooks
  * - 3rd party Libraries and angular1 module
  *
- * Then this module creates the ng-upgrade adapter 
+ * Then this module creates the ng-upgrade adapter
  * and bootstraps the hybrid application
  */
 
@@ -42,11 +42,11 @@ import '../util/ga';
 ////////////// HYBRID BOOTSTRAP ///////////////
 
 import * as angular from 'angular';
-import {NgModuleFactoryLoader, SystemJsNgModuleLoader, NgModule} from '@angular/core';
-import {UpgradeAdapter} from '@angular/upgrade';
-import {BrowserModule} from '@angular/platform-browser';
-
-import {uiRouterNgUpgrade, Ng1ToNg2Module} from '@uirouter/angular-hybrid';
+import { NgModuleFactoryLoader, SystemJsNgModuleLoader, NgModule } from '@angular/core';
+import { UpgradeAdapter } from '@angular/upgrade';
+import { BrowserModule } from '@angular/platform-browser';
+import { uiRouterNgUpgrade, Ng1ToNg2Module } from '@uirouter/angular-hybrid';
+import { PrefsModule } from '../prefs/index';
 
 // Create an NgModule for the ng2 portion of the hybrid app
 //
@@ -55,7 +55,7 @@ import {uiRouterNgUpgrade, Ng1ToNg2Module} from '@uirouter/angular-hybrid';
 //
 // import the Ng1ToNg2Module to supply the ng1-to-ng2 directives
 @NgModule({
-  imports: [BrowserModule, Ng1ToNg2Module],
+  imports: [ BrowserModule, Ng1ToNg2Module, PrefsModule ],
   providers: [
     { provide: NgModuleFactoryLoader, useClass: SystemJsNgModuleLoader }
   ]

@@ -1,15 +1,25 @@
-import * as angular from "angular";
+import { Component, Inject } from '@angular/core';
 
-/**
- * The controller for the prefs component.
- */
-class PrefsController {
-  // data
+@Component({
+  selector: 'prefs-component',
+  template: `
+      <div>
+          <button class="btn btn-primary" (click)="reset()"><i class="fa fa-recycle"></i> <span>Reset All Data</span></button>
+      </div>
+
+      <div>
+          <label for="restDelay">Simulated REST API delay (ms)</label>
+          <input type="text" name="restDelay" [(ngModel)]="prefs.restDelay">
+          <button class="btn btn-primary" (click)="savePrefs()">Save</button>
+      </div>
+  `,
+})
+export class PrefsComponent {
   prefs;
-  
-  constructor(public AppConfig) { }
 
-  $onInit() {
+  constructor(@Inject('AppConfig') public AppConfig) { }
+
+  ngOnInit() {
     this.prefs = {
       restDelay: this.AppConfig.restDelay
     }
@@ -23,25 +33,7 @@ class PrefsController {
 
   /** After saving preferences to session storage, reload the entire application */
   savePrefs() {
-    angular.extend(this.AppConfig, { restDelay: this.prefs.restDelay }).save();
+    Object.assign(this.AppConfig, { restDelay: this.prefs.restDelay }).save();
     document.location.reload(true);
   }
 }
-
-/**
- * A component which shows and updates app preferences
- */
-export const prefs = {
-  controller: PrefsController,
-
-  template: `
-    <div>
-      <button class="btn btn-primary" ng-click="$ctrl.reset()"><i class="fa fa-recycle"></i> <span>Reset All Data</span></button>
-    </div>
-    
-    <div>
-      <label for="restDelay">Simulated REST API delay (ms)</label>
-      <input type="text" name="restDelay" ng-model="$ctrl.prefs.restDelay">
-      <button class="btn btn-primary" ng-click="$ctrl.savePrefs()">Save</button>
-    </div>
-`};
