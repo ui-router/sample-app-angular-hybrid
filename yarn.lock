@@ -58,24 +58,24 @@
   version "0.14.57"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-0.14.57.tgz#1878a8654fafdd1d381b8457292b6433498c5b62"
 
-"@uirouter/angular-hybrid@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@uirouter/angular-hybrid/-/angular-hybrid-2.0.0.tgz#4e2a800506870454095e3e70175b149a54d74d9b"
+"@uirouter/angular-hybrid@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@uirouter/angular-hybrid/-/angular-hybrid-3.0.0.tgz#910758a59ae1889cc87968d3c41721d858ce6a6b"
   dependencies:
     "@uirouter/angular" "git://github.com/ui-router/angular#1.0.0-beta.6-hybrid-2.0.0-4"
     "@uirouter/angularjs" "git://github.com/angular-ui/ui-router#1.0.3-hybrid-2.0.0-5"
     "@uirouter/core" "=5.0.3"
 
-"@uirouter/angular@git://github.com/ui-router/angular#1.0.0-beta.6-hybrid-2.0.0-4":
+"@uirouter/angular@git://github.com/ui-router/angular.git#1.0.0-beta.6-hybrid-2.0.0-4":
   version "1.0.0-beta.6-hybrid-2.0.0-4"
-  resolved "git://github.com/ui-router/angular#90590ddde94fe0c3c8908bccd525bc1b2751106e"
+  resolved "git://github.com/ui-router/angular.git#90590ddde94fe0c3c8908bccd525bc1b2751106e"
   dependencies:
     "@uirouter/core" "^5.0.1"
     "@uirouter/rx" "=0.4.1"
 
-"@uirouter/angularjs@git://github.com/angular-ui/ui-router#1.0.3-hybrid-2.0.0-5":
+"@uirouter/angularjs@git://github.com/angular-ui/ui-router.git#1.0.3-hybrid-2.0.0-5":
   version "1.0.3-hybrid-2.0.0-5"
-  resolved "git://github.com/angular-ui/ui-router#f429ea3b40fdc85dfdd9e2808ef14c73c071184a"
+  resolved "git://github.com/angular-ui/ui-router.git#f429ea3b40fdc85dfdd9e2808ef14c73c071184a"
   dependencies:
     "@uirouter/core" "^5.0.3"
 
@@ -1274,10 +1274,6 @@ is-utf8@^0.2.0:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/is-utf8/-/is-utf8-0.2.1.tgz#4b0da1442104d1b336340e80797e865cf39f7d72"
 
-is-wsl@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/is-wsl/-/is-wsl-1.1.0.tgz#1f16e4aa22b04d1336b66188a66af3c600c3a66d"
-
 isarray@1.0.0, isarray@^1.0.0, isarray@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/isarray/-/isarray-1.0.0.tgz#bb935d48582cba168c06834957a54a3e07124f11"
@@ -1630,12 +1626,6 @@ opn@4.0.2:
   dependencies:
     object-assign "^4.0.1"
     pinkie-promise "^2.0.0"
-
-opn@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/opn/-/opn-5.0.0.tgz#f8870d7cd969b218030cb6ce5a1285e795931df3"
-  dependencies:
-    is-wsl "^1.1.0"
 
 original@>=0.0.5:
   version "1.0.0"
