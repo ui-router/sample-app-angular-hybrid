@@ -245,7 +245,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 //////////////////// APP MODULES ///////////////
 // Create the angular 1 module for the application
-__webpack_require__(27);
+var ngmodule_1 = __webpack_require__(27);
 // import all the sub module definitions
 // This registers each app module's states, directives, components, filters,
 // services, and config/run blocks with the ngmodule
@@ -294,6 +294,8 @@ SampleAppModule = __decorate([
     })
 ], SampleAppModule);
 exports.SampleAppModule = SampleAppModule;
+// Do not synchronize the URL until all bootstrapping is complete
+ngmodule_1.ngmodule.config(['$urlServiceProvider', function ($urlService) { return $urlService.deferIntercept(); }]);
 angular.element(document).ready(function () {
     // Manually bootstrap the Angular app
     platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(SampleAppModule).then(function (platformRef) {
@@ -301,8 +303,11 @@ angular.element(document).ready(function () {
         var upgrade = injector.get(static_1.UpgradeModule);
         // Manually bootstrap the AngularJS app
         upgrade.bootstrap(document.body, ['demo']);
-        // Intialize the UIRouter Angular code
-        injector.get(core_2.UIRouter);
+        // Intialize the UIRouter Angular code (getting a service from DI will instantiate it)
+        var url = injector.get(core_2.UrlService);
+        // UIRouter to listen to URL changes
+        url.listen();
+        url.sync();
     });
 });
 
