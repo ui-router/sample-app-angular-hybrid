@@ -38,42 +38,48 @@ import '../contacts/contacts.futurestate';
 // Google analytics
 import '../util/ga';
 
-
 ////////////// HYBRID BOOTSTRAP ///////////////
 
 import * as angular from 'angular';
-import { NgModuleFactoryLoader, SystemJsNgModuleLoader, NgModule } from '@angular/core';
-import { UpgradeAdapter } from '@angular/upgrade';
+import { NgModuleFactoryLoader, SystemJsNgModuleLoader, NgModule, Injector } from '@angular/core';
+import { UpgradeModule } from '@angular/upgrade/static';
 import { BrowserModule } from '@angular/platform-browser';
-import { uiRouterNgUpgrade, Ng1ToNg2Module } from '@uirouter/angular-hybrid';
+import { Ng1ToNg2Module } from '@uirouter/angular-hybrid';
+import { UIRouter } from '@uirouter/core';
 import { PrefsModule } from '../prefs/index';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+export function getDialogService($injector) {
+  return $injector.get('DialogService');
+}
+
+export function getContactsService($injector) {
+  return $injector.get('Contacts');
+}
 
 // Create an NgModule for the ng2 portion of the hybrid app
 //
-// Use @UIRouterModule instead of @NgModule to allow use of the UIRouter directives
-// and add the UIRouter providers to the root ng2 injector
-//
 // import the Ng1ToNg2Module to supply the ng1-to-ng2 directives
 @NgModule({
-  imports: [ BrowserModule, Ng1ToNg2Module, PrefsModule ],
+  imports: [ BrowserModule, UpgradeModule, Ng1ToNg2Module, PrefsModule ],
   providers: [
-    { provide: NgModuleFactoryLoader, useClass: SystemJsNgModuleLoader }
+    { provide: NgModuleFactoryLoader, useClass: SystemJsNgModuleLoader },
+    // Register some ng1 services as ng2 providers
+    { provide: 'DialogService', deps: ['$injector'], useFactory: getDialogService },
+    { provide: 'Contacts', deps: ['$injector'], useFactory: getContactsService },
   ]
-}) class SampleAppModule {}
-
-// Create ngUpgrade adapter
-export const upgradeAdapter = new UpgradeAdapter(SampleAppModule);
-
-// Supply ui-router-ng1-to-ng1 with the upgrade adapter.
-// This adds glue to the ui-router instance for angular 1 (ng1 hosts the app)
-// which allows it to route to ng2 components
-uiRouterNgUpgrade.setUpgradeAdapter(upgradeAdapter);
-
-// Register some ng1 services as ng2 providers
-upgradeAdapter.upgradeNg1Provider('DialogService');
-upgradeAdapter.upgradeNg1Provider('Contacts');
+}) export class SampleAppModule {
+  ngDoBootstrap() { /* no body */ }
+}
 
 angular.element(document).ready(function () {
-  // Manually bootstrap the app with the Upgrade Adapter (instead of ng-app)
-  upgradeAdapter.bootstrap(document.body, ['demo']);
+  // Manually bootstrap the Angular app
+  platformBrowserDynamic().bootstrapModule(SampleAppModule).then(platformRef => {
+    const injector: Injector = platformRef.injector;
+    const upgrade = injector.get(UpgradeModule) as UpgradeModule;
+    // Manually bootstrap the AngularJS app
+    upgrade.bootstrap(document.body, ['demo']);
+    // Intialize the UIRouter Angular code
+    injector.get(UIRouter);
+  });
 });
