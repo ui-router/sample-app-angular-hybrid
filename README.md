@@ -1,6 +1,6 @@
 ## UI-Router 1.0 Hybrid Angular/AngularJS Sample Application
 
-http://ui-router.github.io/sample-app/#/mymessages/inbox/5648b50cc586cac4aed6836f
+https://ui-router.github.io/sample-app-angular-hybrid/#!/mymessages/inbox/5648b50d5d8be25776881a3f
 
 This sample app is intended to demonstrate a non-trivial ui-router application.
 
