@@ -273,9 +273,9 @@ function getContactsService($injector) {
     return $injector.get('Contacts');
 }
 exports.getContactsService = getContactsService;
-// Create an NgModule for the ng2 portion of the hybrid app
+// Create an NgModule for the Angular portion of the hybrid app
 //
-// import the Ng1ToNg2Module to supply the ng1-to-ng2 directives
+// import the UIRouterUpgradeModule to supply the angular-hybrid directives
 var SampleAppModule = (function () {
     function SampleAppModule() {
     }
@@ -284,18 +284,19 @@ var SampleAppModule = (function () {
 }());
 SampleAppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, static_1.UpgradeModule, angular_hybrid_1.Ng1ToNg2Module, index_1.PrefsModule],
+        imports: [platform_browser_1.BrowserModule, static_1.UpgradeModule, angular_hybrid_1.UIRouterUpgradeModule, index_1.PrefsModule],
         providers: [
             { provide: core_1.NgModuleFactoryLoader, useClass: core_1.SystemJsNgModuleLoader },
-            // Register some ng1 services as ng2 providers
+            // Register some AngularJS services as Angular providers
             { provide: 'DialogService', deps: ['$injector'], useFactory: getDialogService },
             { provide: 'Contacts', deps: ['$injector'], useFactory: getContactsService },
         ]
     })
 ], SampleAppModule);
 exports.SampleAppModule = SampleAppModule;
-// Do not synchronize the URL until all bootstrapping is complete
+// Tell UI-Router to wait to synchronize the URL (until all bootstrapping is complete)e
 ngmodule_1.ngmodule.config(['$urlServiceProvider', function ($urlService) { return $urlService.deferIntercept(); }]);
+// Wait until the DOM is ready
 angular.element(document).ready(function () {
     // Manually bootstrap the Angular app
     platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(SampleAppModule).then(function (platformRef) {
@@ -303,9 +304,9 @@ angular.element(document).ready(function () {
         var upgrade = injector.get(static_1.UpgradeModule);
         // Manually bootstrap the AngularJS app
         upgrade.bootstrap(document.body, ['demo']);
-        // Intialize the UIRouter Angular code (getting a service from DI will instantiate it)
+        // Intialize the Angular Module (get() any UIRouter service from DI to initialize it)
         var url = injector.get(core_2.UrlService);
-        // UIRouter to listen to URL changes
+        // Instruct UIRouter to listen to URL changes
         url.listen();
         url.sync();
     });
