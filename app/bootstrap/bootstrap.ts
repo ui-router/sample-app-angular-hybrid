@@ -24,7 +24,7 @@
 
 //////////////////// APP MODULES ///////////////
 // Create the angular 1 module for the application
-import "./ngmodule";
+import { ngmodule } from "./ngmodule";
 
 // import all the sub module definitions
 // This registers each app module's states, directives, components, filters,
@@ -45,7 +45,7 @@ import { NgModuleFactoryLoader, SystemJsNgModuleLoader, NgModule, Injector } fro
 import { UpgradeModule } from '@angular/upgrade/static';
 import { BrowserModule } from '@angular/platform-browser';
 import { Ng1ToNg2Module } from '@uirouter/angular-hybrid';
-import { UIRouter } from '@uirouter/core';
+import { UrlService } from '@uirouter/core';
 import { PrefsModule } from '../prefs/index';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
@@ -72,6 +72,9 @@ export function getContactsService($injector) {
   ngDoBootstrap() { /* no body */ }
 }
 
+// Do not synchronize the URL until all bootstrapping is complete
+ngmodule.config([ '$urlServiceProvider', ($urlService: UrlService) => $urlService.deferIntercept() ]);
+
 angular.element(document).ready(function () {
   // Manually bootstrap the Angular app
   platformBrowserDynamic().bootstrapModule(SampleAppModule).then(platformRef => {
@@ -79,7 +82,11 @@ angular.element(document).ready(function () {
     const upgrade = injector.get(UpgradeModule) as UpgradeModule;
     // Manually bootstrap the AngularJS app
     upgrade.bootstrap(document.body, ['demo']);
-    // Intialize the UIRouter Angular code
-    injector.get(UIRouter);
+
+    // Intialize the UIRouter Angular code (getting a service from DI will instantiate it)
+    const url: UrlService = injector.get(UrlService);
+    // UIRouter to listen to URL changes
+    url.listen();
+    url.sync();
   });
 });
