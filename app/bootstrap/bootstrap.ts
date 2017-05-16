@@ -44,7 +44,7 @@ import * as angular from 'angular';
 import { NgModuleFactoryLoader, SystemJsNgModuleLoader, NgModule, Injector } from '@angular/core';
 import { UpgradeModule } from '@angular/upgrade/static';
 import { BrowserModule } from '@angular/platform-browser';
-import { Ng1ToNg2Module } from '@uirouter/angular-hybrid';
+import { UIRouterUpgradeModule } from '@uirouter/angular-hybrid';
 import { UrlService } from '@uirouter/core';
 import { PrefsModule } from '../prefs/index';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
@@ -57,14 +57,14 @@ export function getContactsService($injector) {
   return $injector.get('Contacts');
 }
 
-// Create an NgModule for the ng2 portion of the hybrid app
+// Create an NgModule for the Angular portion of the hybrid app
 //
-// import the Ng1ToNg2Module to supply the ng1-to-ng2 directives
+// import the UIRouterUpgradeModule to supply the angular-hybrid directives
 @NgModule({
-  imports: [ BrowserModule, UpgradeModule, Ng1ToNg2Module, PrefsModule ],
+  imports: [ BrowserModule, UpgradeModule, UIRouterUpgradeModule, PrefsModule ],
   providers: [
     { provide: NgModuleFactoryLoader, useClass: SystemJsNgModuleLoader },
-    // Register some ng1 services as ng2 providers
+    // Register some AngularJS services as Angular providers
     { provide: 'DialogService', deps: ['$injector'], useFactory: getDialogService },
     { provide: 'Contacts', deps: ['$injector'], useFactory: getContactsService },
   ]
@@ -72,20 +72,23 @@ export function getContactsService($injector) {
   ngDoBootstrap() { /* no body */ }
 }
 
-// Do not synchronize the URL until all bootstrapping is complete
+// Tell UI-Router to wait to synchronize the URL (until all bootstrapping is complete)e
 ngmodule.config([ '$urlServiceProvider', ($urlService: UrlService) => $urlService.deferIntercept() ]);
 
+// Wait until the DOM is ready
 angular.element(document).ready(function () {
   // Manually bootstrap the Angular app
   platformBrowserDynamic().bootstrapModule(SampleAppModule).then(platformRef => {
     const injector: Injector = platformRef.injector;
     const upgrade = injector.get(UpgradeModule) as UpgradeModule;
+
     // Manually bootstrap the AngularJS app
     upgrade.bootstrap(document.body, ['demo']);
 
-    // Intialize the UIRouter Angular code (getting a service from DI will instantiate it)
+    // Intialize the Angular Module (get() any UIRouter service from DI to initialize it)
     const url: UrlService = injector.get(UrlService);
-    // UIRouter to listen to URL changes
+
+    // Instruct UIRouter to listen to URL changes
     url.listen();
     url.sync();
   });
