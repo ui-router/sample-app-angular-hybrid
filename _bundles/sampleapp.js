@@ -70,7 +70,7 @@ exports.guid = function () { return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".split
 
 /***/ }),
 
-/***/ 174:
+/***/ 175:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -84,32 +84,9 @@ ngmodule_1.ngmodule.config(function ($stateProvider) {
         name: 'contacts.**',
         url: '/contacts',
         // loadNgModule lazy loads an Angular 2 NgModule (or UIRouterModule)
-        lazyLoad: angular_1.loadNgModule(function () { return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 503)).then(function (result) { return result.ContactsModule; }); })
+        lazyLoad: angular_1.loadNgModule(function () { return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 504)).then(function (result) { return result.ContactsModule; }); })
     });
 });
-
-
-/***/ }),
-
-/***/ 175:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var ngmodule_1 = __webpack_require__(27);
-var appConfig_service_1 = __webpack_require__(216);
-var auth_service_1 = __webpack_require__(217);
-var dataSources_service_1 = __webpack_require__(218);
-var dialog_directive_1 = __webpack_require__(219);
-var dialog_service_1 = __webpack_require__(220);
-var requiresAuth_hook_1 = __webpack_require__(221);
-var globalAppModule = {
-    directives: { dialog: dialog_directive_1.dialog },
-    services: { AppConfig: appConfig_service_1.AppConfig, AuthService: auth_service_1.AuthService, Contacts: dataSources_service_1.Contacts, Folders: dataSources_service_1.Folders, Messages: dataSources_service_1.Messages, DialogService: dialog_service_1.DialogService },
-    runBlocks: [requiresAuth_hook_1.authHookRunBlock]
-};
-ngmodule_1.loadNg1AppModule(ngmodule_1.ngmodule, globalAppModule);
 
 
 /***/ }),
@@ -121,19 +98,18 @@ ngmodule_1.loadNg1AppModule(ngmodule_1.ngmodule, globalAppModule);
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var ngmodule_1 = __webpack_require__(27);
-var app_component_1 = __webpack_require__(222);
-var welcome_component_1 = __webpack_require__(227);
-var login_component_1 = __webpack_require__(226);
-var home_component_1 = __webpack_require__(225);
-var app_states_1 = __webpack_require__(224);
-var app_config_1 = __webpack_require__(223);
-var mainAppModule = {
-    components: { app: app_component_1.app, welcome: welcome_component_1.welcome, login: login_component_1.login, home: home_component_1.home },
-    states: [app_states_1.appState, app_states_1.homeState, app_states_1.loginState, app_states_1.welcomeState],
-    configBlocks: [app_config_1.otherwiseConfigBlock],
-    runBlocks: [app_config_1.traceRunBlock]
+var appConfig_service_1 = __webpack_require__(217);
+var auth_service_1 = __webpack_require__(218);
+var dataSources_service_1 = __webpack_require__(219);
+var dialog_directive_1 = __webpack_require__(220);
+var dialog_service_1 = __webpack_require__(221);
+var requiresAuth_hook_1 = __webpack_require__(222);
+var globalAppModule = {
+    directives: { dialog: dialog_directive_1.dialog },
+    services: { AppConfig: appConfig_service_1.AppConfig, AuthService: auth_service_1.AuthService, Contacts: dataSources_service_1.Contacts, Folders: dataSources_service_1.Folders, Messages: dataSources_service_1.Messages, DialogService: dialog_service_1.DialogService },
+    runBlocks: [requiresAuth_hook_1.authHookRunBlock]
 };
-ngmodule_1.loadNg1AppModule(ngmodule_1.ngmodule, mainAppModule);
+ngmodule_1.loadNg1AppModule(ngmodule_1.ngmodule, globalAppModule);
 
 
 /***/ }),
@@ -145,16 +121,40 @@ ngmodule_1.loadNg1AppModule(ngmodule_1.ngmodule, mainAppModule);
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var ngmodule_1 = __webpack_require__(27);
-var compose_component_1 = __webpack_require__(228);
-var folderList_component_1 = __webpack_require__(229);
-var message_component_1 = __webpack_require__(233);
-var messageList_component_1 = __webpack_require__(234);
-var mymessages_component_1 = __webpack_require__(235);
-var messageTable_component_1 = __webpack_require__(230);
-var sortMessages_directive_1 = __webpack_require__(231);
-var messageBody_filter_1 = __webpack_require__(232);
-var messagesListUI_service_1 = __webpack_require__(237);
-var mymessages_states_1 = __webpack_require__(236);
+var app_component_1 = __webpack_require__(223);
+var welcome_component_1 = __webpack_require__(228);
+var login_component_1 = __webpack_require__(227);
+var home_component_1 = __webpack_require__(226);
+var app_states_1 = __webpack_require__(225);
+var app_config_1 = __webpack_require__(224);
+var mainAppModule = {
+    components: { app: app_component_1.app, welcome: welcome_component_1.welcome, login: login_component_1.login, home: home_component_1.home },
+    states: [app_states_1.appState, app_states_1.homeState, app_states_1.loginState, app_states_1.welcomeState],
+    configBlocks: [app_config_1.otherwiseConfigBlock],
+    runBlocks: [app_config_1.traceRunBlock]
+};
+ngmodule_1.loadNg1AppModule(ngmodule_1.ngmodule, mainAppModule);
+
+
+/***/ }),
+
+/***/ 178:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var ngmodule_1 = __webpack_require__(27);
+var compose_component_1 = __webpack_require__(229);
+var folderList_component_1 = __webpack_require__(230);
+var message_component_1 = __webpack_require__(234);
+var messageList_component_1 = __webpack_require__(235);
+var mymessages_component_1 = __webpack_require__(236);
+var messageTable_component_1 = __webpack_require__(231);
+var sortMessages_directive_1 = __webpack_require__(232);
+var messageBody_filter_1 = __webpack_require__(233);
+var messagesListUI_service_1 = __webpack_require__(238);
+var mymessages_states_1 = __webpack_require__(237);
 var mymessagesAppModule = {
     directives: { sortMessages: sortMessages_directive_1.sortMessages },
     components: { compose: compose_component_1.compose, folderList: folderList_component_1.folderList, message: message_component_1.message, messageList: messageList_component_1.messageList, mymessages: mymessages_component_1.mymessages, messageTable: messageTable_component_1.messageTable },
@@ -167,7 +167,7 @@ ngmodule_1.loadNg1AppModule(ngmodule_1.ngmodule, mymessagesAppModule);
 
 /***/ }),
 
-/***/ 178:
+/***/ 179:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -209,7 +209,7 @@ ngmodule_1.ngmodule.config(function ($transitionsProvider) {
 
 /***/ }),
 
-/***/ 215:
+/***/ 216:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -249,57 +249,67 @@ __webpack_require__(27);
 // import all the sub module definitions
 // This registers each app module's states, directives, components, filters,
 // services, and config/run blocks with the ngmodule
-__webpack_require__(175);
 __webpack_require__(176);
 __webpack_require__(177);
-__webpack_require__(70);
-__webpack_require__(174);
-// Google analytics
 __webpack_require__(178);
+__webpack_require__(70);
+__webpack_require__(175);
+// Google analytics
+__webpack_require__(179);
 ////////////// HYBRID BOOTSTRAP ///////////////
 var angular = __webpack_require__(16);
 var core_1 = __webpack_require__(8);
-var upgrade_1 = __webpack_require__(68);
+var static_1 = __webpack_require__(93);
 var platform_browser_1 = __webpack_require__(24);
 var angular_hybrid_1 = __webpack_require__(69);
+var core_2 = __webpack_require__(5);
 var index_1 = __webpack_require__(70);
+var platform_browser_dynamic_1 = __webpack_require__(46);
+function getDialogService($injector) {
+    return $injector.get('DialogService');
+}
+exports.getDialogService = getDialogService;
+function getContactsService($injector) {
+    return $injector.get('Contacts');
+}
+exports.getContactsService = getContactsService;
 // Create an NgModule for the ng2 portion of the hybrid app
-//
-// Use @UIRouterModule instead of @NgModule to allow use of the UIRouter directives
-// and add the UIRouter providers to the root ng2 injector
 //
 // import the Ng1ToNg2Module to supply the ng1-to-ng2 directives
 var SampleAppModule = (function () {
     function SampleAppModule() {
     }
+    SampleAppModule.prototype.ngDoBootstrap = function () { };
     return SampleAppModule;
 }());
 SampleAppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, angular_hybrid_1.Ng1ToNg2Module, index_1.PrefsModule],
+        imports: [platform_browser_1.BrowserModule, static_1.UpgradeModule, angular_hybrid_1.Ng1ToNg2Module, index_1.PrefsModule],
         providers: [
-            { provide: core_1.NgModuleFactoryLoader, useClass: core_1.SystemJsNgModuleLoader }
+            { provide: core_1.NgModuleFactoryLoader, useClass: core_1.SystemJsNgModuleLoader },
+            // Register some ng1 services as ng2 providers
+            { provide: 'DialogService', deps: ['$injector'], useFactory: getDialogService },
+            { provide: 'Contacts', deps: ['$injector'], useFactory: getContactsService },
         ]
     })
 ], SampleAppModule);
-// Create ngUpgrade adapter
-exports.upgradeAdapter = new upgrade_1.UpgradeAdapter(SampleAppModule);
-// Supply ui-router-ng1-to-ng1 with the upgrade adapter.
-// This adds glue to the ui-router instance for angular 1 (ng1 hosts the app)
-// which allows it to route to ng2 components
-angular_hybrid_1.uiRouterNgUpgrade.setUpgradeAdapter(exports.upgradeAdapter);
-// Register some ng1 services as ng2 providers
-exports.upgradeAdapter.upgradeNg1Provider('DialogService');
-exports.upgradeAdapter.upgradeNg1Provider('Contacts');
+exports.SampleAppModule = SampleAppModule;
 angular.element(document).ready(function () {
-    // Manually bootstrap the app with the Upgrade Adapter (instead of ng-app)
-    exports.upgradeAdapter.bootstrap(document.body, ['demo']);
+    // Manually bootstrap the Angular app
+    platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(SampleAppModule).then(function (platformRef) {
+        var injector = platformRef.injector;
+        var upgrade = injector.get(static_1.UpgradeModule);
+        // Manually bootstrap the AngularJS app
+        upgrade.bootstrap(document.body, ['demo']);
+        // Intialize the UIRouter Angular code
+        injector.get(core_2.UIRouter);
+    });
 });
 
 
 /***/ }),
 
-/***/ 216:
+/***/ 217:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -333,7 +343,7 @@ exports.AppConfig = AppConfig;
 
 /***/ }),
 
-/***/ 217:
+/***/ 218:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -391,7 +401,7 @@ exports.AuthService = AuthService;
 
 /***/ }),
 
-/***/ 218:
+/***/ 219:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -407,7 +417,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var sessionStorage_1 = __webpack_require__(239);
+var sessionStorage_1 = __webpack_require__(240);
 /**
  * Fake REST Services (Contacts, Folders, Messages) used in the mymessages submodule.
  *
@@ -464,7 +474,7 @@ exports.Messages = Messages;
 
 /***/ }),
 
-/***/ 219:
+/***/ 220:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -486,7 +496,7 @@ exports.dialog = function ($timeout, $q) {
 
 /***/ }),
 
-/***/ 220:
+/***/ 221:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -513,7 +523,7 @@ exports.DialogService = DialogService;
 
 /***/ }),
 
-/***/ 221:
+/***/ 222:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -549,7 +559,7 @@ exports.authHookRunBlock = authHookRunBlock;
 
 /***/ }),
 
-/***/ 222:
+/***/ 223:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -587,7 +597,7 @@ exports.app = {
 
 /***/ }),
 
-/***/ 223:
+/***/ 224:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -604,7 +614,7 @@ exports.traceRunBlock = ['$trace', function ($trace) { $trace.enable(1); }];
 
 /***/ }),
 
-/***/ 224:
+/***/ 225:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -683,7 +693,7 @@ function returnTo($transition$) {
 
 /***/ }),
 
-/***/ 225:
+/***/ 226:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -698,7 +708,7 @@ exports.home = {
 
 /***/ }),
 
-/***/ 226:
+/***/ 227:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -752,7 +762,7 @@ exports.login = {
 
 /***/ }),
 
-/***/ 227:
+/***/ 228:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -765,7 +775,7 @@ exports.welcome = {
 
 /***/ }),
 
-/***/ 228:
+/***/ 229:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -852,7 +862,7 @@ exports.compose = {
 
 /***/ }),
 
-/***/ 229:
+/***/ 230:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -869,7 +879,7 @@ exports.folderList = {
 
 /***/ }),
 
-/***/ 230:
+/***/ 231:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -897,7 +907,7 @@ exports.messageTable = {
 
 /***/ }),
 
-/***/ 231:
+/***/ 232:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -928,7 +938,7 @@ exports.sortMessages = function (AppConfig) {
 
 /***/ }),
 
-/***/ 232:
+/***/ 233:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -945,7 +955,7 @@ exports.messageBody = function ($sce) {
 
 /***/ }),
 
-/***/ 233:
+/***/ 234:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1042,7 +1052,7 @@ exports.message = {
 
 /***/ }),
 
-/***/ 234:
+/***/ 235:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1059,7 +1069,7 @@ exports.messageList = {
 
 /***/ }),
 
-/***/ 235:
+/***/ 236:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1080,7 +1090,7 @@ exports.mymessages = {
 
 /***/ }),
 
-/***/ 236:
+/***/ 237:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1170,7 +1180,7 @@ exports.messageListState = {
 
 /***/ }),
 
-/***/ 237:
+/***/ 238:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1196,7 +1206,7 @@ exports.MessageListUI = MessageListUI;
 
 /***/ }),
 
-/***/ 238:
+/***/ 239:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1218,7 +1228,7 @@ exports.prefsState = {
 
 /***/ }),
 
-/***/ 239:
+/***/ 240:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1360,7 +1370,7 @@ exports.SessionStorage = SessionStorage;
 Object.defineProperty(exports, "__esModule", { value: true });
 // External dependencies
 var angular = __webpack_require__(16);
-var angularjs_1 = __webpack_require__(66);
+var angularjs_1 = __webpack_require__(67);
 var visualizer_1 = __webpack_require__(94);
 // Create the angular 1 module "demo".
 //
@@ -1414,7 +1424,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var prefs_component_1 = __webpack_require__(128);
-var prefs_states_1 = __webpack_require__(238);
+var prefs_states_1 = __webpack_require__(239);
 var core_1 = __webpack_require__(8);
 var common_1 = __webpack_require__(17);
 var forms_1 = __webpack_require__(71);
@@ -1441,5 +1451,5 @@ exports.PrefsModule = PrefsModule;
 
 /***/ })
 
-},[215]);
+},[216]);
 //# sourceMappingURL=sampleapp.js.map

@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 503:
+/***/ 504:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16,12 +16,12 @@ var forms_1 = __webpack_require__(71);
 var common_1 = __webpack_require__(17);
 var core_1 = __webpack_require__(8);
 var angular_1 = __webpack_require__(33);
-var contacts_states_1 = __webpack_require__(509);
-var contactDetail_component_1 = __webpack_require__(507);
-var contactList_component_1 = __webpack_require__(508);
-var contact_component_1 = __webpack_require__(504);
-var contacts_component_1 = __webpack_require__(505);
-var editContact_component_1 = __webpack_require__(506);
+var contacts_states_1 = __webpack_require__(510);
+var contactDetail_component_1 = __webpack_require__(508);
+var contactList_component_1 = __webpack_require__(509);
+var contact_component_1 = __webpack_require__(505);
+var contacts_component_1 = __webpack_require__(506);
+var editContact_component_1 = __webpack_require__(507);
 var CONTACTS_STATES = [contacts_states_1.contactsState, contacts_states_1.newContactState, contacts_states_1.viewContactState, contacts_states_1.editContactState];
 /** The NgModule for Contacts feature */
 var ContactsModule = (function () {
@@ -44,7 +44,7 @@ exports.ContactsModule = ContactsModule;
 
 /***/ }),
 
-/***/ 504:
+/***/ 505:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -86,7 +86,7 @@ exports.Contact = Contact;
 
 /***/ }),
 
-/***/ 505:
+/***/ 506:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -128,7 +128,7 @@ exports.Contacts = Contacts;
 
 /***/ }),
 
-/***/ 506:
+/***/ 507:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -148,7 +148,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var angular = __webpack_require__(16);
 var angular_1 = __webpack_require__(33);
-var core_1 = __webpack_require__(6);
+var core_1 = __webpack_require__(5);
 var core_2 = __webpack_require__(8);
 /**
  * The EditContact component
@@ -236,7 +236,7 @@ exports.EditContact = EditContact;
 
 /***/ }),
 
-/***/ 507:
+/***/ 508:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -275,7 +275,7 @@ exports.ContactDetail = ContactDetail;
 
 /***/ }),
 
-/***/ 508:
+/***/ 509:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -317,15 +317,15 @@ exports.ContactList = ContactList;
 
 /***/ }),
 
-/***/ 509:
+/***/ 510:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var contact_component_1 = __webpack_require__(504);
-var contacts_component_1 = __webpack_require__(505);
-var editContact_component_1 = __webpack_require__(506);
+var contact_component_1 = __webpack_require__(505);
+var contacts_component_1 = __webpack_require__(506);
+var editContact_component_1 = __webpack_require__(507);
 /**
  * This state displays the contact list.
  * It also provides a nested ui-view (viewport) for child states to fill in.
