@@ -1,4 +1,4 @@
-import {ngmodule} from "../bootstrap/ngmodule";
+import {ngmodule} from "../bootstrap/angularJSModule";
 
 /** Google analytics */
 

@@ -1,4 +1,7 @@
 var webpack = require('webpack');
+
+var AotPlugin = require('@ngtools/webpack').AotPlugin;
+
 var path = require('path');
 
 module.exports = {
@@ -9,11 +12,9 @@ module.exports = {
       'angular',
       'zone.js',
       '@angular/common',
-      '@angular/compiler',
       '@angular/core',
       '@angular/forms',
       '@angular/http',
-      '@angular/platform-browser',
       '@angular/platform-browser-dynamic',
       '@angular/upgrade',
       '@angular/router',
@@ -23,7 +24,6 @@ module.exports = {
       '@uirouter/angular',
       '@uirouter/rx',
       '@uirouter/visualizer',
-      'rxjs',
     ]
   },
 
@@ -42,12 +42,22 @@ module.exports = {
   plugins: [
     // new webpack.optimize.UglifyJsPlugin({ sourceMap: true, minimize: true }),
     new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'vendor.bundle.js'}),
+    new AotPlugin({ tsConfigPath: 'tsconfig.json', mainPath: 'app/bootstrap/bootstrap.ts' }),
   ],
 
   module: {
-    loaders: [
+    rules: [
       { test: /\.tsx?$/,  use: [ "source-map-loader" ], enforce: 'pre' },
-      { test: /\.tsx?$/,  use: [ "awesome-typescript-loader?noEmit=true" ] },
+      { test: /\.tsx?$/,  use: [ "@ngtools/webpack" ] },
     ]
   },
+
+  externals: {
+    '@angular/compiler': {
+      commonjs: "@angular/compiler",
+      commonjs2: "@angular/compiler",
+      amd: "@angular/compiler",
+      root: "@angular/compiler"
+    }
+  }
 };

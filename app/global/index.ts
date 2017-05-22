@@ -1,4 +1,4 @@
-import {ngmodule, loadNg1AppModule} from "../bootstrap/ngmodule";
+import {ngmodule, loadNg1AppModule} from "../bootstrap/angularJSModule";
 
 import {AppConfig} from "./appConfig.service";
 import {AuthService} from "./auth.service";

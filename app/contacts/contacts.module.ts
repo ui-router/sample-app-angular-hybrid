@@ -10,7 +10,7 @@ import {Contact} from "./contact.component";
 import {Contacts} from "./contacts.component";
 import {EditContact} from "./editContact.component";
 
-let CONTACTS_STATES = [contactsState, newContactState, viewContactState, editContactState];
+export let CONTACTS_STATES = [contactsState, newContactState, viewContactState, editContactState];
 
 /** The NgModule for Contacts feature */
 @NgModule({
