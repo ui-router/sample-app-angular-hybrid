@@ -5,6 +5,11 @@ import {Contacts} from "./contacts.component";
 import {EditContact} from "./editContact.component";
 
 
+// Resolve all the contacts.  The resolved contacts are injected into the controller.
+export function resolveContacts(Contacts) {
+  return Contacts.all();
+}
+
 /**
  * This state displays the contact list.
  * It also provides a nested ui-view (viewport) for child states to fill in.
@@ -16,12 +21,15 @@ export const contactsState: Ng2StateDeclaration = {
   name: "contacts",
   url: "/contacts",
   resolve: {
-    // Resolve all the contacts.  The resolved contacts are injected into the controller.
-    contacts: (Contacts) => Contacts.all()
+    contacts: resolveContacts
   },
   data: { requiresAuth: true },
   component: Contacts
 };
+
+export function resolveContact(Contacts, $transition$) {
+  return Contacts.get($transition$.params().contactId);
+}
 
 /**
  * This state displays a single contact.
@@ -33,7 +41,7 @@ export const viewContactState: Ng2StateDeclaration = {
   resolve: {
     // Resolve the contact, based on the contactId parameter value.
     // The resolved contact is provided to the contactComponent's contact binding
-    contact: (Contacts, $transition$) => Contacts.get($transition$.params().contactId)
+    contact: resolveContact
   },
   component: Contact
 };
@@ -61,6 +69,9 @@ export const editContactState: Ng2StateDeclaration = {
   }
 };
 
+export function resolvePristineContact() {
+  return { name: {}, address: {} };
+}
 /**
  * This state allows a user to create a new contact
  *
@@ -70,7 +81,7 @@ export const newContactState: Ng2StateDeclaration = {
   name: 'contacts.new',
   url: '/new',
   resolve: {
-    pristineContact: () => ({ name: {}, address: {} })
+    pristineContact: resolvePristineContact
   },
   component: EditContact
 };

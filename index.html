@@ -1,10 +1,5 @@
 <html>
 <head>
-    <script src="https://unpkg.com/reflect-metadata/Reflect.js"></script>
-
-    <!-- load webpack bundles -->
-    <script src="_bundles/vendor.bundle.js"></script>
-    <script src="_bundles/sampleapp.js"></script>
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -15,5 +10,9 @@
 <body>
     <!-- the app will fill this ui-view -->
     <ui-view></ui-view>
+
+    <!-- load webpack bundles in body tag after document.body is ready -->
+    <script src="_bundles/vendor.bundle.js"></script>
+    <script src="_bundles/sampleapp.js"></script>
 </body>
 </html>

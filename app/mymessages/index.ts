@@ -1,4 +1,4 @@
-import {ngmodule, loadNg1AppModule} from "../bootstrap/ngmodule";
+import {ngmodule, loadNg1AppModule} from "../bootstrap/angularJSModule";
 
 import {compose} from "./compose.component";
 import {folderList} from "./directives/folderList.component";

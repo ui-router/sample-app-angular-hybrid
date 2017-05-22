@@ -24,7 +24,7 @@
 
 //////////////////// APP MODULES ///////////////
 // Create the angular 1 module for the application
-import { ngmodule } from "./ngmodule";
+import { ngmodule } from "./angularJSModule";
 
 // import all the sub module definitions
 // This registers each app module's states, directives, components, filters,
@@ -33,7 +33,6 @@ import '../global/index';
 import '../main/index';
 import '../mymessages/index';
 import '../prefs/index';
-import '../contacts/contacts.futurestate';
 
 // Google analytics
 import '../util/ga';
@@ -41,55 +40,32 @@ import '../util/ga';
 ////////////// HYBRID BOOTSTRAP ///////////////
 
 import * as angular from 'angular';
-import { NgModuleFactoryLoader, SystemJsNgModuleLoader, NgModule, Injector } from '@angular/core';
+
+import { Injector } from '@angular/core';
 import { UpgradeModule } from '@angular/upgrade/static';
-import { BrowserModule } from '@angular/platform-browser';
-import { UIRouterUpgradeModule } from '@uirouter/angular-hybrid';
-import { UrlService } from '@uirouter/core';
-import { PrefsModule } from '../prefs/index';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-export function getDialogService($injector) {
-  return $injector.get('DialogService');
-}
+import { UIRouter, UrlService } from '@uirouter/core';
 
-export function getContactsService($injector) {
-  return $injector.get('Contacts');
-}
+import { SampleAppModule } from './angularModule';
 
-// Create an NgModule for the Angular portion of the hybrid app
-//
-// import the UIRouterUpgradeModule to supply the angular-hybrid directives
-@NgModule({
-  imports: [ BrowserModule, UpgradeModule, UIRouterUpgradeModule, PrefsModule ],
-  providers: [
-    { provide: NgModuleFactoryLoader, useClass: SystemJsNgModuleLoader },
-    // Register some AngularJS services as Angular providers
-    { provide: 'DialogService', deps: ['$injector'], useFactory: getDialogService },
-    { provide: 'Contacts', deps: ['$injector'], useFactory: getContactsService },
-  ]
-}) export class SampleAppModule {
-  ngDoBootstrap() { /* no body */ }
-}
 
 // Tell UI-Router to wait to synchronize the URL (until all bootstrapping is complete)e
 ngmodule.config([ '$urlServiceProvider', ($urlService: UrlService) => $urlService.deferIntercept() ]);
 
-// Wait until the DOM is ready
-angular.element(document).ready(function () {
-  // Manually bootstrap the Angular app
-  platformBrowserDynamic().bootstrapModule(SampleAppModule).then(platformRef => {
-    const injector: Injector = platformRef.injector;
-    const upgrade = injector.get(UpgradeModule) as UpgradeModule;
+// Manually bootstrap the Angular app
+// The DOM must be already be available
+platformBrowserDynamic().bootstrapModule(SampleAppModule).then(platformRef => {
+  const injector: Injector = platformRef.injector;
+  const upgrade = injector.get(UpgradeModule) as UpgradeModule;
 
-    // Manually bootstrap the AngularJS app
-    upgrade.bootstrap(document.body, ['demo']);
+  // Manually bootstrap the AngularJS app
+  upgrade.bootstrap(document.body, ['demo']);
 
-    // Intialize the Angular Module (get() any UIRouter service from DI to initialize it)
-    const url: UrlService = injector.get(UrlService);
+  // Intialize the Angular Module (get() any UIRouter service from DI to initialize it)
+  const url: UrlService = injector.get(UIRouter).urlService;
 
-    // Instruct UIRouter to listen to URL changes
-    url.listen();
-    url.sync();
-  });
+  // Instruct UIRouter to listen to URL changes
+  url.listen();
+  url.sync();
 });
