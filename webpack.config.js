@@ -49,4 +49,8 @@ module.exports = {
       { test: /\.tsx?$/,  use: [ "@ngtools/webpack" ] },
     ]
   },
+
+  externals: {
+    angular: 'angular',
+  }
 };
