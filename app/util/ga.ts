@@ -1,4 +1,4 @@
-import {ngmodule} from "../bootstrap/angularJSModule";
+import { sampleAppModuleAngularJS } from "../angularJSModule";
 
 /** Google analytics */
 
@@ -13,7 +13,7 @@ ga('create', 'UA-73329341-1', 'auto');
 ga('send', 'pageview');
 
 
-ngmodule.config($transitionsProvider => {
+sampleAppModuleAngularJS.config($transitionsProvider => {
   $transitionsProvider.onBefore({}, $transition$ => {
     let path = $transition$.treeChanges().to
         .map(node=>node.state.self.url)

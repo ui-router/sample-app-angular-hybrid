@@ -1,4 +1,6 @@
 import {setProp} from "../util/util";
+import { mymessagesModule } from './mymessages.module';
+
 
 /** Helper function to prefix a message with "fwd: " or "re: " */
 const prefixSubject = (prefix, message) => prefix + message.subject;
@@ -100,7 +102,7 @@ class MessageController {
  * Buttons are shown/hidden based on the folder's context.
  * For instance, a "draft" message can be edited, but can't be replied to.
  */
-export const message = {
+export const messageComponent = {
   bindings: { folder: '<', message: '<', nextMessageGetter: '<' },
 
   controller: MessageController,
@@ -129,3 +131,5 @@ export const message = {
       <div class="body" ng-bind-html="::$ctrl.message.body | messageBody"></div>
     </div>
 `};
+
+mymessagesModule.component('message', messageComponent);

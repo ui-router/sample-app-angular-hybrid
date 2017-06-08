@@ -1,5 +1,6 @@
 import {SessionStorage} from "../util/sessionStorage"
 import {AppConfig} from "./appConfig.service";
+import { globalModule } from './global.module';
 
 /**
  * Fake REST Services (Contacts, Folders, Messages) used in the mymessages submodule.
@@ -45,3 +46,7 @@ export class Messages extends SessionStorage {
     return this.search(searchObject);
   }
 }
+
+globalModule.service('Contacts', Contacts);
+globalModule.service('Folders', Folders);
+globalModule.service('Messages', Messages);

@@ -1,4 +1,8 @@
-import {TargetState} from "@uirouter/core";
+import * as angular from 'angular';
+
+import { homeModule } from './home.module';
+import { TargetState } from "@uirouter/core";
+
 /**
  * The controller for the `login` component
  *
@@ -7,14 +11,14 @@ import {TargetState} from "@uirouter/core";
  */
 class LoginController {
   returnTo: TargetState;
-  
+
   usernames;
   credentials;
   authenticating;
   errorMessage;
 
   login;
-  
+
   constructor(AppConfig, AuthService, $state) {
     this.usernames = AuthService.usernames;
 
@@ -29,7 +33,7 @@ class LoginController {
       const returnToOriginalState = () => {
         let state = this.returnTo.state();
         let params = this.returnTo.params();
-        let options = Object.assign({}, this.returnTo.options(), { reload: true });
+        let options = angular.extend({}, this.returnTo.options(), { reload: true });
         $state.go(state, params, options);
       };
 
@@ -50,12 +54,12 @@ class LoginController {
  * It prompts for the username/password (and gives hints with bouncy arrows)
  * It shows errors if the authentication failed for any reason.
  */
-export const login = {
+const loginComponent = {
   bindings: { returnTo: '<' },
 
   controller: LoginController,
 
-  template:  `
+  template: `
     <div class="container">
       <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
         <h3>Log In</h3>
@@ -93,3 +97,5 @@ export const login = {
     </div>
     `
 };
+
+homeModule.component('login', loginComponent);

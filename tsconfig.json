@@ -1,6 +1,6 @@
 {
   "files": [
-    "app/bootstrap/bootstrap.ts",
+    "app/main.ts",
     "app/contacts/contacts.module.ts"
   ],
   "compilerOptions": {

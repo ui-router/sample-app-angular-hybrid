@@ -1,3 +1,5 @@
+import { homeModule } from './home.module';
+
 /**
  * The controller for the `app` component.
  */
@@ -25,7 +27,7 @@ class AuthedController {
  * This component renders the outermost chrome (application header and tabs, the compose  and logout button)
  * It has a `ui-view` viewport for nested states to fill in.
  */
-export const app = {
+const appComponent = {
   controller: AuthedController,
   template: `
     <div class="navheader">
@@ -55,3 +57,5 @@ export const app = {
     <div ui-view/>
 `
 };
+
+homeModule.component('app', appComponent);

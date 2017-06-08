@@ -1,7 +1,9 @@
+import { mymessagesModule } from './mymessages.module';
+
 /**
  * Renders a list of folders
  */
-export const folderList = {
+const folderListComponent = {
   bindings: {folders: '<'},
 
   template: `
@@ -20,3 +22,5 @@ export const folderList = {
       </ul>
     </div>
 `};
+
+mymessagesModule.component('folderList', folderListComponent);

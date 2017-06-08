@@ -5,7 +5,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { UIRouterModule } from '@uirouter/angular';
 
-
 let PREFS_STATES = [ prefsState ];
 
 /** The NgModule for the Preferences feature */

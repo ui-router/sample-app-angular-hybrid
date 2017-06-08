@@ -1,4 +1,5 @@
 import * as angular from "angular";
+import { mymessagesModule } from './mymessages.module';
 
 /**
  * The controller for the Compose component
@@ -77,7 +78,7 @@ class ComposeController {
  * A Save As Draft button saves the message to the "drafts" folder.
  * A Send button sends the message
  */
-export const compose = {
+const composeComponent = {
   bindings: { $stateParams: '<', $transition$: '<' },
 
   controller: ComposeController,
@@ -102,3 +103,5 @@ export const compose = {
     </div>
 `
 };
+
+mymessagesModule.component('compose', composeComponent);

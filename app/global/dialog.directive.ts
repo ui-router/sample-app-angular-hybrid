@@ -1,4 +1,6 @@
-export const dialog = function($timeout, $q) {
+import { globalModule } from './global.module';
+
+const dialogDirective = function($timeout, $q) {
   return {
     link: (scope, elem) => {
       $timeout(() => elem.addClass('active'));
@@ -23,3 +25,5 @@ export const dialog = function($timeout, $q) {
 `
   }
 };
+
+globalModule.directive('dialog', dialogDirective);

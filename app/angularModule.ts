@@ -5,13 +5,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { UIRouterModule } from '@uirouter/angular';
 import { UIRouterUpgradeModule } from '@uirouter/angular-hybrid';
 
-import { PrefsModule } from '../prefs';
+import { PrefsModule } from './prefs/prefs.module';
 
-// Add all Angular Future States to the root Angular NgModule
+// Create a "future state" (a placeholder) for the Contacts
+// Angular module which will be lazy loaded by UI-Router
 export const contactsFutureState = {
   name: 'contacts.**',
   url: '/contacts',
-  loadChildren: '../contacts/contacts.module#ContactsModule',
+  loadChildren: './contacts/contacts.module#ContactsModule',
 };
 
 export function getDialogService($injector) {
@@ -22,7 +23,7 @@ export function getContactsService($injector) {
   return $injector.get('Contacts');
 }
 
-// Create an NgModule for the Angular portion of the hybrid app
+// The main NgModule for the Angular portion of the hybrid app
 @NgModule({
   imports: [
     BrowserModule,
@@ -38,7 +39,7 @@ export function getContactsService($injector) {
     UIRouterModule.forChild({ states: [contactsFutureState] }),
   ],
   providers: [
-    // Provide SystemJsNgModuleLoader to use Angular lazy loading
+    // Provide the SystemJsNgModuleLoader when using Angular lazy loading
     { provide: NgModuleFactoryLoader, useClass: SystemJsNgModuleLoader },
 
     // Register some AngularJS services as Angular providers
@@ -46,7 +47,7 @@ export function getContactsService($injector) {
     { provide: 'Contacts', deps: ['$injector'], useFactory: getContactsService },
   ]
 })
-export class SampleAppModule {
+export class SampleAppModuleAngular {
   ngDoBootstrap() {
     /* no body: this disables normal (non-hybrid) Angular bootstrapping */
   }

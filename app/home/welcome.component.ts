@@ -1,4 +1,6 @@
-export const welcome = {
+import { homeModule } from './home.module';
+
+const welcomeComponent = {
   template: `
     <div class="container-fluid">
     
@@ -30,3 +32,5 @@ export const welcome = {
       </ul>
     </div>`
 };
+
+homeModule.component('welcome', welcomeComponent);

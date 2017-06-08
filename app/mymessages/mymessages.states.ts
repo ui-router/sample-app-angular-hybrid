@@ -1,10 +1,12 @@
+import { mymessagesModule } from './mymessages.module';
+
 /**
  * This state allows the user to compose a new message, edit a drafted message, send a message,
  * or save an unsent message as a draft.
  *
  * This state uses view-targeting to take over the ui-view that would normally be filled by the 'mymessages' state.
  */
-export const composeState = {
+const composeState = {
   name: 'mymessages.compose',
   url: '/compose',
   // Declares that this state has a 'message' parameter, that defaults to an empty object.
@@ -24,7 +26,7 @@ export const composeState = {
  * This state shows the list of folders for the current user. It retrieves the folders from the
  * Folders service.  If a user navigates directly to this state, the state redirects to the 'mymessages.messagelist'.
  */
-export const mymessagesState = {
+const mymessagesState = {
   parent: 'app',
   name: "mymessages",
   url: "/mymessages",
@@ -44,7 +46,7 @@ export const mymessagesState = {
  * This state shows the contents of a single message.
  * It also has UI to reply, forward, delete, or edit an existing draft.
  */
-export const messageState = {
+const messageState = {
   name: 'mymessages.messagelist.message',
   url: '/:messageId',
   resolve: {
@@ -65,7 +67,7 @@ export const messageState = {
 /**
  * This state shows the contents (a message list) of a single folder
  */
-export const messageListState = {
+const messageListState = {
   name: 'mymessages.messagelist',
   url: '/:folderId',
   // The folderId parameter is part of the URL.  This params block sets 'inbox' as the default value.
@@ -84,3 +86,10 @@ export const messageListState = {
     "messagelist": 'messageList'
   }
 };
+
+mymessagesModule.config(['$stateProvider', ($stateProvider) => {
+  $stateProvider.state(composeState);
+  $stateProvider.state(mymessagesState);
+  $stateProvider.state(messageState);
+  $stateProvider.state(messageListState);
+}]);

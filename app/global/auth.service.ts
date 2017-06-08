@@ -1,4 +1,6 @@
 import {AppConfig} from "./appConfig.service";
+import { globalModule } from './global.module';
+
 /**
  * This service emulates an Authentication Service.
  */
@@ -47,3 +49,5 @@ export class AuthService {
     this.AppConfig.save();
   }
 }
+
+globalModule.service('AuthService', AuthService);

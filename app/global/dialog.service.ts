@@ -1,4 +1,5 @@
 import * as angular from "angular";
+import { globalModule } from './global.module';
 
 export class DialogService {
   confirm;
@@ -14,3 +15,5 @@ export class DialogService {
     }
   }
 }
+
+globalModule.service('DialogService', DialogService);

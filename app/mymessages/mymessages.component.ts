@@ -1,3 +1,5 @@
+import { mymessagesModule } from './mymessages.module';
+
 /**
  * The main mymessages component.
  *
@@ -5,7 +7,7 @@
  * - messageList: filled with the list of messages for a folder
  * - messagecontent: filled with the contents of a single message.
  */
-export const mymessages = {
+const mymessagesComponent = {
   bindings: {folders: '<'},
 
   template: `
@@ -22,3 +24,5 @@ export const mymessages = {
     <!-- A named ui-view for a message's contents.  The 'mymessages.messagelist.message' grandchild state plugs into this ui-view -->
     <div ui-view="messagecontent"></div>
 `};
+
+mymessagesModule.component('mymessages', mymessagesComponent);

@@ -6,7 +6,7 @@ var path = require('path');
 
 module.exports = {
   entry: {
-    "sampleapp": "./app/bootstrap/bootstrap.ts",
+    "sampleapp": "./app/main.ts",
 
     "vendor": [
       'angular',
@@ -42,7 +42,7 @@ module.exports = {
   plugins: [
     // new webpack.optimize.UglifyJsPlugin({ sourceMap: true, minimize: true }),
     new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'vendor.bundle.js'}),
-    new AotPlugin({ tsConfigPath: 'tsconfig.json', mainPath: 'app/bootstrap/bootstrap.ts' }),
+    new AotPlugin({ tsConfigPath: 'tsconfig.json', mainPath: 'app/main.ts' }),
   ],
 
   module: {

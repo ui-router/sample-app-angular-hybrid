@@ -1,5 +1,7 @@
+import { mymessagesModule } from '../mymessages.module';
+
 /** Provides services related to a message list */
-export class MessageListUI {
+class MessageListUI {
   constructor(public $filter, public AppConfig) { }
 
   /** This is a UI helper which finds the nearest messageId in the messages list to the messageId parameter */
@@ -10,3 +12,5 @@ export class MessageListUI {
     return proximalIdx >= 0 ? sorted[proximalIdx]._id : undefined;
   }
 }
+
+mymessagesModule.service('MessageListUI', MessageListUI);

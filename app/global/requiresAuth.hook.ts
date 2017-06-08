@@ -1,3 +1,5 @@
+import { globalModule } from './global.module';
+
 /**
  * This file contains a Transition Hook which protects a
  * route that requires authentication.
@@ -6,7 +8,7 @@
  * - The user is not authenticated
  * - The user is navigating to a state that requires authentication
  */
-export function authHookRunBlock($transitions, AuthService) {
+function authHookRunBlock($transitions, AuthService) {
   // Matches if the destination state's data property has a truthy 'requiresAuth' property
   let requiresAuthCriteria = {
     to: (state) => state.data && state.data.requiresAuth
@@ -26,3 +28,5 @@ export function authHookRunBlock($transitions, AuthService) {
   // Register the "requires auth" hook with the TransitionsService
   $transitions.onBefore(requiresAuthCriteria, redirectToLogin, {priority: 10});
 }
+
+globalModule.run(authHookRunBlock);

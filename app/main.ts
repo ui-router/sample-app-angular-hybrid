@@ -21,46 +21,31 @@
  * and bootstraps the hybrid application
  */
 
-
-//////////////////// APP MODULES ///////////////
-// Create the angular 1 module for the application
-import { ngmodule } from "./angularJSModule";
-
-// import all the sub module definitions
-// This registers each app module's states, directives, components, filters,
-// services, and config/run blocks with the ngmodule
-import '../global/index';
-import '../main/index';
-import '../mymessages/index';
-import '../prefs/index';
-
 // Google analytics
-import '../util/ga';
+import './util/ga';
 
 ////////////// HYBRID BOOTSTRAP ///////////////
-
-import * as angular from 'angular';
-
 import { Injector } from '@angular/core';
 import { UpgradeModule } from '@angular/upgrade/static';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { UIRouter, UrlService } from '@uirouter/core';
+import { visualizer } from '@uirouter/visualizer';
 
-import { SampleAppModule } from './angularModule';
+import { SampleAppModuleAngular } from './angularModule';
+import { sampleAppModuleAngularJS } from "./angularJSModule";
 
-
-// Tell UI-Router to wait to synchronize the URL (until all bootstrapping is complete)e
-ngmodule.config([ '$urlServiceProvider', ($urlService: UrlService) => $urlService.deferIntercept() ]);
+// Using AngularJS config block, call `deferIntercept()`.
+// This tells UI-Router to delay the initial URL sync (until all bootstrapping is complete)
+sampleAppModuleAngularJS.config([ '$urlServiceProvider', ($urlService: UrlService) => $urlService.deferIntercept() ]);
 
 // Manually bootstrap the Angular app
-// The DOM must be already be available
-platformBrowserDynamic().bootstrapModule(SampleAppModule).then(platformRef => {
+platformBrowserDynamic().bootstrapModule(SampleAppModuleAngular).then(platformRef => {
   const injector: Injector = platformRef.injector;
   const upgrade = injector.get(UpgradeModule) as UpgradeModule;
 
-  // Manually bootstrap the AngularJS app
-  upgrade.bootstrap(document.body, ['demo']);
+  // The DOM must be already be available
+  upgrade.bootstrap(document.body, [sampleAppModuleAngularJS.name]);
 
   // Intialize the Angular Module (get() any UIRouter service from DI to initialize it)
   const url: UrlService = injector.get(UIRouter).urlService;
@@ -69,3 +54,6 @@ platformBrowserDynamic().bootstrapModule(SampleAppModule).then(platformRef => {
   url.listen();
   url.sync();
 });
+
+// Show ui-router-visualizer
+sampleAppModuleAngularJS.run(['$uiRouter', ($uiRouter) => visualizer($uiRouter) ]);

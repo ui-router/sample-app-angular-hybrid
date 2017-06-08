@@ -1,3 +1,5 @@
+import { mymessagesModule } from './mymessages.module';
+
 /**
  * A component that displays a folder of messages as a table
  * 
@@ -7,7 +9,7 @@
  * 
  * Shows/hides specific columns based on the `columns` input binding.
  */
-export const messageTable = {
+const messageTableComponent = {
   bindings: { columns: '<', messages: '<' },
 
   controller: function(AppConfig) {
@@ -40,3 +42,5 @@ export const messageTable = {
   
     </table>
 `};
+
+mymessagesModule.component('messageTable', messageTableComponent);

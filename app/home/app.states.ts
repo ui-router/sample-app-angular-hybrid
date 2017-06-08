@@ -1,3 +1,5 @@
+import { homeModule } from './home.module';
+
 /**
  * This is the parent state for the entire application.
  *
@@ -5,7 +7,7 @@
  * 1) Shows the outermost chrome (including the navigation and logout for authenticated users)
  * 2) Provide a viewport (ui-view) for a substate to plug into
  */
-export const appState = {
+const appState = {
   name: 'app',
   redirectTo: 'welcome',
   component: 'app'
@@ -15,7 +17,7 @@ export const appState = {
  * This is the 'welcome' state.  It is the default state (as defined by app.js) if no other state
  * can be matched to the URL.
  */
-export const welcomeState = {
+const welcomeState = {
   parent: 'app',
   name: 'welcome',
   url: '/welcome',
@@ -28,7 +30,7 @@ export const welcomeState = {
  *
  * It shows giant buttons which activate their respective submodules: Messages, Contacts, Preferences
  */
-export const homeState = {
+const homeState = {
   parent: 'app',
   name: 'home',
   url: '/home',
@@ -43,7 +45,7 @@ export const homeState = {
  * It shows a fake login dialog and prompts the user to authenticate.  Once the user authenticates, it then
  * reactivates the state that the user originally came from.
  */
-export const loginState = {
+const loginState = {
   parent: 'app',
   name: 'login',
   url: '/login',
@@ -76,3 +78,10 @@ function returnTo ($transition$): any {
   // If the fromState's name is empty, then this was the initial transition. Just return them to the home state
   return $state.target('home');
 }
+
+homeModule.config(['$stateProvider', ($stateProvider) => {
+  $stateProvider.state(appState);
+  $stateProvider.state(welcomeState);
+  $stateProvider.state(homeState);
+  $stateProvider.state(loginState);
+}]);
