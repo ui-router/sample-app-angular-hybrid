@@ -49,13 +49,4 @@ module.exports = {
       { test: /\.tsx?$/,  use: [ "@ngtools/webpack" ] },
     ]
   },
-
-  externals: {
-    '@angular/compiler': {
-      commonjs: "@angular/compiler",
-      commonjs2: "@angular/compiler",
-      amd: "@angular/compiler",
-      root: "@angular/compiler"
-    }
-  }
 };
