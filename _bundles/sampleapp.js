@@ -1,24 +1,106 @@
-webpackJsonp([1],{
-
-/***/ 128:
+webpackJsonp([1],[
+/* 0 */,
+/* 1 */,
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __param = (this && this.__param) || function (paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(8);
+var angular = __webpack_require__(7);
+// The angularjs module for 'mymessages'
+// This module is imported in each of the
+exports.mymessagesModule = angular.module('mymessages', ['ui.router']);
+//# sourceMappingURL=mymessages.module.js.map
+
+/***/ }),
+/* 10 */,
+/* 11 */,
+/* 12 */,
+/* 13 */,
+/* 14 */,
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var angular = __webpack_require__(7);
+exports.globalModule = angular.module('global', ['ui.router']);
+//# sourceMappingURL=global.module.js.map
+
+/***/ }),
+/* 16 */,
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var angular = __webpack_require__(7);
+exports.homeModule = angular.module('main', ['ui.router']);
+//# sourceMappingURL=home.module.js.map
+
+/***/ }),
+/* 18 */,
+/* 19 */,
+/* 20 */,
+/* 21 */,
+/* 22 */,
+/* 23 */,
+/* 24 */,
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */,
+/* 35 */,
+/* 36 */,
+/* 37 */,
+/* 38 */,
+/* 39 */,
+/* 40 */,
+/* 41 */,
+/* 42 */,
+/* 43 */,
+/* 44 */,
+/* 45 */,
+/* 46 */,
+/* 47 */,
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */,
+/* 56 */,
+/* 57 */,
+/* 58 */,
+/* 59 */,
+/* 60 */,
+/* 61 */,
+/* 62 */,
+/* 63 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(4);
 var PrefsComponent = (function () {
     function PrefsComponent(AppConfig) {
         this.AppConfig = AppConfig;
@@ -38,22 +120,158 @@ var PrefsComponent = (function () {
         Object.assign(this.AppConfig, { restDelay: this.prefs.restDelay }).save();
         document.location.reload(true);
     };
+    PrefsComponent.ctorParameters = function () { return [{ type: undefined, decorators: [{ type: core_1.Inject, args: ['AppConfig'] }] }]; };
     return PrefsComponent;
 }());
-PrefsComponent = __decorate([
-    core_1.Component({
-        selector: 'prefs-component',
-        template: "\n      <div>\n          <button class=\"btn btn-primary\" (click)=\"reset()\"><i class=\"fa fa-recycle\"></i> <span>Reset All Data</span></button>\n      </div>\n\n      <div>\n          <label for=\"restDelay\">Simulated REST API delay (ms)</label>\n          <input type=\"text\" name=\"restDelay\" [(ngModel)]=\"prefs.restDelay\">\n          <button class=\"btn btn-primary\" (click)=\"savePrefs()\">Save</button>\n      </div>\n  ",
-    }),
-    __param(0, core_1.Inject('AppConfig')),
-    __metadata("design:paramtypes", [Object])
-], PrefsComponent);
 exports.PrefsComponent = PrefsComponent;
-
+//# sourceMappingURL=prefs.component.js.map
 
 /***/ }),
+/* 64 */,
+/* 65 */,
+/* 66 */,
+/* 67 */,
+/* 68 */,
+/* 69 */,
+/* 70 */,
+/* 71 */,
+/* 72 */,
+/* 73 */,
+/* 74 */,
+/* 75 */,
+/* 76 */,
+/* 77 */,
+/* 78 */,
+/* 79 */,
+/* 80 */,
+/* 81 */
+/***/ (function(module, exports, __webpack_require__) {
 
-/***/ 129:
+"use strict";
+
+/**
+ * This file imports the third party library dependencies, then creates the angular module "demo"
+ * and exports it.
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+// External dependencies
+var angular = __webpack_require__(7);
+var angularjs_1 = __webpack_require__(36);
+var angular_hybrid_1 = __webpack_require__(82);
+// Feature Modules
+var index_1 = __webpack_require__(135);
+var index_2 = __webpack_require__(140);
+var index_3 = __webpack_require__(150);
+// Create the angular 1 module "demo".
+//
+// Since it is exported, other parts of the application (in other files) can then import it and register things.
+// In bootstrap.js, the module is imported, and the components, services, and states are registered.
+exports.sampleAppModuleAngularJS = angular.module("sampleapp", [
+    angularjs_1.default,
+    angular_hybrid_1.upgradeModule.name,
+    index_2.homeModule.name,
+    index_1.globalModule.name,
+    index_3.mymessagesModule.name,
+]);
+// Apply some global configuration...
+// If the user enters a URL that doesn't match any known URL (state), send them to `/welcome`
+var otherwiseConfigBlock = ['$urlRouterProvider', function ($urlRouterProvider) { $urlRouterProvider.otherwise("/welcome"); }];
+exports.sampleAppModuleAngularJS.config(otherwiseConfigBlock);
+// Enable tracing of each TRANSITION... (check the javascript console)
+// This syntax `$trace.enable(1)` is an alternative to `$trace.enable("TRANSITION")`.
+// Besides "TRANSITION", you can also enable tracing for : "RESOLVE", "HOOK", "INVOKE", "UIVIEW", "VIEWCONFIG"
+var traceRunBlock = ['$trace', function ($trace) { $trace.enable(1); }];
+exports.sampleAppModuleAngularJS.run(traceRunBlock);
+//# sourceMappingURL=angularJSModule.js.map
+
+/***/ }),
+/* 82 */,
+/* 83 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file is generated by the Angular template compiler.
+ * Do not edit.
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride}
+ */
+/* tslint:disable */
+Object.defineProperty(exports, "__esModule", { value: true });
+var import0 = __webpack_require__(4);
+var import1 = __webpack_require__(10);
+var import2 = __webpack_require__(14);
+var import3 = __webpack_require__(28);
+var styles_UIView = [];
+exports.RenderType_UIView = import0.ɵcrt({
+    encapsulation: 2,
+    styles: styles_UIView,
+    data: {}
+});
+function View_UIView_1(l) {
+    return import0.ɵvid(0, [(l()(), import0.ɵand(0, null, null, 0))], null, null);
+}
+function View_UIView_2(l) {
+    return import0.ɵvid(0, [
+        import0.ɵncd(null, 0),
+        (l()(), import0.ɵand(0, null, null, 0))
+    ], null, null);
+}
+function View_UIView_0(l) {
+    return import0.ɵvid(0, [
+        import0.ɵqud(402653184, 1, { componentTarget: 0 }),
+        (l()(), import0.ɵted(null, ['\n    '])),
+        (l()(), import0.ɵand(16777216, [
+            [
+                1,
+                3
+            ],
+            [
+                'componentTarget',
+                2
+            ]
+        ], null, 0, null, View_UIView_1)),
+        (l()(), import0.ɵted(null, ['\n    '])),
+        (l()(), import0.ɵand(16777216, null, null, 1, null, View_UIView_2)),
+        import0.ɵdid(16384, null, 0, import1.NgIf, [
+            import0.ViewContainerRef,
+            import0.TemplateRef
+        ], { ngIf: [
+                0,
+                'ngIf'
+            ]
+        }, null),
+        (l()(), import0.ɵted(null, ['\n  ']))
+    ], function (ck, v) {
+        var co = v.component;
+        var currVal_0 = !co.componentRef;
+        ck(v, 5, 0, currVal_0);
+    }, null);
+}
+exports.View_UIView_0 = View_UIView_0;
+function View_UIView_Host_0(l) {
+    return import0.ɵvid(0, [
+        (l()(), import0.ɵeld(16777216, null, null, 1, 'ui-view', [], null, null, null, View_UIView_0, exports.RenderType_UIView)),
+        import0.ɵdid(245760, null, 0, import2.UIView, [
+            import3.UIRouter,
+            'UIView.PARENT_INJECT',
+            import0.ViewContainerRef
+        ], null, null)
+    ], function (ck, v) {
+        ck(v, 1, 0);
+    }, null);
+}
+exports.UIViewNgFactory = import0.ɵccf('ui-view, [ui-view]', import2.UIView, View_UIView_Host_0, {
+    name: 'name',
+    _name: 'ui-view'
+}, {}, ['*']);
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL1VzZXJzL2N0aGllbGVuL3Byb2plY3RzL3Vpcm91dGVyL3NhbXBsZS1hcHAtbmcxLXRvLW5nMi9ub2RlX21vZHVsZXMvQHVpcm91dGVyL2FuZ3VsYXIvbGliL2RpcmVjdGl2ZXMvdWlWaWV3Lm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL1VzZXJzL2N0aGllbGVuL3Byb2plY3RzL3Vpcm91dGVyL3NhbXBsZS1hcHAtbmcxLXRvLW5nMi9ub2RlX21vZHVsZXMvQHVpcm91dGVyL2FuZ3VsYXIvbGliL2RpcmVjdGl2ZXMvdWlWaWV3LmQudHMiLCJuZzovLy9Vc2Vycy9jdGhpZWxlbi9wcm9qZWN0cy91aXJvdXRlci9zYW1wbGUtYXBwLW5nMS10by1uZzIvbm9kZV9tb2R1bGVzL0B1aXJvdXRlci9hbmd1bGFyL2xpYi9kaXJlY3RpdmVzL3VpVmlldy5kLnRzLlVJVmlldy5odG1sIiwibmc6Ly8vVXNlcnMvY3RoaWVsZW4vcHJvamVjdHMvdWlyb3V0ZXIvc2FtcGxlLWFwcC1uZzEtdG8tbmcyL25vZGVfbW9kdWxlcy9AdWlyb3V0ZXIvYW5ndWxhci9saWIvZGlyZWN0aXZlcy91aVZpZXcuZC50cy5VSVZpZXdfSG9zdC5odG1sIl0sInNvdXJjZXNDb250ZW50IjpbIiAiLCJcbiAgICA8bmctdGVtcGxhdGUgI2NvbXBvbmVudFRhcmdldD48L25nLXRlbXBsYXRlPlxuICAgIDxuZy1jb250ZW50ICpuZ0lmPVwiIWNvbXBvbmVudFJlZlwiPjwvbmctY29udGVudD5cbiAgIiwiPHVpLXZpZXc+PC91aS12aWV3PiJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztnQkNFSTs7Ozs7Ozs7SUFGSjtJQUNJO01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O0lBQUE7S0FBQTtJQUE0QztJQUM1QztnQkFBQTs7O0lBQUE7T0FBQTtRQUFBO1FBQUE7TUFBQTtJQUFBO0lBQStDOzs7O0lBQW5DO0lBQVosU0FBWSxTQUFaOzs7OztJQ0ZKO2dCQUFBOztNQUFBOztJQUFBO0tBQUE7OztJQUFBOzs7Ozs7OyJ9
+//# sourceMappingURL=uiView.ngfactory.js.map
+
+/***/ }),
+/* 84 */,
+/* 85 */,
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66,114 +284,973 @@ exports.uniqReduce = function (arr, item) { return arr.indexOf(item) !== -1 ? ar
 exports.flattenReduce = function (arr, item) { return arr.concat(item); };
 var guidChar = function (c) { return c !== 'x' && c !== 'y' ? '-' : Math.floor(Math.random() * 16).toString(16).toUpperCase(); };
 exports.guid = function () { return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".split("").map(guidChar).join(""); };
-
+//# sourceMappingURL=util.js.map
 
 /***/ }),
+/* 87 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-/***/ 175:
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "upgradeModule", function() { return upgradeModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UIViewNgUpgrade", function() { return UIViewNgUpgrade; });
+/* harmony export (immutable) */ __webpack_exports__["uiRouterUpgradeFactory"] = uiRouterUpgradeFactory;
+/* harmony export (immutable) */ __webpack_exports__["getUIRouter"] = getUIRouter;
+/* harmony export (immutable) */ __webpack_exports__["getParentUIViewInject"] = getParentUIViewInject;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UIRouterUpgradeModule", function() { return UIRouterUpgradeModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_angular__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_upgrade_static__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__uirouter_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__uirouter_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__uirouter_core__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__uirouter_angular__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__uirouter_angularjs__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__uirouter_angularjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__uirouter_angularjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__uirouter_rx__ = __webpack_require__(37);
+
+
+
+
+
+
+
+/**
+ * Create a ng1 module for the ng1 half of the hybrid application to depend on.
+ *
+ * Example:
+ * const myApp = angular.module('myApp', ['ui.router.upgrade']);
+ */
+var upgradeModule = __WEBPACK_IMPORTED_MODULE_0_angular__["module"]('ui.router.upgrade', ['ui.router']);
+/**
+ * UIViewNgUpgrade is a component bridge from ng1 ui-view to ng2 ui-view
+ *
+ * When a ui-router for ng1 is registering a state it checks if a view's
+ * `component:` is an ng2 Component class. If so, it creates a special ng1 template
+ * which references this component, i.e., <ui-view-ng-upgrade></ui-view-ng-upgrade>
+ *
+ * See that code by searching ng1-to-ng2 source for: "$stateProvider.decorator"
+ *
+ * ---
+ *
+ * ng1-to-ng2 component bridge process:
+ *
+ * 1)
+ * When an ng1 template creates a ui-view which is targeted by a ng2 Component,
+ *
+ * ```
+ * <a ui-sref="foo">Go to foo</a>
+ * <div ui-view> <!-- ui-view created in ng1 template -->
+ * </div> <!-- targeted with { component: Ng2RoutedComponent } -->
+ * ```
+ *
+ * the state decorator spits out a custom template.  That template loads this
+ * ng2 Component adapter as a downgraded-to-ng1 directive.
+ *
+ * ```
+ * <a ui-sref="foo">Go to foo</a>
+ * <div ui-view> <!-- decorated template references the downgraded component -->
+ *   <ui-view-ng-upgrade> <!-- downgraded adapter component -->
+ *   </ui-view-ng-upgrade>
+ * </div>
+ * ```
+ *
+ * This downgraded ng2 Component then creates a child UIView (ng2 component)
+ *
+ * ```
+ * <a ui-sref="foo">Go to foo</a>
+ * <div ui-view> <!-- custom template references the downgraded component -->
+ *   <ui-view-ng-upgrade> <!-- ng2 component adapter downgraded to ng1-->
+ *     <ui-view> <!-- pure ng2 ui-view -->
+ *      </ui-view>
+ *   </ui-view-ng-upgrade>
+ * </div>
+ * ```
+ *
+ * which in turn is filled with the routed ng2 component.
+ *
+ * ```
+ * <a ui-sref="foo">Go to foo</a>
+ * <div ui-view> <!-- ng1 ui-view -->
+ *   <ui-view-ng-upgrade> <!-- ng2 component adapter (downgraded to ng1)-->
+ *     <ui-view> <!-- pure ng2 ui-view -->
+ *       <ng2-routed-component> <!-- ng2 component hosted in ng2 ui-view -->
+ *         <h1>ng2 routed component contents</h1>
+ *       </ng2-routed-component>
+ *     </ui-view>
+ *   </ui-view-ng-upgrade>
+ * </div>
+ * ```
+ *
+ * This adapter exposes exposes the parent view context (ParentUIViewInject)
+ * as an ng2 DI Provider, which the nested ng2 UIView requires.
+ *
+ * It gets the ParentUIViewContext information (from the parent ng1 ui-view) by walking
+ * up the DOM and grabbing the .data('$uiView') which the ng1 ui-view directive exposes.
+ */
+var UIViewNgUpgrade = (function () {
+    function UIViewNgUpgrade(ref, parent, registry // access the root state
+    ) {
+        // From the ui-view-ng-upgrade component's element ref, walk up the DOM two elements...
+        // There will first be an ng1 ui-view which hosts this element, and then that ui-view's parent element.
+        // That (parent) element has access to the proper "parent viewcontext"
+        // The ng2 ui-view component is inside this ui-view-ng-upgrade directive, which is inside the ng1 "host" ui-view.
+        // Both ui-views share the same "view context" information (the view's fqn and created-by-state context information)
+        var ng1elem = __WEBPACK_IMPORTED_MODULE_0_angular__["element"](ref.nativeElement).parent().parent();
+        // Expose getters on PARENT_INJECT for context (creation state) and fqn (view address)
+        // These will be used by further nested UIView
+        Object.defineProperty(parent, "context", {
+            get: function () {
+                var data = ng1elem['inheritedData']('$uiView');
+                return (data && data.$cfg) ? data.$cfg.viewDecl.$context : registry.root();
+            },
+            enumerable: true
+        });
+        Object.defineProperty(parent, "fqn", {
+            get: function () {
+                var data = ng1elem['inheritedData']('$uiView');
+                return (data && data.$uiView) ? data.$uiView.fqn : null;
+            },
+            enumerable: true
+        });
+    }
+    return UIViewNgUpgrade;
+}());
+
+UIViewNgUpgrade.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"], args: [{
+                selector: 'ui-view-ng-upgrade',
+                template: "<ui-view [name]=\"name\"></ui-view>",
+                // provide a blank object as PARENT_INJECT.
+                // The component will add property getters when it is constructed.
+                viewProviders: [{ provide: __WEBPACK_IMPORTED_MODULE_4__uirouter_angular__["UIView"].PARENT_INJECT, useValue: {} }],
+            },] },
+];
+/** @nocollapse */
+UIViewNgUpgrade.ctorParameters = function () { return [
+    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ElementRef"], },
+    { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Inject"], args: [__WEBPACK_IMPORTED_MODULE_4__uirouter_angular__["UIView"].PARENT_INJECT,] },] },
+    { type: __WEBPACK_IMPORTED_MODULE_3__uirouter_core__["StateRegistry"], },
+]; };
+UIViewNgUpgrade.propDecorators = {
+    'name': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] },],
+};
+/**********************************
+ * Ng2 @NgModule and bootstrap code
+ **********************************/
+// Register the ng1 DI '$uiRouter' object as an ng2 Provider.
+function uiRouterUpgradeFactory(router, injector) {
+    var modules = injector.get(__WEBPACK_IMPORTED_MODULE_4__uirouter_angular__["UIROUTER_MODULE_TOKEN"], []);
+    modules.forEach(function (module) { return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__uirouter_angular__["applyModuleConfig"])(router, injector, module); });
+    return router;
+}
+function getUIRouter($injector) {
+    return $injector.get('$uiRouter');
+}
+function getParentUIViewInject(r) {
+    return { fqn: null, context: r.root() };
+}
+/**
+ * This NgModule should be added to the root module of the hybrid app.
+ */
+var UIRouterUpgradeModule = (function () {
+    function UIRouterUpgradeModule() {
+    }
+    return UIRouterUpgradeModule;
+}());
+
+UIRouterUpgradeModule.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"], args: [{
+                imports: [__WEBPACK_IMPORTED_MODULE_4__uirouter_angular__["UIRouterModule"], __WEBPACK_IMPORTED_MODULE_2__angular_upgrade_static__["UpgradeModule"]],
+                declarations: [UIViewNgUpgrade],
+                providers: [
+                    // @uirouter/angular code will use the ng1 $uiRouter instance instead of creating its own.
+                    { provide: '$uiRouter', useFactory: getUIRouter, deps: ['$injector'] },
+                    { provide: __WEBPACK_IMPORTED_MODULE_3__uirouter_core__["UIRouter"], useFactory: uiRouterUpgradeFactory, deps: ['$uiRouter', __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injector"]] },
+                    { provide: __WEBPACK_IMPORTED_MODULE_4__uirouter_angular__["UIROUTER_ROOT_MODULE"], useValue: {}, multi: true },
+                    { provide: __WEBPACK_IMPORTED_MODULE_4__uirouter_angular__["UIView"].PARENT_INJECT, useFactory: getParentUIViewInject, deps: [__WEBPACK_IMPORTED_MODULE_3__uirouter_core__["StateRegistry"]] }
+                ].concat(__WEBPACK_IMPORTED_MODULE_4__uirouter_angular__["_UIROUTER_SERVICE_PROVIDERS"]),
+                entryComponents: [
+                    UIViewNgUpgrade
+                ],
+                exports: [UIViewNgUpgrade, __WEBPACK_IMPORTED_MODULE_4__uirouter_angular__["UIRouterModule"]]
+            },] },
+];
+/** @nocollapse */
+UIRouterUpgradeModule.ctorParameters = function () { return []; };
+// Downgrade the UIViewNgUpgrade ng2 Component to an ng1 directive.
+// The directive is used in a (generated) view template by the (host) ng1 ui-router,
+// whenever it finds a view configured with a `component: <Ng2ComponentClass>`
+upgradeModule.directive("uiViewNgUpgrade", __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_upgrade_static__["downgradeComponent"])({
+    component: UIViewNgUpgrade,
+    inputs: ['name']
+}));
+upgradeModule.run(['$injector', function (ng1Injector) {
+        var $uiRouter = ng1Injector.get('$uiRouter');
+        /** Add support for observable state and param changes */
+        $uiRouter.plugin(__WEBPACK_IMPORTED_MODULE_6__uirouter_rx__["UIRouterRx"]);
+        // Expose a merged ng1/ng2 injector as a Resolvable (on the root state).
+        // This mimics how ui-router-ng2 exposes the root ng2 Injector, but
+        // it retrieves from ng1 injector first, then ng2 injector if the token isn't found.
+        var mergedInjector = {
+            get: function (token, ng2NotFoundValue) {
+                var ng2Injector = ng1Injector.get('$$angularInjector');
+                return (ng1Injector.has(token) && ng1Injector.get(token)) || ng2Injector.get(token, ng2NotFoundValue);
+            }
+        };
+        var ng2InjectorResolvable = __WEBPACK_IMPORTED_MODULE_3__uirouter_core__["Resolvable"].fromData(__WEBPACK_IMPORTED_MODULE_4__uirouter_angular__["NATIVE_INJECTOR_TOKEN"], mergedInjector);
+        $uiRouter.stateRegistry.root().resolvables.push(ng2InjectorResolvable);
+    }]);
+/** Adds support for `loadChildren`: Angular NgModule lazy loading via @gntools/webpack */
+upgradeModule.config(['$stateRegistryProvider', function ($stateRegistry) {
+        $stateRegistry.decorator('lazyLoad', __WEBPACK_IMPORTED_MODULE_4__uirouter_angular__["ng2LazyLoadBuilder"]);
+    }]);
+/**
+ * Define a stateProvider `views` builder decorator.
+ * The decorator first applies the standard views builder function.
+ * Then it finds any view components which are **actually** a Ng2 Component Class.
+ * It overwrites that view's config with a ng1-to-ng2 hybrid config.
+ *
+ * In place of the template provider, it simply puts a <ui-view-ng-upgrade/> component
+ * which that provides a ng1 -> ng2 boundary in the component tree.
+ */
+upgradeModule.config(['$stateRegistryProvider', function ($stateRegistry) {
+        $stateRegistry.decorator('views', function (state, parentFn) {
+            var views = parentFn(state);
+            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__uirouter_core__["forEach"])(views, function (viewDecl, viewName) {
+                if (viewDecl.$type === 'ng1-to-ng2' || typeof viewDecl.component === 'function') {
+                    // Update the view config.
+                    // Override default ng1 `component:` behavior (of defining a templateProvider)
+                    // with a <ui-view-ng-upgrade> adapter directive template
+                    viewDecl.$type = "ng1-to-ng2";
+                    viewDecl.templateProvider = null;
+                    viewDecl.template = "<ui-view-ng-upgrade name='" + viewDecl.$uiViewName + "'></ui-view-ng-upgrade>";
+                }
+            });
+            return views;
+        });
+    }]);
+// UI-Router ViewConfig factories take a view declaration object from a state.views: { foo: <ViewDeclaration> }
+// and return a runtime config object (a ViewConfig)
+upgradeModule.run(['$view', '$templateFactory', function ($view, $templateFactory) {
+        // Register a ViewConfig factory for views of type `ng2`
+        $view._pluginapi._viewConfigFactory('ng2', function (path, config) { return new __WEBPACK_IMPORTED_MODULE_4__uirouter_angular__["Ng2ViewConfig"](path, config); });
+        // Register a ViewConfig factory for views of type `ng1-to-ng2`.
+        // Returns both an ng1 config and an ng2 config allowing either ng1 or ng2 ui-view components to be targeted.
+        $view._pluginapi._viewConfigFactory('ng1-to-ng2', function (path, config) {
+            var ng1ViewConfig = new __WEBPACK_IMPORTED_MODULE_5__uirouter_angularjs__["Ng1ViewConfig"](path, Object.assign({}, config, { $type: 'ng1' }), $templateFactory);
+            var ng2ViewConfig = new __WEBPACK_IMPORTED_MODULE_4__uirouter_angular__["Ng2ViewConfig"](path, Object.assign({}, config, { $type: 'ng2' }));
+            return [ng2ViewConfig, ng1ViewConfig];
+        });
+    }]);
+//# sourceMappingURL=angular-hybrid.js.map
+
+/***/ }),
+/* 88 */,
+/* 89 */,
+/* 90 */,
+/* 91 */,
+/* 92 */,
+/* 93 */,
+/* 94 */,
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
+/* 107 */,
+/* 108 */,
+/* 109 */,
+/* 110 */,
+/* 111 */,
+/* 112 */,
+/* 113 */,
+/* 114 */,
+/* 115 */,
+/* 116 */,
+/* 117 */,
+/* 118 */,
+/* 119 */,
+/* 120 */,
+/* 121 */,
+/* 122 */,
+/* 123 */,
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+/**
+ * @fileoverview This file is generated by the Angular template compiler.
+ * Do not edit.
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride}
+ */
+/* tslint:disable */
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 Object.defineProperty(exports, "__esModule", { value: true });
-var ngmodule_1 = __webpack_require__(27);
-var angular_1 = __webpack_require__(33);
-// Add Future State to lazy load the Contacts ng2 module
-ngmodule_1.ngmodule.config(function ($stateProvider) {
-    $stateProvider.state({
-        name: 'contacts.**',
-        url: '/contacts',
-        // loadNgModule lazy loads an Angular 2 NgModule (or UIRouterModule)
-        lazyLoad: angular_1.loadNgModule(function () { return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 504)).then(function (result) { return result.ContactsModule; }); })
+var import0 = __webpack_require__(4);
+var import1 = __webpack_require__(129);
+var import2 = __webpack_require__(10);
+var import3 = __webpack_require__(26);
+var import4 = __webpack_require__(27);
+var import5 = __webpack_require__(29);
+var import6 = __webpack_require__(87);
+var import7 = __webpack_require__(38);
+var import8 = __webpack_require__(158);
+var import9 = __webpack_require__(83);
+var import10 = __webpack_require__(128);
+var import11 = __webpack_require__(127);
+var import12 = __webpack_require__(43);
+var import13 = __webpack_require__(63);
+var import14 = __webpack_require__(28);
+var import15 = __webpack_require__(48);
+var import16 = __webpack_require__(40);
+var import17 = __webpack_require__(30);
+var import18 = __webpack_require__(51);
+var import19 = __webpack_require__(52);
+var import20 = __webpack_require__(53);
+var import21 = __webpack_require__(55);
+var import22 = __webpack_require__(39);
+var import23 = __webpack_require__(41);
+var SampleAppModuleAngularInjector = (function (_super) {
+    __extends(SampleAppModuleAngularInjector, _super);
+    function SampleAppModuleAngularInjector(parent) {
+        return _super.call(this, parent, [
+            import9.UIViewNgFactory,
+            import10.UIViewNgUpgradeNgFactory,
+            import11.PrefsComponentNgFactory
+        ], []) || this;
+    }
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_LOCALE_ID_15", {
+        get: function () {
+            if ((this.__LOCALE_ID_15 == null)) {
+                (this.__LOCALE_ID_15 = import0.ɵn(this.parent.get(import0.LOCALE_ID, null)));
+            }
+            return this.__LOCALE_ID_15;
+        },
+        enumerable: true,
+        configurable: true
     });
-});
-
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_NgLocalization_16", {
+        get: function () {
+            if ((this.__NgLocalization_16 == null)) {
+                (this.__NgLocalization_16 = new import2.NgLocaleLocalization(this._LOCALE_ID_15));
+            }
+            return this.__NgLocalization_16;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_Compiler_17", {
+        get: function () {
+            if ((this.__Compiler_17 == null)) {
+                (this.__Compiler_17 = new import0.Compiler());
+            }
+            return this.__Compiler_17;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_APP_ID_18", {
+        get: function () {
+            if ((this.__APP_ID_18 == null)) {
+                (this.__APP_ID_18 = import0.ɵg());
+            }
+            return this.__APP_ID_18;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_IterableDiffers_19", {
+        get: function () {
+            if ((this.__IterableDiffers_19 == null)) {
+                (this.__IterableDiffers_19 = import0.ɵl());
+            }
+            return this.__IterableDiffers_19;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_KeyValueDiffers_20", {
+        get: function () {
+            if ((this.__KeyValueDiffers_20 == null)) {
+                (this.__KeyValueDiffers_20 = import0.ɵm());
+            }
+            return this.__KeyValueDiffers_20;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_DomSanitizer_21", {
+        get: function () {
+            if ((this.__DomSanitizer_21 == null)) {
+                (this.__DomSanitizer_21 = new import3.ɵe(this.parent.get(import3.DOCUMENT)));
+            }
+            return this.__DomSanitizer_21;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_Sanitizer_22", {
+        get: function () {
+            if ((this.__Sanitizer_22 == null)) {
+                (this.__Sanitizer_22 = this._DomSanitizer_21);
+            }
+            return this.__Sanitizer_22;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_HAMMER_GESTURE_CONFIG_23", {
+        get: function () {
+            if ((this.__HAMMER_GESTURE_CONFIG_23 == null)) {
+                (this.__HAMMER_GESTURE_CONFIG_23 = new import3.HammerGestureConfig());
+            }
+            return this.__HAMMER_GESTURE_CONFIG_23;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_EVENT_MANAGER_PLUGINS_24", {
+        get: function () {
+            if ((this.__EVENT_MANAGER_PLUGINS_24 == null)) {
+                (this.__EVENT_MANAGER_PLUGINS_24 = [
+                    new import3.ɵDomEventsPlugin(this.parent.get(import3.DOCUMENT)),
+                    new import3.ɵKeyEventsPlugin(this.parent.get(import3.DOCUMENT)),
+                    new import3.ɵHammerGesturesPlugin(this.parent.get(import3.DOCUMENT), this._HAMMER_GESTURE_CONFIG_23)
+                ]);
+            }
+            return this.__EVENT_MANAGER_PLUGINS_24;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_EventManager_25", {
+        get: function () {
+            if ((this.__EventManager_25 == null)) {
+                (this.__EventManager_25 = new import3.EventManager(this._EVENT_MANAGER_PLUGINS_24, this.parent.get(import0.NgZone)));
+            }
+            return this.__EventManager_25;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_\u0275DomSharedStylesHost_26", {
+        get: function () {
+            if ((this.__ɵDomSharedStylesHost_26 == null)) {
+                (this.__ɵDomSharedStylesHost_26 = new import3.ɵDomSharedStylesHost(this.parent.get(import3.DOCUMENT)));
+            }
+            return this.__ɵDomSharedStylesHost_26;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_\u0275DomRendererFactory2_27", {
+        get: function () {
+            if ((this.__ɵDomRendererFactory2_27 == null)) {
+                (this.__ɵDomRendererFactory2_27 = new import3.ɵDomRendererFactory2(this._EventManager_25, this._ɵDomSharedStylesHost_26));
+            }
+            return this.__ɵDomRendererFactory2_27;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_RendererFactory2_28", {
+        get: function () {
+            if ((this.__RendererFactory2_28 == null)) {
+                (this.__RendererFactory2_28 = this._ɵDomRendererFactory2_27);
+            }
+            return this.__RendererFactory2_28;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_\u0275SharedStylesHost_29", {
+        get: function () {
+            if ((this.__ɵSharedStylesHost_29 == null)) {
+                (this.__ɵSharedStylesHost_29 = this._ɵDomSharedStylesHost_26);
+            }
+            return this.__ɵSharedStylesHost_29;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_Testability_30", {
+        get: function () {
+            if ((this.__Testability_30 == null)) {
+                (this.__Testability_30 = new import0.Testability(this.parent.get(import0.NgZone)));
+            }
+            return this.__Testability_30;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_Meta_31", {
+        get: function () {
+            if ((this.__Meta_31 == null)) {
+                (this.__Meta_31 = new import3.Meta(this.parent.get(import3.DOCUMENT)));
+            }
+            return this.__Meta_31;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_Title_32", {
+        get: function () {
+            if ((this.__Title_32 == null)) {
+                (this.__Title_32 = new import3.Title(this.parent.get(import3.DOCUMENT)));
+            }
+            return this.__Title_32;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "__injector_33", {
+        get: function () {
+            if ((this.___injector_33 == null)) {
+                (this.___injector_33 = import4.ɵa());
+            }
+            return this.___injector_33;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "__rootScope_34", {
+        get: function () {
+            if ((this.___rootScope_34 == null)) {
+                (this.___rootScope_34 = import4.ɵb(this.__injector_33));
+            }
+            return this.___rootScope_34;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "__compile_35", {
+        get: function () {
+            if ((this.___compile_35 == null)) {
+                (this.___compile_35 = import4.ɵc(this.__injector_33));
+            }
+            return this.___compile_35;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "__parse_36", {
+        get: function () {
+            if ((this.___parse_36 == null)) {
+                (this.___parse_36 = import4.ɵd(this.__injector_33));
+            }
+            return this.___parse_36;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "__uiRouter_37", {
+        get: function () {
+            if ((this.___uiRouter_37 == null)) {
+                (this.___uiRouter_37 = import6.getUIRouter(this.__injector_33));
+            }
+            return this.___uiRouter_37;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_UIRouter_38", {
+        get: function () {
+            if ((this.__UIRouter_38 == null)) {
+                (this.__UIRouter_38 = import6.uiRouterUpgradeFactory(this.__uiRouter_37, this));
+            }
+            return this.__UIRouter_38;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_StateRegistry_40", {
+        get: function () {
+            if ((this.__StateRegistry_40 == null)) {
+                (this.__StateRegistry_40 = import12.fnStateRegistry(this._UIRouter_38));
+            }
+            return this.__StateRegistry_40;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_UIView_PARENT_INJECT_41", {
+        get: function () {
+            if ((this.__UIView_PARENT_INJECT_41 == null)) {
+                (this.__UIView_PARENT_INJECT_41 = import6.getParentUIViewInject(this._StateRegistry_40));
+            }
+            return this.__UIView_PARENT_INJECT_41;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_StateService_42", {
+        get: function () {
+            if ((this.__StateService_42 == null)) {
+                (this.__StateService_42 = import12.fnStateService(this._UIRouter_38));
+            }
+            return this.__StateService_42;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_TransitionService_43", {
+        get: function () {
+            if ((this.__TransitionService_43 == null)) {
+                (this.__TransitionService_43 = import12.fnTransitionService(this._UIRouter_38));
+            }
+            return this.__TransitionService_43;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_UrlMatcherFactory_44", {
+        get: function () {
+            if ((this.__UrlMatcherFactory_44 == null)) {
+                (this.__UrlMatcherFactory_44 = import12.fnUrlMatcherFactory(this._UIRouter_38));
+            }
+            return this.__UrlMatcherFactory_44;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_UrlRouter_45", {
+        get: function () {
+            if ((this.__UrlRouter_45 == null)) {
+                (this.__UrlRouter_45 = import12.fnUrlRouter(this._UIRouter_38));
+            }
+            return this.__UrlRouter_45;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_UrlService_46", {
+        get: function () {
+            if ((this.__UrlService_46 == null)) {
+                (this.__UrlService_46 = import12.fnUrlService(this._UIRouter_38));
+            }
+            return this.__UrlService_46;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_ViewService_47", {
+        get: function () {
+            if ((this.__ViewService_47 == null)) {
+                (this.__ViewService_47 = import12.fnViewService(this._UIRouter_38));
+            }
+            return this.__ViewService_47;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_UIRouterGlobals_48", {
+        get: function () {
+            if ((this.__UIRouterGlobals_48 == null)) {
+                (this.__UIRouterGlobals_48 = import12.fnGlobals(this._UIRouter_38));
+            }
+            return this.__UIRouterGlobals_48;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_\u0275i_49", {
+        get: function () {
+            if ((this.__ɵi_49 == null)) {
+                (this.__ɵi_49 = new import7.ɵi());
+            }
+            return this.__ɵi_49;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_NgModuleFactoryLoader_52", {
+        get: function () {
+            if ((this.__NgModuleFactoryLoader_52 == null)) {
+                (this.__NgModuleFactoryLoader_52 = new import0.SystemJsNgModuleLoader(this._Compiler_17, this.parent.get(import0.SystemJsNgModuleLoaderConfig, null)));
+            }
+            return this.__NgModuleFactoryLoader_52;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_DialogService_53", {
+        get: function () {
+            if ((this.__DialogService_53 == null)) {
+                (this.__DialogService_53 = import1.getDialogService(this.__injector_33));
+            }
+            return this.__DialogService_53;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_Contacts_54", {
+        get: function () {
+            if ((this.__Contacts_54 == null)) {
+                (this.__Contacts_54 = import1.getContactsService(this.__injector_33));
+            }
+            return this.__Contacts_54;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    SampleAppModuleAngularInjector.prototype.createInternal = function () {
+        this._CommonModule_0 = new import2.CommonModule();
+        this._ErrorHandler_1 = import3.ɵa();
+        this._APP_INITIALIZER_2 = [
+            import0.ɵo,
+            import3.ɵc(this.parent.get(import3.NgProbeToken, null), this.parent.get(import0.NgProbeToken, null))
+        ];
+        this._ApplicationInitStatus_3 = new import0.ApplicationInitStatus(this._APP_INITIALIZER_2);
+        this._ɵf_4 = new import0.ɵf(this.parent.get(import0.NgZone), this.parent.get(import0.ɵConsole), this, this._ErrorHandler_1, this.componentFactoryResolver, this._ApplicationInitStatus_3);
+        this._ApplicationRef_5 = this._ɵf_4;
+        this._ApplicationModule_6 = new import0.ApplicationModule(this._ApplicationRef_5);
+        this._BrowserModule_7 = new import3.BrowserModule(this.parent.get(import3.BrowserModule, null));
+        this._UpgradeModule_8 = new import4.UpgradeModule(this, this.parent.get(import0.NgZone));
+        this._UIRouterModule_9 = new import5.UIRouterModule();
+        this._UIRouterUpgradeModule_10 = new import6.UIRouterUpgradeModule();
+        this._ɵba_11 = new import7.ɵba();
+        this._FormsModule_12 = new import7.FormsModule();
+        this._PrefsModule_13 = new import8.PrefsModule();
+        this._SampleAppModuleAngular_14 = new import1.SampleAppModuleAngular();
+        this._UIROUTER_ROOT_MODULE_39 = [{}];
+        this._UIROUTER_MODULE_TOKEN_50 = [
+            { states: [{
+                        parent: 'app',
+                        name: 'prefs',
+                        url: '/prefs',
+                        component: import13.PrefsComponent,
+                        data: { requiresAuth: true }
+                    }
+                ] },
+            { states: [{
+                        name: 'contacts.**',
+                        url: '/contacts',
+                        loadChildren: './contacts/contacts.module#ContactsModule'
+                    }
+                ] }
+        ];
+        this._ROUTES_51 = [
+            [{
+                    parent: 'app',
+                    name: 'prefs',
+                    url: '/prefs',
+                    component: import13.PrefsComponent,
+                    data: { requiresAuth: true }
+                }
+            ],
+            [{
+                    name: 'contacts.**',
+                    url: '/contacts',
+                    loadChildren: './contacts/contacts.module#ContactsModule'
+                }
+            ]
+        ];
+        return this._SampleAppModuleAngular_14;
+    };
+    SampleAppModuleAngularInjector.prototype.getInternal = function (token, notFoundResult) {
+        if ((token === import2.CommonModule)) {
+            return this._CommonModule_0;
+        }
+        if ((token === import0.ErrorHandler)) {
+            return this._ErrorHandler_1;
+        }
+        if ((token === import0.APP_INITIALIZER)) {
+            return this._APP_INITIALIZER_2;
+        }
+        if ((token === import0.ApplicationInitStatus)) {
+            return this._ApplicationInitStatus_3;
+        }
+        if ((token === import0.ɵf)) {
+            return this._ɵf_4;
+        }
+        if ((token === import0.ApplicationRef)) {
+            return this._ApplicationRef_5;
+        }
+        if ((token === import0.ApplicationModule)) {
+            return this._ApplicationModule_6;
+        }
+        if ((token === import3.BrowserModule)) {
+            return this._BrowserModule_7;
+        }
+        if ((token === import4.UpgradeModule)) {
+            return this._UpgradeModule_8;
+        }
+        if ((token === import5.UIRouterModule)) {
+            return this._UIRouterModule_9;
+        }
+        if ((token === import6.UIRouterUpgradeModule)) {
+            return this._UIRouterUpgradeModule_10;
+        }
+        if ((token === import7.ɵba)) {
+            return this._ɵba_11;
+        }
+        if ((token === import7.FormsModule)) {
+            return this._FormsModule_12;
+        }
+        if ((token === import8.PrefsModule)) {
+            return this._PrefsModule_13;
+        }
+        if ((token === import1.SampleAppModuleAngular)) {
+            return this._SampleAppModuleAngular_14;
+        }
+        if ((token === import0.LOCALE_ID)) {
+            return this._LOCALE_ID_15;
+        }
+        if ((token === import2.NgLocalization)) {
+            return this._NgLocalization_16;
+        }
+        if ((token === import0.Compiler)) {
+            return this._Compiler_17;
+        }
+        if ((token === import0.APP_ID)) {
+            return this._APP_ID_18;
+        }
+        if ((token === import0.IterableDiffers)) {
+            return this._IterableDiffers_19;
+        }
+        if ((token === import0.KeyValueDiffers)) {
+            return this._KeyValueDiffers_20;
+        }
+        if ((token === import3.DomSanitizer)) {
+            return this._DomSanitizer_21;
+        }
+        if ((token === import0.Sanitizer)) {
+            return this._Sanitizer_22;
+        }
+        if ((token === import3.HAMMER_GESTURE_CONFIG)) {
+            return this._HAMMER_GESTURE_CONFIG_23;
+        }
+        if ((token === import3.EVENT_MANAGER_PLUGINS)) {
+            return this._EVENT_MANAGER_PLUGINS_24;
+        }
+        if ((token === import3.EventManager)) {
+            return this._EventManager_25;
+        }
+        if ((token === import3.ɵDomSharedStylesHost)) {
+            return this._ɵDomSharedStylesHost_26;
+        }
+        if ((token === import3.ɵDomRendererFactory2)) {
+            return this._ɵDomRendererFactory2_27;
+        }
+        if ((token === import0.RendererFactory2)) {
+            return this._RendererFactory2_28;
+        }
+        if ((token === import3.ɵSharedStylesHost)) {
+            return this._ɵSharedStylesHost_29;
+        }
+        if ((token === import0.Testability)) {
+            return this._Testability_30;
+        }
+        if ((token === import3.Meta)) {
+            return this._Meta_31;
+        }
+        if ((token === import3.Title)) {
+            return this._Title_32;
+        }
+        if ((token === '$injector')) {
+            return this.__injector_33;
+        }
+        if ((token === '$rootScope')) {
+            return this.__rootScope_34;
+        }
+        if ((token === '$compile')) {
+            return this.__compile_35;
+        }
+        if ((token === '$parse')) {
+            return this.__parse_36;
+        }
+        if ((token === '$uiRouter')) {
+            return this.__uiRouter_37;
+        }
+        if ((token === import14.UIRouter)) {
+            return this._UIRouter_38;
+        }
+        if ((token === import5.UIROUTER_ROOT_MODULE)) {
+            return this._UIROUTER_ROOT_MODULE_39;
+        }
+        if ((token === import15.StateRegistry)) {
+            return this._StateRegistry_40;
+        }
+        if ((token === 'UIView.PARENT_INJECT')) {
+            return this._UIView_PARENT_INJECT_41;
+        }
+        if ((token === import16.StateService)) {
+            return this._StateService_42;
+        }
+        if ((token === import17.TransitionService)) {
+            return this._TransitionService_43;
+        }
+        if ((token === import18.UrlMatcherFactory)) {
+            return this._UrlMatcherFactory_44;
+        }
+        if ((token === import19.UrlRouter)) {
+            return this._UrlRouter_45;
+        }
+        if ((token === import20.UrlService)) {
+            return this._UrlService_46;
+        }
+        if ((token === import21.ViewService)) {
+            return this._ViewService_47;
+        }
+        if ((token === import22.UIRouterGlobals)) {
+            return this._UIRouterGlobals_48;
+        }
+        if ((token === import7.ɵi)) {
+            return this._ɵi_49;
+        }
+        if ((token === import5.UIROUTER_MODULE_TOKEN)) {
+            return this._UIROUTER_MODULE_TOKEN_50;
+        }
+        if ((token === import23.ROUTES)) {
+            return this._ROUTES_51;
+        }
+        if ((token === import0.NgModuleFactoryLoader)) {
+            return this._NgModuleFactoryLoader_52;
+        }
+        if ((token === 'DialogService')) {
+            return this._DialogService_53;
+        }
+        if ((token === 'Contacts')) {
+            return this._Contacts_54;
+        }
+        return notFoundResult;
+    };
+    SampleAppModuleAngularInjector.prototype.destroyInternal = function () {
+        this._ɵf_4.ngOnDestroy();
+        (this.__ɵDomSharedStylesHost_26 && this._ɵDomSharedStylesHost_26.ngOnDestroy());
+    };
+    return SampleAppModuleAngularInjector;
+}(import0.ɵNgModuleInjector));
+exports.SampleAppModuleAngularNgFactory = new import0.NgModuleFactory(SampleAppModuleAngularInjector, import1.SampleAppModuleAngular);
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL1VzZXJzL2N0aGllbGVuL3Byb2plY3RzL3Vpcm91dGVyL3NhbXBsZS1hcHAtbmcxLXRvLW5nMi9hcHAvYW5ndWxhck1vZHVsZS5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9Vc2Vycy9jdGhpZWxlbi9wcm9qZWN0cy91aXJvdXRlci9zYW1wbGUtYXBwLW5nMS10by1uZzIvYXBwL2FuZ3VsYXJNb2R1bGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsifQ==
+//# sourceMappingURL=angularModule.ngfactory.js.map
 
 /***/ }),
-
-/***/ 176:
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var ngmodule_1 = __webpack_require__(27);
-var appConfig_service_1 = __webpack_require__(217);
-var auth_service_1 = __webpack_require__(218);
-var dataSources_service_1 = __webpack_require__(219);
-var dialog_directive_1 = __webpack_require__(220);
-var dialog_service_1 = __webpack_require__(221);
-var requiresAuth_hook_1 = __webpack_require__(222);
-var globalAppModule = {
-    directives: { dialog: dialog_directive_1.dialog },
-    services: { AppConfig: appConfig_service_1.AppConfig, AuthService: auth_service_1.AuthService, Contacts: dataSources_service_1.Contacts, Folders: dataSources_service_1.Folders, Messages: dataSources_service_1.Messages, DialogService: dialog_service_1.DialogService },
-    runBlocks: [requiresAuth_hook_1.authHookRunBlock]
-};
-ngmodule_1.loadNg1AppModule(ngmodule_1.ngmodule, globalAppModule);
-
-
-/***/ }),
-
-/***/ 177:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var ngmodule_1 = __webpack_require__(27);
-var app_component_1 = __webpack_require__(223);
-var welcome_component_1 = __webpack_require__(228);
-var login_component_1 = __webpack_require__(227);
-var home_component_1 = __webpack_require__(226);
-var app_states_1 = __webpack_require__(225);
-var app_config_1 = __webpack_require__(224);
-var mainAppModule = {
-    components: { app: app_component_1.app, welcome: welcome_component_1.welcome, login: login_component_1.login, home: home_component_1.home },
-    states: [app_states_1.appState, app_states_1.homeState, app_states_1.loginState, app_states_1.welcomeState],
-    configBlocks: [app_config_1.otherwiseConfigBlock],
-    runBlocks: [app_config_1.traceRunBlock]
-};
-ngmodule_1.loadNg1AppModule(ngmodule_1.ngmodule, mainAppModule);
-
-
-/***/ }),
-
-/***/ 178:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var ngmodule_1 = __webpack_require__(27);
-var compose_component_1 = __webpack_require__(229);
-var folderList_component_1 = __webpack_require__(230);
-var message_component_1 = __webpack_require__(234);
-var messageList_component_1 = __webpack_require__(235);
-var mymessages_component_1 = __webpack_require__(236);
-var messageTable_component_1 = __webpack_require__(231);
-var sortMessages_directive_1 = __webpack_require__(232);
-var messageBody_filter_1 = __webpack_require__(233);
-var messagesListUI_service_1 = __webpack_require__(238);
-var mymessages_states_1 = __webpack_require__(237);
-var mymessagesAppModule = {
-    directives: { sortMessages: sortMessages_directive_1.sortMessages },
-    components: { compose: compose_component_1.compose, folderList: folderList_component_1.folderList, message: message_component_1.message, messageList: messageList_component_1.messageList, mymessages: mymessages_component_1.mymessages, messageTable: messageTable_component_1.messageTable },
-    states: [mymessages_states_1.composeState, mymessages_states_1.messageState, mymessages_states_1.messageListState, mymessages_states_1.mymessagesState],
-    filters: { messageBody: messageBody_filter_1.messageBody },
-    services: { MessageListUI: messagesListUI_service_1.MessageListUI }
-};
-ngmodule_1.loadNg1AppModule(ngmodule_1.ngmodule, mymessagesAppModule);
-
-
-/***/ }),
-
-/***/ 179:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var ngmodule_1 = __webpack_require__(27);
+var angularJSModule_1 = __webpack_require__(81);
 /** Google analytics */
 (function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
@@ -189,7 +1266,7 @@ var ngmodule_1 = __webpack_require__(27);
 var ga = window['ga'];
 ga('create', 'UA-73329341-1', 'auto');
 ga('send', 'pageview');
-ngmodule_1.ngmodule.config(function ($transitionsProvider) {
+angularJSModule_1.sampleAppModuleAngularJS.config(function ($transitionsProvider) {
     $transitionsProvider.onBefore({}, function ($transition$) {
         var path = $transition$.treeChanges().to
             .map(function (node) { return node.state.self.url; })
@@ -205,66 +1282,594 @@ ngmodule_1.ngmodule.config(function ($transitionsProvider) {
         $transition$.promise.then(success, error);
     });
 });
-
+//# sourceMappingURL=ga.js.map
 
 /***/ }),
-
-/***/ 216:
+/* 126 */,
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-/** * This file is the main entry point for the entire app.
- *
- * If the application is being bundled, this is where the bundling process
- * starts.  If the application is being loaded by an es6 module loader, this
- * is the entry point.
- *
- * Point Webpack or SystemJS to this file.
- *
- * This module imports all the different parts of the application and registers them with angular.
- * - Submodules
- *   - States
- *   - Components
- *   - Directives
- *   - Services
- *   - Filters
- *   - Run and Config blocks
- *     - Transition Hooks
- * - 3rd party Libraries and angular1 module
- *
- * Then this module creates the ng-upgrade adapter
- * and bootstraps the hybrid application
+/**
+ * @fileoverview This file is generated by the Angular template compiler.
+ * Do not edit.
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride}
  */
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
+/* tslint:disable */
 Object.defineProperty(exports, "__esModule", { value: true });
-//////////////////// APP MODULES ///////////////
-// Create the angular 1 module for the application
-var ngmodule_1 = __webpack_require__(27);
-// import all the sub module definitions
-// This registers each app module's states, directives, components, filters,
-// services, and config/run blocks with the ngmodule
-__webpack_require__(176);
-__webpack_require__(177);
-__webpack_require__(178);
-__webpack_require__(70);
-__webpack_require__(175);
-// Google analytics
-__webpack_require__(179);
-////////////// HYBRID BOOTSTRAP ///////////////
-var angular = __webpack_require__(16);
-var core_1 = __webpack_require__(8);
-var static_1 = __webpack_require__(93);
-var platform_browser_1 = __webpack_require__(24);
-var angular_hybrid_1 = __webpack_require__(69);
-var core_2 = __webpack_require__(5);
-var index_1 = __webpack_require__(70);
-var platform_browser_dynamic_1 = __webpack_require__(46);
+var import0 = __webpack_require__(4);
+var import1 = __webpack_require__(63);
+var import2 = __webpack_require__(38);
+var styles_PrefsComponent = [];
+exports.RenderType_PrefsComponent = import0.ɵcrt({
+    encapsulation: 2,
+    styles: styles_PrefsComponent,
+    data: {}
+});
+function View_PrefsComponent_0(l) {
+    return import0.ɵvid(0, [
+        (l()(), import0.ɵted(null, ['\n      '])),
+        (l()(), import0.ɵeld(0, null, null, 7, 'div', [], null, null, null, null, null)),
+        (l()(), import0.ɵted(null, ['\n          '])),
+        (l()(), import0.ɵeld(0, null, null, 4, 'button', [[
+                'class',
+                'btn btn-primary'
+            ]
+        ], null, [[
+                null,
+                'click'
+            ]
+        ], function (v, en, $event) {
+            var ad = true;
+            var co = v.component;
+            if (('click' === en)) {
+                var pd_0 = (co.reset() !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)),
+        (l()(), import0.ɵeld(0, null, null, 0, 'i', [[
+                'class',
+                'fa fa-recycle'
+            ]
+        ], null, null, null, null, null)),
+        (l()(), import0.ɵted(null, [' '])),
+        (l()(), import0.ɵeld(0, null, null, 1, 'span', [], null, null, null, null, null)),
+        (l()(), import0.ɵted(null, ['Reset All Data'])),
+        (l()(), import0.ɵted(null, ['\n      '])),
+        (l()(), import0.ɵted(null, ['\n\n      '])),
+        (l()(), import0.ɵeld(0, null, null, 14, 'div', [], null, null, null, null, null)),
+        (l()(), import0.ɵted(null, ['\n          '])),
+        (l()(), import0.ɵeld(0, null, null, 1, 'label', [[
+                'for',
+                'restDelay'
+            ]
+        ], null, null, null, null, null)),
+        (l()(), import0.ɵted(null, ['Simulated REST API delay (ms)'])),
+        (l()(), import0.ɵted(null, ['\n          '])),
+        (l()(), import0.ɵeld(0, null, null, 5, 'input', [
+            [
+                'name',
+                'restDelay'
+            ],
+            [
+                'type',
+                'text'
+            ]
+        ], [
+            [
+                2,
+                'ng-untouched',
+                null
+            ],
+            [
+                2,
+                'ng-touched',
+                null
+            ],
+            [
+                2,
+                'ng-pristine',
+                null
+            ],
+            [
+                2,
+                'ng-dirty',
+                null
+            ],
+            [
+                2,
+                'ng-valid',
+                null
+            ],
+            [
+                2,
+                'ng-invalid',
+                null
+            ],
+            [
+                2,
+                'ng-pending',
+                null
+            ]
+        ], [
+            [
+                null,
+                'ngModelChange'
+            ],
+            [
+                null,
+                'input'
+            ],
+            [
+                null,
+                'blur'
+            ],
+            [
+                null,
+                'compositionstart'
+            ],
+            [
+                null,
+                'compositionend'
+            ]
+        ], function (v, en, $event) {
+            var ad = true;
+            var co = v.component;
+            if (('input' === en)) {
+                var pd_0 = (import0.ɵnov(v, 16)._handleInput($event.target.value) !== false);
+                ad = (pd_0 && ad);
+            }
+            if (('blur' === en)) {
+                var pd_1 = (import0.ɵnov(v, 16).onTouched() !== false);
+                ad = (pd_1 && ad);
+            }
+            if (('compositionstart' === en)) {
+                var pd_2 = (import0.ɵnov(v, 16)._compositionStart() !== false);
+                ad = (pd_2 && ad);
+            }
+            if (('compositionend' === en)) {
+                var pd_3 = (import0.ɵnov(v, 16)._compositionEnd($event.target.value) !== false);
+                ad = (pd_3 && ad);
+            }
+            if (('ngModelChange' === en)) {
+                var pd_4 = ((co.prefs.restDelay = $event) !== false);
+                ad = (pd_4 && ad);
+            }
+            return ad;
+        }, null, null)),
+        import0.ɵdid(16384, null, 0, import2.DefaultValueAccessor, [
+            import0.Renderer,
+            import0.ElementRef,
+            [
+                2,
+                import2.COMPOSITION_BUFFER_MODE
+            ]
+        ], null, null),
+        import0.ɵprd(1024, null, import2.NG_VALUE_ACCESSOR, function (p0_0) {
+            return [p0_0];
+        }, [import2.DefaultValueAccessor]),
+        import0.ɵdid(671744, null, 0, import2.NgModel, [
+            [
+                8,
+                null
+            ],
+            [
+                8,
+                null
+            ],
+            [
+                8,
+                null
+            ],
+            [
+                2,
+                import2.NG_VALUE_ACCESSOR
+            ]
+        ], {
+            name: [
+                0,
+                'name'
+            ],
+            model: [
+                1,
+                'model'
+            ]
+        }, { update: 'ngModelChange' }),
+        import0.ɵprd(2048, null, import2.NgControl, null, [import2.NgModel]),
+        import0.ɵdid(16384, null, 0, import2.NgControlStatus, [import2.NgControl], null, null),
+        (l()(), import0.ɵted(null, ['\n          '])),
+        (l()(), import0.ɵeld(0, null, null, 1, 'button', [[
+                'class',
+                'btn btn-primary'
+            ]
+        ], null, [[
+                null,
+                'click'
+            ]
+        ], function (v, en, $event) {
+            var ad = true;
+            var co = v.component;
+            if (('click' === en)) {
+                var pd_0 = (co.savePrefs() !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)),
+        (l()(), import0.ɵted(null, ['Save'])),
+        (l()(), import0.ɵted(null, ['\n      '])),
+        (l()(), import0.ɵted(null, ['\n  ']))
+    ], function (ck, v) {
+        var co = v.component;
+        var currVal_7 = 'restDelay';
+        var currVal_8 = co.prefs.restDelay;
+        ck(v, 18, 0, currVal_7, currVal_8);
+    }, function (ck, v) {
+        var currVal_0 = import0.ɵnov(v, 20).ngClassUntouched;
+        var currVal_1 = import0.ɵnov(v, 20).ngClassTouched;
+        var currVal_2 = import0.ɵnov(v, 20).ngClassPristine;
+        var currVal_3 = import0.ɵnov(v, 20).ngClassDirty;
+        var currVal_4 = import0.ɵnov(v, 20).ngClassValid;
+        var currVal_5 = import0.ɵnov(v, 20).ngClassInvalid;
+        var currVal_6 = import0.ɵnov(v, 20).ngClassPending;
+        ck(v, 15, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6);
+    });
+}
+exports.View_PrefsComponent_0 = View_PrefsComponent_0;
+function View_PrefsComponent_Host_0(l) {
+    return import0.ɵvid(0, [
+        (l()(), import0.ɵeld(0, null, null, 1, 'prefs-component', [], null, null, null, View_PrefsComponent_0, exports.RenderType_PrefsComponent)),
+        import0.ɵdid(114688, null, 0, import1.PrefsComponent, ['AppConfig'], null, null)
+    ], function (ck, v) {
+        ck(v, 1, 0);
+    }, null);
+}
+exports.PrefsComponentNgFactory = import0.ɵccf('prefs-component', import1.PrefsComponent, View_PrefsComponent_Host_0, {}, {}, []);
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL1VzZXJzL2N0aGllbGVuL3Byb2plY3RzL3Vpcm91dGVyL3NhbXBsZS1hcHAtbmcxLXRvLW5nMi9hcHAvcHJlZnMvcHJlZnMuY29tcG9uZW50Lm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL1VzZXJzL2N0aGllbGVuL3Byb2plY3RzL3Vpcm91dGVyL3NhbXBsZS1hcHAtbmcxLXRvLW5nMi9hcHAvcHJlZnMvcHJlZnMuY29tcG9uZW50LnRzIiwibmc6Ly8vVXNlcnMvY3RoaWVsZW4vcHJvamVjdHMvdWlyb3V0ZXIvc2FtcGxlLWFwcC1uZzEtdG8tbmcyL2FwcC9wcmVmcy9wcmVmcy5jb21wb25lbnQudHMuUHJlZnNDb21wb25lbnQuaHRtbCIsIm5nOi8vL1VzZXJzL2N0aGllbGVuL3Byb2plY3RzL3Vpcm91dGVyL3NhbXBsZS1hcHAtbmcxLXRvLW5nMi9hcHAvcHJlZnMvcHJlZnMuY29tcG9uZW50LnRzLlByZWZzQ29tcG9uZW50X0hvc3QuaHRtbCJdLCJzb3VyY2VzQ29udGVudCI6WyIgIiwiXG4gICAgICA8ZGl2PlxuICAgICAgICAgIDxidXR0b24gY2xhc3M9XCJidG4gYnRuLXByaW1hcnlcIiAoY2xpY2spPVwicmVzZXQoKVwiPjxpIGNsYXNzPVwiZmEgZmEtcmVjeWNsZVwiPjwvaT4gPHNwYW4+UmVzZXQgQWxsIERhdGE8L3NwYW4+PC9idXR0b24+XG4gICAgICA8L2Rpdj5cblxuICAgICAgPGRpdj5cbiAgICAgICAgICA8bGFiZWwgZm9yPVwicmVzdERlbGF5XCI+U2ltdWxhdGVkIFJFU1QgQVBJIGRlbGF5IChtcyk8L2xhYmVsPlxuICAgICAgICAgIDxpbnB1dCB0eXBlPVwidGV4dFwiIG5hbWU9XCJyZXN0RGVsYXlcIiBbKG5nTW9kZWwpXT1cInByZWZzLnJlc3REZWxheVwiPlxuICAgICAgICAgIDxidXR0b24gY2xhc3M9XCJidG4gYnRuLXByaW1hcnlcIiAoY2xpY2spPVwic2F2ZVByZWZzKClcIj5TYXZlPC9idXR0b24+XG4gICAgICA8L2Rpdj5cbiAgIiwiPHByZWZzLWNvbXBvbmVudD48L3ByZWZzLWNvbXBvbmVudD4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQ0FBO0lBQ007SUFBSztNQUNEO1FBQUE7UUFBQTtNQUFBO01BQUE7UUFBQTtRQUFBO01BQUE7SUFBQTtNQUFBO01BQUE7TUFBZ0M7UUFBQTtRQUFBO01BQUE7TUFBaEM7SUFBQTtNQUFrRDtRQUFBO1FBQUE7TUFBQTtJQUFBO0lBQTZCO0lBQUM7SUFBTTtJQUE4QjtJQUNsSDtJQUVOO0lBQUs7TUFDRDtRQUFBO1FBQUE7TUFBQTtJQUFBO0lBQXVCO0lBQXFDO0lBQzVEO01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O0lBQUE7S0FBQTtNQUFBO1FBQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtRQUFBO01BQUE7O0lBQUE7S0FBQTtNQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtNQUFBOztJQUFBO0tBQUE7TUFBQTtNQUFBO01BQUE7UUFBQTtRQUFBO01BQUE7TUFBQTtRQUFBO1FBQUE7TUFBQTtNQUFBO1FBQUE7UUFBQTtNQUFBO01BQUE7UUFBQTtRQUFBO01BQUE7TUFBb0M7UUFBQTtRQUFBO01BQUE7TUFBcEM7SUFBQTtnQkFBQTs7O01BQUE7UUFBQTs7TUFBQTs7SUFBQTtLQUFBO2dCQUFBO01BQUE7SUFBQTtnQkFBQTtNQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7O01BQUE7O0lBQUE7S0FBQTtNQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtNQUFBOztJQUFBO0tBQUE7Z0JBQUE7Z0JBQUE7SUFBa0U7TUFDbEU7UUFBQTtRQUFBO01BQUE7TUFBQTtRQUFBO1FBQUE7TUFBQTtJQUFBO01BQUE7TUFBQTtNQUFnQztRQUFBO1FBQUE7TUFBQTtNQUFoQztJQUFBO0lBQXNEO0lBQWE7SUFDakU7Ozs7SUFGaUI7SUFBaUI7SUFBcEMsVUFBbUIsVUFBaUIsU0FBcEM7O0lBQUE7SUFBQTtJQUFBO0lBQUE7SUFBQTtJQUFBO0lBQUE7SUFBQSxVQUFBLHFFQUFBOzs7OztJQ1BWO2dCQUFBOzs7SUFBQTs7OyJ9
+//# sourceMappingURL=prefs.component.ngfactory.js.map
+
+/***/ }),
+/* 128 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file is generated by the Angular template compiler.
+ * Do not edit.
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride}
+ */
+/* tslint:disable */
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var import0 = __webpack_require__(4);
+var import1 = __webpack_require__(87);
+var import2 = __webpack_require__(10);
+var import3 = __webpack_require__(29);
+var import4 = __webpack_require__(27);
+var import5 = __webpack_require__(83);
+var import6 = __webpack_require__(43);
+var import7 = __webpack_require__(28);
+var import8 = __webpack_require__(48);
+var import9 = __webpack_require__(40);
+var import10 = __webpack_require__(30);
+var import11 = __webpack_require__(51);
+var import12 = __webpack_require__(52);
+var import13 = __webpack_require__(53);
+var import14 = __webpack_require__(55);
+var import15 = __webpack_require__(39);
+var import16 = __webpack_require__(14);
+var UIRouterUpgradeModuleInjector = (function (_super) {
+    __extends(UIRouterUpgradeModuleInjector, _super);
+    function UIRouterUpgradeModuleInjector(parent) {
+        return _super.call(this, parent, [
+            import5.UIViewNgFactory,
+            exports.UIViewNgUpgradeNgFactory
+        ], []) || this;
+    }
+    Object.defineProperty(UIRouterUpgradeModuleInjector.prototype, "_NgLocalization_4", {
+        get: function () {
+            if ((this.__NgLocalization_4 == null)) {
+                (this.__NgLocalization_4 = new import2.NgLocaleLocalization(this.parent.get(import0.LOCALE_ID)));
+            }
+            return this.__NgLocalization_4;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(UIRouterUpgradeModuleInjector.prototype, "__injector_5", {
+        get: function () {
+            if ((this.___injector_5 == null)) {
+                (this.___injector_5 = import4.ɵa());
+            }
+            return this.___injector_5;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(UIRouterUpgradeModuleInjector.prototype, "__rootScope_6", {
+        get: function () {
+            if ((this.___rootScope_6 == null)) {
+                (this.___rootScope_6 = import4.ɵb(this.__injector_5));
+            }
+            return this.___rootScope_6;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(UIRouterUpgradeModuleInjector.prototype, "__compile_7", {
+        get: function () {
+            if ((this.___compile_7 == null)) {
+                (this.___compile_7 = import4.ɵc(this.__injector_5));
+            }
+            return this.___compile_7;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(UIRouterUpgradeModuleInjector.prototype, "__parse_8", {
+        get: function () {
+            if ((this.___parse_8 == null)) {
+                (this.___parse_8 = import4.ɵd(this.__injector_5));
+            }
+            return this.___parse_8;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(UIRouterUpgradeModuleInjector.prototype, "__uiRouter_9", {
+        get: function () {
+            if ((this.___uiRouter_9 == null)) {
+                (this.___uiRouter_9 = import1.getUIRouter(this.__injector_5));
+            }
+            return this.___uiRouter_9;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(UIRouterUpgradeModuleInjector.prototype, "_UIRouter_10", {
+        get: function () {
+            if ((this.__UIRouter_10 == null)) {
+                (this.__UIRouter_10 = import1.uiRouterUpgradeFactory(this.__uiRouter_9, this));
+            }
+            return this.__UIRouter_10;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(UIRouterUpgradeModuleInjector.prototype, "_StateRegistry_12", {
+        get: function () {
+            if ((this.__StateRegistry_12 == null)) {
+                (this.__StateRegistry_12 = import6.fnStateRegistry(this._UIRouter_10));
+            }
+            return this.__StateRegistry_12;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(UIRouterUpgradeModuleInjector.prototype, "_UIView_PARENT_INJECT_13", {
+        get: function () {
+            if ((this.__UIView_PARENT_INJECT_13 == null)) {
+                (this.__UIView_PARENT_INJECT_13 = import1.getParentUIViewInject(this._StateRegistry_12));
+            }
+            return this.__UIView_PARENT_INJECT_13;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(UIRouterUpgradeModuleInjector.prototype, "_StateService_14", {
+        get: function () {
+            if ((this.__StateService_14 == null)) {
+                (this.__StateService_14 = import6.fnStateService(this._UIRouter_10));
+            }
+            return this.__StateService_14;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(UIRouterUpgradeModuleInjector.prototype, "_TransitionService_15", {
+        get: function () {
+            if ((this.__TransitionService_15 == null)) {
+                (this.__TransitionService_15 = import6.fnTransitionService(this._UIRouter_10));
+            }
+            return this.__TransitionService_15;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(UIRouterUpgradeModuleInjector.prototype, "_UrlMatcherFactory_16", {
+        get: function () {
+            if ((this.__UrlMatcherFactory_16 == null)) {
+                (this.__UrlMatcherFactory_16 = import6.fnUrlMatcherFactory(this._UIRouter_10));
+            }
+            return this.__UrlMatcherFactory_16;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(UIRouterUpgradeModuleInjector.prototype, "_UrlRouter_17", {
+        get: function () {
+            if ((this.__UrlRouter_17 == null)) {
+                (this.__UrlRouter_17 = import6.fnUrlRouter(this._UIRouter_10));
+            }
+            return this.__UrlRouter_17;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(UIRouterUpgradeModuleInjector.prototype, "_UrlService_18", {
+        get: function () {
+            if ((this.__UrlService_18 == null)) {
+                (this.__UrlService_18 = import6.fnUrlService(this._UIRouter_10));
+            }
+            return this.__UrlService_18;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(UIRouterUpgradeModuleInjector.prototype, "_ViewService_19", {
+        get: function () {
+            if ((this.__ViewService_19 == null)) {
+                (this.__ViewService_19 = import6.fnViewService(this._UIRouter_10));
+            }
+            return this.__ViewService_19;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(UIRouterUpgradeModuleInjector.prototype, "_UIRouterGlobals_20", {
+        get: function () {
+            if ((this.__UIRouterGlobals_20 == null)) {
+                (this.__UIRouterGlobals_20 = import6.fnGlobals(this._UIRouter_10));
+            }
+            return this.__UIRouterGlobals_20;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    UIRouterUpgradeModuleInjector.prototype.createInternal = function () {
+        this._CommonModule_0 = new import2.CommonModule();
+        this._UIRouterModule_1 = new import3.UIRouterModule();
+        this._UpgradeModule_2 = new import4.UpgradeModule(this, this.parent.get(import0.NgZone));
+        this._UIRouterUpgradeModule_3 = new import1.UIRouterUpgradeModule();
+        this._UIROUTER_ROOT_MODULE_11 = [{}];
+        return this._UIRouterUpgradeModule_3;
+    };
+    UIRouterUpgradeModuleInjector.prototype.getInternal = function (token, notFoundResult) {
+        if ((token === import2.CommonModule)) {
+            return this._CommonModule_0;
+        }
+        if ((token === import3.UIRouterModule)) {
+            return this._UIRouterModule_1;
+        }
+        if ((token === import4.UpgradeModule)) {
+            return this._UpgradeModule_2;
+        }
+        if ((token === import1.UIRouterUpgradeModule)) {
+            return this._UIRouterUpgradeModule_3;
+        }
+        if ((token === import2.NgLocalization)) {
+            return this._NgLocalization_4;
+        }
+        if ((token === '$injector')) {
+            return this.__injector_5;
+        }
+        if ((token === '$rootScope')) {
+            return this.__rootScope_6;
+        }
+        if ((token === '$compile')) {
+            return this.__compile_7;
+        }
+        if ((token === '$parse')) {
+            return this.__parse_8;
+        }
+        if ((token === '$uiRouter')) {
+            return this.__uiRouter_9;
+        }
+        if ((token === import7.UIRouter)) {
+            return this._UIRouter_10;
+        }
+        if ((token === import3.UIROUTER_ROOT_MODULE)) {
+            return this._UIROUTER_ROOT_MODULE_11;
+        }
+        if ((token === import8.StateRegistry)) {
+            return this._StateRegistry_12;
+        }
+        if ((token === 'UIView.PARENT_INJECT')) {
+            return this._UIView_PARENT_INJECT_13;
+        }
+        if ((token === import9.StateService)) {
+            return this._StateService_14;
+        }
+        if ((token === import10.TransitionService)) {
+            return this._TransitionService_15;
+        }
+        if ((token === import11.UrlMatcherFactory)) {
+            return this._UrlMatcherFactory_16;
+        }
+        if ((token === import12.UrlRouter)) {
+            return this._UrlRouter_17;
+        }
+        if ((token === import13.UrlService)) {
+            return this._UrlService_18;
+        }
+        if ((token === import14.ViewService)) {
+            return this._ViewService_19;
+        }
+        if ((token === import15.UIRouterGlobals)) {
+            return this._UIRouterGlobals_20;
+        }
+        return notFoundResult;
+    };
+    UIRouterUpgradeModuleInjector.prototype.destroyInternal = function () {
+    };
+    return UIRouterUpgradeModuleInjector;
+}(import0.ɵNgModuleInjector));
+exports.UIRouterUpgradeModuleNgFactory = new import0.NgModuleFactory(UIRouterUpgradeModuleInjector, import1.UIRouterUpgradeModule);
+var styles_UIViewNgUpgrade = [];
+exports.RenderType_UIViewNgUpgrade = import0.ɵcrt({
+    encapsulation: 2,
+    styles: styles_UIViewNgUpgrade,
+    data: {}
+});
+function View_UIViewNgUpgrade_0(l) {
+    return import0.ɵvid(0, [
+        (l()(), import0.ɵeld(16777216, null, null, 1, 'ui-view', [], null, null, null, import5.View_UIView_0, import5.RenderType_UIView)),
+        import0.ɵdid(245760, null, 0, import16.UIView, [
+            import7.UIRouter,
+            'UIView.PARENT_INJECT',
+            import0.ViewContainerRef
+        ], { name: [
+                0,
+                'name'
+            ]
+        }, null)
+    ], function (ck, v) {
+        var co = v.component;
+        var currVal_0 = co.name;
+        ck(v, 1, 0, currVal_0);
+    }, null);
+}
+exports.View_UIViewNgUpgrade_0 = View_UIViewNgUpgrade_0;
+function View_UIViewNgUpgrade_Host_0(l) {
+    return import0.ɵvid(0, [
+        (l()(), import0.ɵeld(0, null, null, 2, 'ui-view-ng-upgrade', [], null, null, null, View_UIViewNgUpgrade_0, exports.RenderType_UIViewNgUpgrade)),
+        import0.ɵprd(8448, null, 'UIView.PARENT_INJECT', {}, []),
+        import0.ɵdid(49152, null, 0, import1.UIViewNgUpgrade, [
+            import0.ElementRef,
+            'UIView.PARENT_INJECT',
+            import8.StateRegistry
+        ], null, null)
+    ], null, null);
+}
+exports.UIViewNgUpgradeNgFactory = import0.ɵccf('ui-view-ng-upgrade', import1.UIViewNgUpgrade, View_UIViewNgUpgrade_Host_0, { name: 'name' }, {}, []);
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL1VzZXJzL2N0aGllbGVuL3Byb2plY3RzL3Vpcm91dGVyL3NhbXBsZS1hcHAtbmcxLXRvLW5nMi9ub2RlX21vZHVsZXMvQHVpcm91dGVyL2FuZ3VsYXItaHlicmlkL2xpYi9hbmd1bGFyLWh5YnJpZC5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9Vc2Vycy9jdGhpZWxlbi9wcm9qZWN0cy91aXJvdXRlci9zYW1wbGUtYXBwLW5nMS10by1uZzIvbm9kZV9tb2R1bGVzL0B1aXJvdXRlci9hbmd1bGFyLWh5YnJpZC9saWIvYW5ndWxhci1oeWJyaWQuZC50cyIsIm5nOi8vL1VzZXJzL2N0aGllbGVuL3Byb2plY3RzL3Vpcm91dGVyL3NhbXBsZS1hcHAtbmcxLXRvLW5nMi9ub2RlX21vZHVsZXMvQHVpcm91dGVyL2FuZ3VsYXItaHlicmlkL2xpYi9hbmd1bGFyLWh5YnJpZC5kLnRzLlVJVmlld05nVXBncmFkZS5odG1sIiwibmc6Ly8vVXNlcnMvY3RoaWVsZW4vcHJvamVjdHMvdWlyb3V0ZXIvc2FtcGxlLWFwcC1uZzEtdG8tbmcyL25vZGVfbW9kdWxlcy9AdWlyb3V0ZXIvYW5ndWxhci1oeWJyaWQvbGliL2FuZ3VsYXItaHlicmlkLmQudHMuVUlWaWV3TmdVcGdyYWRlX0hvc3QuaHRtbCJdLCJzb3VyY2VzQ29udGVudCI6WyIgIiwiPHVpLXZpZXcgW25hbWVdPVwibmFtZVwiPjwvdWktdmlldz4iLCI8dWktdmlldy1uZy11cGdyYWRlPjwvdWktdmlldy1uZy11cGdyYWRlPiJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUNBQTtnQkFBQTs7TUFBQTs7SUFBQTtPQUFBO1FBQUE7UUFBQTtNQUFBO0lBQUE7Ozs7SUFBUztJQUFULFNBQVMsU0FBVDs7Ozs7SUNBQTtnQkFBQTtnQkFBQTs7TUFBQTs7SUFBQTtLQUFBOzs7OyJ9
+//# sourceMappingURL=angular-hybrid.ngfactory.js.map
+
+/***/ }),
+/* 129 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+// Create a "future state" (a placeholder) for the Contacts
+// Angular module which will be lazy loaded by UI-Router
+exports.contactsFutureState = {
+    name: 'contacts.**',
+    url: '/contacts',
+    loadChildren: './contacts/contacts.module#ContactsModule',
+};
 function getDialogService($injector) {
     return $injector.get('DialogService');
 }
@@ -273,55 +1878,27 @@ function getContactsService($injector) {
     return $injector.get('Contacts');
 }
 exports.getContactsService = getContactsService;
-// Create an NgModule for the Angular portion of the hybrid app
-//
-// import the UIRouterUpgradeModule to supply the angular-hybrid directives
-var SampleAppModule = (function () {
-    function SampleAppModule() {
+// The main NgModule for the Angular portion of the hybrid app
+var SampleAppModuleAngular = (function () {
+    function SampleAppModuleAngular() {
     }
-    SampleAppModule.prototype.ngDoBootstrap = function () { };
-    return SampleAppModule;
+    SampleAppModuleAngular.prototype.ngDoBootstrap = function () {
+        /* no body: this disables normal (non-hybrid) Angular bootstrapping */
+    };
+    return SampleAppModuleAngular;
 }());
-SampleAppModule = __decorate([
-    core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, static_1.UpgradeModule, angular_hybrid_1.UIRouterUpgradeModule, index_1.PrefsModule],
-        providers: [
-            { provide: core_1.NgModuleFactoryLoader, useClass: core_1.SystemJsNgModuleLoader },
-            // Register some AngularJS services as Angular providers
-            { provide: 'DialogService', deps: ['$injector'], useFactory: getDialogService },
-            { provide: 'Contacts', deps: ['$injector'], useFactory: getContactsService },
-        ]
-    })
-], SampleAppModule);
-exports.SampleAppModule = SampleAppModule;
-// Tell UI-Router to wait to synchronize the URL (until all bootstrapping is complete)e
-ngmodule_1.ngmodule.config(['$urlServiceProvider', function ($urlService) { return $urlService.deferIntercept(); }]);
-// Wait until the DOM is ready
-angular.element(document).ready(function () {
-    // Manually bootstrap the Angular app
-    platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(SampleAppModule).then(function (platformRef) {
-        var injector = platformRef.injector;
-        var upgrade = injector.get(static_1.UpgradeModule);
-        // Manually bootstrap the AngularJS app
-        upgrade.bootstrap(document.body, ['demo']);
-        // Intialize the Angular Module (get() any UIRouter service from DI to initialize it)
-        var url = injector.get(core_2.UrlService);
-        // Instruct UIRouter to listen to URL changes
-        url.listen();
-        url.sync();
-    });
-});
-
+exports.SampleAppModuleAngular = SampleAppModuleAngular;
+//# sourceMappingURL=angularModule.js.map
 
 /***/ }),
-
-/***/ 217:
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var angular = __webpack_require__(16);
+var angular = __webpack_require__(7);
+var global_module_1 = __webpack_require__(15);
 /**
  * This service stores and retrieves user preferences in session storage
  */
@@ -345,16 +1922,17 @@ var AppConfig = (function () {
     return AppConfig;
 }());
 exports.AppConfig = AppConfig;
-
+global_module_1.globalModule.service('AppConfig', AppConfig);
+//# sourceMappingURL=appConfig.service.js.map
 
 /***/ }),
-
-/***/ 218:
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+var global_module_1 = __webpack_require__(15);
 /**
  * This service emulates an Authentication Service.
  */
@@ -403,11 +1981,11 @@ var AuthService = (function () {
     return AuthService;
 }());
 exports.AuthService = AuthService;
-
+global_module_1.globalModule.service('AuthService', AuthService);
+//# sourceMappingURL=auth.service.js.map
 
 /***/ }),
-
-/***/ 219:
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -423,7 +2001,8 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var sessionStorage_1 = __webpack_require__(240);
+var sessionStorage_1 = __webpack_require__(160);
+var global_module_1 = __webpack_require__(15);
 /**
  * Fake REST Services (Contacts, Folders, Messages) used in the mymessages submodule.
  *
@@ -476,17 +2055,20 @@ var Messages = (function (_super) {
     return Messages;
 }(sessionStorage_1.SessionStorage));
 exports.Messages = Messages;
-
+global_module_1.globalModule.service('Contacts', Contacts);
+global_module_1.globalModule.service('Folders', Folders);
+global_module_1.globalModule.service('Messages', Messages);
+//# sourceMappingURL=dataSources.service.js.map
 
 /***/ }),
-
-/***/ 220:
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.dialog = function ($timeout, $q) {
+var global_module_1 = __webpack_require__(15);
+var dialogDirective = function ($timeout, $q) {
     return {
         link: function (scope, elem) {
             $timeout(function () { return elem.addClass('active'); });
@@ -498,17 +2080,18 @@ exports.dialog = function ($timeout, $q) {
         template: "\n      <div class=\"backdrop\"></div>\n      <div class='wrapper'>\n        <div class=\"content\">\n          <h4 ng-show=\"message\">{{message}}</h4>\n          <div ng-show=\"details\">{{details}}</div>\n    \n          <div style=\"padding-top: 1em;\">\n            <button class=\"btn btn-primary\" ng-click=\"yes()\">{{yesMsg}}</button>\n            <button class=\"btn btn-primary\" ng-click=\"no()\">{{noMsg}}</button>\n          </div>\n        </div>\n      </div>\n"
     };
 };
-
+global_module_1.globalModule.directive('dialog', dialogDirective);
+//# sourceMappingURL=dialog.directive.js.map
 
 /***/ }),
-
-/***/ 221:
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var angular = __webpack_require__(16);
+var angular = __webpack_require__(7);
+var global_module_1 = __webpack_require__(15);
 var DialogService = (function () {
     function DialogService($document, $compile, $rootScope) {
         var body = $document.find("body");
@@ -525,16 +2108,36 @@ var DialogService = (function () {
     return DialogService;
 }());
 exports.DialogService = DialogService;
-
+global_module_1.globalModule.service('DialogService', DialogService);
+//# sourceMappingURL=dialog.service.js.map
 
 /***/ }),
+/* 135 */
+/***/ (function(module, exports, __webpack_require__) {
 
-/***/ 222:
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+__export(__webpack_require__(15));
+__webpack_require__(130);
+__webpack_require__(131);
+__webpack_require__(132);
+__webpack_require__(133);
+__webpack_require__(134);
+__webpack_require__(136);
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+var global_module_1 = __webpack_require__(15);
 /**
  * This file contains a Transition Hook which protects a
  * route that requires authentication.
@@ -560,17 +2163,17 @@ function authHookRunBlock($transitions, AuthService) {
     // Register the "requires auth" hook with the TransitionsService
     $transitions.onBefore(requiresAuthCriteria, redirectToLogin, { priority: 10 });
 }
-exports.authHookRunBlock = authHookRunBlock;
-
+global_module_1.globalModule.run(authHookRunBlock);
+//# sourceMappingURL=requiresAuth.hook.js.map
 
 /***/ }),
-
-/***/ 223:
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+var home_module_1 = __webpack_require__(17);
 /**
  * The controller for the `app` component.
  */
@@ -595,37 +2198,21 @@ var AuthedController = (function () {
  * This component renders the outermost chrome (application header and tabs, the compose  and logout button)
  * It has a `ui-view` viewport for nested states to fill in.
  */
-exports.app = {
+var appComponent = {
     controller: AuthedController,
     template: "\n    <div class=\"navheader\">\n      <ul ng-if=\"::$ctrl.isAuthenticated\" class=\"nav nav-tabs\">\n    \n        <li ui-sref-active=\"active\"> <a ui-sref=\"mymessages\" role=\"button\"> Messages </a> </li>\n        <li ui-sref-active=\"active\"> <a ui-sref=\"contacts\" role=\"button\"> Contacts </a> </li>\n        <li ui-sref-active=\"active\"> <a ui-sref=\"prefs\" role=\"button\"> Preferences </a> </li>\n    \n        <li class=\"navbar-right\">\n          <button class=\"btn btn-primary fa fa-home\" ui-sref=\"home\"></button>\n          <button style=\"margin-right: 15px;\" class=\"btn btn-primary\" ui-sref=\"mymessages.compose\"><i class=\"fa fa-envelope\"></i> New Message</button>\n        </li>\n    \n        <li class=\"navbar-text navbar-right logged-in-user\" style=\"margin: 0.5em 1.5em;\">\n          <div>\n            {{::$ctrl.emailAddress}} <i class=\"fa fa-chevron-down\"></i>\n            <div class=\"hoverdrop\">\n              <button class=\"btn btn-primary\" ng-click=\"$ctrl.logout()\">Log Out</button>\n            </div>\n          </div>\n        </li>\n    \n      </ul>\n    </div>\n    \n    <div ui-view/>\n"
 };
-
-
-/***/ }),
-
-/***/ 224:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-// Apply some global configuration...
-Object.defineProperty(exports, "__esModule", { value: true });
-// If the user enters a URL that doesn't match any known URL (state), send them to `/welcome`
-exports.otherwiseConfigBlock = ['$urlRouterProvider', function ($urlRouterProvider) { $urlRouterProvider.otherwise("/welcome"); }];
-// Enable tracing of each TRANSITION... (check the javascript console)
-// This syntax `$trace.enable(1)` is an alternative to `$trace.enable("TRANSITION")`.
-// Besides "TRANSITION", you can also enable tracing for : "RESOLVE", "HOOK", "INVOKE", "UIVIEW", "VIEWCONFIG"
-exports.traceRunBlock = ['$trace', function ($trace) { $trace.enable(1); }];
-
+home_module_1.homeModule.component('app', appComponent);
+//# sourceMappingURL=app.component.js.map
 
 /***/ }),
-
-/***/ 225:
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+var home_module_1 = __webpack_require__(17);
 /**
  * This is the parent state for the entire application.
  *
@@ -633,7 +2220,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * 1) Shows the outermost chrome (including the navigation and logout for authenticated users)
  * 2) Provide a viewport (ui-view) for a substate to plug into
  */
-exports.appState = {
+var appState = {
     name: 'app',
     redirectTo: 'welcome',
     component: 'app'
@@ -642,7 +2229,7 @@ exports.appState = {
  * This is the 'welcome' state.  It is the default state (as defined by app.js) if no other state
  * can be matched to the URL.
  */
-exports.welcomeState = {
+var welcomeState = {
     parent: 'app',
     name: 'welcome',
     url: '/welcome',
@@ -653,7 +2240,7 @@ exports.welcomeState = {
  *
  * It shows giant buttons which activate their respective submodules: Messages, Contacts, Preferences
  */
-exports.homeState = {
+var homeState = {
     parent: 'app',
     name: 'home',
     url: '/home',
@@ -666,7 +2253,7 @@ exports.homeState = {
  * It shows a fake login dialog and prompts the user to authenticate.  Once the user authenticates, it then
  * reactivates the state that the user originally came from.
  */
-exports.loginState = {
+var loginState = {
     parent: 'app',
     name: 'login',
     url: '/login',
@@ -695,31 +2282,57 @@ function returnTo($transition$) {
     // If the fromState's name is empty, then this was the initial transition. Just return them to the home state
     return $state.target('home');
 }
-
+home_module_1.homeModule.config(['$stateProvider', function ($stateProvider) {
+        $stateProvider.state(appState);
+        $stateProvider.state(welcomeState);
+        $stateProvider.state(homeState);
+        $stateProvider.state(loginState);
+    }]);
+//# sourceMappingURL=app.states.js.map
 
 /***/ }),
-
-/***/ 226:
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+var home_module_1 = __webpack_require__(17);
 // This is a home component for authenticated users.
 // It shows giant buttons which activate their respective submodules: Messages, Contacts, Preferences
-exports.home = {
+var homeComponent = {
     template: "\n    <div class=\"home buttons\">\n      <button ui-sref=\"mymessages\" class=\"btn btn-primary\">\n        <h1><i class=\"fa fa-envelope\"></i></h1>\n        <h1>Messages</h1>\n      </button>\n\n      <button ui-sref=\"contacts\" class=\"btn btn-primary\">\n      <h1><i class=\"fa fa-users\"></i></h1>\n      <h1>Contacts</h1>\n      </button>\n\n      <button ui-sref=\"prefs\" class=\"btn btn-primary\">\n        <h1><i class=\"fa fa-cogs\"></i></h1>\n        <h1>Preferences</h1>\n      </button>\n    </div>\n"
 };
-
+home_module_1.homeModule.component('home', homeComponent);
+//# sourceMappingURL=home.component.js.map
 
 /***/ }),
+/* 140 */
+/***/ (function(module, exports, __webpack_require__) {
 
-/***/ 227:
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+__export(__webpack_require__(17));
+__webpack_require__(137);
+__webpack_require__(138);
+__webpack_require__(139);
+__webpack_require__(141);
+__webpack_require__(142);
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+var angular = __webpack_require__(7);
+var home_module_1 = __webpack_require__(17);
 /**
  * The controller for the `login` component
  *
@@ -739,7 +2352,7 @@ var LoginController = (function () {
             var returnToOriginalState = function () {
                 var state = _this.returnTo.state();
                 var params = _this.returnTo.params();
-                var options = Object.assign({}, _this.returnTo.options(), { reload: true });
+                var options = angular.extend({}, _this.returnTo.options(), { reload: true });
                 $state.go(state, params, options);
             };
             var showError = function (errorMessage) {
@@ -759,35 +2372,93 @@ var LoginController = (function () {
  * It prompts for the username/password (and gives hints with bouncy arrows)
  * It shows errors if the authentication failed for any reason.
  */
-exports.login = {
+var loginComponent = {
     bindings: { returnTo: '<' },
     controller: LoginController,
     template: "\n    <div class=\"container\">\n      <div class=\"col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2\">\n        <h3>Log In</h3>\n        <p>(This login screen is for demonstration only... just pick a username, enter 'password' and click <b>\"Log in\"</b>)</p>\n        <hr>\n    \n        <div>\n          <label for=\"username\">Username:</label>\n          <select class=\"form-control\" name=\"username\" id=\"username\"\n            ng-model=\"$ctrl.credentials.username\" ng-options=\"username for username in $ctrl.usernames\"></select>\n          <i style=\"position: relative; bottom: 1.8em; margin-left: 10em; height: 0\"\n              ng-hide=\"$ctrl.credentials.username\" class=\"fa fa-arrow-left bounce-horizontal\"> Choose </i>\n        </div>\n        <br>\n    \n        <div>\n          <label for=\"password\">Password:</label>\n          <input class=\"form-control\" type=\"password\" name=\"password\" ng-model=\"$ctrl.credentials.password\">\n          <i style=\"position: relative; bottom: 1.8em; margin-left: 5em; height: 0\"\n              ng-hide=\"!$ctrl.credentials.username || $ctrl.credentials.password == 'password'\" class=\"fa fa-arrow-left bounce-horizontal\">\n            Enter '<b>password</b>' here\n          </i>\n        </div>\n    \n        <div ng-show=\"$ctrl.errorMessage\" class=\"well error\">{{ $ctrl.errorMessage }}</div>\n    \n        <hr>\n        <div>\n          <button class=\"btn btn-primary\" type=\"button\"\n              ng-disabled=\"$ctrl.authenticating\" ng-click=\"$ctrl.login($ctrl.credentials)\">\n            <i class=\"fa fa-spin fa-spinner\" ng-show=\"$ctrl.authenticating\"></i> <span>Log in</span>\n          </button>\n          <i ng-show=\"$ctrl.credentials.username && $ctrl.credentials.password == 'password'\" style=\"position: relative;\" class=\"fa fa-arrow-left bounce-horizontal\"> Click Me!</i>\n      </div>\n    </div>\n    "
 };
-
+home_module_1.homeModule.component('login', loginComponent);
+//# sourceMappingURL=login.component.js.map
 
 /***/ }),
-
-/***/ 228:
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.welcome = {
+var home_module_1 = __webpack_require__(17);
+var welcomeComponent = {
     template: "\n    <div class=\"container-fluid\">\n    \n      <h3>UI-Router Sample App</h3>\n    \n      <p>Welcome to the sample app!</p>\n      <p>This is a demonstration app intended to highlight some patterns that can be used within UI-Router.\n        These patterns should help you to to build cohesive, robust apps.  Additionally, this app uses state-vis\n        to show the tree of states, and a transition log visualizer.</p>\n    \n      <h4>App Overview</h4>\n      <p>\n        First, start exploring the application's functionality at a high level by activating\n        one of the three submodules: Messages, Contacts, or Preferences. If you are not already logged in,\n        you will be taken to an authentication screen (the authentication is fake; the password is \"password\")\n        <div>\n          <button class=\"btn btn-primary\" ui-sref=\"mymessages\"><i class=\"fa fa-envelope\"></i><span>Messages</span></button>\n          <button class=\"btn btn-primary\" ui-sref=\"contacts\"><i class=\"fa fa-users\"></i><span>Contacts</span></button>\n          <button class=\"btn btn-primary\" ui-sref=\"prefs\"><i class=\"fa fa-cogs\"></i><span>Preferences</span></button>\n        </div>\n      </p>\n    \n      <h4>Patterns and Recipes</h4>\n      <ul>\n        <li>Require Authentication</li>\n        <li>Previous State</li>\n        <li>Redirect Hook</li>\n        <li>Default Param Values</li>\n      </ul>\n    </div>"
 };
-
+home_module_1.homeModule.component('welcome', welcomeComponent);
+//# sourceMappingURL=welcome.component.js.map
 
 /***/ }),
+/* 143 */
+/***/ (function(module, exports, __webpack_require__) {
 
-/***/ 229:
+"use strict";
+
+/** * This file is the main entry point for the entire app.
+ *
+ * If the application is being bundled, this is where the bundling process
+ * starts.  If the application is being loaded by an es6 module loader, this
+ * is the entry point.
+ *
+ * Point Webpack or SystemJS to this file.
+ *
+ * This module imports all the different parts of the application and registers them with angular.
+ * - Submodules
+ *   - States
+ *   - Components
+ *   - Directives
+ *   - Services
+ *   - Filters
+ *   - Run and Config blocks
+ *     - Transition Hooks
+ * - 3rd party Libraries and angular1 module
+ *
+ * Then this module creates the ng-upgrade adapter
+ * and bootstraps the hybrid application
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+// Google analytics
+__webpack_require__(125);
+var static_1 = __webpack_require__(27);
+var core_1 = __webpack_require__(1);
+var visualizer_1 = __webpack_require__(60);
+var angularJSModule_1 = __webpack_require__(81);
+var platform_browser_1 = __webpack_require__(26);
+var angularModule_ngfactory_1 = __webpack_require__(124);
+// Using AngularJS config block, call `deferIntercept()`.
+// This tells UI-Router to delay the initial URL sync (until all bootstrapping is complete)
+angularJSModule_1.sampleAppModuleAngularJS.config(['$urlServiceProvider', function ($urlService) { return $urlService.deferIntercept(); }]);
+// Manually bootstrap the Angular app
+platform_browser_1.platformBrowser().bootstrapModuleFactory(angularModule_ngfactory_1.SampleAppModuleAngularNgFactory).then(function (platformRef) {
+    var injector = platformRef.injector;
+    var upgrade = injector.get(static_1.UpgradeModule);
+    // The DOM must be already be available
+    upgrade.bootstrap(document.body, [angularJSModule_1.sampleAppModuleAngularJS.name]);
+    // Intialize the Angular Module (get() any UIRouter service from DI to initialize it)
+    var url = injector.get(core_1.UIRouter).urlService;
+    // Instruct UIRouter to listen to URL changes
+    url.listen();
+    url.sync();
+});
+// Show ui-router-visualizer
+angularJSModule_1.sampleAppModuleAngularJS.run(['$uiRouter', function ($uiRouter) { return visualizer_1.visualizer($uiRouter); }]);
+//# sourceMappingURL=main.js.map
+
+/***/ }),
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var angular = __webpack_require__(16);
+var angular = __webpack_require__(7);
+var mymessages_module_1 = __webpack_require__(9);
 /**
  * The controller for the Compose component
  */
@@ -859,71 +2530,37 @@ var ComposeController = (function () {
  * A Save As Draft button saves the message to the "drafts" folder.
  * A Send button sends the message
  */
-exports.compose = {
+var composeComponent = {
     bindings: { $stateParams: '<', $transition$: '<' },
     controller: ComposeController,
     template: "\n    <div class=\"compose\">\n      <div class=\"header\">\n        <div class=\"flex-h\"> <label>Recipient</label> <input type=\"text\" id=\"to\" name=\"to\" ng-model=\"$ctrl.message.to\"> </div>\n        <div class=\"flex-h\"> <label>Subject</label> <input type=\"text\" id=\"subject\" name=\"subject\" ng-model=\"$ctrl.message.subject\"> </div>\n      </div>\n    \n      <div class=\"body\">\n        <textarea name=\"body\" id=\"body\" ng-model=\"$ctrl.message.body\" cols=\"30\" rows=\"20\"></textarea>\n        \n        <div class=\"buttons\">\n          <!-- Clicking this button brings the user back to the state they came from (previous state) -->\n          <button class=\"btn btn-primary\" ng-click=\"$ctrl.gotoPreviousState()\"><i class=\"fa fa-times-circle-o\"></i><span>Cancel</span></button>\n          <button class=\"btn btn-primary\" ng-click=\"$ctrl.save($ctrl.message)\"><i class=\"fa fa-save\"></i><span>Save as Draft</span></button>\n          <button class=\"btn btn-primary\" ng-click=\"$ctrl.send($ctrl.message)\"><i class=\"fa fa-paper-plane-o\"></i><span>Send</span></button>\n        </div>\n      </div>\n    </div>\n"
 };
-
+mymessages_module_1.mymessagesModule.component('compose', composeComponent);
+//# sourceMappingURL=compose.component.js.map
 
 /***/ }),
-
-/***/ 230:
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * Renders a list of folders
- */
-exports.folderList = {
-    bindings: { folders: '<' },
-    template: "\n    <!-- Renders a list of folders -->\n    <div class=\"folderlist\">\n      <ul class=\"selectlist list-unstyled\">\n  \n        <!-- Highlight the selected folder:\n            When the current state matches the ui-sref's state (and its parameters)\n            ui-sref-active applies the 'selected' class to the li element -->\n        <li class=\"folder\" ui-sref-active=\"selected\" ng-repeat=\"folder in $ctrl.folders\" >\n          <!-- This ui-sref is a relative link to the 'mymessages.messagelist' substate. It provides the\n              'folderId' parameter value from the current folder's .id property -->\n          <a ui-sref=\".messagelist({folderId: folder._id})\"><i class=\"fa\"></i>{{folder._id}}</a>\n        </li>\n      </ul>\n    </div>\n"
-};
-
+__webpack_require__(146);
+//# sourceMappingURL=index.js.map
 
 /***/ }),
-
-/***/ 231:
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * A component that displays a folder of messages as a table
- *
- * If a row is clicked, the details of the message is shown using a relative ui-sref to `.message`.
- *
- * ui-sref-active is used to highlight the selected row.
- *
- * Shows/hides specific columns based on the `columns` input binding.
- */
-exports.messageTable = {
-    bindings: { columns: '<', messages: '<' },
-    controller: function (AppConfig) {
-        var _this = this;
-        this.AppConfig = AppConfig;
-        this.colVisible = function (name) { return _this.columns.indexOf(name) !== -1; };
-    },
-    template: "\n    <table>\n      <thead>\n        <tr>\n          <td ng-if=\"::$ctrl.colVisible('read')\"></td>\n          <td ng-if=\"::$ctrl.colVisible('from')\"     sort-messages=\"from\">Sender</td>\n          <td ng-if=\"::$ctrl.colVisible('to')\"       sort-messages=\"to\">Recipient</td>\n          <td ng-if=\"::$ctrl.colVisible('subject')\"  sort-messages=\"subject\">Subject</td>\n          <td ng-if=\"::$ctrl.colVisible('date')\"     sort-messages=\"date\">Date</td>\n        </tr>\n      </thead>\n  \n      <tbody>\n        <tr ng-repeat=\"message in $ctrl.messages | orderBy: $ctrl.AppConfig.sort track by message._id\"\n            ui-sref=\".message({messageId: message._id})\" ui-sref-active=\"active\">\n          <td ng-if=\"::$ctrl.colVisible('read')\"><i class=\"fa fa-circle\" style=\"font-size: 50%\" ng-show=\"!message.read\"></td>\n          <td ng-if=\"::$ctrl.colVisible('from')\">{{ message.from }}</td>\n          <td ng-if=\"::$ctrl.colVisible('to')\">{{ message.to }}</td>\n          <td ng-if=\"::$ctrl.colVisible('subject')\">{{ message.subject }}</td>\n          <td ng-if=\"::$ctrl.colVisible('date')\">{{ message.date | date: \"yyyy-MM-dd\" }}</td>\n        </tr>\n      </tbody>\n  \n    </table>\n"
-};
-
-
-/***/ }),
-
-/***/ 232:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var angular = __webpack_require__(16);
+var angular = __webpack_require__(7);
+var mymessages_module_1 = __webpack_require__(9);
 /**
  * A directive (for a table header) which changes the app's sort order
  */
-exports.sortMessages = function (AppConfig) {
+var sortMessagesDirective = function (AppConfig) {
     return {
         restrict: 'A',
         link: function (scope, elem, attrs) {
@@ -940,34 +2577,87 @@ exports.sortMessages = function (AppConfig) {
         }
     };
 };
-
+mymessages_module_1.mymessagesModule.directive('sortMessages', sortMessagesDirective);
+//# sourceMappingURL=sortMessages.directive.js.map
 
 /***/ }),
-
-/***/ 233:
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+__webpack_require__(148);
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+/* 148 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var mymessages_module_1 = __webpack_require__(9);
 /** Angular filter to format fake emails as HTML*/
-exports.messageBody = function ($sce) {
+var messageBody = function ($sce) {
     return function (msgText) {
         if (msgText === void 0) { msgText = ''; }
         return $sce.trustAsHtml(msgText.split(/\n/).map(function (p) { return "<p>" + p + "</p>"; }).join('\n'));
     };
 };
-
+mymessages_module_1.mymessagesModule.filter('messageBody', messageBody);
+//# sourceMappingURL=messageBody.filter.js.map
 
 /***/ }),
-
-/***/ 234:
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var util_1 = __webpack_require__(129);
+var mymessages_module_1 = __webpack_require__(9);
+/**
+ * Renders a list of folders
+ */
+var folderListComponent = {
+    bindings: { folders: '<' },
+    template: "\n    <!-- Renders a list of folders -->\n    <div class=\"folderlist\">\n      <ul class=\"selectlist list-unstyled\">\n  \n        <!-- Highlight the selected folder:\n            When the current state matches the ui-sref's state (and its parameters)\n            ui-sref-active applies the 'selected' class to the li element -->\n        <li class=\"folder\" ui-sref-active=\"selected\" ng-repeat=\"folder in $ctrl.folders\" >\n          <!-- This ui-sref is a relative link to the 'mymessages.messagelist' substate. It provides the\n              'folderId' parameter value from the current folder's .id property -->\n          <a ui-sref=\".messagelist({folderId: folder._id})\"><i class=\"fa\"></i>{{folder._id}}</a>\n        </li>\n      </ul>\n    </div>\n"
+};
+mymessages_module_1.mymessagesModule.component('folderList', folderListComponent);
+//# sourceMappingURL=folderList.component.js.map
+
+/***/ }),
+/* 150 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+__export(__webpack_require__(9));
+__webpack_require__(144);
+__webpack_require__(149);
+__webpack_require__(151);
+__webpack_require__(152);
+__webpack_require__(153);
+__webpack_require__(154);
+__webpack_require__(155);
+__webpack_require__(145);
+__webpack_require__(147);
+__webpack_require__(156);
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+/* 151 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var util_1 = __webpack_require__(86);
+var mymessages_module_1 = __webpack_require__(9);
 /** Helper function to prefix a message with "fwd: " or "re: " */
 var prefixSubject = function (prefix, message) { return prefix + message.subject; };
 /** Helper function which quotes an email message */
@@ -1049,38 +2739,69 @@ var MessageController = (function () {
  * Buttons are shown/hidden based on the folder's context.
  * For instance, a "draft" message can be edited, but can't be replied to.
  */
-exports.message = {
+exports.messageComponent = {
     bindings: { folder: '<', message: '<', nextMessageGetter: '<' },
     controller: MessageController,
     template: "\n    <div class=\"message\">\n    \n      <div class=\"header\">\n        <div>\n          <h4>{{$ctrl.message.subject}}</h4>\n          <h5>{{$ctrl.message.from}} <i class=\"fa fa-long-arrow-right\"></i> {{$ctrl.message.to}}</h5>\n        </div>\n    \n        <div class=\"line2\">\n          <div>{{$ctrl.message.date | date: 'longDate'}} {{$ctrl.message.date | date: 'mediumTime'}}</div>\n          <div>\n            <button class=\"btn btn-primary\" ng-show=\"$ctrl.actions.edit\" ng-click=\"$ctrl.editDraft($ctrl.message)\"><i class=\"fa fa-pencil\"></i> <span>Edit Draft</span></button>\n            <button class=\"btn btn-primary\" ng-show=\"$ctrl.actions.reply\" ng-click=\"$ctrl.reply($ctrl.message)\"><i class=\"fa fa-reply\"></i> <span>Reply</span></button>\n            <button class=\"btn btn-primary\" ng-show=\"$ctrl.actions.forward\" ng-click=\"$ctrl.forward($ctrl.message)\"><i class=\"fa fa-forward\" ></i> <span>Forward</span></button>\n            <button class=\"btn btn-primary\" ng-show=\"$ctrl.actions.delete\" ng-click=\"$ctrl.remove($ctrl.message)\"><i class=\"fa fa-close\"></i> <span>Delete</span></button>\n          </div>\n        </div>\n      </div>\n    \n      <!-- Pass the raw (plain text) message body through the messageBody filter to format slightly nicer. -->\n      <div class=\"body\" ng-bind-html=\"::$ctrl.message.body | messageBody\"></div>\n    </div>\n"
 };
-
+mymessages_module_1.mymessagesModule.component('message', exports.messageComponent);
+//# sourceMappingURL=message.component.js.map
 
 /***/ }),
-
-/***/ 235:
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+var mymessages_module_1 = __webpack_require__(9);
 /**
  * This component renders a list of messages using the `messageTable` component
  */
-exports.messageList = {
+var messageListComponent = {
     bindings: { folder: '<', messages: '<' },
     template: "\n    <div class=\"messages\">\n      <message-table columns=\"$ctrl.folder.columns\" messages=\"$ctrl.messages\"></message-table>\n    </div>\n"
 };
-
+mymessages_module_1.mymessagesModule.component('messageList', messageListComponent);
+//# sourceMappingURL=messageList.component.js.map
 
 /***/ }),
-
-/***/ 236:
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+var mymessages_module_1 = __webpack_require__(9);
+/**
+ * A component that displays a folder of messages as a table
+ *
+ * If a row is clicked, the details of the message is shown using a relative ui-sref to `.message`.
+ *
+ * ui-sref-active is used to highlight the selected row.
+ *
+ * Shows/hides specific columns based on the `columns` input binding.
+ */
+var messageTableComponent = {
+    bindings: { columns: '<', messages: '<' },
+    controller: function (AppConfig) {
+        var _this = this;
+        this.AppConfig = AppConfig;
+        this.colVisible = function (name) { return _this.columns.indexOf(name) !== -1; };
+    },
+    template: "\n    <table>\n      <thead>\n        <tr>\n          <td ng-if=\"::$ctrl.colVisible('read')\"></td>\n          <td ng-if=\"::$ctrl.colVisible('from')\"     sort-messages=\"from\">Sender</td>\n          <td ng-if=\"::$ctrl.colVisible('to')\"       sort-messages=\"to\">Recipient</td>\n          <td ng-if=\"::$ctrl.colVisible('subject')\"  sort-messages=\"subject\">Subject</td>\n          <td ng-if=\"::$ctrl.colVisible('date')\"     sort-messages=\"date\">Date</td>\n        </tr>\n      </thead>\n  \n      <tbody>\n        <tr ng-repeat=\"message in $ctrl.messages | orderBy: $ctrl.AppConfig.sort track by message._id\"\n            ui-sref=\".message({messageId: message._id})\" ui-sref-active=\"active\">\n          <td ng-if=\"::$ctrl.colVisible('read')\"><i class=\"fa fa-circle\" style=\"font-size: 50%\" ng-show=\"!message.read\"></td>\n          <td ng-if=\"::$ctrl.colVisible('from')\">{{ message.from }}</td>\n          <td ng-if=\"::$ctrl.colVisible('to')\">{{ message.to }}</td>\n          <td ng-if=\"::$ctrl.colVisible('subject')\">{{ message.subject }}</td>\n          <td ng-if=\"::$ctrl.colVisible('date')\">{{ message.date | date: \"yyyy-MM-dd\" }}</td>\n        </tr>\n      </tbody>\n  \n    </table>\n"
+};
+mymessages_module_1.mymessagesModule.component('messageTable', messageTableComponent);
+//# sourceMappingURL=messageTable.component.js.map
+
+/***/ }),
+/* 154 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var mymessages_module_1 = __webpack_require__(9);
 /**
  * The main mymessages component.
  *
@@ -1088,27 +2809,28 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * - messageList: filled with the list of messages for a folder
  * - messagecontent: filled with the contents of a single message.
  */
-exports.mymessages = {
+var mymessagesComponent = {
     bindings: { folders: '<' },
     template: "\n    <div class=\"my-messages\">\n    \n      <!-- Show message folders -->\n      <folder-list folders=\"$ctrl.folders\"></folder-list>\n    \n      <!-- A named view for the list of messages in this folder.  This will be  filled in by the 'mymessages.messagelist' child state -->\n      <div ui-view=\"messagelist\" class=\"messagelist\"> </div>\n    \n    </div>\n    \n    <!-- A named ui-view for a message's contents.  The 'mymessages.messagelist.message' grandchild state plugs into this ui-view -->\n    <div ui-view=\"messagecontent\"></div>\n"
 };
-
+mymessages_module_1.mymessagesModule.component('mymessages', mymessagesComponent);
+//# sourceMappingURL=mymessages.component.js.map
 
 /***/ }),
-
-/***/ 237:
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+var mymessages_module_1 = __webpack_require__(9);
 /**
  * This state allows the user to compose a new message, edit a drafted message, send a message,
  * or save an unsent message as a draft.
  *
  * This state uses view-targeting to take over the ui-view that would normally be filled by the 'mymessages' state.
  */
-exports.composeState = {
+var composeState = {
     name: 'mymessages.compose',
     url: '/compose',
     // Declares that this state has a 'message' parameter, that defaults to an empty object.
@@ -1127,7 +2849,7 @@ exports.composeState = {
  * This state shows the list of folders for the current user. It retrieves the folders from the
  * Folders service.  If a user navigates directly to this state, the state redirects to the 'mymessages.messagelist'.
  */
-exports.mymessagesState = {
+var mymessagesState = {
     parent: 'app',
     name: "mymessages",
     url: "/mymessages",
@@ -1145,7 +2867,7 @@ exports.mymessagesState = {
  * This state shows the contents of a single message.
  * It also has UI to reply, forward, delete, or edit an existing draft.
  */
-exports.messageState = {
+var messageState = {
     name: 'mymessages.messagelist.message',
     url: '/:messageId',
     resolve: {
@@ -1164,7 +2886,7 @@ exports.messageState = {
 /**
  * This state shows the contents (a message list) of a single folder
  */
-exports.messageListState = {
+var messageListState = {
     name: 'mymessages.messagelist',
     url: '/:folderId',
     // The folderId parameter is part of the URL.  This params block sets 'inbox' as the default value.
@@ -1182,16 +2904,32 @@ exports.messageListState = {
         "messagelist": 'messageList'
     }
 };
-
+mymessages_module_1.mymessagesModule.config(['$stateProvider', function ($stateProvider) {
+        $stateProvider.state(composeState);
+        $stateProvider.state(mymessagesState);
+        $stateProvider.state(messageState);
+        $stateProvider.state(messageListState);
+    }]);
+//# sourceMappingURL=mymessages.states.js.map
 
 /***/ }),
-
-/***/ 238:
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+__webpack_require__(157);
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+/* 157 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var mymessages_module_1 = __webpack_require__(9);
 /** Provides services related to a message list */
 var MessageListUI = (function () {
     function MessageListUI($filter, AppConfig) {
@@ -1207,18 +2945,35 @@ var MessageListUI = (function () {
     };
     return MessageListUI;
 }());
-exports.MessageListUI = MessageListUI;
-
+mymessages_module_1.mymessagesModule.service('MessageListUI', MessageListUI);
+//# sourceMappingURL=messagesListUI.service.js.map
 
 /***/ }),
-
-/***/ 239:
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var prefs_component_1 = __webpack_require__(128);
+var prefs_states_1 = __webpack_require__(159);
+var PREFS_STATES = [prefs_states_1.prefsState];
+/** The NgModule for the Preferences feature */
+var PrefsModule = (function () {
+    function PrefsModule() {
+    }
+    return PrefsModule;
+}());
+exports.PrefsModule = PrefsModule;
+//# sourceMappingURL=prefs.module.js.map
+
+/***/ }),
+/* 159 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var prefs_component_1 = __webpack_require__(63);
 /**
  * This state allows the user to set their application preferences
  */
@@ -1230,17 +2985,16 @@ exports.prefsState = {
     // Mark this state as requiring authentication.  See ../global/requiresAuth.hook.js.
     data: { requiresAuth: true }
 };
-
+//# sourceMappingURL=prefs.states.js.map
 
 /***/ }),
-
-/***/ 240:
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var util_1 = __webpack_require__(129);
+var util_1 = __webpack_require__(86);
 /**
  * This class simulates a RESTful resource, but the API calls fetch data from
  * Session Storage instead of an HTTP call.
@@ -1360,102 +3114,8 @@ var SessionStorage = (function () {
     return SessionStorage;
 }());
 exports.SessionStorage = SessionStorage;
-
-
-/***/ }),
-
-/***/ 27:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/**
- * This file imports the third party library dependencies, then creates the angular module "demo"
- * and exports it.
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-// External dependencies
-var angular = __webpack_require__(16);
-var angularjs_1 = __webpack_require__(67);
-var visualizer_1 = __webpack_require__(94);
-// Create the angular 1 module "demo".
-//
-// Since it is exported, other parts of the application (in other files) can then import it and register things.
-// In bootstrap.js, the module is imported, and the components, services, and states are registered.
-exports.ngmodule = angular.module("demo", [angularjs_1.default, 'ui.router.upgrade']);
-// Show ui-router-visualizer
-exports.ngmodule.run(['$uiRouter', function ($uiRouter) { return visualizer_1.visualizer($uiRouter); }]);
-var BLANK_MODULE = {
-    states: [],
-    components: {},
-    directives: {},
-    services: {},
-    filters: {},
-    configBlocks: [],
-    runBlocks: []
-};
-/**
- * Register an app module's states, directives, components, filters, services,
- * and config/run blocks with the `ngmodule`
- *
- * @param ngModule the `angular.module()` object
- * @param appModule the feature module consisting of components, states, services, etc
- */
-function loadNg1AppModule(ngModule, appModule) {
-    var module = Object.assign({}, BLANK_MODULE, appModule);
-    ngModule.config(['$stateProvider', function ($stateProvider) { return module.states.forEach(function (state) { return $stateProvider.state(state); }); }]);
-    Object.keys(module.components).forEach(function (name) { return ngModule.component(name, module.components[name]); });
-    Object.keys(module.directives).forEach(function (name) { return ngModule.directive(name, module.directives[name]); });
-    Object.keys(module.services).forEach(function (name) { return ngModule.service(name, module.services[name]); });
-    Object.keys(module.filters).forEach(function (name) { return ngModule.filter(name, module.filters[name]); });
-    module.configBlocks.forEach(function (configBlock) { return ngModule.config(configBlock); });
-    module.runBlocks.forEach(function (runBlock) { return ngModule.run(runBlock); });
-    return ngModule;
-}
-exports.loadNg1AppModule = loadNg1AppModule;
-
-
-/***/ }),
-
-/***/ 70:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var prefs_component_1 = __webpack_require__(128);
-var prefs_states_1 = __webpack_require__(239);
-var core_1 = __webpack_require__(8);
-var common_1 = __webpack_require__(17);
-var forms_1 = __webpack_require__(71);
-var angular_1 = __webpack_require__(33);
-var PREFS_STATES = [prefs_states_1.prefsState];
-/** The NgModule for the Preferences feature */
-var PrefsModule = (function () {
-    function PrefsModule() {
-    }
-    return PrefsModule;
-}());
-PrefsModule = __decorate([
-    core_1.NgModule({
-        imports: [
-            common_1.CommonModule,
-            forms_1.FormsModule,
-            angular_1.UIRouterModule.forChild({ states: PREFS_STATES })
-        ],
-        declarations: [prefs_component_1.PrefsComponent],
-    })
-], PrefsModule);
-exports.PrefsModule = PrefsModule;
-
+//# sourceMappingURL=sessionStorage.js.map
 
 /***/ })
-
-},[216]);
+],[143]);
 //# sourceMappingURL=sampleapp.js.map
