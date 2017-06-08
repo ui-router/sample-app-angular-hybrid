@@ -15,8 +15,6 @@ module.exports = {
       '@angular/core',
       '@angular/forms',
       '@angular/http',
-      '@angular/platform-browser-dynamic',
-      '@angular/upgrade',
       '@angular/router',
       '@uirouter/core',
       '@uirouter/angular-hybrid',
