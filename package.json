@@ -30,7 +30,7 @@
     "@angular/platform-browser-dynamic": "^4.4.4",
     "@angular/router": "^4.4.4",
     "@angular/upgrade": "^4.4.4",
-    "@uirouter/angular-hybrid": "^3.1.4",
+    "@uirouter/angular-hybrid": "3.1.5",
     "@uirouter/visualizer": "^4.0.2",
     "angular": "<2",
     "rxjs": "5.4.3",

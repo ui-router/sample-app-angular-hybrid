@@ -99,33 +99,29 @@
   version "0.14.57"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-0.14.57.tgz#1878a8654fafdd1d381b8457292b6433498c5b62"
 
-"@uirouter/angular-hybrid@^3.1.4":
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/@uirouter/angular-hybrid/-/angular-hybrid-3.1.4.tgz#056706ecce180d1dc11445b9b4b927c32c8f7a15"
+"@uirouter/angular-hybrid@3.1.5":
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/@uirouter/angular-hybrid/-/angular-hybrid-3.1.5.tgz#0ff26adc1e87cac40b9a860e1120903a36b59185"
   dependencies:
-    "@uirouter/angular" "1.0.0-beta.7-SNAPSHOT.20170812"
-    "@uirouter/angularjs" "1.0.6-SNAPSHOT.20170812"
-    "@uirouter/core" "=5.0.6"
+    "@uirouter/angular" "1.0.0-beta.8"
+    "@uirouter/angularjs" "1.0.8"
+    "@uirouter/core" "5.0.10"
 
-"@uirouter/angular@1.0.0-beta.7-SNAPSHOT.20170812":
-  version "1.0.0-beta.7-SNAPSHOT.20170812"
-  resolved "https://registry.yarnpkg.com/@uirouter/angular/-/angular-1.0.0-beta.7-SNAPSHOT.20170812.tgz#8d338813641a1f6086a9119b486b9d817a8ebe45"
+"@uirouter/angular@1.0.0-beta.8":
+  version "1.0.0-beta.8"
+  resolved "https://registry.yarnpkg.com/@uirouter/angular/-/angular-1.0.0-beta.8.tgz#c0395e43f15203f8c5096b85bc5b8186d3b58ce7"
   dependencies:
-    "@uirouter/core" "^5.0.5"
+    "@uirouter/core" "5.0.10"
     "@uirouter/rx" "=0.4.1"
     tslib "^1.7.1"
 
-"@uirouter/angularjs@1.0.6-SNAPSHOT.20170812":
-  version "1.0.6-SNAPSHOT.20170812"
-  resolved "https://registry.yarnpkg.com/@uirouter/angularjs/-/angularjs-1.0.6-SNAPSHOT.20170812.tgz#cf401565ba753d71082f85b42b8e1e19c140e300"
+"@uirouter/angularjs@1.0.8":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@uirouter/angularjs/-/angularjs-1.0.8.tgz#09e7528884752fa4071ab1cf74325f10c6d6d8c9"
   dependencies:
-    "@uirouter/core" "^5.0.6"
+    "@uirouter/core" "5.0.10"
 
-"@uirouter/core@=5.0.6":
-  version "5.0.6"
-  resolved "https://registry.yarnpkg.com/@uirouter/core/-/core-5.0.6.tgz#251e1fc4d6ce8fe47e374bb86971e68a2ef1b323"
-
-"@uirouter/core@^5.0.5", "@uirouter/core@^5.0.6":
+"@uirouter/core@5.0.10":
   version "5.0.10"
   resolved "https://registry.yarnpkg.com/@uirouter/core/-/core-5.0.10.tgz#1a39eacbe33f3b44ab2c8fa4520cb1da92026cc3"
 
