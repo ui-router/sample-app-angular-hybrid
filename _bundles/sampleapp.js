@@ -8,7 +8,8 @@ webpackJsonp([1],[
 /* 6 */,
 /* 7 */,
 /* 8 */,
-/* 9 */
+/* 9 */,
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21,12 +22,13 @@ exports.mymessagesModule = angular.module('mymessages', ['ui.router']);
 //# sourceMappingURL=mymessages.module.js.map
 
 /***/ }),
-/* 10 */,
 /* 11 */,
 /* 12 */,
 /* 13 */,
 /* 14 */,
-/* 15 */
+/* 15 */,
+/* 16 */,
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37,8 +39,7 @@ exports.globalModule = angular.module('global', ['ui.router']);
 //# sourceMappingURL=global.module.js.map
 
 /***/ }),
-/* 16 */,
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49,7 +50,6 @@ exports.homeModule = angular.module('main', ['ui.router']);
 //# sourceMappingURL=home.module.js.map
 
 /***/ }),
-/* 18 */,
 /* 19 */,
 /* 20 */,
 /* 21 */,
@@ -92,9 +92,7 @@ exports.homeModule = angular.module('main', ['ui.router']);
 /* 58 */,
 /* 59 */,
 /* 60 */,
-/* 61 */,
-/* 62 */,
-/* 63 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -127,6 +125,8 @@ exports.PrefsComponent = PrefsComponent;
 //# sourceMappingURL=prefs.component.js.map
 
 /***/ }),
+/* 62 */,
+/* 63 */,
 /* 64 */,
 /* 65 */,
 /* 66 */,
@@ -143,8 +143,7 @@ exports.PrefsComponent = PrefsComponent;
 /* 77 */,
 /* 78 */,
 /* 79 */,
-/* 80 */,
-/* 81 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -156,12 +155,12 @@ exports.PrefsComponent = PrefsComponent;
 Object.defineProperty(exports, "__esModule", { value: true });
 // External dependencies
 var angular = __webpack_require__(7);
-var angularjs_1 = __webpack_require__(36);
-var angular_hybrid_1 = __webpack_require__(82);
+var angularjs_1 = __webpack_require__(56);
+var angular_hybrid_1 = __webpack_require__(81);
 // Feature Modules
-var index_1 = __webpack_require__(135);
-var index_2 = __webpack_require__(140);
-var index_3 = __webpack_require__(150);
+var index_1 = __webpack_require__(131);
+var index_2 = __webpack_require__(136);
+var index_3 = __webpack_require__(146);
 // Create the angular 1 module "demo".
 //
 // Since it is exported, other parts of the application (in other files) can then import it and register things.
@@ -185,8 +184,8 @@ exports.sampleAppModuleAngularJS.run(traceRunBlock);
 //# sourceMappingURL=angularJSModule.js.map
 
 /***/ }),
-/* 82 */,
-/* 83 */
+/* 81 */,
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -198,80 +197,45 @@ exports.sampleAppModuleAngularJS.run(traceRunBlock);
  */
 /* tslint:disable */
 Object.defineProperty(exports, "__esModule", { value: true });
-var import0 = __webpack_require__(4);
-var import1 = __webpack_require__(10);
-var import2 = __webpack_require__(14);
-var import3 = __webpack_require__(28);
+var i0 = __webpack_require__(4);
+var i1 = __webpack_require__(9);
+var i2 = __webpack_require__(16);
+var i3 = __webpack_require__(28);
 var styles_UIView = [];
-exports.RenderType_UIView = import0.ɵcrt({
-    encapsulation: 2,
-    styles: styles_UIView,
-    data: {}
-});
-function View_UIView_1(l) {
-    return import0.ɵvid(0, [(l()(), import0.ɵand(0, null, null, 0))], null, null);
+exports.RenderType_UIView = i0.ɵcrt({ encapsulation: 2, styles: styles_UIView,
+    data: {} });
+function View_UIView_1(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵand(0, null, null, 0))], null, null);
 }
-function View_UIView_2(l) {
-    return import0.ɵvid(0, [
-        import0.ɵncd(null, 0),
-        (l()(), import0.ɵand(0, null, null, 0))
-    ], null, null);
+function View_UIView_2(_l) {
+    return i0.ɵvid(0, [i0.ɵncd(null, 0), (_l()(), i0.ɵand(0, null, null, 0))], null, null);
 }
-function View_UIView_0(l) {
-    return import0.ɵvid(0, [
-        import0.ɵqud(402653184, 1, { componentTarget: 0 }),
-        (l()(), import0.ɵted(null, ['\n    '])),
-        (l()(), import0.ɵand(16777216, [
-            [
-                1,
-                3
-            ],
-            [
-                'componentTarget',
-                2
-            ]
-        ], null, 0, null, View_UIView_1)),
-        (l()(), import0.ɵted(null, ['\n    '])),
-        (l()(), import0.ɵand(16777216, null, null, 1, null, View_UIView_2)),
-        import0.ɵdid(16384, null, 0, import1.NgIf, [
-            import0.ViewContainerRef,
-            import0.TemplateRef
-        ], { ngIf: [
-                0,
-                'ngIf'
-            ]
-        }, null),
-        (l()(), import0.ɵted(null, ['\n  ']))
-    ], function (ck, v) {
-        var co = v.component;
-        var currVal_0 = !co.componentRef;
-        ck(v, 5, 0, currVal_0);
+function View_UIView_0(_l) {
+    return i0.ɵvid(0, [i0.ɵqud(402653184, 1, { componentTarget: 0 }), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵand(16777216, [[1, 3], ['componentTarget', 2]], null, 0, null, View_UIView_1)), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(),
+            i0.ɵand(16777216, null, null, 1, null, View_UIView_2)),
+        i0.ɵdid(16384, null, 0, i1.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0,
+                'ngIf'] }, null), (_l()(), i0.ɵted(null, ['\n  ']))], function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_0 = !_co.componentRef;
+        _ck(_v, 5, 0, currVal_0);
     }, null);
 }
 exports.View_UIView_0 = View_UIView_0;
-function View_UIView_Host_0(l) {
-    return import0.ɵvid(0, [
-        (l()(), import0.ɵeld(16777216, null, null, 1, 'ui-view', [], null, null, null, View_UIView_0, exports.RenderType_UIView)),
-        import0.ɵdid(245760, null, 0, import2.UIView, [
-            import3.UIRouter,
-            'UIView.PARENT_INJECT',
-            import0.ViewContainerRef
-        ], null, null)
-    ], function (ck, v) {
-        ck(v, 1, 0);
+function View_UIView_Host_0(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(16777216, null, null, 1, 'ui-view', [], null, null, null, View_UIView_0, exports.RenderType_UIView)),
+        i0.ɵdid(245760, null, 0, i2.UIView, [i3.UIRouter, 'UIView.PARENT_INJECT',
+            i0.ViewContainerRef], null, null)], function (_ck, _v) {
+        _ck(_v, 1, 0);
     }, null);
 }
-exports.UIViewNgFactory = import0.ɵccf('ui-view, [ui-view]', import2.UIView, View_UIView_Host_0, {
-    name: 'name',
-    _name: 'ui-view'
-}, {}, ['*']);
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL1VzZXJzL2N0aGllbGVuL3Byb2plY3RzL3Vpcm91dGVyL3NhbXBsZS1hcHAtbmcxLXRvLW5nMi9ub2RlX21vZHVsZXMvQHVpcm91dGVyL2FuZ3VsYXIvbGliL2RpcmVjdGl2ZXMvdWlWaWV3Lm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL1VzZXJzL2N0aGllbGVuL3Byb2plY3RzL3Vpcm91dGVyL3NhbXBsZS1hcHAtbmcxLXRvLW5nMi9ub2RlX21vZHVsZXMvQHVpcm91dGVyL2FuZ3VsYXIvbGliL2RpcmVjdGl2ZXMvdWlWaWV3LmQudHMiLCJuZzovLy9Vc2Vycy9jdGhpZWxlbi9wcm9qZWN0cy91aXJvdXRlci9zYW1wbGUtYXBwLW5nMS10by1uZzIvbm9kZV9tb2R1bGVzL0B1aXJvdXRlci9hbmd1bGFyL2xpYi9kaXJlY3RpdmVzL3VpVmlldy5kLnRzLlVJVmlldy5odG1sIiwibmc6Ly8vVXNlcnMvY3RoaWVsZW4vcHJvamVjdHMvdWlyb3V0ZXIvc2FtcGxlLWFwcC1uZzEtdG8tbmcyL25vZGVfbW9kdWxlcy9AdWlyb3V0ZXIvYW5ndWxhci9saWIvZGlyZWN0aXZlcy91aVZpZXcuZC50cy5VSVZpZXdfSG9zdC5odG1sIl0sInNvdXJjZXNDb250ZW50IjpbIiAiLCJcbiAgICA8bmctdGVtcGxhdGUgI2NvbXBvbmVudFRhcmdldD48L25nLXRlbXBsYXRlPlxuICAgIDxuZy1jb250ZW50ICpuZ0lmPVwiIWNvbXBvbmVudFJlZlwiPjwvbmctY29udGVudD5cbiAgIiwiPHVpLXZpZXc+PC91aS12aWV3PiJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztnQkNFSTs7Ozs7Ozs7SUFGSjtJQUNJO01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O0lBQUE7S0FBQTtJQUE0QztJQUM1QztnQkFBQTs7O0lBQUE7T0FBQTtRQUFBO1FBQUE7TUFBQTtJQUFBO0lBQStDOzs7O0lBQW5DO0lBQVosU0FBWSxTQUFaOzs7OztJQ0ZKO2dCQUFBOztNQUFBOztJQUFBO0tBQUE7OztJQUFBOzs7Ozs7OyJ9
+exports.View_UIView_Host_0 = View_UIView_Host_0;
+exports.UIViewNgFactory = i0.ɵccf('ui-view, [ui-view]', i2.UIView, View_UIView_Host_0, { name: 'name', _name: 'ui-view' }, {}, ['*']);
 //# sourceMappingURL=uiView.ngfactory.js.map
 
 /***/ }),
+/* 83 */,
 /* 84 */,
-/* 85 */,
-/* 86 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -287,265 +251,8 @@ exports.guid = function () { return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".split
 //# sourceMappingURL=util.js.map
 
 /***/ }),
-/* 87 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "upgradeModule", function() { return upgradeModule; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UIViewNgUpgrade", function() { return UIViewNgUpgrade; });
-/* harmony export (immutable) */ __webpack_exports__["uiRouterUpgradeFactory"] = uiRouterUpgradeFactory;
-/* harmony export (immutable) */ __webpack_exports__["getUIRouter"] = getUIRouter;
-/* harmony export (immutable) */ __webpack_exports__["getParentUIViewInject"] = getParentUIViewInject;
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UIRouterUpgradeModule", function() { return UIRouterUpgradeModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_angular__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_upgrade_static__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__uirouter_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__uirouter_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__uirouter_core__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__uirouter_angular__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__uirouter_angularjs__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__uirouter_angularjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__uirouter_angularjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__uirouter_rx__ = __webpack_require__(37);
-
-
-
-
-
-
-
-/**
- * Create a ng1 module for the ng1 half of the hybrid application to depend on.
- *
- * Example:
- * const myApp = angular.module('myApp', ['ui.router.upgrade']);
- */
-var upgradeModule = __WEBPACK_IMPORTED_MODULE_0_angular__["module"]('ui.router.upgrade', ['ui.router']);
-/**
- * UIViewNgUpgrade is a component bridge from ng1 ui-view to ng2 ui-view
- *
- * When a ui-router for ng1 is registering a state it checks if a view's
- * `component:` is an ng2 Component class. If so, it creates a special ng1 template
- * which references this component, i.e., <ui-view-ng-upgrade></ui-view-ng-upgrade>
- *
- * See that code by searching ng1-to-ng2 source for: "$stateProvider.decorator"
- *
- * ---
- *
- * ng1-to-ng2 component bridge process:
- *
- * 1)
- * When an ng1 template creates a ui-view which is targeted by a ng2 Component,
- *
- * ```
- * <a ui-sref="foo">Go to foo</a>
- * <div ui-view> <!-- ui-view created in ng1 template -->
- * </div> <!-- targeted with { component: Ng2RoutedComponent } -->
- * ```
- *
- * the state decorator spits out a custom template.  That template loads this
- * ng2 Component adapter as a downgraded-to-ng1 directive.
- *
- * ```
- * <a ui-sref="foo">Go to foo</a>
- * <div ui-view> <!-- decorated template references the downgraded component -->
- *   <ui-view-ng-upgrade> <!-- downgraded adapter component -->
- *   </ui-view-ng-upgrade>
- * </div>
- * ```
- *
- * This downgraded ng2 Component then creates a child UIView (ng2 component)
- *
- * ```
- * <a ui-sref="foo">Go to foo</a>
- * <div ui-view> <!-- custom template references the downgraded component -->
- *   <ui-view-ng-upgrade> <!-- ng2 component adapter downgraded to ng1-->
- *     <ui-view> <!-- pure ng2 ui-view -->
- *      </ui-view>
- *   </ui-view-ng-upgrade>
- * </div>
- * ```
- *
- * which in turn is filled with the routed ng2 component.
- *
- * ```
- * <a ui-sref="foo">Go to foo</a>
- * <div ui-view> <!-- ng1 ui-view -->
- *   <ui-view-ng-upgrade> <!-- ng2 component adapter (downgraded to ng1)-->
- *     <ui-view> <!-- pure ng2 ui-view -->
- *       <ng2-routed-component> <!-- ng2 component hosted in ng2 ui-view -->
- *         <h1>ng2 routed component contents</h1>
- *       </ng2-routed-component>
- *     </ui-view>
- *   </ui-view-ng-upgrade>
- * </div>
- * ```
- *
- * This adapter exposes exposes the parent view context (ParentUIViewInject)
- * as an ng2 DI Provider, which the nested ng2 UIView requires.
- *
- * It gets the ParentUIViewContext information (from the parent ng1 ui-view) by walking
- * up the DOM and grabbing the .data('$uiView') which the ng1 ui-view directive exposes.
- */
-var UIViewNgUpgrade = (function () {
-    function UIViewNgUpgrade(ref, parent, registry // access the root state
-    ) {
-        // From the ui-view-ng-upgrade component's element ref, walk up the DOM two elements...
-        // There will first be an ng1 ui-view which hosts this element, and then that ui-view's parent element.
-        // That (parent) element has access to the proper "parent viewcontext"
-        // The ng2 ui-view component is inside this ui-view-ng-upgrade directive, which is inside the ng1 "host" ui-view.
-        // Both ui-views share the same "view context" information (the view's fqn and created-by-state context information)
-        var ng1elem = __WEBPACK_IMPORTED_MODULE_0_angular__["element"](ref.nativeElement).parent().parent();
-        // Expose getters on PARENT_INJECT for context (creation state) and fqn (view address)
-        // These will be used by further nested UIView
-        Object.defineProperty(parent, "context", {
-            get: function () {
-                var data = ng1elem['inheritedData']('$uiView');
-                return (data && data.$cfg) ? data.$cfg.viewDecl.$context : registry.root();
-            },
-            enumerable: true
-        });
-        Object.defineProperty(parent, "fqn", {
-            get: function () {
-                var data = ng1elem['inheritedData']('$uiView');
-                return (data && data.$uiView) ? data.$uiView.fqn : null;
-            },
-            enumerable: true
-        });
-    }
-    return UIViewNgUpgrade;
-}());
-
-UIViewNgUpgrade.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"], args: [{
-                selector: 'ui-view-ng-upgrade',
-                template: "<ui-view [name]=\"name\"></ui-view>",
-                // provide a blank object as PARENT_INJECT.
-                // The component will add property getters when it is constructed.
-                viewProviders: [{ provide: __WEBPACK_IMPORTED_MODULE_4__uirouter_angular__["UIView"].PARENT_INJECT, useValue: {} }],
-            },] },
-];
-/** @nocollapse */
-UIViewNgUpgrade.ctorParameters = function () { return [
-    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ElementRef"], },
-    { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Inject"], args: [__WEBPACK_IMPORTED_MODULE_4__uirouter_angular__["UIView"].PARENT_INJECT,] },] },
-    { type: __WEBPACK_IMPORTED_MODULE_3__uirouter_core__["StateRegistry"], },
-]; };
-UIViewNgUpgrade.propDecorators = {
-    'name': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] },],
-};
-/**********************************
- * Ng2 @NgModule and bootstrap code
- **********************************/
-// Register the ng1 DI '$uiRouter' object as an ng2 Provider.
-function uiRouterUpgradeFactory(router, injector) {
-    var modules = injector.get(__WEBPACK_IMPORTED_MODULE_4__uirouter_angular__["UIROUTER_MODULE_TOKEN"], []);
-    modules.forEach(function (module) { return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__uirouter_angular__["applyModuleConfig"])(router, injector, module); });
-    return router;
-}
-function getUIRouter($injector) {
-    return $injector.get('$uiRouter');
-}
-function getParentUIViewInject(r) {
-    return { fqn: null, context: r.root() };
-}
-/**
- * This NgModule should be added to the root module of the hybrid app.
- */
-var UIRouterUpgradeModule = (function () {
-    function UIRouterUpgradeModule() {
-    }
-    return UIRouterUpgradeModule;
-}());
-
-UIRouterUpgradeModule.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"], args: [{
-                imports: [__WEBPACK_IMPORTED_MODULE_4__uirouter_angular__["UIRouterModule"], __WEBPACK_IMPORTED_MODULE_2__angular_upgrade_static__["UpgradeModule"]],
-                declarations: [UIViewNgUpgrade],
-                providers: [
-                    // @uirouter/angular code will use the ng1 $uiRouter instance instead of creating its own.
-                    { provide: '$uiRouter', useFactory: getUIRouter, deps: ['$injector'] },
-                    { provide: __WEBPACK_IMPORTED_MODULE_3__uirouter_core__["UIRouter"], useFactory: uiRouterUpgradeFactory, deps: ['$uiRouter', __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injector"]] },
-                    { provide: __WEBPACK_IMPORTED_MODULE_4__uirouter_angular__["UIROUTER_ROOT_MODULE"], useValue: {}, multi: true },
-                    { provide: __WEBPACK_IMPORTED_MODULE_4__uirouter_angular__["UIView"].PARENT_INJECT, useFactory: getParentUIViewInject, deps: [__WEBPACK_IMPORTED_MODULE_3__uirouter_core__["StateRegistry"]] }
-                ].concat(__WEBPACK_IMPORTED_MODULE_4__uirouter_angular__["_UIROUTER_SERVICE_PROVIDERS"]),
-                entryComponents: [
-                    UIViewNgUpgrade
-                ],
-                exports: [UIViewNgUpgrade, __WEBPACK_IMPORTED_MODULE_4__uirouter_angular__["UIRouterModule"]]
-            },] },
-];
-/** @nocollapse */
-UIRouterUpgradeModule.ctorParameters = function () { return []; };
-// Downgrade the UIViewNgUpgrade ng2 Component to an ng1 directive.
-// The directive is used in a (generated) view template by the (host) ng1 ui-router,
-// whenever it finds a view configured with a `component: <Ng2ComponentClass>`
-upgradeModule.directive("uiViewNgUpgrade", __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_upgrade_static__["downgradeComponent"])({
-    component: UIViewNgUpgrade,
-    inputs: ['name']
-}));
-upgradeModule.run(['$injector', function (ng1Injector) {
-        var $uiRouter = ng1Injector.get('$uiRouter');
-        /** Add support for observable state and param changes */
-        $uiRouter.plugin(__WEBPACK_IMPORTED_MODULE_6__uirouter_rx__["UIRouterRx"]);
-        // Expose a merged ng1/ng2 injector as a Resolvable (on the root state).
-        // This mimics how ui-router-ng2 exposes the root ng2 Injector, but
-        // it retrieves from ng1 injector first, then ng2 injector if the token isn't found.
-        var mergedInjector = {
-            get: function (token, ng2NotFoundValue) {
-                var ng2Injector = ng1Injector.get('$$angularInjector');
-                return (ng1Injector.has(token) && ng1Injector.get(token)) || ng2Injector.get(token, ng2NotFoundValue);
-            }
-        };
-        var ng2InjectorResolvable = __WEBPACK_IMPORTED_MODULE_3__uirouter_core__["Resolvable"].fromData(__WEBPACK_IMPORTED_MODULE_4__uirouter_angular__["NATIVE_INJECTOR_TOKEN"], mergedInjector);
-        $uiRouter.stateRegistry.root().resolvables.push(ng2InjectorResolvable);
-    }]);
-/** Adds support for `loadChildren`: Angular NgModule lazy loading via @gntools/webpack */
-upgradeModule.config(['$stateRegistryProvider', function ($stateRegistry) {
-        $stateRegistry.decorator('lazyLoad', __WEBPACK_IMPORTED_MODULE_4__uirouter_angular__["ng2LazyLoadBuilder"]);
-    }]);
-/**
- * Define a stateProvider `views` builder decorator.
- * The decorator first applies the standard views builder function.
- * Then it finds any view components which are **actually** a Ng2 Component Class.
- * It overwrites that view's config with a ng1-to-ng2 hybrid config.
- *
- * In place of the template provider, it simply puts a <ui-view-ng-upgrade/> component
- * which that provides a ng1 -> ng2 boundary in the component tree.
- */
-upgradeModule.config(['$stateRegistryProvider', function ($stateRegistry) {
-        $stateRegistry.decorator('views', function (state, parentFn) {
-            var views = parentFn(state);
-            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__uirouter_core__["forEach"])(views, function (viewDecl, viewName) {
-                if (viewDecl.$type === 'ng1-to-ng2' || typeof viewDecl.component === 'function') {
-                    // Update the view config.
-                    // Override default ng1 `component:` behavior (of defining a templateProvider)
-                    // with a <ui-view-ng-upgrade> adapter directive template
-                    viewDecl.$type = "ng1-to-ng2";
-                    viewDecl.templateProvider = null;
-                    viewDecl.template = "<ui-view-ng-upgrade name='" + viewDecl.$uiViewName + "'></ui-view-ng-upgrade>";
-                }
-            });
-            return views;
-        });
-    }]);
-// UI-Router ViewConfig factories take a view declaration object from a state.views: { foo: <ViewDeclaration> }
-// and return a runtime config object (a ViewConfig)
-upgradeModule.run(['$view', '$templateFactory', function ($view, $templateFactory) {
-        // Register a ViewConfig factory for views of type `ng2`
-        $view._pluginapi._viewConfigFactory('ng2', function (path, config) { return new __WEBPACK_IMPORTED_MODULE_4__uirouter_angular__["Ng2ViewConfig"](path, config); });
-        // Register a ViewConfig factory for views of type `ng1-to-ng2`.
-        // Returns both an ng1 config and an ng2 config allowing either ng1 or ng2 ui-view components to be targeted.
-        $view._pluginapi._viewConfigFactory('ng1-to-ng2', function (path, config) {
-            var ng1ViewConfig = new __WEBPACK_IMPORTED_MODULE_5__uirouter_angularjs__["Ng1ViewConfig"](path, Object.assign({}, config, { $type: 'ng1' }), $templateFactory);
-            var ng2ViewConfig = new __WEBPACK_IMPORTED_MODULE_4__uirouter_angular__["Ng2ViewConfig"](path, Object.assign({}, config, { $type: 'ng2' }));
-            return [ng2ViewConfig, ng1ViewConfig];
-        });
-    }]);
-//# sourceMappingURL=angular-hybrid.js.map
-
-/***/ }),
+/* 86 */,
+/* 87 */,
 /* 88 */,
 /* 89 */,
 /* 90 */,
@@ -578,11 +285,7 @@ upgradeModule.run(['$view', '$templateFactory', function ($view, $templateFactor
 /* 117 */,
 /* 118 */,
 /* 119 */,
-/* 120 */,
-/* 121 */,
-/* 122 */,
-/* 123 */,
-/* 124 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -593,664 +296,72 @@ upgradeModule.run(['$view', '$templateFactory', function ($view, $templateFactor
  * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride}
  */
 /* tslint:disable */
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 Object.defineProperty(exports, "__esModule", { value: true });
-var import0 = __webpack_require__(4);
-var import1 = __webpack_require__(129);
-var import2 = __webpack_require__(10);
-var import3 = __webpack_require__(26);
-var import4 = __webpack_require__(27);
-var import5 = __webpack_require__(29);
-var import6 = __webpack_require__(87);
-var import7 = __webpack_require__(38);
-var import8 = __webpack_require__(158);
-var import9 = __webpack_require__(83);
-var import10 = __webpack_require__(128);
-var import11 = __webpack_require__(127);
-var import12 = __webpack_require__(43);
-var import13 = __webpack_require__(63);
-var import14 = __webpack_require__(28);
-var import15 = __webpack_require__(48);
-var import16 = __webpack_require__(40);
-var import17 = __webpack_require__(30);
-var import18 = __webpack_require__(51);
-var import19 = __webpack_require__(52);
-var import20 = __webpack_require__(53);
-var import21 = __webpack_require__(55);
-var import22 = __webpack_require__(39);
-var import23 = __webpack_require__(41);
-var SampleAppModuleAngularInjector = (function (_super) {
-    __extends(SampleAppModuleAngularInjector, _super);
-    function SampleAppModuleAngularInjector(parent) {
-        return _super.call(this, parent, [
-            import9.UIViewNgFactory,
-            import10.UIViewNgUpgradeNgFactory,
-            import11.PrefsComponentNgFactory
-        ], []) || this;
-    }
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_LOCALE_ID_15", {
-        get: function () {
-            if ((this.__LOCALE_ID_15 == null)) {
-                (this.__LOCALE_ID_15 = import0.ɵn(this.parent.get(import0.LOCALE_ID, null)));
-            }
-            return this.__LOCALE_ID_15;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_NgLocalization_16", {
-        get: function () {
-            if ((this.__NgLocalization_16 == null)) {
-                (this.__NgLocalization_16 = new import2.NgLocaleLocalization(this._LOCALE_ID_15));
-            }
-            return this.__NgLocalization_16;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_Compiler_17", {
-        get: function () {
-            if ((this.__Compiler_17 == null)) {
-                (this.__Compiler_17 = new import0.Compiler());
-            }
-            return this.__Compiler_17;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_APP_ID_18", {
-        get: function () {
-            if ((this.__APP_ID_18 == null)) {
-                (this.__APP_ID_18 = import0.ɵg());
-            }
-            return this.__APP_ID_18;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_IterableDiffers_19", {
-        get: function () {
-            if ((this.__IterableDiffers_19 == null)) {
-                (this.__IterableDiffers_19 = import0.ɵl());
-            }
-            return this.__IterableDiffers_19;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_KeyValueDiffers_20", {
-        get: function () {
-            if ((this.__KeyValueDiffers_20 == null)) {
-                (this.__KeyValueDiffers_20 = import0.ɵm());
-            }
-            return this.__KeyValueDiffers_20;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_DomSanitizer_21", {
-        get: function () {
-            if ((this.__DomSanitizer_21 == null)) {
-                (this.__DomSanitizer_21 = new import3.ɵe(this.parent.get(import3.DOCUMENT)));
-            }
-            return this.__DomSanitizer_21;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_Sanitizer_22", {
-        get: function () {
-            if ((this.__Sanitizer_22 == null)) {
-                (this.__Sanitizer_22 = this._DomSanitizer_21);
-            }
-            return this.__Sanitizer_22;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_HAMMER_GESTURE_CONFIG_23", {
-        get: function () {
-            if ((this.__HAMMER_GESTURE_CONFIG_23 == null)) {
-                (this.__HAMMER_GESTURE_CONFIG_23 = new import3.HammerGestureConfig());
-            }
-            return this.__HAMMER_GESTURE_CONFIG_23;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_EVENT_MANAGER_PLUGINS_24", {
-        get: function () {
-            if ((this.__EVENT_MANAGER_PLUGINS_24 == null)) {
-                (this.__EVENT_MANAGER_PLUGINS_24 = [
-                    new import3.ɵDomEventsPlugin(this.parent.get(import3.DOCUMENT)),
-                    new import3.ɵKeyEventsPlugin(this.parent.get(import3.DOCUMENT)),
-                    new import3.ɵHammerGesturesPlugin(this.parent.get(import3.DOCUMENT), this._HAMMER_GESTURE_CONFIG_23)
-                ]);
-            }
-            return this.__EVENT_MANAGER_PLUGINS_24;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_EventManager_25", {
-        get: function () {
-            if ((this.__EventManager_25 == null)) {
-                (this.__EventManager_25 = new import3.EventManager(this._EVENT_MANAGER_PLUGINS_24, this.parent.get(import0.NgZone)));
-            }
-            return this.__EventManager_25;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_\u0275DomSharedStylesHost_26", {
-        get: function () {
-            if ((this.__ɵDomSharedStylesHost_26 == null)) {
-                (this.__ɵDomSharedStylesHost_26 = new import3.ɵDomSharedStylesHost(this.parent.get(import3.DOCUMENT)));
-            }
-            return this.__ɵDomSharedStylesHost_26;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_\u0275DomRendererFactory2_27", {
-        get: function () {
-            if ((this.__ɵDomRendererFactory2_27 == null)) {
-                (this.__ɵDomRendererFactory2_27 = new import3.ɵDomRendererFactory2(this._EventManager_25, this._ɵDomSharedStylesHost_26));
-            }
-            return this.__ɵDomRendererFactory2_27;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_RendererFactory2_28", {
-        get: function () {
-            if ((this.__RendererFactory2_28 == null)) {
-                (this.__RendererFactory2_28 = this._ɵDomRendererFactory2_27);
-            }
-            return this.__RendererFactory2_28;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_\u0275SharedStylesHost_29", {
-        get: function () {
-            if ((this.__ɵSharedStylesHost_29 == null)) {
-                (this.__ɵSharedStylesHost_29 = this._ɵDomSharedStylesHost_26);
-            }
-            return this.__ɵSharedStylesHost_29;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_Testability_30", {
-        get: function () {
-            if ((this.__Testability_30 == null)) {
-                (this.__Testability_30 = new import0.Testability(this.parent.get(import0.NgZone)));
-            }
-            return this.__Testability_30;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_Meta_31", {
-        get: function () {
-            if ((this.__Meta_31 == null)) {
-                (this.__Meta_31 = new import3.Meta(this.parent.get(import3.DOCUMENT)));
-            }
-            return this.__Meta_31;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_Title_32", {
-        get: function () {
-            if ((this.__Title_32 == null)) {
-                (this.__Title_32 = new import3.Title(this.parent.get(import3.DOCUMENT)));
-            }
-            return this.__Title_32;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "__injector_33", {
-        get: function () {
-            if ((this.___injector_33 == null)) {
-                (this.___injector_33 = import4.ɵa());
-            }
-            return this.___injector_33;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "__rootScope_34", {
-        get: function () {
-            if ((this.___rootScope_34 == null)) {
-                (this.___rootScope_34 = import4.ɵb(this.__injector_33));
-            }
-            return this.___rootScope_34;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "__compile_35", {
-        get: function () {
-            if ((this.___compile_35 == null)) {
-                (this.___compile_35 = import4.ɵc(this.__injector_33));
-            }
-            return this.___compile_35;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "__parse_36", {
-        get: function () {
-            if ((this.___parse_36 == null)) {
-                (this.___parse_36 = import4.ɵd(this.__injector_33));
-            }
-            return this.___parse_36;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "__uiRouter_37", {
-        get: function () {
-            if ((this.___uiRouter_37 == null)) {
-                (this.___uiRouter_37 = import6.getUIRouter(this.__injector_33));
-            }
-            return this.___uiRouter_37;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_UIRouter_38", {
-        get: function () {
-            if ((this.__UIRouter_38 == null)) {
-                (this.__UIRouter_38 = import6.uiRouterUpgradeFactory(this.__uiRouter_37, this));
-            }
-            return this.__UIRouter_38;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_StateRegistry_40", {
-        get: function () {
-            if ((this.__StateRegistry_40 == null)) {
-                (this.__StateRegistry_40 = import12.fnStateRegistry(this._UIRouter_38));
-            }
-            return this.__StateRegistry_40;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_UIView_PARENT_INJECT_41", {
-        get: function () {
-            if ((this.__UIView_PARENT_INJECT_41 == null)) {
-                (this.__UIView_PARENT_INJECT_41 = import6.getParentUIViewInject(this._StateRegistry_40));
-            }
-            return this.__UIView_PARENT_INJECT_41;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_StateService_42", {
-        get: function () {
-            if ((this.__StateService_42 == null)) {
-                (this.__StateService_42 = import12.fnStateService(this._UIRouter_38));
-            }
-            return this.__StateService_42;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_TransitionService_43", {
-        get: function () {
-            if ((this.__TransitionService_43 == null)) {
-                (this.__TransitionService_43 = import12.fnTransitionService(this._UIRouter_38));
-            }
-            return this.__TransitionService_43;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_UrlMatcherFactory_44", {
-        get: function () {
-            if ((this.__UrlMatcherFactory_44 == null)) {
-                (this.__UrlMatcherFactory_44 = import12.fnUrlMatcherFactory(this._UIRouter_38));
-            }
-            return this.__UrlMatcherFactory_44;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_UrlRouter_45", {
-        get: function () {
-            if ((this.__UrlRouter_45 == null)) {
-                (this.__UrlRouter_45 = import12.fnUrlRouter(this._UIRouter_38));
-            }
-            return this.__UrlRouter_45;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_UrlService_46", {
-        get: function () {
-            if ((this.__UrlService_46 == null)) {
-                (this.__UrlService_46 = import12.fnUrlService(this._UIRouter_38));
-            }
-            return this.__UrlService_46;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_ViewService_47", {
-        get: function () {
-            if ((this.__ViewService_47 == null)) {
-                (this.__ViewService_47 = import12.fnViewService(this._UIRouter_38));
-            }
-            return this.__ViewService_47;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_UIRouterGlobals_48", {
-        get: function () {
-            if ((this.__UIRouterGlobals_48 == null)) {
-                (this.__UIRouterGlobals_48 = import12.fnGlobals(this._UIRouter_38));
-            }
-            return this.__UIRouterGlobals_48;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_\u0275i_49", {
-        get: function () {
-            if ((this.__ɵi_49 == null)) {
-                (this.__ɵi_49 = new import7.ɵi());
-            }
-            return this.__ɵi_49;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_NgModuleFactoryLoader_52", {
-        get: function () {
-            if ((this.__NgModuleFactoryLoader_52 == null)) {
-                (this.__NgModuleFactoryLoader_52 = new import0.SystemJsNgModuleLoader(this._Compiler_17, this.parent.get(import0.SystemJsNgModuleLoaderConfig, null)));
-            }
-            return this.__NgModuleFactoryLoader_52;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_DialogService_53", {
-        get: function () {
-            if ((this.__DialogService_53 == null)) {
-                (this.__DialogService_53 = import1.getDialogService(this.__injector_33));
-            }
-            return this.__DialogService_53;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SampleAppModuleAngularInjector.prototype, "_Contacts_54", {
-        get: function () {
-            if ((this.__Contacts_54 == null)) {
-                (this.__Contacts_54 = import1.getContactsService(this.__injector_33));
-            }
-            return this.__Contacts_54;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    SampleAppModuleAngularInjector.prototype.createInternal = function () {
-        this._CommonModule_0 = new import2.CommonModule();
-        this._ErrorHandler_1 = import3.ɵa();
-        this._APP_INITIALIZER_2 = [
-            import0.ɵo,
-            import3.ɵc(this.parent.get(import3.NgProbeToken, null), this.parent.get(import0.NgProbeToken, null))
-        ];
-        this._ApplicationInitStatus_3 = new import0.ApplicationInitStatus(this._APP_INITIALIZER_2);
-        this._ɵf_4 = new import0.ɵf(this.parent.get(import0.NgZone), this.parent.get(import0.ɵConsole), this, this._ErrorHandler_1, this.componentFactoryResolver, this._ApplicationInitStatus_3);
-        this._ApplicationRef_5 = this._ɵf_4;
-        this._ApplicationModule_6 = new import0.ApplicationModule(this._ApplicationRef_5);
-        this._BrowserModule_7 = new import3.BrowserModule(this.parent.get(import3.BrowserModule, null));
-        this._UpgradeModule_8 = new import4.UpgradeModule(this, this.parent.get(import0.NgZone));
-        this._UIRouterModule_9 = new import5.UIRouterModule();
-        this._UIRouterUpgradeModule_10 = new import6.UIRouterUpgradeModule();
-        this._ɵba_11 = new import7.ɵba();
-        this._FormsModule_12 = new import7.FormsModule();
-        this._PrefsModule_13 = new import8.PrefsModule();
-        this._SampleAppModuleAngular_14 = new import1.SampleAppModuleAngular();
-        this._UIROUTER_ROOT_MODULE_39 = [{}];
-        this._UIROUTER_MODULE_TOKEN_50 = [
-            { states: [{
-                        parent: 'app',
-                        name: 'prefs',
-                        url: '/prefs',
-                        component: import13.PrefsComponent,
-                        data: { requiresAuth: true }
-                    }
-                ] },
-            { states: [{
-                        name: 'contacts.**',
-                        url: '/contacts',
-                        loadChildren: './contacts/contacts.module#ContactsModule'
-                    }
-                ] }
-        ];
-        this._ROUTES_51 = [
-            [{
-                    parent: 'app',
-                    name: 'prefs',
-                    url: '/prefs',
-                    component: import13.PrefsComponent,
-                    data: { requiresAuth: true }
-                }
-            ],
-            [{
-                    name: 'contacts.**',
-                    url: '/contacts',
-                    loadChildren: './contacts/contacts.module#ContactsModule'
-                }
-            ]
-        ];
-        return this._SampleAppModuleAngular_14;
-    };
-    SampleAppModuleAngularInjector.prototype.getInternal = function (token, notFoundResult) {
-        if ((token === import2.CommonModule)) {
-            return this._CommonModule_0;
-        }
-        if ((token === import0.ErrorHandler)) {
-            return this._ErrorHandler_1;
-        }
-        if ((token === import0.APP_INITIALIZER)) {
-            return this._APP_INITIALIZER_2;
-        }
-        if ((token === import0.ApplicationInitStatus)) {
-            return this._ApplicationInitStatus_3;
-        }
-        if ((token === import0.ɵf)) {
-            return this._ɵf_4;
-        }
-        if ((token === import0.ApplicationRef)) {
-            return this._ApplicationRef_5;
-        }
-        if ((token === import0.ApplicationModule)) {
-            return this._ApplicationModule_6;
-        }
-        if ((token === import3.BrowserModule)) {
-            return this._BrowserModule_7;
-        }
-        if ((token === import4.UpgradeModule)) {
-            return this._UpgradeModule_8;
-        }
-        if ((token === import5.UIRouterModule)) {
-            return this._UIRouterModule_9;
-        }
-        if ((token === import6.UIRouterUpgradeModule)) {
-            return this._UIRouterUpgradeModule_10;
-        }
-        if ((token === import7.ɵba)) {
-            return this._ɵba_11;
-        }
-        if ((token === import7.FormsModule)) {
-            return this._FormsModule_12;
-        }
-        if ((token === import8.PrefsModule)) {
-            return this._PrefsModule_13;
-        }
-        if ((token === import1.SampleAppModuleAngular)) {
-            return this._SampleAppModuleAngular_14;
-        }
-        if ((token === import0.LOCALE_ID)) {
-            return this._LOCALE_ID_15;
-        }
-        if ((token === import2.NgLocalization)) {
-            return this._NgLocalization_16;
-        }
-        if ((token === import0.Compiler)) {
-            return this._Compiler_17;
-        }
-        if ((token === import0.APP_ID)) {
-            return this._APP_ID_18;
-        }
-        if ((token === import0.IterableDiffers)) {
-            return this._IterableDiffers_19;
-        }
-        if ((token === import0.KeyValueDiffers)) {
-            return this._KeyValueDiffers_20;
-        }
-        if ((token === import3.DomSanitizer)) {
-            return this._DomSanitizer_21;
-        }
-        if ((token === import0.Sanitizer)) {
-            return this._Sanitizer_22;
-        }
-        if ((token === import3.HAMMER_GESTURE_CONFIG)) {
-            return this._HAMMER_GESTURE_CONFIG_23;
-        }
-        if ((token === import3.EVENT_MANAGER_PLUGINS)) {
-            return this._EVENT_MANAGER_PLUGINS_24;
-        }
-        if ((token === import3.EventManager)) {
-            return this._EventManager_25;
-        }
-        if ((token === import3.ɵDomSharedStylesHost)) {
-            return this._ɵDomSharedStylesHost_26;
-        }
-        if ((token === import3.ɵDomRendererFactory2)) {
-            return this._ɵDomRendererFactory2_27;
-        }
-        if ((token === import0.RendererFactory2)) {
-            return this._RendererFactory2_28;
-        }
-        if ((token === import3.ɵSharedStylesHost)) {
-            return this._ɵSharedStylesHost_29;
-        }
-        if ((token === import0.Testability)) {
-            return this._Testability_30;
-        }
-        if ((token === import3.Meta)) {
-            return this._Meta_31;
-        }
-        if ((token === import3.Title)) {
-            return this._Title_32;
-        }
-        if ((token === '$injector')) {
-            return this.__injector_33;
-        }
-        if ((token === '$rootScope')) {
-            return this.__rootScope_34;
-        }
-        if ((token === '$compile')) {
-            return this.__compile_35;
-        }
-        if ((token === '$parse')) {
-            return this.__parse_36;
-        }
-        if ((token === '$uiRouter')) {
-            return this.__uiRouter_37;
-        }
-        if ((token === import14.UIRouter)) {
-            return this._UIRouter_38;
-        }
-        if ((token === import5.UIROUTER_ROOT_MODULE)) {
-            return this._UIROUTER_ROOT_MODULE_39;
-        }
-        if ((token === import15.StateRegistry)) {
-            return this._StateRegistry_40;
-        }
-        if ((token === 'UIView.PARENT_INJECT')) {
-            return this._UIView_PARENT_INJECT_41;
-        }
-        if ((token === import16.StateService)) {
-            return this._StateService_42;
-        }
-        if ((token === import17.TransitionService)) {
-            return this._TransitionService_43;
-        }
-        if ((token === import18.UrlMatcherFactory)) {
-            return this._UrlMatcherFactory_44;
-        }
-        if ((token === import19.UrlRouter)) {
-            return this._UrlRouter_45;
-        }
-        if ((token === import20.UrlService)) {
-            return this._UrlService_46;
-        }
-        if ((token === import21.ViewService)) {
-            return this._ViewService_47;
-        }
-        if ((token === import22.UIRouterGlobals)) {
-            return this._UIRouterGlobals_48;
-        }
-        if ((token === import7.ɵi)) {
-            return this._ɵi_49;
-        }
-        if ((token === import5.UIROUTER_MODULE_TOKEN)) {
-            return this._UIROUTER_MODULE_TOKEN_50;
-        }
-        if ((token === import23.ROUTES)) {
-            return this._ROUTES_51;
-        }
-        if ((token === import0.NgModuleFactoryLoader)) {
-            return this._NgModuleFactoryLoader_52;
-        }
-        if ((token === 'DialogService')) {
-            return this._DialogService_53;
-        }
-        if ((token === 'Contacts')) {
-            return this._Contacts_54;
-        }
-        return notFoundResult;
-    };
-    SampleAppModuleAngularInjector.prototype.destroyInternal = function () {
-        this._ɵf_4.ngOnDestroy();
-        (this.__ɵDomSharedStylesHost_26 && this._ɵDomSharedStylesHost_26.ngOnDestroy());
-    };
-    return SampleAppModuleAngularInjector;
-}(import0.ɵNgModuleInjector));
-exports.SampleAppModuleAngularNgFactory = new import0.NgModuleFactory(SampleAppModuleAngularInjector, import1.SampleAppModuleAngular);
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL1VzZXJzL2N0aGllbGVuL3Byb2plY3RzL3Vpcm91dGVyL3NhbXBsZS1hcHAtbmcxLXRvLW5nMi9hcHAvYW5ndWxhck1vZHVsZS5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9Vc2Vycy9jdGhpZWxlbi9wcm9qZWN0cy91aXJvdXRlci9zYW1wbGUtYXBwLW5nMS10by1uZzIvYXBwL2FuZ3VsYXJNb2R1bGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsifQ==
+var i0 = __webpack_require__(4);
+var i1 = __webpack_require__(125);
+var i2 = __webpack_require__(82);
+var i3 = __webpack_require__(124);
+var i4 = __webpack_require__(123);
+var i5 = __webpack_require__(9);
+var i6 = __webpack_require__(27);
+var i7 = __webpack_require__(35);
+var i8 = __webpack_require__(62);
+var i9 = __webpack_require__(28);
+var i10 = __webpack_require__(44);
+var i11 = __webpack_require__(40);
+var i12 = __webpack_require__(38);
+var i13 = __webpack_require__(30);
+var i14 = __webpack_require__(47);
+var i15 = __webpack_require__(48);
+var i16 = __webpack_require__(49);
+var i17 = __webpack_require__(51);
+var i18 = __webpack_require__(37);
+var i19 = __webpack_require__(36);
+var i20 = __webpack_require__(29);
+var i21 = __webpack_require__(154);
+var i22 = __webpack_require__(61);
+var i23 = __webpack_require__(39);
+exports.SampleAppModuleAngularNgFactory = i0.ɵcmf(i1.SampleAppModuleAngular, [], function (_l) {
+    return i0.ɵmod([i0.ɵmpd(512, i0.ComponentFactoryResolver, i0.ɵCodegenComponentFactoryResolver, [[8, [i2.UIViewNgFactory, i3.UIViewNgUpgradeNgFactory, i4.PrefsComponentNgFactory]],
+            [3, i0.ComponentFactoryResolver], i0.NgModuleRef]), i0.ɵmpd(5120, i0.LOCALE_ID, i0.ɵm, [[3, i0.LOCALE_ID]]), i0.ɵmpd(4608, i5.NgLocalization, i5.NgLocaleLocalization, [i0.LOCALE_ID]), i0.ɵmpd(4608, i0.Compiler, i0.Compiler, []), i0.ɵmpd(5120, i0.APP_ID, i0.ɵf, []), i0.ɵmpd(5120, i0.IterableDiffers, i0.ɵk, []),
+        i0.ɵmpd(5120, i0.KeyValueDiffers, i0.ɵl, []), i0.ɵmpd(4608, i6.DomSanitizer, i6.ɵe, [i5.DOCUMENT]), i0.ɵmpd(6144, i0.Sanitizer, null, [i6.DomSanitizer]),
+        i0.ɵmpd(4608, i6.HAMMER_GESTURE_CONFIG, i6.HammerGestureConfig, []),
+        i0.ɵmpd(5120, i6.EVENT_MANAGER_PLUGINS, function (p0_0, p1_0, p2_0, p2_1) {
+            return [new i6.ɵDomEventsPlugin(p0_0), new i6.ɵKeyEventsPlugin(p1_0), new i6.ɵHammerGesturesPlugin(p2_0, p2_1)];
+        }, [i5.DOCUMENT, i5.DOCUMENT, i5.DOCUMENT, i6.HAMMER_GESTURE_CONFIG]), i0.ɵmpd(4608, i6.EventManager, i6.EventManager, [i6.EVENT_MANAGER_PLUGINS, i0.NgZone]),
+        i0.ɵmpd(135680, i6.ɵDomSharedStylesHost, i6.ɵDomSharedStylesHost, [i5.DOCUMENT]),
+        i0.ɵmpd(4608, i6.ɵDomRendererFactory2, i6.ɵDomRendererFactory2, [i6.EventManager,
+            i6.ɵDomSharedStylesHost]), i0.ɵmpd(6144, i0.RendererFactory2, null, [i6.ɵDomRendererFactory2]), i0.ɵmpd(6144, i6.ɵSharedStylesHost, null, [i6.ɵDomSharedStylesHost]), i0.ɵmpd(4608, i0.Testability, i0.Testability, [i0.NgZone]), i0.ɵmpd(4608, i6.Meta, i6.Meta, [i5.DOCUMENT]), i0.ɵmpd(4608, i6.Title, i6.Title, [i5.DOCUMENT]), i0.ɵmpd(5120, '$injector', i7.ɵa, []),
+        i0.ɵmpd(5120, '$rootScope', i7.ɵb, ['$injector']), i0.ɵmpd(5120, '$compile', i7.ɵc, ['$injector']), i0.ɵmpd(5120, '$parse', i7.ɵd, ['$injector']), i0.ɵmpd(5120, '$uiRouter', i8.getUIRouter, ['$injector']), i0.ɵmpd(5120, i9.UIRouter, i8.uiRouterUpgradeFactory, ['$uiRouter', i0.Injector]), i0.ɵmpd(5120, i10.StateRegistry, i11.fnStateRegistry, [i9.UIRouter]), i0.ɵmpd(5120, 'UIView.PARENT_INJECT', i8.getParentUIViewInject, [i10.StateRegistry]), i0.ɵmpd(5120, i12.StateService, i11.fnStateService, [i9.UIRouter]), i0.ɵmpd(5120, i13.TransitionService, i11.fnTransitionService, [i9.UIRouter]), i0.ɵmpd(5120, i14.UrlMatcherFactory, i11.fnUrlMatcherFactory, [i9.UIRouter]), i0.ɵmpd(5120, i15.UrlRouter, i11.fnUrlRouter, [i9.UIRouter]),
+        i0.ɵmpd(5120, i16.UrlService, i11.fnUrlService, [i9.UIRouter]), i0.ɵmpd(5120, i17.ViewService, i11.fnViewService, [i9.UIRouter]), i0.ɵmpd(5120, i18.UIRouterGlobals, i11.fnGlobals, [i9.UIRouter]), i0.ɵmpd(4608, i19.ɵi, i19.ɵi, []),
+        i0.ɵmpd(4608, i0.NgModuleFactoryLoader, i0.SystemJsNgModuleLoader, [i0.Compiler,
+            [2, i0.SystemJsNgModuleLoaderConfig]]), i0.ɵmpd(5120, 'DialogService', i1.getDialogService, ['$injector']), i0.ɵmpd(5120, 'Contacts', i1.getContactsService, ['$injector']),
+        i0.ɵmpd(512, i5.CommonModule, i5.CommonModule, []), i0.ɵmpd(1024, i0.ErrorHandler, i6.ɵa, []), i0.ɵmpd(1024, i0.APP_INITIALIZER, function (p0_0, p0_1) {
+            return [i6.ɵc(p0_0, p0_1)];
+        }, [[2, i6.NgProbeToken], [2, i0.NgProbeToken]]), i0.ɵmpd(512, i0.ApplicationInitStatus, i0.ApplicationInitStatus, [[2, i0.APP_INITIALIZER]]), i0.ɵmpd(131584, i0.ɵe, i0.ɵe, [i0.NgZone, i0.ɵConsole, i0.Injector, i0.ErrorHandler, i0.ComponentFactoryResolver,
+            i0.ApplicationInitStatus]), i0.ɵmpd(2048, i0.ApplicationRef, null, [i0.ɵe]), i0.ɵmpd(512, i0.ApplicationModule, i0.ApplicationModule, [i0.ApplicationRef]),
+        i0.ɵmpd(512, i6.BrowserModule, i6.BrowserModule, [[3, i6.BrowserModule]]), i0.ɵmpd(512, i7.UpgradeModule, i7.UpgradeModule, [i0.Injector, i0.NgZone]), i0.ɵmpd(512, i20.UIRouterModule, i20.UIRouterModule, []), i0.ɵmpd(512, i8.UIRouterUpgradeModule, i8.UIRouterUpgradeModule, []), i0.ɵmpd(512, i19.ɵba, i19.ɵba, []), i0.ɵmpd(512, i19.FormsModule, i19.FormsModule, []),
+        i0.ɵmpd(512, i21.PrefsModule, i21.PrefsModule, []), i0.ɵmpd(512, i1.SampleAppModuleAngular, i1.SampleAppModuleAngular, []), i0.ɵmpd(1024, i20.UIROUTER_ROOT_MODULE, function () {
+            return [{}];
+        }, []), i0.ɵmpd(1024, i20.UIROUTER_MODULE_TOKEN, function () {
+            return [{ states: [{ parent: 'app', name: 'prefs', url: '/prefs', component: i22.PrefsComponent,
+                            data: { requiresAuth: true } }] }, { states: [{ name: 'contacts.**', url: '/contacts',
+                            loadChildren: './contacts/contacts.module#ContactsModule' }] }];
+        }, []), i0.ɵmpd(1024, i23.ROUTES, function () {
+            return [[{ parent: 'app', name: 'prefs', url: '/prefs', component: i22.PrefsComponent,
+                        data: { requiresAuth: true } }], [{ name: 'contacts.**', url: '/contacts', loadChildren: './contacts/contacts.module#ContactsModule' }]];
+        }, [])]);
+});
 //# sourceMappingURL=angularModule.ngfactory.js.map
 
 /***/ }),
-/* 125 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var angularJSModule_1 = __webpack_require__(81);
+var angularJSModule_1 = __webpack_require__(80);
 /** Google analytics */
 (function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
@@ -1285,8 +396,8 @@ angularJSModule_1.sampleAppModuleAngularJS.config(function ($transitionsProvider
 //# sourceMappingURL=ga.js.map
 
 /***/ }),
-/* 126 */,
-/* 127 */
+/* 122 */,
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1298,239 +409,95 @@ angularJSModule_1.sampleAppModuleAngularJS.config(function ($transitionsProvider
  */
 /* tslint:disable */
 Object.defineProperty(exports, "__esModule", { value: true });
-var import0 = __webpack_require__(4);
-var import1 = __webpack_require__(63);
-var import2 = __webpack_require__(38);
+var i0 = __webpack_require__(4);
+var i1 = __webpack_require__(61);
+var i2 = __webpack_require__(36);
 var styles_PrefsComponent = [];
-exports.RenderType_PrefsComponent = import0.ɵcrt({
-    encapsulation: 2,
-    styles: styles_PrefsComponent,
-    data: {}
-});
-function View_PrefsComponent_0(l) {
-    return import0.ɵvid(0, [
-        (l()(), import0.ɵted(null, ['\n      '])),
-        (l()(), import0.ɵeld(0, null, null, 7, 'div', [], null, null, null, null, null)),
-        (l()(), import0.ɵted(null, ['\n          '])),
-        (l()(), import0.ɵeld(0, null, null, 4, 'button', [[
-                'class',
-                'btn btn-primary'
-            ]
-        ], null, [[
-                null,
-                'click'
-            ]
-        ], function (v, en, $event) {
+exports.RenderType_PrefsComponent = i0.ɵcrt({ encapsulation: 2,
+    styles: styles_PrefsComponent, data: {} });
+function View_PrefsComponent_0(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['\n      '])), (_l()(), i0.ɵeld(0, null, null, 7, 'div', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n          '])),
+        (_l()(), i0.ɵeld(0, null, null, 4, 'button', [['class', 'btn btn-primary']], null, [[null, 'click']], function (_v, en, $event) {
             var ad = true;
-            var co = v.component;
+            var _co = _v.component;
             if (('click' === en)) {
-                var pd_0 = (co.reset() !== false);
+                var pd_0 = (_co.reset() !== false);
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, null, null)),
-        (l()(), import0.ɵeld(0, null, null, 0, 'i', [[
-                'class',
-                'fa fa-recycle'
-            ]
-        ], null, null, null, null, null)),
-        (l()(), import0.ɵted(null, [' '])),
-        (l()(), import0.ɵeld(0, null, null, 1, 'span', [], null, null, null, null, null)),
-        (l()(), import0.ɵted(null, ['Reset All Data'])),
-        (l()(), import0.ɵted(null, ['\n      '])),
-        (l()(), import0.ɵted(null, ['\n\n      '])),
-        (l()(), import0.ɵeld(0, null, null, 14, 'div', [], null, null, null, null, null)),
-        (l()(), import0.ɵted(null, ['\n          '])),
-        (l()(), import0.ɵeld(0, null, null, 1, 'label', [[
-                'for',
-                'restDelay'
-            ]
-        ], null, null, null, null, null)),
-        (l()(), import0.ɵted(null, ['Simulated REST API delay (ms)'])),
-        (l()(), import0.ɵted(null, ['\n          '])),
-        (l()(), import0.ɵeld(0, null, null, 5, 'input', [
-            [
-                'name',
-                'restDelay'
-            ],
-            [
-                'type',
-                'text'
-            ]
-        ], [
-            [
-                2,
-                'ng-untouched',
-                null
-            ],
-            [
-                2,
-                'ng-touched',
-                null
-            ],
-            [
-                2,
-                'ng-pristine',
-                null
-            ],
-            [
-                2,
-                'ng-dirty',
-                null
-            ],
-            [
-                2,
-                'ng-valid',
-                null
-            ],
-            [
-                2,
-                'ng-invalid',
-                null
-            ],
-            [
-                2,
-                'ng-pending',
-                null
-            ]
-        ], [
-            [
-                null,
-                'ngModelChange'
-            ],
-            [
-                null,
-                'input'
-            ],
-            [
-                null,
-                'blur'
-            ],
-            [
-                null,
-                'compositionstart'
-            ],
-            [
-                null,
-                'compositionend'
-            ]
-        ], function (v, en, $event) {
+        }, null, null)), (_l()(), i0.ɵeld(0, null, null, 0, 'i', [['class', 'fa fa-recycle']], null, null, null, null, null)), (_l()(), i0.ɵted(null, [' '])), (_l()(),
+            i0.ɵeld(0, null, null, 1, 'span', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Reset All Data'])), (_l()(), i0.ɵted(null, ['\n      '])), (_l()(),
+            i0.ɵted(null, ['\n\n      '])), (_l()(), i0.ɵeld(0, null, null, 14, 'div', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n          '])), (_l()(),
+            i0.ɵeld(0, null, null, 1, 'label', [['for', 'restDelay']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Simulated REST API delay (ms)'])), (_l()(), i0.ɵted(null, ['\n          '])),
+        (_l()(), i0.ɵeld(0, null, null, 5, 'input', [['name', 'restDelay'],
+            ['type', 'text']], [[2, 'ng-untouched', null], [2, 'ng-touched', null],
+            [2, 'ng-pristine', null], [2, 'ng-dirty', null], [2, 'ng-valid',
+                null], [2, 'ng-invalid', null], [2, 'ng-pending', null]], [[null, 'ngModelChange'], [null, 'input'], [null,
+                'blur'], [null, 'compositionstart'], [null, 'compositionend']], function (_v, en, $event) {
             var ad = true;
-            var co = v.component;
+            var _co = _v.component;
             if (('input' === en)) {
-                var pd_0 = (import0.ɵnov(v, 16)._handleInput($event.target.value) !== false);
+                var pd_0 = (i0.ɵnov(_v, 16)._handleInput($event.target.value) !== false);
                 ad = (pd_0 && ad);
             }
             if (('blur' === en)) {
-                var pd_1 = (import0.ɵnov(v, 16).onTouched() !== false);
+                var pd_1 = (i0.ɵnov(_v, 16).onTouched() !== false);
                 ad = (pd_1 && ad);
             }
             if (('compositionstart' === en)) {
-                var pd_2 = (import0.ɵnov(v, 16)._compositionStart() !== false);
+                var pd_2 = (i0.ɵnov(_v, 16)._compositionStart() !== false);
                 ad = (pd_2 && ad);
             }
             if (('compositionend' === en)) {
-                var pd_3 = (import0.ɵnov(v, 16)._compositionEnd($event.target.value) !== false);
+                var pd_3 = (i0.ɵnov(_v, 16)._compositionEnd($event.target.value) !== false);
                 ad = (pd_3 && ad);
             }
             if (('ngModelChange' === en)) {
-                var pd_4 = ((co.prefs.restDelay = $event) !== false);
+                var pd_4 = ((_co.prefs.restDelay = $event) !== false);
                 ad = (pd_4 && ad);
             }
             return ad;
-        }, null, null)),
-        import0.ɵdid(16384, null, 0, import2.DefaultValueAccessor, [
-            import0.Renderer,
-            import0.ElementRef,
-            [
-                2,
-                import2.COMPOSITION_BUFFER_MODE
-            ]
-        ], null, null),
-        import0.ɵprd(1024, null, import2.NG_VALUE_ACCESSOR, function (p0_0) {
+        }, null, null)), i0.ɵdid(16384, null, 0, i2.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i2.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵprd(1024, null, i2.NG_VALUE_ACCESSOR, function (p0_0) {
             return [p0_0];
-        }, [import2.DefaultValueAccessor]),
-        import0.ɵdid(671744, null, 0, import2.NgModel, [
-            [
-                8,
-                null
-            ],
-            [
-                8,
-                null
-            ],
-            [
-                8,
-                null
-            ],
-            [
-                2,
-                import2.NG_VALUE_ACCESSOR
-            ]
-        ], {
-            name: [
-                0,
-                'name'
-            ],
-            model: [
-                1,
-                'model'
-            ]
-        }, { update: 'ngModelChange' }),
-        import0.ɵprd(2048, null, import2.NgControl, null, [import2.NgModel]),
-        import0.ɵdid(16384, null, 0, import2.NgControlStatus, [import2.NgControl], null, null),
-        (l()(), import0.ɵted(null, ['\n          '])),
-        (l()(), import0.ɵeld(0, null, null, 1, 'button', [[
-                'class',
-                'btn btn-primary'
-            ]
-        ], null, [[
-                null,
-                'click'
-            ]
-        ], function (v, en, $event) {
+        }, [i2.DefaultValueAccessor]), i0.ɵdid(671744, null, 0, i2.NgModel, [[8, null],
+            [8, null], [8, null], [2, i2.NG_VALUE_ACCESSOR]], { name: [0, 'name'],
+            model: [1, 'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i2.NgControl, null, [i2.NgModel]), i0.ɵdid(16384, null, 0, i2.NgControlStatus, [i2.NgControl], null, null), (_l()(), i0.ɵted(null, ['\n          '])), (_l()(), i0.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-primary']], null, [[null, 'click']], function (_v, en, $event) {
             var ad = true;
-            var co = v.component;
+            var _co = _v.component;
             if (('click' === en)) {
-                var pd_0 = (co.savePrefs() !== false);
+                var pd_0 = (_co.savePrefs() !== false);
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, null, null)),
-        (l()(), import0.ɵted(null, ['Save'])),
-        (l()(), import0.ɵted(null, ['\n      '])),
-        (l()(), import0.ɵted(null, ['\n  ']))
-    ], function (ck, v) {
-        var co = v.component;
+        }, null, null)), (_l()(), i0.ɵted(null, ['Save'])),
+        (_l()(), i0.ɵted(null, ['\n      '])), (_l()(), i0.ɵted(null, ['\n  ']))], function (_ck, _v) {
+        var _co = _v.component;
         var currVal_7 = 'restDelay';
-        var currVal_8 = co.prefs.restDelay;
-        ck(v, 18, 0, currVal_7, currVal_8);
-    }, function (ck, v) {
-        var currVal_0 = import0.ɵnov(v, 20).ngClassUntouched;
-        var currVal_1 = import0.ɵnov(v, 20).ngClassTouched;
-        var currVal_2 = import0.ɵnov(v, 20).ngClassPristine;
-        var currVal_3 = import0.ɵnov(v, 20).ngClassDirty;
-        var currVal_4 = import0.ɵnov(v, 20).ngClassValid;
-        var currVal_5 = import0.ɵnov(v, 20).ngClassInvalid;
-        var currVal_6 = import0.ɵnov(v, 20).ngClassPending;
-        ck(v, 15, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6);
+        var currVal_8 = _co.prefs.restDelay;
+        _ck(_v, 18, 0, currVal_7, currVal_8);
+    }, function (_ck, _v) {
+        var currVal_0 = i0.ɵnov(_v, 20).ngClassUntouched;
+        var currVal_1 = i0.ɵnov(_v, 20).ngClassTouched;
+        var currVal_2 = i0.ɵnov(_v, 20).ngClassPristine;
+        var currVal_3 = i0.ɵnov(_v, 20).ngClassDirty;
+        var currVal_4 = i0.ɵnov(_v, 20).ngClassValid;
+        var currVal_5 = i0.ɵnov(_v, 20).ngClassInvalid;
+        var currVal_6 = i0.ɵnov(_v, 20).ngClassPending;
+        _ck(_v, 15, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6);
     });
 }
 exports.View_PrefsComponent_0 = View_PrefsComponent_0;
-function View_PrefsComponent_Host_0(l) {
-    return import0.ɵvid(0, [
-        (l()(), import0.ɵeld(0, null, null, 1, 'prefs-component', [], null, null, null, View_PrefsComponent_0, exports.RenderType_PrefsComponent)),
-        import0.ɵdid(114688, null, 0, import1.PrefsComponent, ['AppConfig'], null, null)
-    ], function (ck, v) {
-        ck(v, 1, 0);
+function View_PrefsComponent_Host_0(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'prefs-component', [], null, null, null, View_PrefsComponent_0, exports.RenderType_PrefsComponent)), i0.ɵdid(114688, null, 0, i1.PrefsComponent, ['AppConfig'], null, null)], function (_ck, _v) {
+        _ck(_v, 1, 0);
     }, null);
 }
-exports.PrefsComponentNgFactory = import0.ɵccf('prefs-component', import1.PrefsComponent, View_PrefsComponent_Host_0, {}, {}, []);
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL1VzZXJzL2N0aGllbGVuL3Byb2plY3RzL3Vpcm91dGVyL3NhbXBsZS1hcHAtbmcxLXRvLW5nMi9hcHAvcHJlZnMvcHJlZnMuY29tcG9uZW50Lm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL1VzZXJzL2N0aGllbGVuL3Byb2plY3RzL3Vpcm91dGVyL3NhbXBsZS1hcHAtbmcxLXRvLW5nMi9hcHAvcHJlZnMvcHJlZnMuY29tcG9uZW50LnRzIiwibmc6Ly8vVXNlcnMvY3RoaWVsZW4vcHJvamVjdHMvdWlyb3V0ZXIvc2FtcGxlLWFwcC1uZzEtdG8tbmcyL2FwcC9wcmVmcy9wcmVmcy5jb21wb25lbnQudHMuUHJlZnNDb21wb25lbnQuaHRtbCIsIm5nOi8vL1VzZXJzL2N0aGllbGVuL3Byb2plY3RzL3Vpcm91dGVyL3NhbXBsZS1hcHAtbmcxLXRvLW5nMi9hcHAvcHJlZnMvcHJlZnMuY29tcG9uZW50LnRzLlByZWZzQ29tcG9uZW50X0hvc3QuaHRtbCJdLCJzb3VyY2VzQ29udGVudCI6WyIgIiwiXG4gICAgICA8ZGl2PlxuICAgICAgICAgIDxidXR0b24gY2xhc3M9XCJidG4gYnRuLXByaW1hcnlcIiAoY2xpY2spPVwicmVzZXQoKVwiPjxpIGNsYXNzPVwiZmEgZmEtcmVjeWNsZVwiPjwvaT4gPHNwYW4+UmVzZXQgQWxsIERhdGE8L3NwYW4+PC9idXR0b24+XG4gICAgICA8L2Rpdj5cblxuICAgICAgPGRpdj5cbiAgICAgICAgICA8bGFiZWwgZm9yPVwicmVzdERlbGF5XCI+U2ltdWxhdGVkIFJFU1QgQVBJIGRlbGF5IChtcyk8L2xhYmVsPlxuICAgICAgICAgIDxpbnB1dCB0eXBlPVwidGV4dFwiIG5hbWU9XCJyZXN0RGVsYXlcIiBbKG5nTW9kZWwpXT1cInByZWZzLnJlc3REZWxheVwiPlxuICAgICAgICAgIDxidXR0b24gY2xhc3M9XCJidG4gYnRuLXByaW1hcnlcIiAoY2xpY2spPVwic2F2ZVByZWZzKClcIj5TYXZlPC9idXR0b24+XG4gICAgICA8L2Rpdj5cbiAgIiwiPHByZWZzLWNvbXBvbmVudD48L3ByZWZzLWNvbXBvbmVudD4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQ0FBO0lBQ007SUFBSztNQUNEO1FBQUE7UUFBQTtNQUFBO01BQUE7UUFBQTtRQUFBO01BQUE7SUFBQTtNQUFBO01BQUE7TUFBZ0M7UUFBQTtRQUFBO01BQUE7TUFBaEM7SUFBQTtNQUFrRDtRQUFBO1FBQUE7TUFBQTtJQUFBO0lBQTZCO0lBQUM7SUFBTTtJQUE4QjtJQUNsSDtJQUVOO0lBQUs7TUFDRDtRQUFBO1FBQUE7TUFBQTtJQUFBO0lBQXVCO0lBQXFDO0lBQzVEO01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O0lBQUE7S0FBQTtNQUFBO1FBQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtRQUFBO01BQUE7O0lBQUE7S0FBQTtNQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtNQUFBOztJQUFBO0tBQUE7TUFBQTtNQUFBO01BQUE7UUFBQTtRQUFBO01BQUE7TUFBQTtRQUFBO1FBQUE7TUFBQTtNQUFBO1FBQUE7UUFBQTtNQUFBO01BQUE7UUFBQTtRQUFBO01BQUE7TUFBb0M7UUFBQTtRQUFBO01BQUE7TUFBcEM7SUFBQTtnQkFBQTs7O01BQUE7UUFBQTs7TUFBQTs7SUFBQTtLQUFBO2dCQUFBO01BQUE7SUFBQTtnQkFBQTtNQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7O01BQUE7O0lBQUE7S0FBQTtNQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtNQUFBOztJQUFBO0tBQUE7Z0JBQUE7Z0JBQUE7SUFBa0U7TUFDbEU7UUFBQTtRQUFBO01BQUE7TUFBQTtRQUFBO1FBQUE7TUFBQTtJQUFBO01BQUE7TUFBQTtNQUFnQztRQUFBO1FBQUE7TUFBQTtNQUFoQztJQUFBO0lBQXNEO0lBQWE7SUFDakU7Ozs7SUFGaUI7SUFBaUI7SUFBcEMsVUFBbUIsVUFBaUIsU0FBcEM7O0lBQUE7SUFBQTtJQUFBO0lBQUE7SUFBQTtJQUFBO0lBQUE7SUFBQSxVQUFBLHFFQUFBOzs7OztJQ1BWO2dCQUFBOzs7SUFBQTs7OyJ9
+exports.View_PrefsComponent_Host_0 = View_PrefsComponent_Host_0;
+exports.PrefsComponentNgFactory = i0.ɵccf('prefs-component', i1.PrefsComponent, View_PrefsComponent_Host_0, {}, {}, []);
 //# sourceMappingURL=prefs.component.ngfactory.js.map
 
 /***/ }),
-/* 128 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1541,323 +508,58 @@ exports.PrefsComponentNgFactory = import0.ɵccf('prefs-component', import1.Prefs
  * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride}
  */
 /* tslint:disable */
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 Object.defineProperty(exports, "__esModule", { value: true });
-var import0 = __webpack_require__(4);
-var import1 = __webpack_require__(87);
-var import2 = __webpack_require__(10);
-var import3 = __webpack_require__(29);
-var import4 = __webpack_require__(27);
-var import5 = __webpack_require__(83);
-var import6 = __webpack_require__(43);
-var import7 = __webpack_require__(28);
-var import8 = __webpack_require__(48);
-var import9 = __webpack_require__(40);
-var import10 = __webpack_require__(30);
-var import11 = __webpack_require__(51);
-var import12 = __webpack_require__(52);
-var import13 = __webpack_require__(53);
-var import14 = __webpack_require__(55);
-var import15 = __webpack_require__(39);
-var import16 = __webpack_require__(14);
-var UIRouterUpgradeModuleInjector = (function (_super) {
-    __extends(UIRouterUpgradeModuleInjector, _super);
-    function UIRouterUpgradeModuleInjector(parent) {
-        return _super.call(this, parent, [
-            import5.UIViewNgFactory,
-            exports.UIViewNgUpgradeNgFactory
-        ], []) || this;
-    }
-    Object.defineProperty(UIRouterUpgradeModuleInjector.prototype, "_NgLocalization_4", {
-        get: function () {
-            if ((this.__NgLocalization_4 == null)) {
-                (this.__NgLocalization_4 = new import2.NgLocaleLocalization(this.parent.get(import0.LOCALE_ID)));
-            }
-            return this.__NgLocalization_4;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(UIRouterUpgradeModuleInjector.prototype, "__injector_5", {
-        get: function () {
-            if ((this.___injector_5 == null)) {
-                (this.___injector_5 = import4.ɵa());
-            }
-            return this.___injector_5;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(UIRouterUpgradeModuleInjector.prototype, "__rootScope_6", {
-        get: function () {
-            if ((this.___rootScope_6 == null)) {
-                (this.___rootScope_6 = import4.ɵb(this.__injector_5));
-            }
-            return this.___rootScope_6;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(UIRouterUpgradeModuleInjector.prototype, "__compile_7", {
-        get: function () {
-            if ((this.___compile_7 == null)) {
-                (this.___compile_7 = import4.ɵc(this.__injector_5));
-            }
-            return this.___compile_7;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(UIRouterUpgradeModuleInjector.prototype, "__parse_8", {
-        get: function () {
-            if ((this.___parse_8 == null)) {
-                (this.___parse_8 = import4.ɵd(this.__injector_5));
-            }
-            return this.___parse_8;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(UIRouterUpgradeModuleInjector.prototype, "__uiRouter_9", {
-        get: function () {
-            if ((this.___uiRouter_9 == null)) {
-                (this.___uiRouter_9 = import1.getUIRouter(this.__injector_5));
-            }
-            return this.___uiRouter_9;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(UIRouterUpgradeModuleInjector.prototype, "_UIRouter_10", {
-        get: function () {
-            if ((this.__UIRouter_10 == null)) {
-                (this.__UIRouter_10 = import1.uiRouterUpgradeFactory(this.__uiRouter_9, this));
-            }
-            return this.__UIRouter_10;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(UIRouterUpgradeModuleInjector.prototype, "_StateRegistry_12", {
-        get: function () {
-            if ((this.__StateRegistry_12 == null)) {
-                (this.__StateRegistry_12 = import6.fnStateRegistry(this._UIRouter_10));
-            }
-            return this.__StateRegistry_12;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(UIRouterUpgradeModuleInjector.prototype, "_UIView_PARENT_INJECT_13", {
-        get: function () {
-            if ((this.__UIView_PARENT_INJECT_13 == null)) {
-                (this.__UIView_PARENT_INJECT_13 = import1.getParentUIViewInject(this._StateRegistry_12));
-            }
-            return this.__UIView_PARENT_INJECT_13;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(UIRouterUpgradeModuleInjector.prototype, "_StateService_14", {
-        get: function () {
-            if ((this.__StateService_14 == null)) {
-                (this.__StateService_14 = import6.fnStateService(this._UIRouter_10));
-            }
-            return this.__StateService_14;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(UIRouterUpgradeModuleInjector.prototype, "_TransitionService_15", {
-        get: function () {
-            if ((this.__TransitionService_15 == null)) {
-                (this.__TransitionService_15 = import6.fnTransitionService(this._UIRouter_10));
-            }
-            return this.__TransitionService_15;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(UIRouterUpgradeModuleInjector.prototype, "_UrlMatcherFactory_16", {
-        get: function () {
-            if ((this.__UrlMatcherFactory_16 == null)) {
-                (this.__UrlMatcherFactory_16 = import6.fnUrlMatcherFactory(this._UIRouter_10));
-            }
-            return this.__UrlMatcherFactory_16;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(UIRouterUpgradeModuleInjector.prototype, "_UrlRouter_17", {
-        get: function () {
-            if ((this.__UrlRouter_17 == null)) {
-                (this.__UrlRouter_17 = import6.fnUrlRouter(this._UIRouter_10));
-            }
-            return this.__UrlRouter_17;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(UIRouterUpgradeModuleInjector.prototype, "_UrlService_18", {
-        get: function () {
-            if ((this.__UrlService_18 == null)) {
-                (this.__UrlService_18 = import6.fnUrlService(this._UIRouter_10));
-            }
-            return this.__UrlService_18;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(UIRouterUpgradeModuleInjector.prototype, "_ViewService_19", {
-        get: function () {
-            if ((this.__ViewService_19 == null)) {
-                (this.__ViewService_19 = import6.fnViewService(this._UIRouter_10));
-            }
-            return this.__ViewService_19;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(UIRouterUpgradeModuleInjector.prototype, "_UIRouterGlobals_20", {
-        get: function () {
-            if ((this.__UIRouterGlobals_20 == null)) {
-                (this.__UIRouterGlobals_20 = import6.fnGlobals(this._UIRouter_10));
-            }
-            return this.__UIRouterGlobals_20;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    UIRouterUpgradeModuleInjector.prototype.createInternal = function () {
-        this._CommonModule_0 = new import2.CommonModule();
-        this._UIRouterModule_1 = new import3.UIRouterModule();
-        this._UpgradeModule_2 = new import4.UpgradeModule(this, this.parent.get(import0.NgZone));
-        this._UIRouterUpgradeModule_3 = new import1.UIRouterUpgradeModule();
-        this._UIROUTER_ROOT_MODULE_11 = [{}];
-        return this._UIRouterUpgradeModule_3;
-    };
-    UIRouterUpgradeModuleInjector.prototype.getInternal = function (token, notFoundResult) {
-        if ((token === import2.CommonModule)) {
-            return this._CommonModule_0;
-        }
-        if ((token === import3.UIRouterModule)) {
-            return this._UIRouterModule_1;
-        }
-        if ((token === import4.UpgradeModule)) {
-            return this._UpgradeModule_2;
-        }
-        if ((token === import1.UIRouterUpgradeModule)) {
-            return this._UIRouterUpgradeModule_3;
-        }
-        if ((token === import2.NgLocalization)) {
-            return this._NgLocalization_4;
-        }
-        if ((token === '$injector')) {
-            return this.__injector_5;
-        }
-        if ((token === '$rootScope')) {
-            return this.__rootScope_6;
-        }
-        if ((token === '$compile')) {
-            return this.__compile_7;
-        }
-        if ((token === '$parse')) {
-            return this.__parse_8;
-        }
-        if ((token === '$uiRouter')) {
-            return this.__uiRouter_9;
-        }
-        if ((token === import7.UIRouter)) {
-            return this._UIRouter_10;
-        }
-        if ((token === import3.UIROUTER_ROOT_MODULE)) {
-            return this._UIROUTER_ROOT_MODULE_11;
-        }
-        if ((token === import8.StateRegistry)) {
-            return this._StateRegistry_12;
-        }
-        if ((token === 'UIView.PARENT_INJECT')) {
-            return this._UIView_PARENT_INJECT_13;
-        }
-        if ((token === import9.StateService)) {
-            return this._StateService_14;
-        }
-        if ((token === import10.TransitionService)) {
-            return this._TransitionService_15;
-        }
-        if ((token === import11.UrlMatcherFactory)) {
-            return this._UrlMatcherFactory_16;
-        }
-        if ((token === import12.UrlRouter)) {
-            return this._UrlRouter_17;
-        }
-        if ((token === import13.UrlService)) {
-            return this._UrlService_18;
-        }
-        if ((token === import14.ViewService)) {
-            return this._ViewService_19;
-        }
-        if ((token === import15.UIRouterGlobals)) {
-            return this._UIRouterGlobals_20;
-        }
-        return notFoundResult;
-    };
-    UIRouterUpgradeModuleInjector.prototype.destroyInternal = function () {
-    };
-    return UIRouterUpgradeModuleInjector;
-}(import0.ɵNgModuleInjector));
-exports.UIRouterUpgradeModuleNgFactory = new import0.NgModuleFactory(UIRouterUpgradeModuleInjector, import1.UIRouterUpgradeModule);
-var styles_UIViewNgUpgrade = [];
-exports.RenderType_UIViewNgUpgrade = import0.ɵcrt({
-    encapsulation: 2,
-    styles: styles_UIViewNgUpgrade,
-    data: {}
+var i0 = __webpack_require__(4);
+var i1 = __webpack_require__(62);
+var i2 = __webpack_require__(82);
+var i3 = __webpack_require__(9);
+var i4 = __webpack_require__(35);
+var i5 = __webpack_require__(28);
+var i6 = __webpack_require__(44);
+var i7 = __webpack_require__(40);
+var i8 = __webpack_require__(38);
+var i9 = __webpack_require__(30);
+var i10 = __webpack_require__(47);
+var i11 = __webpack_require__(48);
+var i12 = __webpack_require__(49);
+var i13 = __webpack_require__(51);
+var i14 = __webpack_require__(37);
+var i15 = __webpack_require__(29);
+var i16 = __webpack_require__(16);
+exports.UIRouterUpgradeModuleNgFactory = i0.ɵcmf(i1.UIRouterUpgradeModule, [], function (_l) {
+    return i0.ɵmod([i0.ɵmpd(512, i0.ComponentFactoryResolver, i0.ɵCodegenComponentFactoryResolver, [[8, [i2.UIViewNgFactory, exports.UIViewNgUpgradeNgFactory]], [3, i0.ComponentFactoryResolver],
+            i0.NgModuleRef]), i0.ɵmpd(4608, i3.NgLocalization, i3.NgLocaleLocalization, [i0.LOCALE_ID]), i0.ɵmpd(5120, '$injector', i4.ɵa, []), i0.ɵmpd(5120, '$rootScope', i4.ɵb, ['$injector']), i0.ɵmpd(5120, '$compile', i4.ɵc, ['$injector']),
+        i0.ɵmpd(5120, '$parse', i4.ɵd, ['$injector']), i0.ɵmpd(5120, '$uiRouter', i1.getUIRouter, ['$injector']), i0.ɵmpd(5120, i5.UIRouter, i1.uiRouterUpgradeFactory, ['$uiRouter',
+            i0.Injector]), i0.ɵmpd(5120, i6.StateRegistry, i7.fnStateRegistry, [i5.UIRouter]),
+        i0.ɵmpd(5120, 'UIView.PARENT_INJECT', i1.getParentUIViewInject, [i6.StateRegistry]),
+        i0.ɵmpd(5120, i8.StateService, i7.fnStateService, [i5.UIRouter]), i0.ɵmpd(5120, i9.TransitionService, i7.fnTransitionService, [i5.UIRouter]), i0.ɵmpd(5120, i10.UrlMatcherFactory, i7.fnUrlMatcherFactory, [i5.UIRouter]), i0.ɵmpd(5120, i11.UrlRouter, i7.fnUrlRouter, [i5.UIRouter]), i0.ɵmpd(5120, i12.UrlService, i7.fnUrlService, [i5.UIRouter]), i0.ɵmpd(5120, i13.ViewService, i7.fnViewService, [i5.UIRouter]), i0.ɵmpd(5120, i14.UIRouterGlobals, i7.fnGlobals, [i5.UIRouter]),
+        i0.ɵmpd(512, i3.CommonModule, i3.CommonModule, []), i0.ɵmpd(512, i15.UIRouterModule, i15.UIRouterModule, []), i0.ɵmpd(512, i4.UpgradeModule, i4.UpgradeModule, [i0.Injector, i0.NgZone]), i0.ɵmpd(512, i1.UIRouterUpgradeModule, i1.UIRouterUpgradeModule, []), i0.ɵmpd(1024, i15.UIROUTER_ROOT_MODULE, function () {
+            return [{}];
+        }, [])]);
 });
-function View_UIViewNgUpgrade_0(l) {
-    return import0.ɵvid(0, [
-        (l()(), import0.ɵeld(16777216, null, null, 1, 'ui-view', [], null, null, null, import5.View_UIView_0, import5.RenderType_UIView)),
-        import0.ɵdid(245760, null, 0, import16.UIView, [
-            import7.UIRouter,
-            'UIView.PARENT_INJECT',
-            import0.ViewContainerRef
-        ], { name: [
-                0,
-                'name'
-            ]
-        }, null)
-    ], function (ck, v) {
-        var co = v.component;
-        var currVal_0 = co.name;
-        ck(v, 1, 0, currVal_0);
+var styles_UIViewNgUpgrade = [];
+exports.RenderType_UIViewNgUpgrade = i0.ɵcrt({ encapsulation: 2,
+    styles: styles_UIViewNgUpgrade, data: {} });
+function View_UIViewNgUpgrade_0(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(16777216, null, null, 1, 'ui-view', [], null, null, null, i2.View_UIView_0, i2.RenderType_UIView)),
+        i0.ɵdid(245760, null, 0, i16.UIView, [i5.UIRouter, 'UIView.PARENT_INJECT',
+            i0.ViewContainerRef], { name: [0, 'name'] }, null)], function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_0 = _co.name;
+        _ck(_v, 1, 0, currVal_0);
     }, null);
 }
 exports.View_UIViewNgUpgrade_0 = View_UIViewNgUpgrade_0;
-function View_UIViewNgUpgrade_Host_0(l) {
-    return import0.ɵvid(0, [
-        (l()(), import0.ɵeld(0, null, null, 2, 'ui-view-ng-upgrade', [], null, null, null, View_UIViewNgUpgrade_0, exports.RenderType_UIViewNgUpgrade)),
-        import0.ɵprd(8448, null, 'UIView.PARENT_INJECT', {}, []),
-        import0.ɵdid(49152, null, 0, import1.UIViewNgUpgrade, [
-            import0.ElementRef,
-            'UIView.PARENT_INJECT',
-            import8.StateRegistry
-        ], null, null)
-    ], null, null);
+function View_UIViewNgUpgrade_Host_0(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 2, 'ui-view-ng-upgrade', [], null, null, null, View_UIViewNgUpgrade_0, exports.RenderType_UIViewNgUpgrade)), i0.ɵprd(8448, null, 'UIView.PARENT_INJECT', {}, []), i0.ɵdid(49152, null, 0, i1.UIViewNgUpgrade, [i0.ElementRef,
+            'UIView.PARENT_INJECT', i6.StateRegistry], null, null)], null, null);
 }
-exports.UIViewNgUpgradeNgFactory = import0.ɵccf('ui-view-ng-upgrade', import1.UIViewNgUpgrade, View_UIViewNgUpgrade_Host_0, { name: 'name' }, {}, []);
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL1VzZXJzL2N0aGllbGVuL3Byb2plY3RzL3Vpcm91dGVyL3NhbXBsZS1hcHAtbmcxLXRvLW5nMi9ub2RlX21vZHVsZXMvQHVpcm91dGVyL2FuZ3VsYXItaHlicmlkL2xpYi9hbmd1bGFyLWh5YnJpZC5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9Vc2Vycy9jdGhpZWxlbi9wcm9qZWN0cy91aXJvdXRlci9zYW1wbGUtYXBwLW5nMS10by1uZzIvbm9kZV9tb2R1bGVzL0B1aXJvdXRlci9hbmd1bGFyLWh5YnJpZC9saWIvYW5ndWxhci1oeWJyaWQuZC50cyIsIm5nOi8vL1VzZXJzL2N0aGllbGVuL3Byb2plY3RzL3Vpcm91dGVyL3NhbXBsZS1hcHAtbmcxLXRvLW5nMi9ub2RlX21vZHVsZXMvQHVpcm91dGVyL2FuZ3VsYXItaHlicmlkL2xpYi9hbmd1bGFyLWh5YnJpZC5kLnRzLlVJVmlld05nVXBncmFkZS5odG1sIiwibmc6Ly8vVXNlcnMvY3RoaWVsZW4vcHJvamVjdHMvdWlyb3V0ZXIvc2FtcGxlLWFwcC1uZzEtdG8tbmcyL25vZGVfbW9kdWxlcy9AdWlyb3V0ZXIvYW5ndWxhci1oeWJyaWQvbGliL2FuZ3VsYXItaHlicmlkLmQudHMuVUlWaWV3TmdVcGdyYWRlX0hvc3QuaHRtbCJdLCJzb3VyY2VzQ29udGVudCI6WyIgIiwiPHVpLXZpZXcgW25hbWVdPVwibmFtZVwiPjwvdWktdmlldz4iLCI8dWktdmlldy1uZy11cGdyYWRlPjwvdWktdmlldy1uZy11cGdyYWRlPiJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUNBQTtnQkFBQTs7TUFBQTs7SUFBQTtPQUFBO1FBQUE7UUFBQTtNQUFBO0lBQUE7Ozs7SUFBUztJQUFULFNBQVMsU0FBVDs7Ozs7SUNBQTtnQkFBQTtnQkFBQTs7TUFBQTs7SUFBQTtLQUFBOzs7OyJ9
+exports.View_UIViewNgUpgrade_Host_0 = View_UIViewNgUpgrade_Host_0;
+exports.UIViewNgUpgradeNgFactory = i0.ɵccf('ui-view-ng-upgrade', i1.UIViewNgUpgrade, View_UIViewNgUpgrade_Host_0, { name: 'name' }, {}, []);
 //# sourceMappingURL=angular-hybrid.ngfactory.js.map
 
 /***/ }),
-/* 129 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1891,14 +593,14 @@ exports.SampleAppModuleAngular = SampleAppModuleAngular;
 //# sourceMappingURL=angularModule.js.map
 
 /***/ }),
-/* 130 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var angular = __webpack_require__(7);
-var global_module_1 = __webpack_require__(15);
+var global_module_1 = __webpack_require__(17);
 /**
  * This service stores and retrieves user preferences in session storage
  */
@@ -1926,13 +628,13 @@ global_module_1.globalModule.service('AppConfig', AppConfig);
 //# sourceMappingURL=appConfig.service.js.map
 
 /***/ }),
-/* 131 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var global_module_1 = __webpack_require__(15);
+var global_module_1 = __webpack_require__(17);
 /**
  * This service emulates an Authentication Service.
  */
@@ -1985,7 +687,7 @@ global_module_1.globalModule.service('AuthService', AuthService);
 //# sourceMappingURL=auth.service.js.map
 
 /***/ }),
-/* 132 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2001,8 +703,8 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var sessionStorage_1 = __webpack_require__(160);
-var global_module_1 = __webpack_require__(15);
+var sessionStorage_1 = __webpack_require__(156);
+var global_module_1 = __webpack_require__(17);
 /**
  * Fake REST Services (Contacts, Folders, Messages) used in the mymessages submodule.
  *
@@ -2061,13 +763,13 @@ global_module_1.globalModule.service('Messages', Messages);
 //# sourceMappingURL=dataSources.service.js.map
 
 /***/ }),
-/* 133 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var global_module_1 = __webpack_require__(15);
+var global_module_1 = __webpack_require__(17);
 var dialogDirective = function ($timeout, $q) {
     return {
         link: function (scope, elem) {
@@ -2084,14 +786,14 @@ global_module_1.globalModule.directive('dialog', dialogDirective);
 //# sourceMappingURL=dialog.directive.js.map
 
 /***/ }),
-/* 134 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var angular = __webpack_require__(7);
-var global_module_1 = __webpack_require__(15);
+var global_module_1 = __webpack_require__(17);
 var DialogService = (function () {
     function DialogService($document, $compile, $rootScope) {
         var body = $document.find("body");
@@ -2112,7 +814,7 @@ global_module_1.globalModule.service('DialogService', DialogService);
 //# sourceMappingURL=dialog.service.js.map
 
 /***/ }),
-/* 135 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2121,23 +823,23 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-__export(__webpack_require__(15));
+__export(__webpack_require__(17));
+__webpack_require__(126);
+__webpack_require__(127);
+__webpack_require__(128);
+__webpack_require__(129);
 __webpack_require__(130);
-__webpack_require__(131);
 __webpack_require__(132);
-__webpack_require__(133);
-__webpack_require__(134);
-__webpack_require__(136);
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 136 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var global_module_1 = __webpack_require__(15);
+var global_module_1 = __webpack_require__(17);
 /**
  * This file contains a Transition Hook which protects a
  * route that requires authentication.
@@ -2167,13 +869,13 @@ global_module_1.globalModule.run(authHookRunBlock);
 //# sourceMappingURL=requiresAuth.hook.js.map
 
 /***/ }),
-/* 137 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var home_module_1 = __webpack_require__(17);
+var home_module_1 = __webpack_require__(18);
 /**
  * The controller for the `app` component.
  */
@@ -2206,13 +908,13 @@ home_module_1.homeModule.component('app', appComponent);
 //# sourceMappingURL=app.component.js.map
 
 /***/ }),
-/* 138 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var home_module_1 = __webpack_require__(17);
+var home_module_1 = __webpack_require__(18);
 /**
  * This is the parent state for the entire application.
  *
@@ -2291,13 +993,13 @@ home_module_1.homeModule.config(['$stateProvider', function ($stateProvider) {
 //# sourceMappingURL=app.states.js.map
 
 /***/ }),
-/* 139 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var home_module_1 = __webpack_require__(17);
+var home_module_1 = __webpack_require__(18);
 // This is a home component for authenticated users.
 // It shows giant buttons which activate their respective submodules: Messages, Contacts, Preferences
 var homeComponent = {
@@ -2307,7 +1009,7 @@ home_module_1.homeModule.component('home', homeComponent);
 //# sourceMappingURL=home.component.js.map
 
 /***/ }),
-/* 140 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2316,23 +1018,23 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-__export(__webpack_require__(17));
+__export(__webpack_require__(18));
+__webpack_require__(133);
+__webpack_require__(134);
+__webpack_require__(135);
 __webpack_require__(137);
 __webpack_require__(138);
-__webpack_require__(139);
-__webpack_require__(141);
-__webpack_require__(142);
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 141 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var angular = __webpack_require__(7);
-var home_module_1 = __webpack_require__(17);
+var home_module_1 = __webpack_require__(18);
 /**
  * The controller for the `login` component
  *
@@ -2381,13 +1083,13 @@ home_module_1.homeModule.component('login', loginComponent);
 //# sourceMappingURL=login.component.js.map
 
 /***/ }),
-/* 142 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var home_module_1 = __webpack_require__(17);
+var home_module_1 = __webpack_require__(18);
 var welcomeComponent = {
     template: "\n    <div class=\"container-fluid\">\n    \n      <h3>UI-Router Sample App</h3>\n    \n      <p>Welcome to the sample app!</p>\n      <p>This is a demonstration app intended to highlight some patterns that can be used within UI-Router.\n        These patterns should help you to to build cohesive, robust apps.  Additionally, this app uses state-vis\n        to show the tree of states, and a transition log visualizer.</p>\n    \n      <h4>App Overview</h4>\n      <p>\n        First, start exploring the application's functionality at a high level by activating\n        one of the three submodules: Messages, Contacts, or Preferences. If you are not already logged in,\n        you will be taken to an authentication screen (the authentication is fake; the password is \"password\")\n        <div>\n          <button class=\"btn btn-primary\" ui-sref=\"mymessages\"><i class=\"fa fa-envelope\"></i><span>Messages</span></button>\n          <button class=\"btn btn-primary\" ui-sref=\"contacts\"><i class=\"fa fa-users\"></i><span>Contacts</span></button>\n          <button class=\"btn btn-primary\" ui-sref=\"prefs\"><i class=\"fa fa-cogs\"></i><span>Preferences</span></button>\n        </div>\n      </p>\n    \n      <h4>Patterns and Recipes</h4>\n      <ul>\n        <li>Require Authentication</li>\n        <li>Previous State</li>\n        <li>Redirect Hook</li>\n        <li>Default Param Values</li>\n      </ul>\n    </div>"
 };
@@ -2395,7 +1097,7 @@ home_module_1.homeModule.component('welcome', welcomeComponent);
 //# sourceMappingURL=welcome.component.js.map
 
 /***/ }),
-/* 143 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2424,13 +1126,13 @@ home_module_1.homeModule.component('welcome', welcomeComponent);
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 // Google analytics
-__webpack_require__(125);
-var static_1 = __webpack_require__(27);
-var core_1 = __webpack_require__(1);
-var visualizer_1 = __webpack_require__(60);
-var angularJSModule_1 = __webpack_require__(81);
-var platform_browser_1 = __webpack_require__(26);
-var angularModule_ngfactory_1 = __webpack_require__(124);
+__webpack_require__(121);
+var static_1 = __webpack_require__(35);
+var core_1 = __webpack_require__(3);
+var visualizer_1 = __webpack_require__(58);
+var angularJSModule_1 = __webpack_require__(80);
+var angularModule_ngfactory_1 = __webpack_require__(120);
+var platform_browser_1 = __webpack_require__(27);
 // Using AngularJS config block, call `deferIntercept()`.
 // This tells UI-Router to delay the initial URL sync (until all bootstrapping is complete)
 angularJSModule_1.sampleAppModuleAngularJS.config(['$urlServiceProvider', function ($urlService) { return $urlService.deferIntercept(); }]);
@@ -2451,14 +1153,14 @@ angularJSModule_1.sampleAppModuleAngularJS.run(['$uiRouter', function ($uiRouter
 //# sourceMappingURL=main.js.map
 
 /***/ }),
-/* 144 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var angular = __webpack_require__(7);
-var mymessages_module_1 = __webpack_require__(9);
+var mymessages_module_1 = __webpack_require__(10);
 /**
  * The controller for the Compose component
  */
@@ -2539,24 +1241,24 @@ mymessages_module_1.mymessagesModule.component('compose', composeComponent);
 //# sourceMappingURL=compose.component.js.map
 
 /***/ }),
-/* 145 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-__webpack_require__(146);
+__webpack_require__(142);
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 146 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var angular = __webpack_require__(7);
-var mymessages_module_1 = __webpack_require__(9);
+var mymessages_module_1 = __webpack_require__(10);
 /**
  * A directive (for a table header) which changes the app's sort order
  */
@@ -2581,23 +1283,23 @@ mymessages_module_1.mymessagesModule.directive('sortMessages', sortMessagesDirec
 //# sourceMappingURL=sortMessages.directive.js.map
 
 /***/ }),
-/* 147 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-__webpack_require__(148);
+__webpack_require__(144);
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 148 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var mymessages_module_1 = __webpack_require__(9);
+var mymessages_module_1 = __webpack_require__(10);
 /** Angular filter to format fake emails as HTML*/
 var messageBody = function ($sce) {
     return function (msgText) {
@@ -2609,13 +1311,13 @@ mymessages_module_1.mymessagesModule.filter('messageBody', messageBody);
 //# sourceMappingURL=messageBody.filter.js.map
 
 /***/ }),
-/* 149 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var mymessages_module_1 = __webpack_require__(9);
+var mymessages_module_1 = __webpack_require__(10);
 /**
  * Renders a list of folders
  */
@@ -2627,7 +1329,7 @@ mymessages_module_1.mymessagesModule.component('folderList', folderListComponent
 //# sourceMappingURL=folderList.component.js.map
 
 /***/ }),
-/* 150 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2636,28 +1338,28 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-__export(__webpack_require__(9));
-__webpack_require__(144);
-__webpack_require__(149);
-__webpack_require__(151);
-__webpack_require__(152);
-__webpack_require__(153);
-__webpack_require__(154);
-__webpack_require__(155);
+__export(__webpack_require__(10));
+__webpack_require__(140);
 __webpack_require__(145);
 __webpack_require__(147);
-__webpack_require__(156);
+__webpack_require__(148);
+__webpack_require__(149);
+__webpack_require__(150);
+__webpack_require__(151);
+__webpack_require__(141);
+__webpack_require__(143);
+__webpack_require__(152);
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 151 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var util_1 = __webpack_require__(86);
-var mymessages_module_1 = __webpack_require__(9);
+var util_1 = __webpack_require__(85);
+var mymessages_module_1 = __webpack_require__(10);
 /** Helper function to prefix a message with "fwd: " or "re: " */
 var prefixSubject = function (prefix, message) { return prefix + message.subject; };
 /** Helper function which quotes an email message */
@@ -2748,13 +1450,13 @@ mymessages_module_1.mymessagesModule.component('message', exports.messageCompone
 //# sourceMappingURL=message.component.js.map
 
 /***/ }),
-/* 152 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var mymessages_module_1 = __webpack_require__(9);
+var mymessages_module_1 = __webpack_require__(10);
 /**
  * This component renders a list of messages using the `messageTable` component
  */
@@ -2766,13 +1468,13 @@ mymessages_module_1.mymessagesModule.component('messageList', messageListCompone
 //# sourceMappingURL=messageList.component.js.map
 
 /***/ }),
-/* 153 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var mymessages_module_1 = __webpack_require__(9);
+var mymessages_module_1 = __webpack_require__(10);
 /**
  * A component that displays a folder of messages as a table
  *
@@ -2795,13 +1497,13 @@ mymessages_module_1.mymessagesModule.component('messageTable', messageTableCompo
 //# sourceMappingURL=messageTable.component.js.map
 
 /***/ }),
-/* 154 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var mymessages_module_1 = __webpack_require__(9);
+var mymessages_module_1 = __webpack_require__(10);
 /**
  * The main mymessages component.
  *
@@ -2817,13 +1519,13 @@ mymessages_module_1.mymessagesModule.component('mymessages', mymessagesComponent
 //# sourceMappingURL=mymessages.component.js.map
 
 /***/ }),
-/* 155 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var mymessages_module_1 = __webpack_require__(9);
+var mymessages_module_1 = __webpack_require__(10);
 /**
  * This state allows the user to compose a new message, edit a drafted message, send a message,
  * or save an unsent message as a draft.
@@ -2913,23 +1615,23 @@ mymessages_module_1.mymessagesModule.config(['$stateProvider', function ($stateP
 //# sourceMappingURL=mymessages.states.js.map
 
 /***/ }),
-/* 156 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-__webpack_require__(157);
+__webpack_require__(153);
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 157 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var mymessages_module_1 = __webpack_require__(9);
+var mymessages_module_1 = __webpack_require__(10);
 /** Provides services related to a message list */
 var MessageListUI = (function () {
     function MessageListUI($filter, AppConfig) {
@@ -2949,13 +1651,13 @@ mymessages_module_1.mymessagesModule.service('MessageListUI', MessageListUI);
 //# sourceMappingURL=messagesListUI.service.js.map
 
 /***/ }),
-/* 158 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var prefs_states_1 = __webpack_require__(159);
+var prefs_states_1 = __webpack_require__(155);
 var PREFS_STATES = [prefs_states_1.prefsState];
 /** The NgModule for the Preferences feature */
 var PrefsModule = (function () {
@@ -2967,13 +1669,13 @@ exports.PrefsModule = PrefsModule;
 //# sourceMappingURL=prefs.module.js.map
 
 /***/ }),
-/* 159 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var prefs_component_1 = __webpack_require__(63);
+var prefs_component_1 = __webpack_require__(61);
 /**
  * This state allows the user to set their application preferences
  */
@@ -2988,13 +1690,13 @@ exports.prefsState = {
 //# sourceMappingURL=prefs.states.js.map
 
 /***/ }),
-/* 160 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var util_1 = __webpack_require__(86);
+var util_1 = __webpack_require__(85);
 /**
  * This class simulates a RESTful resource, but the API calls fetch data from
  * Session Storage instead of an HTTP call.
@@ -3117,5 +1819,5 @@ exports.SessionStorage = SessionStorage;
 //# sourceMappingURL=sessionStorage.js.map
 
 /***/ })
-],[143]);
+],[139]);
 //# sourceMappingURL=sampleapp.js.map
