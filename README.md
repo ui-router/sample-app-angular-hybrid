@@ -2,6 +2,8 @@
 
 https://ui-router.github.io/sample-app-angular-hybrid/#!/mymessages/inbox/5648b50d5d8be25776881a3f
 
+[![Travis badge](https://travis-ci.org/ui-router/sample-app-angular-hybrid.svg?branch=master)](https://travis-ci.org/ui-router/sample-app-angular-hybrid)
+
 This sample app is intended to demonstrate a non-trivial ui-router application.
 
 - Multiple sub-modules
