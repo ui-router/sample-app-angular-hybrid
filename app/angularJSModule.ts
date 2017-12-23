@@ -28,7 +28,10 @@ export const sampleAppModuleAngularJS = angular.module("sampleapp", [
 // Apply some global configuration...
 
 // If the user enters a URL that doesn't match any known URL (state), send them to `/welcome`
-const otherwiseConfigBlock = ['$urlRouterProvider', $urlRouterProvider => { $urlRouterProvider.otherwise("/welcome"); }];
+const otherwiseConfigBlock = ['$urlRouterProvider', '$locationProvider', ($urlRouterProvider, $locationProvider) => {
+  $locationProvider.hashPrefix('');
+  $urlRouterProvider.otherwise("/welcome");
+}];
 sampleAppModuleAngularJS.config(otherwiseConfigBlock);
 
 // Enable tracing of each TRANSITION... (check the javascript console)
