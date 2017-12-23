@@ -7,11 +7,8 @@ import { sampleAppModuleAngularJS } from "../angularJSModule";
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 }))(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-var ga = window['ga'];
-
-ga('create', 'UA-73329341-1', 'auto');
-ga('send', 'pageview');
-
+window['ga']('create', 'UA-73329341-1', 'auto');
+window['ga']('send', 'pageview');
 
 sampleAppModuleAngularJS.config($transitionsProvider => {
   $transitionsProvider.onBefore({}, $transition$ => {
@@ -20,7 +17,8 @@ sampleAppModuleAngularJS.config($transitionsProvider => {
         .filter(x => x != null && x !== '^')
         .join('');
 
-    let vpv = (path) => ga('send', 'pageview', path);
+    let vpv = (path) => 
+      window['ga']('send', 'pageview', path);
 
     let success = () => { vpv(path); };
     let error = (err) => {
