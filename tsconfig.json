@@ -4,7 +4,6 @@
     "app/contacts/contacts.module.ts"
   ],
   "compilerOptions": {
-    "allowJs": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "module": "commonjs",
