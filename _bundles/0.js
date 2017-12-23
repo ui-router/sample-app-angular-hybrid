@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 219:
+/***/ 241:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13,19 +13,19 @@ webpackJsonp([0],{
 /* tslint:disable */
 Object.defineProperty(exports, "__esModule", { value: true });
 var i0 = __webpack_require__(4);
-var i1 = __webpack_require__(231);
-var i2 = __webpack_require__(82);
-var i3 = __webpack_require__(229);
-var i4 = __webpack_require__(230);
-var i5 = __webpack_require__(226);
-var i6 = __webpack_require__(9);
-var i7 = __webpack_require__(36);
-var i8 = __webpack_require__(29);
-var i9 = __webpack_require__(225);
-var i10 = __webpack_require__(221);
-var i11 = __webpack_require__(222);
-var i12 = __webpack_require__(220);
-var i13 = __webpack_require__(39);
+var i1 = __webpack_require__(248);
+var i2 = __webpack_require__(80);
+var i3 = __webpack_require__(249);
+var i4 = __webpack_require__(251);
+var i5 = __webpack_require__(252);
+var i6 = __webpack_require__(11);
+var i7 = __webpack_require__(55);
+var i8 = __webpack_require__(26);
+var i9 = __webpack_require__(245);
+var i10 = __webpack_require__(243);
+var i11 = __webpack_require__(244);
+var i12 = __webpack_require__(242);
+var i13 = __webpack_require__(57);
 exports.ContactsModuleNgFactory = i0.ɵcmf(i1.ContactsModule, [], function (_l) {
     return i0.ɵmod([i0.ɵmpd(512, i0.ComponentFactoryResolver, i0.ɵCodegenComponentFactoryResolver, [[8, [i2.UIViewNgFactory, i3.ContactsNgFactory, i4.EditContactNgFactory, i5.ContactNgFactory]],
             [3, i0.ComponentFactoryResolver], i0.NgModuleRef]), i0.ɵmpd(4608, i6.NgLocalization, i6.NgLocaleLocalization, [i0.LOCALE_ID]), i0.ɵmpd(4608, i7.ɵi, i7.ɵi, []),
@@ -51,7 +51,7 @@ exports.ContactsModuleNgFactory = i0.ɵcmf(i1.ContactsModule, [], function (_l) 
 
 /***/ }),
 
-/***/ 220:
+/***/ 242:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -73,7 +73,7 @@ exports.Contact = Contact;
 
 /***/ }),
 
-/***/ 221:
+/***/ 243:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -95,14 +95,14 @@ exports.Contacts = Contacts;
 
 /***/ }),
 
-/***/ 222:
+/***/ 244:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var angular = __webpack_require__(7);
-var angular_1 = __webpack_require__(63);
+var angular = __webpack_require__(8);
+var angular_1 = __webpack_require__(81);
 var core_1 = __webpack_require__(3);
 var core_2 = __webpack_require__(4);
 /**
@@ -178,56 +178,15 @@ exports.EditContact = EditContact;
 
 /***/ }),
 
-/***/ 223:
+/***/ 245:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * This component renders a read only view of the details for a single contact.
- */
-var ContactDetail = (function () {
-    function ContactDetail() {
-    }
-    return ContactDetail;
-}());
-exports.ContactDetail = ContactDetail;
-//# sourceMappingURL=contactDetail.component.js.map
-
-/***/ }),
-
-/***/ 224:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * This component renders a list of contacts.
- *
- * At the top is a "new contact" button.
- * Each list item is a clickable link to the `contacts.contact` details substate
- */
-var ContactList = (function () {
-    function ContactList() {
-    }
-    return ContactList;
-}());
-exports.ContactList = ContactList;
-//# sourceMappingURL=contactList.component.js.map
-
-/***/ }),
-
-/***/ 225:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var contact_component_1 = __webpack_require__(220);
-var contacts_component_1 = __webpack_require__(221);
-var editContact_component_1 = __webpack_require__(222);
+var contact_component_1 = __webpack_require__(242);
+var contacts_component_1 = __webpack_require__(243);
+var editContact_component_1 = __webpack_require__(244);
 // Resolve all the contacts.  The resolved contacts are injected into the controller.
 function resolveContacts(Contacts) {
     return Contacts.all();
@@ -309,7 +268,67 @@ exports.newContactState = {
 
 /***/ }),
 
-/***/ 226:
+/***/ 246:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * This component renders a list of contacts.
+ *
+ * At the top is a "new contact" button.
+ * Each list item is a clickable link to the `contacts.contact` details substate
+ */
+var ContactList = (function () {
+    function ContactList() {
+    }
+    return ContactList;
+}());
+exports.ContactList = ContactList;
+//# sourceMappingURL=contactList.component.js.map
+
+/***/ }),
+
+/***/ 247:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * This component renders a read only view of the details for a single contact.
+ */
+var ContactDetail = (function () {
+    function ContactDetail() {
+    }
+    return ContactDetail;
+}());
+exports.ContactDetail = ContactDetail;
+//# sourceMappingURL=contactDetail.component.js.map
+
+/***/ }),
+
+/***/ 248:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var contacts_states_1 = __webpack_require__(245);
+exports.CONTACTS_STATES = [contacts_states_1.contactsState, contacts_states_1.newContactState, contacts_states_1.viewContactState, contacts_states_1.editContactState];
+/** The NgModule for Contacts feature */
+var ContactsModule = (function () {
+    function ContactsModule() {
+    }
+    return ContactsModule;
+}());
+exports.ContactsModule = ContactsModule;
+//# sourceMappingURL=contacts.module.js.map
+
+/***/ }),
+
+/***/ 249:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -322,64 +341,39 @@ exports.newContactState = {
 /* tslint:disable */
 Object.defineProperty(exports, "__esModule", { value: true });
 var i0 = __webpack_require__(4);
-var i1 = __webpack_require__(227);
-var i2 = __webpack_require__(223);
-var i3 = __webpack_require__(59);
-var i4 = __webpack_require__(28);
-var i5 = __webpack_require__(82);
-var i6 = __webpack_require__(16);
-var i7 = __webpack_require__(220);
-var styles_Contact = [];
-exports.RenderType_Contact = i0.ɵcrt({ encapsulation: 2, styles: styles_Contact,
+var i1 = __webpack_require__(250);
+var i2 = __webpack_require__(246);
+var i3 = __webpack_require__(80);
+var i4 = __webpack_require__(16);
+var i5 = __webpack_require__(24);
+var i6 = __webpack_require__(243);
+var styles_Contacts = [];
+exports.RenderType_Contacts = i0.ɵcrt({ encapsulation: 2, styles: styles_Contacts,
     data: {} });
-function View_Contact_0(_l) {
-    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 27, 'div', [['class', 'contact']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n      '])), (_l()(),
-            i0.ɵeld(0, null, null, 1, 'contact-detail', [], null, null, null, i1.View_ContactDetail_0, i1.RenderType_ContactDetail)),
-        i0.ɵdid(49152, null, 0, i2.ContactDetail, [], { contact: [0, 'contact'] }, null), (_l()(), i0.ɵted(null, ['\n    \n      '])), (_l()(),
-            i0.ɵted(null, ['\n      '])), (_l()(), i0.ɵeld(0, null, null, 8, 'button', [['class', 'btn btn-primary'], ['uiSref', 'mymessages.compose']], null, [[null, 'click']], function (_v, en, $event) {
-            var ad = true;
-            if (('click' === en)) {
-                var pd_0 = (i0.ɵnov(_v, 8).go() !== false);
-                ad = (pd_0 && ad);
-            }
-            return ad;
-        }, null, null)), i0.ɵdid(737280, null, 0, i3.UISref, [i4.UIRouter, [2, i3.AnchorUISref], 'UIView.PARENT_INJECT'], { state: [0, 'state'],
-            params: [1, 'params'] }, null), i0.ɵpod({ to: 0 }), i0.ɵpod({ message: 0 }),
-        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 0, 'i', [['class', 'fa fa-envelope']], null, null, null, null, null)), (_l()(), i0.ɵeld(0, null, null, 1, 'span', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Message'])),
-        (_l()(), i0.ɵted(null, ['\n      '])), (_l()(), i0.ɵted(null, ['\n    \n      '])),
-        (_l()(), i0.ɵted(null, ['\n      '])), (_l()(), i0.ɵeld(0, null, null, 6, 'button', [['class', 'btn btn-primary'], ['uiSref', '.edit']], null, [[null, 'click']], function (_v, en, $event) {
-            var ad = true;
-            if (('click' === en)) {
-                var pd_0 = (i0.ɵnov(_v, 19).go() !== false);
-                ad = (pd_0 && ad);
-            }
-            return ad;
-        }, null, null)), i0.ɵdid(737280, null, 0, i3.UISref, [i4.UIRouter, [2, i3.AnchorUISref], 'UIView.PARENT_INJECT'], { state: [0, 'state'] }, null), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 0, 'i', [['class', 'fa fa-pencil']], null, null, null, null, null)), (_l()(), i0.ɵeld(0, null, null, 1, 'span', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Edit Contact'])), (_l()(), i0.ɵted(null, ['\n      '])), (_l()(),
-            i0.ɵted(null, ['\n      '])), (_l()(), i0.ɵeld(16777216, null, null, 1, 'ui-view', [], null, null, null, i5.View_UIView_0, i5.RenderType_UIView)), i0.ɵdid(245760, null, 0, i6.UIView, [i4.UIRouter, 'UIView.PARENT_INJECT', i0.ViewContainerRef], null, null),
-        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n']))], function (_ck, _v) {
+function View_Contacts_0(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(-1, null, ['\n    '])), (_l()(), i0.ɵeld(1, 0, null, null, 12, 'div', [['class', 'my-contacts flex-h']], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ['\n    \n      '])), (_l()(), i0.ɵeld(3, 0, null, null, 1, 'contact-list', [['class', 'flex nogrow']], null, null, null, i1.View_ContactList_0, i1.RenderType_ContactList)), i0.ɵdid(4, 49152, null, 0, i2.ContactList, [], { contacts: [0, 'contacts'] }, null), (_l()(),
+            i0.ɵted(-1, null, ['\n    \n      '])), (_l()(), i0.ɵeld(6, 16777216, null, null, 6, 'div', [['ui-view', '']], null, null, null, i3.View_UIView_0, i3.RenderType_UIView)), i0.ɵdid(7, 245760, null, 0, i4.UIView, [i5.UIRouter, 'UIView.PARENT_INJECT', i0.ViewContainerRef], { _name: [0, '_name'] }, null), (_l()(), i0.ɵted(-1, 0, ['\n        '])), (_l()(), i0.ɵted(-1, 0, ['\n        '])),
+        (_l()(), i0.ɵeld(10, 0, null, 0, 1, 'h4', [['style', 'margin: 1em 2em;']], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ['Select a contact'])), (_l()(), i0.ɵted(-1, 0, ['\n      '])),
+        (_l()(), i0.ɵted(-1, null, ['\n    '])), (_l()(), i0.ɵted(-1, null, ['\n']))], function (_ck, _v) {
         var _co = _v.component;
-        var currVal_0 = _co.contact;
+        var currVal_0 = _co.contacts;
         _ck(_v, 4, 0, currVal_0);
-        var currVal_1 = 'mymessages.compose';
-        var currVal_2 = _ck(_v, 10, 0, _ck(_v, 9, 0, _co.contact.email));
-        _ck(_v, 8, 0, currVal_1, currVal_2);
-        var currVal_3 = '.edit';
-        _ck(_v, 19, 0, currVal_3);
-        _ck(_v, 27, 0);
+        var currVal_1 = '';
+        _ck(_v, 7, 0, currVal_1);
     }, null);
 }
-exports.View_Contact_0 = View_Contact_0;
-function View_Contact_Host_0(_l) {
-    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'contact', [], null, null, null, View_Contact_0, exports.RenderType_Contact)),
-        i0.ɵdid(49152, null, 0, i7.Contact, [], null, null)], null, null);
+exports.View_Contacts_0 = View_Contacts_0;
+function View_Contacts_Host_0(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 1, 'contacts', [], null, null, null, View_Contacts_0, exports.RenderType_Contacts)),
+        i0.ɵdid(1, 49152, null, 0, i6.Contacts, [], null, null)], null, null);
 }
-exports.View_Contact_Host_0 = View_Contact_Host_0;
-exports.ContactNgFactory = i0.ɵccf('contact', i7.Contact, View_Contact_Host_0, { contact: 'contact' }, {}, []);
-//# sourceMappingURL=contact.component.ngfactory.js.map
+exports.View_Contacts_Host_0 = View_Contacts_Host_0;
+exports.ContactsNgFactory = i0.ɵccf('contacts', i6.Contacts, View_Contacts_Host_0, { contacts: 'contacts' }, {}, []);
+//# sourceMappingURL=contacts.component.ngfactory.js.map
 
 /***/ }),
 
-/***/ 227:
+/***/ 250:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -392,88 +386,19 @@ exports.ContactNgFactory = i0.ɵccf('contact', i7.Contact, View_Contact_Host_0, 
 /* tslint:disable */
 Object.defineProperty(exports, "__esModule", { value: true });
 var i0 = __webpack_require__(4);
-var i1 = __webpack_require__(223);
-var styles_ContactDetail = [];
-exports.RenderType_ContactDetail = i0.ɵcrt({ encapsulation: 2,
-    styles: styles_ContactDetail, data: {} });
-function View_ContactDetail_0(_l) {
-    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['\n  '])), (_l()(), i0.ɵeld(0, null, null, 47, 'div', [['class', 'flex-h']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(),
-            i0.ɵeld(0, null, null, 39, 'div', [['class', 'details']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n      '])), (_l()(), i0.ɵeld(0, null, null, 1, 'h3', [], null, null, null, null, null)), (_l()(),
-            i0.ɵted(null, ['', ' ', ''])), (_l()(), i0.ɵted(null, ['\n      '])),
-        (_l()(), i0.ɵeld(0, null, null, 4, 'div', [], null, null, null, null, null)), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Company'])), (_l()(), i0.ɵeld(0, null, null, 1, 'div', [], null, null, null, null, null)),
-        (_l()(), i0.ɵted(null, ['', ''])), (_l()(), i0.ɵted(null, ['\n      '])),
-        (_l()(), i0.ɵeld(0, null, null, 4, 'div', [], null, null, null, null, null)), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Age'])), (_l()(), i0.ɵeld(0, null, null, 1, 'div', [], null, null, null, null, null)),
-        (_l()(), i0.ɵted(null, ['', ''])), (_l()(), i0.ɵted(null, ['\n      '])),
-        (_l()(), i0.ɵeld(0, null, null, 4, 'div', [], null, null, null, null, null)), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Phone'])), (_l()(), i0.ɵeld(0, null, null, 1, 'div', [], null, null, null, null, null)),
-        (_l()(), i0.ɵted(null, ['', ''])), (_l()(), i0.ɵted(null, ['\n      '])),
-        (_l()(), i0.ɵeld(0, null, null, 4, 'div', [], null, null, null, null, null)), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Email'])), (_l()(), i0.ɵeld(0, null, null, 1, 'div', [], null, null, null, null, null)),
-        (_l()(), i0.ɵted(null, ['', ''])), (_l()(), i0.ɵted(null, ['\n      '])),
-        (_l()(), i0.ɵeld(0, null, null, 9, 'div', [['class', 'flex-h']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)),
-        (_l()(), i0.ɵted(null, ['Address'])), (_l()(), i0.ɵted(null, ['\n        '])),
-        (_l()(), i0.ɵeld(0, null, null, 3, 'div', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['', ''])), (_l()(), i0.ɵeld(0, null, null, 0, 'br', [], null, null, null, null, null)),
-        (_l()(), i0.ɵted(null, ['\n              ', ', ', ' ', '\n        '])), (_l()(),
-            i0.ɵted(null, ['\n      '])), (_l()(), i0.ɵted(null, ['\n    '])),
-        (_l()(), i0.ɵted(null, ['\n\n    '])), (_l()(), i0.ɵeld(0, null, null, 3, 'div', [['class', 'flex nogrow']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n      '])), (_l()(), i0.ɵeld(0, null, null, 0, 'img', [], [[8, 'src', 4]], null, null, null, null)),
-        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n  '])),
-        (_l()(), i0.ɵted(null, ['\n']))], null, function (_ck, _v) {
-        var _co = _v.component;
-        var currVal_0 = _co.contact.name.first;
-        var currVal_1 = _co.contact.name.last;
-        _ck(_v, 6, 0, currVal_0, currVal_1);
-        var currVal_2 = _co.contact.company;
-        _ck(_v, 12, 0, currVal_2);
-        var currVal_3 = _co.contact.age;
-        _ck(_v, 18, 0, currVal_3);
-        var currVal_4 = _co.contact.phone;
-        _ck(_v, 24, 0, currVal_4);
-        var currVal_5 = _co.contact.email;
-        _ck(_v, 30, 0, currVal_5);
-        var currVal_6 = _co.contact.address.street;
-        _ck(_v, 38, 0, currVal_6);
-        var currVal_7 = _co.contact.address.city;
-        var currVal_8 = _co.contact.address.state;
-        var currVal_9 = _co.contact.address.zip;
-        _ck(_v, 40, 0, currVal_7, currVal_8, currVal_9);
-        var currVal_10 = _co.contact.picture;
-        _ck(_v, 46, 0, currVal_10);
-    });
-}
-exports.View_ContactDetail_0 = View_ContactDetail_0;
-function View_ContactDetail_Host_0(_l) {
-    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'contact-detail', [], null, null, null, View_ContactDetail_0, exports.RenderType_ContactDetail)), i0.ɵdid(49152, null, 0, i1.ContactDetail, [], null, null)], null, null);
-}
-exports.View_ContactDetail_Host_0 = View_ContactDetail_Host_0;
-exports.ContactDetailNgFactory = i0.ɵccf('contact-detail', i1.ContactDetail, View_ContactDetail_Host_0, { contact: 'contact' }, {}, []);
-//# sourceMappingURL=contactDetail.component.ngfactory.js.map
-
-/***/ }),
-
-/***/ 228:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/**
- * @fileoverview This file is generated by the Angular template compiler.
- * Do not edit.
- * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride}
- */
-/* tslint:disable */
-Object.defineProperty(exports, "__esModule", { value: true });
-var i0 = __webpack_require__(4);
-var i1 = __webpack_require__(59);
-var i2 = __webpack_require__(28);
-var i3 = __webpack_require__(60);
-var i4 = __webpack_require__(37);
-var i5 = __webpack_require__(83);
-var i6 = __webpack_require__(9);
-var i7 = __webpack_require__(224);
+var i1 = __webpack_require__(54);
+var i2 = __webpack_require__(24);
+var i3 = __webpack_require__(56);
+var i4 = __webpack_require__(36);
+var i5 = __webpack_require__(82);
+var i6 = __webpack_require__(11);
+var i7 = __webpack_require__(246);
 var styles_ContactList = [];
 exports.RenderType_ContactList = i0.ɵcrt({ encapsulation: 2, styles: styles_ContactList,
     data: {} });
 function View_ContactList_1(_l) {
-    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 10, 'li', [], null, null, null, null, null)), (_l()(),
-            i0.ɵted(null, ['\n      '])), (_l()(), i0.ɵeld(0, null, null, 7, 'a', [['uiSref', '.contact'], ['uiSrefActive', 'selected']], null, [[null,
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 10, 'li', [], null, null, null, null, null)), (_l()(),
+            i0.ɵted(-1, null, ['\n      '])), (_l()(), i0.ɵeld(2, 0, null, null, 7, 'a', [['uiSref', '.contact'], ['uiSrefActive', 'selected']], null, [[null,
                 'click']], function (_v, en, $event) {
             var ad = true;
             if (('click' === en)) {
@@ -481,11 +406,11 @@ function View_ContactList_1(_l) {
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, null, null)), i0.ɵdid(16384, null, 0, i1.AnchorUISref, [i0.ElementRef, i0.Renderer2], null, null), i0.ɵdid(737280, [[1,
+        }, null, null)), i0.ɵdid(3, 16384, null, 0, i1.AnchorUISref, [i0.ElementRef, i0.Renderer2], null, null), i0.ɵdid(4, 737280, [[1,
                 4]], 0, i1.UISref, [i2.UIRouter, [2, i1.AnchorUISref], 'UIView.PARENT_INJECT'], { state: [0,
-                'state'], params: [1, 'params'] }, null), i0.ɵpod({ contactId: 0 }), i0.ɵdid(1196032, null, 1, i3.UISrefStatus, [i4.UIRouterGlobals], null, null),
-        i0.ɵqud(603979776, 1, { srefs: 1 }), i0.ɵdid(147456, null, 0, i5.UISrefActive, [i3.UISrefStatus, i0.Renderer, i0.ElementRef], { active: [0, 'active'] }, null),
-        (_l()(), i0.ɵted(null, ['\n        ', ' ', '\n      '])), (_l()(), i0.ɵted(null, ['\n    ']))], function (_ck, _v) {
+                'state'], params: [1, 'params'] }, null), i0.ɵpod(5, { contactId: 0 }), i0.ɵdid(6, 1196032, null, 1, i3.UISrefStatus, [i4.UIRouterGlobals], null, null),
+        i0.ɵqud(603979776, 1, { _srefs: 1 }), i0.ɵdid(8, 147456, null, 0, i5.UISrefActive, [i3.UISrefStatus, i0.Renderer, i0.ElementRef], { active: [0, 'active'] }, null),
+        (_l()(), i0.ɵted(9, null, ['\n        ', ' ', '\n      '])), (_l()(), i0.ɵted(-1, null, ['\n    ']))], function (_ck, _v) {
         var currVal_0 = '.contact';
         var currVal_1 = _ck(_v, 5, 0, _v.context.$implicit._id);
         _ck(_v, 4, 0, currVal_0, currVal_1);
@@ -498,23 +423,22 @@ function View_ContactList_1(_l) {
     });
 }
 function View_ContactList_0(_l) {
-    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['\n  '])), (_l()(), i0.ɵeld(0, null, null, 24, 'ul', [['class', 'selectlist list-unstyled']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n    '])),
-        (_l()(), i0.ɵeld(0, null, null, 14, 'li', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n      '])), (_l()(), i0.ɵted(null, ['\n      '])), (_l()(), i0.ɵeld(0, null, null, 10, 'a', [['uiSref', '.new']], null, [[null,
-                'click']], function (_v, en, $event) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(-1, null, ['\n  '])), (_l()(), i0.ɵeld(1, 0, null, null, 24, 'ul', [['class', 'selectlist list-unstyled']], null, null, null, null, null)), (_l()(),
+            i0.ɵted(-1, null, ['\n    '])), (_l()(), i0.ɵeld(3, 0, null, null, 14, 'li', [], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ['\n      '])), (_l()(), i0.ɵted(-1, null, ['\n      '])), (_l()(), i0.ɵeld(6, 0, null, null, 10, 'a', [['uiSref', '.new']], null, [[null, 'click']], function (_v, en, $event) {
             var ad = true;
             if (('click' === en)) {
                 var pd_0 = (i0.ɵnov(_v, 8).go() !== false);
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, null, null)), i0.ɵdid(16384, null, 0, i1.AnchorUISref, [i0.ElementRef, i0.Renderer2], null, null), i0.ɵdid(737280, null, 0, i1.UISref, [i2.UIRouter, [2, i1.AnchorUISref], 'UIView.PARENT_INJECT'], { state: [0, 'state'] }, null), (_l()(), i0.ɵted(null, ['\n        '])),
-        (_l()(), i0.ɵeld(0, null, null, 5, 'button', [['class', 'btn btn-primary']], null, null, null, null, null)),
-        (_l()(), i0.ɵted(null, ['\n          '])), (_l()(), i0.ɵeld(0, null, null, 0, 'i', [['class', 'fa fa-pencil']], null, null, null, null, null)), (_l()(), i0.ɵeld(0, null, null, 1, 'span', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['New Contact'])),
-        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n      '])), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n\n    '])), (_l()(), i0.ɵeld(0, null, null, 1, 'li', [], null, null, null, null, null)),
-        (_l()(), i0.ɵted(null, [' '])), (_l()(), i0.ɵted(null, ['\n\n    '])),
-        (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵand(16777216, null, null, 1, null, View_ContactList_1)), i0.ɵdid(802816, null, 0, i6.NgForOf, [i0.ViewContainerRef, i0.TemplateRef, i0.IterableDiffers], { ngForOf: [0,
-                'ngForOf'] }, null), (_l()(), i0.ɵted(null, ['\n  '])),
-        (_l()(), i0.ɵted(null, ['\n']))], function (_ck, _v) {
+        }, null, null)), i0.ɵdid(7, 16384, null, 0, i1.AnchorUISref, [i0.ElementRef, i0.Renderer2], null, null), i0.ɵdid(8, 737280, null, 0, i1.UISref, [i2.UIRouter, [2, i1.AnchorUISref], 'UIView.PARENT_INJECT'], { state: [0,
+                'state'] }, null), (_l()(), i0.ɵted(-1, null, ['\n        '])),
+        (_l()(), i0.ɵeld(10, 0, null, null, 5, 'button', [['class', 'btn btn-primary']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(-1, null, ['\n          '])), (_l()(), i0.ɵeld(12, 0, null, null, 0, 'i', [['class', 'fa fa-pencil']], null, null, null, null, null)), (_l()(), i0.ɵeld(13, 0, null, null, 1, 'span', [], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ['New Contact'])),
+        (_l()(), i0.ɵted(-1, null, ['\n        '])), (_l()(), i0.ɵted(-1, null, ['\n      '])), (_l()(), i0.ɵted(-1, null, ['\n    '])), (_l()(), i0.ɵted(-1, null, ['\n\n    '])), (_l()(), i0.ɵeld(19, 0, null, null, 1, 'li', [], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, [' '])), (_l()(), i0.ɵted(-1, null, ['\n\n    '])), (_l()(), i0.ɵted(-1, null, ['\n    '])),
+        (_l()(), i0.ɵand(16777216, null, null, 1, null, View_ContactList_1)),
+        i0.ɵdid(24, 802816, null, 0, i6.NgForOf, [i0.ViewContainerRef, i0.TemplateRef,
+            i0.IterableDiffers], { ngForOf: [0, 'ngForOf'] }, null), (_l()(), i0.ɵted(-1, null, ['\n  '])), (_l()(), i0.ɵted(-1, null, ['\n']))], function (_ck, _v) {
         var _co = _v.component;
         var currVal_0 = '.new';
         _ck(_v, 8, 0, currVal_0);
@@ -524,8 +448,8 @@ function View_ContactList_0(_l) {
 }
 exports.View_ContactList_0 = View_ContactList_0;
 function View_ContactList_Host_0(_l) {
-    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'contact-list', [], null, null, null, View_ContactList_0, exports.RenderType_ContactList)),
-        i0.ɵdid(49152, null, 0, i7.ContactList, [], null, null)], null, null);
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 1, 'contact-list', [], null, null, null, View_ContactList_0, exports.RenderType_ContactList)),
+        i0.ɵdid(1, 49152, null, 0, i7.ContactList, [], null, null)], null, null);
 }
 exports.View_ContactList_Host_0 = View_ContactList_Host_0;
 exports.ContactListNgFactory = i0.ɵccf('contact-list', i7.ContactList, View_ContactList_Host_0, { contacts: 'contacts' }, {}, []);
@@ -533,7 +457,7 @@ exports.ContactListNgFactory = i0.ɵccf('contact-list', i7.ContactList, View_Con
 
 /***/ }),
 
-/***/ 229:
+/***/ 251:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -546,107 +470,57 @@ exports.ContactListNgFactory = i0.ɵccf('contact-list', i7.ContactList, View_Con
 /* tslint:disable */
 Object.defineProperty(exports, "__esModule", { value: true });
 var i0 = __webpack_require__(4);
-var i1 = __webpack_require__(228);
-var i2 = __webpack_require__(224);
-var i3 = __webpack_require__(82);
-var i4 = __webpack_require__(16);
-var i5 = __webpack_require__(28);
-var i6 = __webpack_require__(221);
-var styles_Contacts = [];
-exports.RenderType_Contacts = i0.ɵcrt({ encapsulation: 2, styles: styles_Contacts,
-    data: {} });
-function View_Contacts_0(_l) {
-    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 12, 'div', [['class', 'my-contacts flex-h']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n    \n      '])),
-        (_l()(), i0.ɵeld(0, null, null, 1, 'contact-list', [['class', 'flex nogrow']], null, null, null, i1.View_ContactList_0, i1.RenderType_ContactList)),
-        i0.ɵdid(49152, null, 0, i2.ContactList, [], { contacts: [0, 'contacts'] }, null), (_l()(), i0.ɵted(null, ['\n    \n      '])), (_l()(),
-            i0.ɵeld(16777216, null, null, 6, 'div', [['ui-view', '']], null, null, null, i3.View_UIView_0, i3.RenderType_UIView)),
-        i0.ɵdid(245760, null, 0, i4.UIView, [i5.UIRouter, 'UIView.PARENT_INJECT',
-            i0.ViewContainerRef], { _name: [0, '_name'] }, null), (_l()(), i0.ɵted(0, ['\n        '])), (_l()(), i0.ɵted(0, ['\n        '])), (_l()(), i0.ɵeld(0, null, 0, 1, 'h4', [['style', 'margin: 1em 2em;']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Select a contact'])),
-        (_l()(), i0.ɵted(0, ['\n      '])), (_l()(), i0.ɵted(null, ['\n    '])),
-        (_l()(), i0.ɵted(null, ['\n']))], function (_ck, _v) {
-        var _co = _v.component;
-        var currVal_0 = _co.contacts;
-        _ck(_v, 4, 0, currVal_0);
-        var currVal_1 = '';
-        _ck(_v, 7, 0, currVal_1);
-    }, null);
-}
-exports.View_Contacts_0 = View_Contacts_0;
-function View_Contacts_Host_0(_l) {
-    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'contacts', [], null, null, null, View_Contacts_0, exports.RenderType_Contacts)),
-        i0.ɵdid(49152, null, 0, i6.Contacts, [], null, null)], null, null);
-}
-exports.View_Contacts_Host_0 = View_Contacts_Host_0;
-exports.ContactsNgFactory = i0.ɵccf('contacts', i6.Contacts, View_Contacts_Host_0, { contacts: 'contacts' }, {}, []);
-//# sourceMappingURL=contacts.component.ngfactory.js.map
-
-/***/ }),
-
-/***/ 230:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/**
- * @fileoverview This file is generated by the Angular template compiler.
- * Do not edit.
- * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride}
- */
-/* tslint:disable */
-Object.defineProperty(exports, "__esModule", { value: true });
-var i0 = __webpack_require__(4);
-var i1 = __webpack_require__(222);
-var i2 = __webpack_require__(36);
-var i3 = __webpack_require__(59);
-var i4 = __webpack_require__(28);
-var i5 = __webpack_require__(38);
-var i6 = __webpack_require__(30);
+var i1 = __webpack_require__(244);
+var i2 = __webpack_require__(55);
+var i3 = __webpack_require__(54);
+var i4 = __webpack_require__(24);
+var i5 = __webpack_require__(35);
+var i6 = __webpack_require__(25);
 var styles_EditContact = [];
 exports.RenderType_EditContact = i0.ɵcrt({ encapsulation: 2, styles: styles_EditContact,
     data: {} });
 function View_EditContact_0(_l) {
-    return i0.ɵvid(0, [(_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵeld(0, null, null, 137, 'div', [['class', 'contact']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n      '])), (_l()(),
-            i0.ɵeld(0, null, null, 112, 'div', [['class', 'details']], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 8, 'div', [], null, null, null, null, null)), (_l()(),
-            i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['First'])), (_l()(), i0.ɵeld(0, null, null, 5, 'input', [['type',
-                'text']], [[2, 'ng-untouched', null], [2, 'ng-touched', null], [2,
-                'ng-pristine', null], [2, 'ng-dirty', null], [2, 'ng-valid', null],
-            [2, 'ng-invalid', null], [2, 'ng-pending', null]], [[null,
-                'ngModelChange'], [null, 'input'], [null, 'blur'], [null,
-                'compositionstart'], [null, 'compositionend']], function (_v, en, $event) {
-            var ad = true;
-            var _co = _v.component;
-            if (('input' === en)) {
-                var pd_0 = (i0.ɵnov(_v, 9)._handleInput($event.target.value) !== false);
-                ad = (pd_0 && ad);
-            }
-            if (('blur' === en)) {
-                var pd_1 = (i0.ɵnov(_v, 9).onTouched() !== false);
-                ad = (pd_1 && ad);
-            }
-            if (('compositionstart' === en)) {
-                var pd_2 = (i0.ɵnov(_v, 9)._compositionStart() !== false);
-                ad = (pd_2 && ad);
-            }
-            if (('compositionend' === en)) {
-                var pd_3 = (i0.ɵnov(_v, 9)._compositionEnd($event.target.value) !== false);
-                ad = (pd_3 && ad);
-            }
-            if (('ngModelChange' === en)) {
-                var pd_4 = ((_co.contact.name.first = $event) !== false);
-                ad = (pd_4 && ad);
-            }
-            return ad;
-        }, null, null)), i0.ɵdid(16384, null, 0, i2.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i2.COMPOSITION_BUFFER_MODE]], null, null),
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(-1, null, ['\n    '])), (_l()(), i0.ɵeld(1, 0, null, null, 137, 'div', [['class', 'contact']], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ['\n      '])), (_l()(), i0.ɵeld(3, 0, null, null, 112, 'div', [['class', 'details']], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ['\n        '])), (_l()(), i0.ɵeld(5, 0, null, null, 8, 'div', [], null, null, null, null, null)), (_l()(), i0.ɵeld(6, 0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ['First'])), (_l()(),
+            i0.ɵeld(8, 0, null, null, 5, 'input', [['type', 'text']], [[2, 'ng-untouched',
+                    null], [2, 'ng-touched', null], [2, 'ng-pristine', null],
+                [2, 'ng-dirty', null], [2, 'ng-valid', null], [2, 'ng-invalid',
+                    null], [2, 'ng-pending', null]], [[null, 'ngModelChange'],
+                [null, 'input'], [null, 'blur'], [null, 'compositionstart'],
+                [null, 'compositionend']], function (_v, en, $event) {
+                var ad = true;
+                var _co = _v.component;
+                if (('input' === en)) {
+                    var pd_0 = (i0.ɵnov(_v, 9)._handleInput($event.target.value) !== false);
+                    ad = (pd_0 && ad);
+                }
+                if (('blur' === en)) {
+                    var pd_1 = (i0.ɵnov(_v, 9).onTouched() !== false);
+                    ad = (pd_1 && ad);
+                }
+                if (('compositionstart' === en)) {
+                    var pd_2 = (i0.ɵnov(_v, 9)._compositionStart() !== false);
+                    ad = (pd_2 && ad);
+                }
+                if (('compositionend' === en)) {
+                    var pd_3 = (i0.ɵnov(_v, 9)._compositionEnd($event.target.value) !== false);
+                    ad = (pd_3 && ad);
+                }
+                if (('ngModelChange' === en)) {
+                    var pd_4 = ((_co.contact.name.first = $event) !== false);
+                    ad = (pd_4 && ad);
+                }
+                return ad;
+            }, null, null)), i0.ɵdid(9, 16384, null, 0, i2.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i2.COMPOSITION_BUFFER_MODE]], null, null),
         i0.ɵprd(1024, null, i2.NG_VALUE_ACCESSOR, function (p0_0) {
             return [p0_0];
-        }, [i2.DefaultValueAccessor]), i0.ɵdid(671744, null, 0, i2.NgModel, [[8, null],
-            [8, null], [8, null], [2, i2.NG_VALUE_ACCESSOR]], { model: [0,
-                'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i2.NgControl, null, [i2.NgModel]), i0.ɵdid(16384, null, 0, i2.NgControlStatus, [i2.NgControl], null, null), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 8, 'div', [], null, null, null, null, null)),
-        (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Last'])), (_l()(), i0.ɵeld(0, null, null, 5, 'input', [['type',
-                'text']], [[2, 'ng-untouched', null], [2, 'ng-touched', null],
-            [2, 'ng-pristine', null], [2, 'ng-dirty', null], [2, 'ng-valid',
-                null], [2, 'ng-invalid', null], [2, 'ng-pending', null]], [[null, 'ngModelChange'], [null, 'input'], [null,
-                'blur'], [null, 'compositionstart'], [null, 'compositionend']], function (_v, en, $event) {
+        }, [i2.DefaultValueAccessor]), i0.ɵdid(11, 671744, null, 0, i2.NgModel, [[8,
+                null], [8, null], [8, null], [2, i2.NG_VALUE_ACCESSOR]], { model: [0, 'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i2.NgControl, null, [i2.NgModel]), i0.ɵdid(13, 16384, null, 0, i2.NgControlStatus, [i2.NgControl], null, null), (_l()(),
+            i0.ɵted(-1, null, ['\n        '])), (_l()(), i0.ɵeld(15, 0, null, null, 8, 'div', [], null, null, null, null, null)), (_l()(), i0.ɵeld(16, 0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ['Last'])), (_l()(), i0.ɵeld(18, 0, null, null, 5, 'input', [['type', 'text']], [[2, 'ng-untouched',
+                null], [2, 'ng-touched', null], [2, 'ng-pristine', null],
+            [2, 'ng-dirty', null], [2, 'ng-valid', null], [2, 'ng-invalid',
+                null], [2, 'ng-pending', null]], [[null, 'ngModelChange'],
+            [null, 'input'], [null, 'blur'], [null, 'compositionstart'],
+            [null, 'compositionend']], function (_v, en, $event) {
             var ad = true;
             var _co = _v.component;
             if (('input' === en)) {
@@ -670,16 +544,16 @@ function View_EditContact_0(_l) {
                 ad = (pd_4 && ad);
             }
             return ad;
-        }, null, null)), i0.ɵdid(16384, null, 0, i2.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i2.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵprd(1024, null, i2.NG_VALUE_ACCESSOR, function (p0_0) {
+        }, null, null)), i0.ɵdid(19, 16384, null, 0, i2.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i2.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵprd(1024, null, i2.NG_VALUE_ACCESSOR, function (p0_0) {
             return [p0_0];
-        }, [i2.DefaultValueAccessor]), i0.ɵdid(671744, null, 0, i2.NgModel, [[8, null],
-            [8, null], [8, null], [2, i2.NG_VALUE_ACCESSOR]], { model: [0,
-                'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i2.NgControl, null, [i2.NgModel]), i0.ɵdid(16384, null, 0, i2.NgControlStatus, [i2.NgControl], null, null), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 8, 'div', [], null, null, null, null, null)),
-        (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Company'])), (_l()(), i0.ɵeld(0, null, null, 5, 'input', [['type',
-                'text']], [[2, 'ng-untouched', null], [2, 'ng-touched', null],
-            [2, 'ng-pristine', null], [2, 'ng-dirty', null], [2, 'ng-valid',
-                null], [2, 'ng-invalid', null], [2, 'ng-pending', null]], [[null, 'ngModelChange'], [null, 'input'], [null,
-                'blur'], [null, 'compositionstart'], [null, 'compositionend']], function (_v, en, $event) {
+        }, [i2.DefaultValueAccessor]), i0.ɵdid(21, 671744, null, 0, i2.NgModel, [[8,
+                null], [8, null], [8, null], [2, i2.NG_VALUE_ACCESSOR]], { model: [0, 'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i2.NgControl, null, [i2.NgModel]), i0.ɵdid(23, 16384, null, 0, i2.NgControlStatus, [i2.NgControl], null, null), (_l()(),
+            i0.ɵted(-1, null, ['\n        '])), (_l()(), i0.ɵeld(25, 0, null, null, 8, 'div', [], null, null, null, null, null)), (_l()(), i0.ɵeld(26, 0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ['Company'])), (_l()(), i0.ɵeld(28, 0, null, null, 5, 'input', [['type', 'text']], [[2, 'ng-untouched',
+                null], [2, 'ng-touched', null], [2, 'ng-pristine', null],
+            [2, 'ng-dirty', null], [2, 'ng-valid', null], [2, 'ng-invalid',
+                null], [2, 'ng-pending', null]], [[null, 'ngModelChange'],
+            [null, 'input'], [null, 'blur'], [null, 'compositionstart'],
+            [null, 'compositionend']], function (_v, en, $event) {
             var ad = true;
             var _co = _v.component;
             if (('input' === en)) {
@@ -703,16 +577,16 @@ function View_EditContact_0(_l) {
                 ad = (pd_4 && ad);
             }
             return ad;
-        }, null, null)), i0.ɵdid(16384, null, 0, i2.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i2.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵprd(1024, null, i2.NG_VALUE_ACCESSOR, function (p0_0) {
+        }, null, null)), i0.ɵdid(29, 16384, null, 0, i2.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i2.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵprd(1024, null, i2.NG_VALUE_ACCESSOR, function (p0_0) {
             return [p0_0];
-        }, [i2.DefaultValueAccessor]), i0.ɵdid(671744, null, 0, i2.NgModel, [[8, null],
-            [8, null], [8, null], [2, i2.NG_VALUE_ACCESSOR]], { model: [0,
-                'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i2.NgControl, null, [i2.NgModel]), i0.ɵdid(16384, null, 0, i2.NgControlStatus, [i2.NgControl], null, null), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 8, 'div', [], null, null, null, null, null)),
-        (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Age'])), (_l()(), i0.ɵeld(0, null, null, 5, 'input', [['type',
-                'text']], [[2, 'ng-untouched', null], [2, 'ng-touched', null],
-            [2, 'ng-pristine', null], [2, 'ng-dirty', null], [2, 'ng-valid',
-                null], [2, 'ng-invalid', null], [2, 'ng-pending', null]], [[null, 'ngModelChange'], [null, 'input'], [null,
-                'blur'], [null, 'compositionstart'], [null, 'compositionend']], function (_v, en, $event) {
+        }, [i2.DefaultValueAccessor]), i0.ɵdid(31, 671744, null, 0, i2.NgModel, [[8,
+                null], [8, null], [8, null], [2, i2.NG_VALUE_ACCESSOR]], { model: [0, 'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i2.NgControl, null, [i2.NgModel]), i0.ɵdid(33, 16384, null, 0, i2.NgControlStatus, [i2.NgControl], null, null), (_l()(),
+            i0.ɵted(-1, null, ['\n        '])), (_l()(), i0.ɵeld(35, 0, null, null, 8, 'div', [], null, null, null, null, null)), (_l()(), i0.ɵeld(36, 0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ['Age'])), (_l()(), i0.ɵeld(38, 0, null, null, 5, 'input', [['type', 'text']], [[2, 'ng-untouched',
+                null], [2, 'ng-touched', null], [2, 'ng-pristine', null],
+            [2, 'ng-dirty', null], [2, 'ng-valid', null], [2, 'ng-invalid',
+                null], [2, 'ng-pending', null]], [[null, 'ngModelChange'],
+            [null, 'input'], [null, 'blur'], [null, 'compositionstart'],
+            [null, 'compositionend']], function (_v, en, $event) {
             var ad = true;
             var _co = _v.component;
             if (('input' === en)) {
@@ -736,16 +610,16 @@ function View_EditContact_0(_l) {
                 ad = (pd_4 && ad);
             }
             return ad;
-        }, null, null)), i0.ɵdid(16384, null, 0, i2.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i2.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵprd(1024, null, i2.NG_VALUE_ACCESSOR, function (p0_0) {
+        }, null, null)), i0.ɵdid(39, 16384, null, 0, i2.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i2.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵprd(1024, null, i2.NG_VALUE_ACCESSOR, function (p0_0) {
             return [p0_0];
-        }, [i2.DefaultValueAccessor]), i0.ɵdid(671744, null, 0, i2.NgModel, [[8, null],
-            [8, null], [8, null], [2, i2.NG_VALUE_ACCESSOR]], { model: [0,
-                'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i2.NgControl, null, [i2.NgModel]), i0.ɵdid(16384, null, 0, i2.NgControlStatus, [i2.NgControl], null, null), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 8, 'div', [], null, null, null, null, null)),
-        (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Phone'])), (_l()(), i0.ɵeld(0, null, null, 5, 'input', [['type',
-                'text']], [[2, 'ng-untouched', null], [2, 'ng-touched', null],
-            [2, 'ng-pristine', null], [2, 'ng-dirty', null], [2, 'ng-valid',
-                null], [2, 'ng-invalid', null], [2, 'ng-pending', null]], [[null, 'ngModelChange'], [null, 'input'], [null,
-                'blur'], [null, 'compositionstart'], [null, 'compositionend']], function (_v, en, $event) {
+        }, [i2.DefaultValueAccessor]), i0.ɵdid(41, 671744, null, 0, i2.NgModel, [[8,
+                null], [8, null], [8, null], [2, i2.NG_VALUE_ACCESSOR]], { model: [0, 'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i2.NgControl, null, [i2.NgModel]), i0.ɵdid(43, 16384, null, 0, i2.NgControlStatus, [i2.NgControl], null, null), (_l()(),
+            i0.ɵted(-1, null, ['\n        '])), (_l()(), i0.ɵeld(45, 0, null, null, 8, 'div', [], null, null, null, null, null)), (_l()(), i0.ɵeld(46, 0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ['Phone'])), (_l()(), i0.ɵeld(48, 0, null, null, 5, 'input', [['type', 'text']], [[2, 'ng-untouched',
+                null], [2, 'ng-touched', null], [2, 'ng-pristine', null],
+            [2, 'ng-dirty', null], [2, 'ng-valid', null], [2, 'ng-invalid',
+                null], [2, 'ng-pending', null]], [[null, 'ngModelChange'],
+            [null, 'input'], [null, 'blur'], [null, 'compositionstart'],
+            [null, 'compositionend']], function (_v, en, $event) {
             var ad = true;
             var _co = _v.component;
             if (('input' === en)) {
@@ -769,16 +643,16 @@ function View_EditContact_0(_l) {
                 ad = (pd_4 && ad);
             }
             return ad;
-        }, null, null)), i0.ɵdid(16384, null, 0, i2.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i2.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵprd(1024, null, i2.NG_VALUE_ACCESSOR, function (p0_0) {
+        }, null, null)), i0.ɵdid(49, 16384, null, 0, i2.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i2.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵprd(1024, null, i2.NG_VALUE_ACCESSOR, function (p0_0) {
             return [p0_0];
-        }, [i2.DefaultValueAccessor]), i0.ɵdid(671744, null, 0, i2.NgModel, [[8, null],
-            [8, null], [8, null], [2, i2.NG_VALUE_ACCESSOR]], { model: [0,
-                'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i2.NgControl, null, [i2.NgModel]), i0.ɵdid(16384, null, 0, i2.NgControlStatus, [i2.NgControl], null, null), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 8, 'div', [], null, null, null, null, null)),
-        (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Email'])), (_l()(), i0.ɵeld(0, null, null, 5, 'input', [['type',
-                'text']], [[2, 'ng-untouched', null], [2, 'ng-touched', null],
-            [2, 'ng-pristine', null], [2, 'ng-dirty', null], [2, 'ng-valid',
-                null], [2, 'ng-invalid', null], [2, 'ng-pending', null]], [[null, 'ngModelChange'], [null, 'input'], [null,
-                'blur'], [null, 'compositionstart'], [null, 'compositionend']], function (_v, en, $event) {
+        }, [i2.DefaultValueAccessor]), i0.ɵdid(51, 671744, null, 0, i2.NgModel, [[8,
+                null], [8, null], [8, null], [2, i2.NG_VALUE_ACCESSOR]], { model: [0, 'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i2.NgControl, null, [i2.NgModel]), i0.ɵdid(53, 16384, null, 0, i2.NgControlStatus, [i2.NgControl], null, null), (_l()(),
+            i0.ɵted(-1, null, ['\n        '])), (_l()(), i0.ɵeld(55, 0, null, null, 8, 'div', [], null, null, null, null, null)), (_l()(), i0.ɵeld(56, 0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ['Email'])), (_l()(), i0.ɵeld(58, 0, null, null, 5, 'input', [['type', 'text']], [[2, 'ng-untouched',
+                null], [2, 'ng-touched', null], [2, 'ng-pristine', null],
+            [2, 'ng-dirty', null], [2, 'ng-valid', null], [2, 'ng-invalid',
+                null], [2, 'ng-pending', null]], [[null, 'ngModelChange'],
+            [null, 'input'], [null, 'blur'], [null, 'compositionstart'],
+            [null, 'compositionend']], function (_v, en, $event) {
             var ad = true;
             var _co = _v.component;
             if (('input' === en)) {
@@ -802,16 +676,16 @@ function View_EditContact_0(_l) {
                 ad = (pd_4 && ad);
             }
             return ad;
-        }, null, null)), i0.ɵdid(16384, null, 0, i2.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i2.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵprd(1024, null, i2.NG_VALUE_ACCESSOR, function (p0_0) {
+        }, null, null)), i0.ɵdid(59, 16384, null, 0, i2.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i2.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵprd(1024, null, i2.NG_VALUE_ACCESSOR, function (p0_0) {
             return [p0_0];
-        }, [i2.DefaultValueAccessor]), i0.ɵdid(671744, null, 0, i2.NgModel, [[8, null],
-            [8, null], [8, null], [2, i2.NG_VALUE_ACCESSOR]], { model: [0,
-                'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i2.NgControl, null, [i2.NgModel]), i0.ɵdid(16384, null, 0, i2.NgControlStatus, [i2.NgControl], null, null), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 8, 'div', [], null, null, null, null, null)),
-        (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Street'])), (_l()(), i0.ɵeld(0, null, null, 5, 'input', [['type',
-                'text']], [[2, 'ng-untouched', null], [2, 'ng-touched', null],
-            [2, 'ng-pristine', null], [2, 'ng-dirty', null], [2, 'ng-valid',
-                null], [2, 'ng-invalid', null], [2, 'ng-pending', null]], [[null, 'ngModelChange'], [null, 'input'], [null,
-                'blur'], [null, 'compositionstart'], [null, 'compositionend']], function (_v, en, $event) {
+        }, [i2.DefaultValueAccessor]), i0.ɵdid(61, 671744, null, 0, i2.NgModel, [[8,
+                null], [8, null], [8, null], [2, i2.NG_VALUE_ACCESSOR]], { model: [0, 'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i2.NgControl, null, [i2.NgModel]), i0.ɵdid(63, 16384, null, 0, i2.NgControlStatus, [i2.NgControl], null, null), (_l()(),
+            i0.ɵted(-1, null, ['\n        '])), (_l()(), i0.ɵeld(65, 0, null, null, 8, 'div', [], null, null, null, null, null)), (_l()(), i0.ɵeld(66, 0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ['Street'])), (_l()(), i0.ɵeld(68, 0, null, null, 5, 'input', [['type', 'text']], [[2, 'ng-untouched',
+                null], [2, 'ng-touched', null], [2, 'ng-pristine', null],
+            [2, 'ng-dirty', null], [2, 'ng-valid', null], [2, 'ng-invalid',
+                null], [2, 'ng-pending', null]], [[null, 'ngModelChange'],
+            [null, 'input'], [null, 'blur'], [null, 'compositionstart'],
+            [null, 'compositionend']], function (_v, en, $event) {
             var ad = true;
             var _co = _v.component;
             if (('input' === en)) {
@@ -835,16 +709,16 @@ function View_EditContact_0(_l) {
                 ad = (pd_4 && ad);
             }
             return ad;
-        }, null, null)), i0.ɵdid(16384, null, 0, i2.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i2.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵprd(1024, null, i2.NG_VALUE_ACCESSOR, function (p0_0) {
+        }, null, null)), i0.ɵdid(69, 16384, null, 0, i2.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i2.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵprd(1024, null, i2.NG_VALUE_ACCESSOR, function (p0_0) {
             return [p0_0];
-        }, [i2.DefaultValueAccessor]), i0.ɵdid(671744, null, 0, i2.NgModel, [[8, null],
-            [8, null], [8, null], [2, i2.NG_VALUE_ACCESSOR]], { model: [0,
-                'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i2.NgControl, null, [i2.NgModel]), i0.ɵdid(16384, null, 0, i2.NgControlStatus, [i2.NgControl], null, null), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 9, 'div', [], null, null, null, null, null)),
-        (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['City'])), (_l()(), i0.ɵeld(0, null, null, 5, 'input', [['type',
-                'text']], [[2, 'ng-untouched', null], [2, 'ng-touched', null],
-            [2, 'ng-pristine', null], [2, 'ng-dirty', null], [2, 'ng-valid',
-                null], [2, 'ng-invalid', null], [2, 'ng-pending', null]], [[null, 'ngModelChange'], [null, 'input'], [null,
-                'blur'], [null, 'compositionstart'], [null, 'compositionend']], function (_v, en, $event) {
+        }, [i2.DefaultValueAccessor]), i0.ɵdid(71, 671744, null, 0, i2.NgModel, [[8,
+                null], [8, null], [8, null], [2, i2.NG_VALUE_ACCESSOR]], { model: [0, 'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i2.NgControl, null, [i2.NgModel]), i0.ɵdid(73, 16384, null, 0, i2.NgControlStatus, [i2.NgControl], null, null), (_l()(),
+            i0.ɵted(-1, null, ['\n        '])), (_l()(), i0.ɵeld(75, 0, null, null, 9, 'div', [], null, null, null, null, null)), (_l()(), i0.ɵeld(76, 0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ['City'])), (_l()(), i0.ɵeld(78, 0, null, null, 5, 'input', [['type', 'text']], [[2, 'ng-untouched',
+                null], [2, 'ng-touched', null], [2, 'ng-pristine', null],
+            [2, 'ng-dirty', null], [2, 'ng-valid', null], [2, 'ng-invalid',
+                null], [2, 'ng-pending', null]], [[null, 'ngModelChange'],
+            [null, 'input'], [null, 'blur'], [null, 'compositionstart'],
+            [null, 'compositionend']], function (_v, en, $event) {
             var ad = true;
             var _co = _v.component;
             if (('input' === en)) {
@@ -868,17 +742,16 @@ function View_EditContact_0(_l) {
                 ad = (pd_4 && ad);
             }
             return ad;
-        }, null, null)), i0.ɵdid(16384, null, 0, i2.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i2.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵprd(1024, null, i2.NG_VALUE_ACCESSOR, function (p0_0) {
+        }, null, null)), i0.ɵdid(79, 16384, null, 0, i2.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i2.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵprd(1024, null, i2.NG_VALUE_ACCESSOR, function (p0_0) {
             return [p0_0];
-        }, [i2.DefaultValueAccessor]), i0.ɵdid(671744, null, 0, i2.NgModel, [[8, null],
-            [8, null], [8, null], [2, i2.NG_VALUE_ACCESSOR]], { model: [0,
-                'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i2.NgControl, null, [i2.NgModel]), i0.ɵdid(16384, null, 0, i2.NgControlStatus, [i2.NgControl], null, null), (_l()(), i0.ɵted(null, [' '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 8, 'div', [], null, null, null, null, null)), (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['State'])),
-        (_l()(), i0.ɵeld(0, null, null, 5, 'input', [['type', 'text']], [[2,
-                'ng-untouched', null], [2, 'ng-touched', null], [2, 'ng-pristine',
-                null], [2, 'ng-dirty', null], [2, 'ng-valid', null],
-            [2, 'ng-invalid', null], [2, 'ng-pending', null]], [[null,
-                'ngModelChange'], [null, 'input'], [null, 'blur'], [null,
-                'compositionstart'], [null, 'compositionend']], function (_v, en, $event) {
+        }, [i2.DefaultValueAccessor]), i0.ɵdid(81, 671744, null, 0, i2.NgModel, [[8,
+                null], [8, null], [8, null], [2, i2.NG_VALUE_ACCESSOR]], { model: [0, 'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i2.NgControl, null, [i2.NgModel]), i0.ɵdid(83, 16384, null, 0, i2.NgControlStatus, [i2.NgControl], null, null), (_l()(),
+            i0.ɵted(-1, null, [' '])), (_l()(), i0.ɵted(-1, null, ['\n        '])),
+        (_l()(), i0.ɵeld(86, 0, null, null, 8, 'div', [], null, null, null, null, null)), (_l()(), i0.ɵeld(87, 0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ['State'])), (_l()(), i0.ɵeld(89, 0, null, null, 5, 'input', [['type',
+                'text']], [[2, 'ng-untouched', null], [2, 'ng-touched', null],
+            [2, 'ng-pristine', null], [2, 'ng-dirty', null], [2, 'ng-valid',
+                null], [2, 'ng-invalid', null], [2, 'ng-pending', null]], [[null, 'ngModelChange'], [null, 'input'], [null,
+                'blur'], [null, 'compositionstart'], [null, 'compositionend']], function (_v, en, $event) {
             var ad = true;
             var _co = _v.component;
             if (('input' === en)) {
@@ -902,16 +775,16 @@ function View_EditContact_0(_l) {
                 ad = (pd_4 && ad);
             }
             return ad;
-        }, null, null)), i0.ɵdid(16384, null, 0, i2.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i2.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵprd(1024, null, i2.NG_VALUE_ACCESSOR, function (p0_0) {
+        }, null, null)), i0.ɵdid(90, 16384, null, 0, i2.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i2.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵprd(1024, null, i2.NG_VALUE_ACCESSOR, function (p0_0) {
             return [p0_0];
-        }, [i2.DefaultValueAccessor]), i0.ɵdid(671744, null, 0, i2.NgModel, [[8, null],
-            [8, null], [8, null], [2, i2.NG_VALUE_ACCESSOR]], { model: [0,
-                'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i2.NgControl, null, [i2.NgModel]), i0.ɵdid(16384, null, 0, i2.NgControlStatus, [i2.NgControl], null, null), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 8, 'div', [], null, null, null, null, null)),
-        (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Zip'])), (_l()(), i0.ɵeld(0, null, null, 5, 'input', [['type',
-                'text']], [[2, 'ng-untouched', null], [2, 'ng-touched', null],
-            [2, 'ng-pristine', null], [2, 'ng-dirty', null], [2, 'ng-valid',
-                null], [2, 'ng-invalid', null], [2, 'ng-pending', null]], [[null, 'ngModelChange'], [null, 'input'], [null,
-                'blur'], [null, 'compositionstart'], [null, 'compositionend']], function (_v, en, $event) {
+        }, [i2.DefaultValueAccessor]), i0.ɵdid(92, 671744, null, 0, i2.NgModel, [[8,
+                null], [8, null], [8, null], [2, i2.NG_VALUE_ACCESSOR]], { model: [0, 'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i2.NgControl, null, [i2.NgModel]), i0.ɵdid(94, 16384, null, 0, i2.NgControlStatus, [i2.NgControl], null, null), (_l()(),
+            i0.ɵted(-1, null, ['\n        '])), (_l()(), i0.ɵeld(96, 0, null, null, 8, 'div', [], null, null, null, null, null)), (_l()(), i0.ɵeld(97, 0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ['Zip'])), (_l()(), i0.ɵeld(99, 0, null, null, 5, 'input', [['type', 'text']], [[2, 'ng-untouched',
+                null], [2, 'ng-touched', null], [2, 'ng-pristine', null],
+            [2, 'ng-dirty', null], [2, 'ng-valid', null], [2, 'ng-invalid',
+                null], [2, 'ng-pending', null]], [[null, 'ngModelChange'],
+            [null, 'input'], [null, 'blur'], [null, 'compositionstart'],
+            [null, 'compositionend']], function (_v, en, $event) {
             var ad = true;
             var _co = _v.component;
             if (('input' === en)) {
@@ -935,16 +808,16 @@ function View_EditContact_0(_l) {
                 ad = (pd_4 && ad);
             }
             return ad;
-        }, null, null)), i0.ɵdid(16384, null, 0, i2.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i2.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵprd(1024, null, i2.NG_VALUE_ACCESSOR, function (p0_0) {
+        }, null, null)), i0.ɵdid(100, 16384, null, 0, i2.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i2.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵprd(1024, null, i2.NG_VALUE_ACCESSOR, function (p0_0) {
             return [p0_0];
-        }, [i2.DefaultValueAccessor]), i0.ɵdid(671744, null, 0, i2.NgModel, [[8, null],
-            [8, null], [8, null], [2, i2.NG_VALUE_ACCESSOR]], { model: [0,
-                'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i2.NgControl, null, [i2.NgModel]), i0.ɵdid(16384, null, 0, i2.NgControlStatus, [i2.NgControl], null, null), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 8, 'div', [], null, null, null, null, null)),
-        (_l()(), i0.ɵeld(0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Image'])), (_l()(), i0.ɵeld(0, null, null, 5, 'input', [['type',
-                'text']], [[2, 'ng-untouched', null], [2, 'ng-touched', null],
-            [2, 'ng-pristine', null], [2, 'ng-dirty', null], [2, 'ng-valid',
-                null], [2, 'ng-invalid', null], [2, 'ng-pending', null]], [[null, 'ngModelChange'], [null, 'input'], [null,
-                'blur'], [null, 'compositionstart'], [null, 'compositionend']], function (_v, en, $event) {
+        }, [i2.DefaultValueAccessor]), i0.ɵdid(102, 671744, null, 0, i2.NgModel, [[8,
+                null], [8, null], [8, null], [2, i2.NG_VALUE_ACCESSOR]], { model: [0, 'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i2.NgControl, null, [i2.NgModel]), i0.ɵdid(104, 16384, null, 0, i2.NgControlStatus, [i2.NgControl], null, null), (_l()(),
+            i0.ɵted(-1, null, ['\n        '])), (_l()(), i0.ɵeld(106, 0, null, null, 8, 'div', [], null, null, null, null, null)), (_l()(), i0.ɵeld(107, 0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ['Image'])), (_l()(), i0.ɵeld(109, 0, null, null, 5, 'input', [['type', 'text']], [[2, 'ng-untouched',
+                null], [2, 'ng-touched', null], [2, 'ng-pristine', null],
+            [2, 'ng-dirty', null], [2, 'ng-valid', null], [2, 'ng-invalid',
+                null], [2, 'ng-pending', null]], [[null, 'ngModelChange'],
+            [null, 'input'], [null, 'blur'], [null, 'compositionstart'],
+            [null, 'compositionend']], function (_v, en, $event) {
             var ad = true;
             var _co = _v.component;
             if (('input' === en)) {
@@ -968,24 +841,23 @@ function View_EditContact_0(_l) {
                 ad = (pd_4 && ad);
             }
             return ad;
-        }, null, null)), i0.ɵdid(16384, null, 0, i2.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i2.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵprd(1024, null, i2.NG_VALUE_ACCESSOR, function (p0_0) {
+        }, null, null)), i0.ɵdid(110, 16384, null, 0, i2.DefaultValueAccessor, [i0.Renderer2, i0.ElementRef, [2, i2.COMPOSITION_BUFFER_MODE]], null, null), i0.ɵprd(1024, null, i2.NG_VALUE_ACCESSOR, function (p0_0) {
             return [p0_0];
-        }, [i2.DefaultValueAccessor]), i0.ɵdid(671744, null, 0, i2.NgModel, [[8, null],
-            [8, null], [8, null], [2, i2.NG_VALUE_ACCESSOR]], { model: [0,
-                'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i2.NgControl, null, [i2.NgModel]), i0.ɵdid(16384, null, 0, i2.NgControlStatus, [i2.NgControl], null, null), (_l()(), i0.ɵted(null, ['\n      '])), (_l()(), i0.ɵted(null, ['\n    \n      '])), (_l()(),
-            i0.ɵeld(0, null, null, 0, 'hr', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['\n    \n      '])), (_l()(), i0.ɵeld(0, null, null, 18, 'div', [], null, null, null, null, null)),
-        (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 4, 'button', [['class', 'btn btn-primary'], ['uiSref', '^']], null, [[null,
-                'click']], function (_v, en, $event) {
+        }, [i2.DefaultValueAccessor]), i0.ɵdid(112, 671744, null, 0, i2.NgModel, [[8,
+                null], [8, null], [8, null], [2, i2.NG_VALUE_ACCESSOR]], { model: [0, 'model'] }, { update: 'ngModelChange' }), i0.ɵprd(2048, null, i2.NgControl, null, [i2.NgModel]), i0.ɵdid(114, 16384, null, 0, i2.NgControlStatus, [i2.NgControl], null, null), (_l()(),
+            i0.ɵted(-1, null, ['\n      '])), (_l()(), i0.ɵted(-1, null, ['\n    \n      '])), (_l()(), i0.ɵeld(117, 0, null, null, 0, 'hr', [], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ['\n    \n      '])), (_l()(),
+            i0.ɵeld(119, 0, null, null, 18, 'div', [], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ['\n        '])), (_l()(), i0.ɵted(-1, null, ['\n        '])),
+        (_l()(), i0.ɵeld(122, 0, null, null, 4, 'button', [['class', 'btn btn-primary'],
+            ['uiSref', '^']], null, [[null, 'click']], function (_v, en, $event) {
             var ad = true;
             if (('click' === en)) {
                 var pd_0 = (i0.ɵnov(_v, 123).go() !== false);
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, null, null)), i0.ɵdid(737280, null, 0, i3.UISref, [i4.UIRouter, [2, i3.AnchorUISref], 'UIView.PARENT_INJECT'], { state: [0, 'state'] }, null), (_l()(), i0.ɵeld(0, null, null, 0, 'i', [['class',
-                'fa fa-close']], null, null, null, null, null)), (_l()(), i0.ɵeld(0, null, null, 1, 'span', [], null, null, null, null, null)),
-        (_l()(), i0.ɵted(null, ['Cancel'])), (_l()(), i0.ɵted(null, ['\n        '])),
-        (_l()(), i0.ɵeld(0, null, null, 3, 'button', [['class', 'btn btn-primary']], null, [[null, 'click']], function (_v, en, $event) {
+        }, null, null)), i0.ɵdid(123, 737280, null, 0, i3.UISref, [i4.UIRouter, [2, i3.AnchorUISref], 'UIView.PARENT_INJECT'], { state: [0, 'state'] }, null), (_l()(), i0.ɵeld(124, 0, null, null, 0, 'i', [['class',
+                'fa fa-close']], null, null, null, null, null)), (_l()(), i0.ɵeld(125, 0, null, null, 1, 'span', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(-1, null, ['Cancel'])), (_l()(), i0.ɵted(-1, null, ['\n        '])), (_l()(), i0.ɵeld(128, 0, null, null, 3, 'button', [['class', 'btn btn-primary']], null, [[null, 'click']], function (_v, en, $event) {
             var ad = true;
             var _co = _v.component;
             if (('click' === en)) {
@@ -993,7 +865,7 @@ function View_EditContact_0(_l) {
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, null, null)), (_l()(), i0.ɵeld(0, null, null, 0, 'i', [['class', 'fa fa-save']], null, null, null, null, null)), (_l()(), i0.ɵeld(0, null, null, 1, 'span', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Save'])), (_l()(), i0.ɵted(null, ['\n        '])), (_l()(), i0.ɵeld(0, null, null, 3, 'button', [['class', 'btn btn-primary']], null, [[null, 'click']], function (_v, en, $event) {
+        }, null, null)), (_l()(), i0.ɵeld(129, 0, null, null, 0, 'i', [['class', 'fa fa-save']], null, null, null, null, null)), (_l()(), i0.ɵeld(130, 0, null, null, 1, 'span', [], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ['Save'])), (_l()(), i0.ɵted(-1, null, ['\n        '])), (_l()(), i0.ɵeld(133, 0, null, null, 3, 'button', [['class', 'btn btn-primary']], null, [[null, 'click']], function (_v, en, $event) {
             var ad = true;
             var _co = _v.component;
             if (('click' === en)) {
@@ -1001,7 +873,8 @@ function View_EditContact_0(_l) {
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, null, null)), (_l()(), i0.ɵeld(0, null, null, 0, 'i', [['class', 'fa fa-close']], null, null, null, null, null)), (_l()(), i0.ɵeld(0, null, null, 1, 'span', [], null, null, null, null, null)), (_l()(), i0.ɵted(null, ['Delete'])), (_l()(), i0.ɵted(null, ['\n      '])), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵted(null, ['\n']))], function (_ck, _v) {
+        }, null, null)), (_l()(), i0.ɵeld(134, 0, null, null, 0, 'i', [['class', 'fa fa-close']], null, null, null, null, null)), (_l()(), i0.ɵeld(135, 0, null, null, 1, 'span', [], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ['Delete'])), (_l()(), i0.ɵted(-1, null, ['\n      '])), (_l()(), i0.ɵted(-1, null, ['\n    '])),
+        (_l()(), i0.ɵted(-1, null, ['\n']))], function (_ck, _v) {
         var _co = _v.component;
         var currVal_7 = _co.contact.name.first;
         _ck(_v, 11, 0, currVal_7);
@@ -1120,8 +993,8 @@ function View_EditContact_0(_l) {
 }
 exports.View_EditContact_0 = View_EditContact_0;
 function View_EditContact_Host_0(_l) {
-    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, null, null, 1, 'edit-contact', [], null, null, null, View_EditContact_0, exports.RenderType_EditContact)),
-        i0.ɵdid(245760, null, 0, i1.EditContact, [i5.StateService, 'DialogService',
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 1, 'edit-contact', [], null, null, null, View_EditContact_0, exports.RenderType_EditContact)),
+        i0.ɵdid(1, 245760, null, 0, i1.EditContact, [i5.StateService, 'DialogService',
             'Contacts', [2, 'UIView.PARENT_INJECT'], i6.TransitionService], null, null)], function (_ck, _v) {
         _ck(_v, 1, 0);
     }, null);
@@ -1132,26 +1005,7 @@ exports.EditContactNgFactory = i0.ɵccf('edit-contact', i1.EditContact, View_Edi
 
 /***/ }),
 
-/***/ 231:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var contacts_states_1 = __webpack_require__(225);
-exports.CONTACTS_STATES = [contacts_states_1.contactsState, contacts_states_1.newContactState, contacts_states_1.viewContactState, contacts_states_1.editContactState];
-/** The NgModule for Contacts feature */
-var ContactsModule = (function () {
-    function ContactsModule() {
-    }
-    return ContactsModule;
-}());
-exports.ContactsModule = ContactsModule;
-//# sourceMappingURL=contacts.module.js.map
-
-/***/ }),
-
-/***/ 82:
+/***/ 252:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1164,9 +1018,146 @@ exports.ContactsModule = ContactsModule;
 /* tslint:disable */
 Object.defineProperty(exports, "__esModule", { value: true });
 var i0 = __webpack_require__(4);
-var i1 = __webpack_require__(9);
+var i1 = __webpack_require__(253);
+var i2 = __webpack_require__(247);
+var i3 = __webpack_require__(54);
+var i4 = __webpack_require__(24);
+var i5 = __webpack_require__(80);
+var i6 = __webpack_require__(16);
+var i7 = __webpack_require__(242);
+var styles_Contact = [];
+exports.RenderType_Contact = i0.ɵcrt({ encapsulation: 2, styles: styles_Contact,
+    data: {} });
+function View_Contact_0(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(-1, null, ['\n    '])), (_l()(), i0.ɵeld(1, 0, null, null, 27, 'div', [['class', 'contact']], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ['\n      '])), (_l()(), i0.ɵeld(3, 0, null, null, 1, 'contact-detail', [], null, null, null, i1.View_ContactDetail_0, i1.RenderType_ContactDetail)), i0.ɵdid(4, 49152, null, 0, i2.ContactDetail, [], { contact: [0, 'contact'] }, null), (_l()(), i0.ɵted(-1, null, ['\n    \n      '])), (_l()(), i0.ɵted(-1, null, ['\n      '])), (_l()(),
+            i0.ɵeld(7, 0, null, null, 8, 'button', [['class', 'btn btn-primary'],
+                ['uiSref', 'mymessages.compose']], null, [[null, 'click']], function (_v, en, $event) {
+                var ad = true;
+                if (('click' === en)) {
+                    var pd_0 = (i0.ɵnov(_v, 8).go() !== false);
+                    ad = (pd_0 && ad);
+                }
+                return ad;
+            }, null, null)), i0.ɵdid(8, 737280, null, 0, i3.UISref, [i4.UIRouter, [2, i3.AnchorUISref], 'UIView.PARENT_INJECT'], { state: [0, 'state'],
+            params: [1, 'params'] }, null), i0.ɵpod(9, { to: 0 }), i0.ɵpod(10, { message: 0 }),
+        (_l()(), i0.ɵted(-1, null, ['\n        '])), (_l()(), i0.ɵeld(12, 0, null, null, 0, 'i', [['class', 'fa fa-envelope']], null, null, null, null, null)), (_l()(), i0.ɵeld(13, 0, null, null, 1, 'span', [], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ['Message'])),
+        (_l()(), i0.ɵted(-1, null, ['\n      '])), (_l()(), i0.ɵted(-1, null, ['\n    \n      '])), (_l()(), i0.ɵted(-1, null, ['\n      '])), (_l()(),
+            i0.ɵeld(18, 0, null, null, 6, 'button', [['class', 'btn btn-primary'],
+                ['uiSref', '.edit']], null, [[null, 'click']], function (_v, en, $event) {
+                var ad = true;
+                if (('click' === en)) {
+                    var pd_0 = (i0.ɵnov(_v, 19).go() !== false);
+                    ad = (pd_0 && ad);
+                }
+                return ad;
+            }, null, null)), i0.ɵdid(19, 737280, null, 0, i3.UISref, [i4.UIRouter, [2, i3.AnchorUISref], 'UIView.PARENT_INJECT'], { state: [0, 'state'] }, null), (_l()(), i0.ɵted(-1, null, ['\n        '])), (_l()(),
+            i0.ɵeld(21, 0, null, null, 0, 'i', [['class', 'fa fa-pencil']], null, null, null, null, null)),
+        (_l()(), i0.ɵeld(22, 0, null, null, 1, 'span', [], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ['Edit Contact'])), (_l()(), i0.ɵted(-1, null, ['\n      '])),
+        (_l()(), i0.ɵted(-1, null, ['\n      '])), (_l()(), i0.ɵeld(26, 16777216, null, null, 1, 'ui-view', [], null, null, null, i5.View_UIView_0, i5.RenderType_UIView)), i0.ɵdid(27, 245760, null, 0, i6.UIView, [i4.UIRouter, 'UIView.PARENT_INJECT', i0.ViewContainerRef], null, null), (_l()(), i0.ɵted(-1, null, ['\n    '])),
+        (_l()(), i0.ɵted(-1, null, ['\n']))], function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_0 = _co.contact;
+        _ck(_v, 4, 0, currVal_0);
+        var currVal_1 = 'mymessages.compose';
+        var currVal_2 = _ck(_v, 10, 0, _ck(_v, 9, 0, _co.contact.email));
+        _ck(_v, 8, 0, currVal_1, currVal_2);
+        var currVal_3 = '.edit';
+        _ck(_v, 19, 0, currVal_3);
+        _ck(_v, 27, 0);
+    }, null);
+}
+exports.View_Contact_0 = View_Contact_0;
+function View_Contact_Host_0(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 1, 'contact', [], null, null, null, View_Contact_0, exports.RenderType_Contact)),
+        i0.ɵdid(1, 49152, null, 0, i7.Contact, [], null, null)], null, null);
+}
+exports.View_Contact_Host_0 = View_Contact_Host_0;
+exports.ContactNgFactory = i0.ɵccf('contact', i7.Contact, View_Contact_Host_0, { contact: 'contact' }, {}, []);
+//# sourceMappingURL=contact.component.ngfactory.js.map
+
+/***/ }),
+
+/***/ 253:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file is generated by the Angular template compiler.
+ * Do not edit.
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride}
+ */
+/* tslint:disable */
+Object.defineProperty(exports, "__esModule", { value: true });
+var i0 = __webpack_require__(4);
+var i1 = __webpack_require__(247);
+var styles_ContactDetail = [];
+exports.RenderType_ContactDetail = i0.ɵcrt({ encapsulation: 2,
+    styles: styles_ContactDetail, data: {} });
+function View_ContactDetail_0(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵted(-1, null, ['\n  '])), (_l()(), i0.ɵeld(1, 0, null, null, 47, 'div', [['class', 'flex-h']], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ['\n    '])), (_l()(), i0.ɵeld(3, 0, null, null, 39, 'div', [['class',
+                'details']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(-1, null, ['\n      '])), (_l()(), i0.ɵeld(5, 0, null, null, 1, 'h3', [], null, null, null, null, null)), (_l()(), i0.ɵted(6, null, ['', ' ', ''])),
+        (_l()(), i0.ɵted(-1, null, ['\n      '])), (_l()(), i0.ɵeld(8, 0, null, null, 4, 'div', [], null, null, null, null, null)), (_l()(), i0.ɵeld(9, 0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ['Company'])), (_l()(), i0.ɵeld(11, 0, null, null, 1, 'div', [], null, null, null, null, null)), (_l()(), i0.ɵted(12, null, ['', ''])), (_l()(), i0.ɵted(-1, null, ['\n      '])), (_l()(), i0.ɵeld(14, 0, null, null, 4, 'div', [], null, null, null, null, null)), (_l()(), i0.ɵeld(15, 0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ['Age'])),
+        (_l()(), i0.ɵeld(17, 0, null, null, 1, 'div', [], null, null, null, null, null)), (_l()(), i0.ɵted(18, null, ['', ''])), (_l()(), i0.ɵted(-1, null, ['\n      '])),
+        (_l()(), i0.ɵeld(20, 0, null, null, 4, 'div', [], null, null, null, null, null)), (_l()(), i0.ɵeld(21, 0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ['Phone'])), (_l()(), i0.ɵeld(23, 0, null, null, 1, 'div', [], null, null, null, null, null)),
+        (_l()(), i0.ɵted(24, null, ['', ''])), (_l()(), i0.ɵted(-1, null, ['\n      '])), (_l()(), i0.ɵeld(26, 0, null, null, 4, 'div', [], null, null, null, null, null)),
+        (_l()(), i0.ɵeld(27, 0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ['Email'])), (_l()(), i0.ɵeld(29, 0, null, null, 1, 'div', [], null, null, null, null, null)), (_l()(), i0.ɵted(30, null, ['', ''])), (_l()(), i0.ɵted(-1, null, ['\n      '])), (_l()(), i0.ɵeld(32, 0, null, null, 9, 'div', [['class', 'flex-h']], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ['\n        '])), (_l()(),
+            i0.ɵeld(34, 0, null, null, 1, 'label', [], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ['Address'])), (_l()(), i0.ɵted(-1, null, ['\n        '])),
+        (_l()(), i0.ɵeld(37, 0, null, null, 3, 'div', [], null, null, null, null, null)), (_l()(), i0.ɵted(38, null, ['', ''])), (_l()(), i0.ɵeld(39, 0, null, null, 0, 'br', [], null, null, null, null, null)), (_l()(), i0.ɵted(40, null, ['\n              ', ', ',
+            ' ', '\n        '])), (_l()(), i0.ɵted(-1, null, ['\n      '])), (_l()(),
+            i0.ɵted(-1, null, ['\n    '])), (_l()(), i0.ɵted(-1, null, ['\n\n    '])),
+        (_l()(), i0.ɵeld(44, 0, null, null, 3, 'div', [['class', 'flex nogrow']], null, null, null, null, null)),
+        (_l()(), i0.ɵted(-1, null, ['\n      '])), (_l()(), i0.ɵeld(46, 0, null, null, 0, 'img', [], [[8, 'src', 4]], null, null, null, null)), (_l()(), i0.ɵted(-1, null, ['\n    '])),
+        (_l()(), i0.ɵted(-1, null, ['\n  '])), (_l()(), i0.ɵted(-1, null, ['\n']))], null, function (_ck, _v) {
+        var _co = _v.component;
+        var currVal_0 = _co.contact.name.first;
+        var currVal_1 = _co.contact.name.last;
+        _ck(_v, 6, 0, currVal_0, currVal_1);
+        var currVal_2 = _co.contact.company;
+        _ck(_v, 12, 0, currVal_2);
+        var currVal_3 = _co.contact.age;
+        _ck(_v, 18, 0, currVal_3);
+        var currVal_4 = _co.contact.phone;
+        _ck(_v, 24, 0, currVal_4);
+        var currVal_5 = _co.contact.email;
+        _ck(_v, 30, 0, currVal_5);
+        var currVal_6 = _co.contact.address.street;
+        _ck(_v, 38, 0, currVal_6);
+        var currVal_7 = _co.contact.address.city;
+        var currVal_8 = _co.contact.address.state;
+        var currVal_9 = _co.contact.address.zip;
+        _ck(_v, 40, 0, currVal_7, currVal_8, currVal_9);
+        var currVal_10 = _co.contact.picture;
+        _ck(_v, 46, 0, currVal_10);
+    });
+}
+exports.View_ContactDetail_0 = View_ContactDetail_0;
+function View_ContactDetail_Host_0(_l) {
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 1, 'contact-detail', [], null, null, null, View_ContactDetail_0, exports.RenderType_ContactDetail)), i0.ɵdid(1, 49152, null, 0, i1.ContactDetail, [], null, null)], null, null);
+}
+exports.View_ContactDetail_Host_0 = View_ContactDetail_Host_0;
+exports.ContactDetailNgFactory = i0.ɵccf('contact-detail', i1.ContactDetail, View_ContactDetail_Host_0, { contact: 'contact' }, {}, []);
+//# sourceMappingURL=contactDetail.component.ngfactory.js.map
+
+/***/ }),
+
+/***/ 80:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file is generated by the Angular template compiler.
+ * Do not edit.
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride}
+ */
+/* tslint:disable */
+Object.defineProperty(exports, "__esModule", { value: true });
+var i0 = __webpack_require__(4);
+var i1 = __webpack_require__(11);
 var i2 = __webpack_require__(16);
-var i3 = __webpack_require__(28);
+var i3 = __webpack_require__(24);
 var styles_UIView = [];
 exports.RenderType_UIView = i0.ɵcrt({ encapsulation: 2, styles: styles_UIView,
     data: {} });
@@ -1177,19 +1168,18 @@ function View_UIView_2(_l) {
     return i0.ɵvid(0, [i0.ɵncd(null, 0), (_l()(), i0.ɵand(0, null, null, 0))], null, null);
 }
 function View_UIView_0(_l) {
-    return i0.ɵvid(0, [i0.ɵqud(402653184, 1, { componentTarget: 0 }), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(), i0.ɵand(16777216, [[1, 3], ['componentTarget', 2]], null, 0, null, View_UIView_1)), (_l()(), i0.ɵted(null, ['\n    '])), (_l()(),
-            i0.ɵand(16777216, null, null, 1, null, View_UIView_2)),
-        i0.ɵdid(16384, null, 0, i1.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0,
-                'ngIf'] }, null), (_l()(), i0.ɵted(null, ['\n  ']))], function (_ck, _v) {
+    return i0.ɵvid(0, [i0.ɵqud(402653184, 1, { _componentTarget: 0 }), (_l()(), i0.ɵted(-1, null, ['\n    '])), (_l()(), i0.ɵand(16777216, [[1, 3], ['componentTarget', 2]], null, 0, null, View_UIView_1)), (_l()(), i0.ɵted(-1, null, ['\n    '])),
+        (_l()(), i0.ɵand(16777216, null, null, 1, null, View_UIView_2)),
+        i0.ɵdid(5, 16384, null, 0, i1.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, 'ngIf'] }, null), (_l()(), i0.ɵted(-1, null, ['\n  ']))], function (_ck, _v) {
         var _co = _v.component;
-        var currVal_0 = !_co.componentRef;
+        var currVal_0 = !_co._componentRef;
         _ck(_v, 5, 0, currVal_0);
     }, null);
 }
 exports.View_UIView_0 = View_UIView_0;
 function View_UIView_Host_0(_l) {
-    return i0.ɵvid(0, [(_l()(), i0.ɵeld(16777216, null, null, 1, 'ui-view', [], null, null, null, View_UIView_0, exports.RenderType_UIView)),
-        i0.ɵdid(245760, null, 0, i2.UIView, [i3.UIRouter, 'UIView.PARENT_INJECT',
+    return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 16777216, null, null, 1, 'ui-view', [], null, null, null, View_UIView_0, exports.RenderType_UIView)),
+        i0.ɵdid(1, 245760, null, 0, i2.UIView, [i3.UIRouter, 'UIView.PARENT_INJECT',
             i0.ViewContainerRef], null, null)], function (_ck, _v) {
         _ck(_v, 1, 0);
     }, null);
