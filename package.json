@@ -22,18 +22,19 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ui-router/sample-app-ng1-to-ng2.git"
+    "url": "https://github.com/ui-router/sample-app-angular-hybrid.git"
   },
   "dependencies": {
-    "@angular/common": "^5.1.2",
-    "@angular/compiler": "^5.1.2",
-    "@angular/core": "^5.1.2",
-    "@angular/forms": "^5.1.2",
-    "@angular/http": "^5.1.2",
-    "@angular/platform-browser": "^5.1.2",
-    "@angular/platform-browser-dynamic": "^5.1.2",
-    "@angular/router": "^5.1.2",
-    "@angular/upgrade": "^5.1.2",
+    "@angular/common": "^4.0.0",
+    "@angular/compiler": "^4.0.0",
+    "@angular/compiler-cli": "^4.0.0",
+    "@angular/core": "^4.0.0",
+    "@angular/forms": "^4.0.0",
+    "@angular/http": "^4.0.0",
+    "@angular/platform-browser": "^4.0.0",
+    "@angular/platform-browser-dynamic": "^4.0.0",
+    "@angular/router": "^4.0.0",
+    "@angular/upgrade": "^4.0.0",
     "@uirouter/angular-hybrid": "3.1.8",
     "@uirouter/visualizer": "^5.0.6",
     "angular": "<2",
@@ -42,7 +43,6 @@
   },
   "devDependencies": {
     "@angular/cli": "^1.6.2",
-    "@angular/compiler-cli": "5.1.2",
     "@types/angular": "1.6.39",
     "@types/react": "^16.0.31",
     "@types/react-dom": "^16.0.3",
