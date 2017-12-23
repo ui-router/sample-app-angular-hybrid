@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+- 8.9.1
+cache:
+  directories:
+  - "$HOME/.npm"
+  - node_modules
+before_script:
+- greenkeeper-lockfile-update
+before_install:
+- curl -o- -L https://yarnpkg.com/install.sh | bash
+- export PATH="$HOME/.yarn/bin:$PATH"
+- yarn global add greenkeeper-lockfile@1
+after_script: greenkeeper-lockfile-upload
+notifications:
+  slack:
+    secure: e/lVSx31fq3lZqmG2NcL/b5vkYTHWEhuquLiRxqmLGcwOcpMU65ZmzQIqGvB8X1/WVT+A9pxPQL1E/iddC2IBUYelARsENUhZO6DbamoSaTzd5XvUKoXS3XF2GG7gf95pnXOYMJ6Jx+NE170dQ8EPAGJfjxZXX35KAz7DgQjzCG0iMNTaL1W4v8BmxmK7GaJuxERE6SzkxepeRbsHIlvDPlvMFCSn3TIIPYNAqkGEHgxJfmfnQu8V5Q9bJgi34wdqETgZfg1F8MOcvEwmcF9DazlAUI7Ie9A3YbbDKrWrNhVe7ylkGc2VKXoHZvk6etGCAH40BLDZ5uXCFHYzMAAoLo8pJUXoQ5g6Vq0jZiVY4y2LBJEhOnMcXrTOBDzKK9mlkGHAldgVZtgXvvf4WpviGgg2z2CuZBVkvlsZ2HMbpESxxrpR95kAINlnDEFJCCtcq7x4/VtI/AZ8+L3CSGKZE1/gugs5ShbjNtf0wuyWH9oIH4ZWlAVBuX21jhoexvKoE3kpGSypuUumFbkkESQ0+I6HnmvT9AkWs5KIpjScqklEEziVF3xNEh2K/Ccr/D1oH4KmfOUpx7WCgpFxaStfQhIcbdFntH823dQ+2BXgfVaC3VHZClUfvbmeHlsdDPLrhy98z9MKByA76IAE5/U52vIlFPO+ha6WitMj+XG2g0=
+env:
+  global:
+    secure: W69gLpjphNtiwVBLjlg0tR64YwOTjjWFm7oh4EkwSVF2dxoirkrLWYdJ2uXam+FTqHV8Sqo585/wnHpzbP1vIuHaO7spO8aSvcMHKific7p8fZK6JVm9uKafOEMI2DOU5tDIVJe/zwfQJTA66MGpi/j0+CNSfp6b7NRtQCq+IkEuuQBWfHuyS7394PTVSJhSFP7iXL7k9en5SVangrKMkpVna1cJXEfUQrNm6OChaeysCf3OCkQqsY+ElW72PUe8VjLO/7HK4kediQz+scJe9N6MRSGmJD5ZvIrx3oe1i6Ds1T0qT4Jlubn408fynxBSGPMcPDRKsB7PT+BB+m5ag0TPvq/leUfm0N7EZnS64vTVn32yK2eZy3rltkJePA3P3ShG04zedUNtXC5Jy+luN4bn/RD0GvQ/aMAZUaSHe1U6HPFyRFUPKY/zbZluLflK/Jv690H1aEJfdiATfEt2HYq57rs5ax8UMs+fkA6jiclA7AQN4faZ9kU780dAFo3nj2dbSvhyoNP/FYCxwgv930yyaF2Yt1lr50Z+8xzPQWkz149oEiygzYMzCDQo7WSBsVyroPnNekuqi4OoukDitQ7KeM8xcCBmaLTYU0IxtBqNAi/ozo2s5H/+x7oxHf9FGhEAwtqTbUkokfq9BZ0DHn0I0KJ7kVY1OEIMInRMZrs=
