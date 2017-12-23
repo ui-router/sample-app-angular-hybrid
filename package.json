@@ -5,7 +5,7 @@
   "scripts": {
     "start": "npm run serve",
     "serve": "webpack-dev-server --open --progress",
-    "clean": "shx rm -rf _bundles",
+    "clean": "shx rm -rf _bundles transpiled",
     "build": "npm run clean && webpack",
     "test": "run-s build e2e",
     "e2e": "run-p -r browser-sync cypress",
