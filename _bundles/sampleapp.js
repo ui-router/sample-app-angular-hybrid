@@ -110,22 +110,22 @@ var angularJSModule_1 = __webpack_require__(83);
 window['ga']('create', 'UA-73329341-1', 'auto');
 window['ga']('send', 'pageview');
 angularJSModule_1.sampleAppModuleAngularJS.config(function ($transitionsProvider) {
-    $transitionsProvider.onBefore({}, function ($transition$) {
-        var path = $transition$.treeChanges().to
-            .map(function (node) { return node.state.self.url; })
-            .filter(function (x) { return x != null && x !== '^'; })
-            .join('');
-        var vpv = function (path) {
-            return window['ga']('send', 'pageview', path);
-        };
-        var success = function () { vpv(path); };
-        var error = function (err) {
-            var errType = err && err.hasOwnProperty("type") ? err.type : '_';
-            path = path.replace(/^\//, "");
-            vpv("/errors/" + errType + "/" + path);
-        };
-        $transition$.promise.then(success, error);
-    });
+    var vpv = function (vpath) {
+        return window['ga']('send', 'pageview', vpath);
+    };
+    var path = function (trans) {
+        return '/' +
+            location.pathname.split('/').filter(function (x) { return x; }).join('/') +
+            trans.$to().url.format(trans.params());
+    };
+    var error = function (trans) {
+        var err = trans.error();
+        var type = err && err.hasOwnProperty('type') ? err.type : '_';
+        var message = err && err.hasOwnProperty('message') ? err.message : '_';
+        vpv(path(trans) + ';errorType=' + type + ';errorMessage=' + message);
+    };
+    $transitionsProvider.onSuccess({}, function (trans) { return vpv(path(trans)); }, { priority: -10000 });
+    $transitionsProvider.onError({}, function (trans) { return error(trans); }, { priority: -10000 });
 });
 //# sourceMappingURL=ga.js.map
 
