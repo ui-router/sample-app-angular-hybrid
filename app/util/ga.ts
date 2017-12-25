@@ -14,10 +14,11 @@ sampleAppModuleAngularJS.config($transitionsProvider => {
   const vpv = (vpath) =>
       window['ga']('send', 'pageview', vpath);
 
-  const path = (trans) =>
-      '/' +
-      location.pathname.split('/').filter(x => x).join('/') +
-      trans.$to().url.format(trans.params());
+  const path = (trans) => {
+    const formattedRoute = trans.$to().url.format(trans.params());
+    const withSitePrefix = location.pathname + formattedRoute;
+    return `/${withSitePrefix.split('/').filter(x => x).join('/')}`;
+  };
 
   const error = (trans) => {
     const err = trans.error();
