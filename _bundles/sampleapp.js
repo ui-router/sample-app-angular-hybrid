@@ -114,9 +114,9 @@ angularJSModule_1.sampleAppModuleAngularJS.config(function ($transitionsProvider
         return window['ga']('send', 'pageview', vpath);
     };
     var path = function (trans) {
-        return '/' +
-            location.pathname.split('/').filter(function (x) { return x; }).join('/') +
-            trans.$to().url.format(trans.params());
+        var formattedRoute = trans.$to().url.format(trans.params());
+        var withSitePrefix = location.pathname + formattedRoute;
+        return "/" + withSitePrefix.split('/').filter(function (x) { return x; }).join('/');
     };
     var error = function (trans) {
         var err = trans.error();
