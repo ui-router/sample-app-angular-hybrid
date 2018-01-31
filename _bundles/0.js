@@ -12,20 +12,20 @@ webpackJsonp([0],{
  */
 /* tslint:disable */
 Object.defineProperty(exports, "__esModule", { value: true });
-var i0 = __webpack_require__(4);
+var i0 = __webpack_require__(3);
 var i1 = __webpack_require__(248);
 var i2 = __webpack_require__(80);
 var i3 = __webpack_require__(249);
 var i4 = __webpack_require__(251);
 var i5 = __webpack_require__(252);
 var i6 = __webpack_require__(11);
-var i7 = __webpack_require__(55);
+var i7 = __webpack_require__(54);
 var i8 = __webpack_require__(26);
 var i9 = __webpack_require__(245);
 var i10 = __webpack_require__(243);
 var i11 = __webpack_require__(244);
 var i12 = __webpack_require__(242);
-var i13 = __webpack_require__(57);
+var i13 = __webpack_require__(56);
 exports.ContactsModuleNgFactory = i0.ɵcmf(i1.ContactsModule, [], function (_l) {
     return i0.ɵmod([i0.ɵmpd(512, i0.ComponentFactoryResolver, i0.ɵCodegenComponentFactoryResolver, [[8, [i2.UIViewNgFactory, i3.ContactsNgFactory, i4.EditContactNgFactory, i5.ContactNgFactory]],
             [3, i0.ComponentFactoryResolver], i0.NgModuleRef]), i0.ɵmpd(4608, i6.NgLocalization, i6.NgLocaleLocalization, [i0.LOCALE_ID]), i0.ɵmpd(4608, i7.ɵi, i7.ɵi, []),
@@ -63,7 +63,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * A button messages the contact by linking to `mymessages.compose` state passing the email as a state parameter.
  * Another button edits the contact by linking to `contacts.contact.edit` state.
  */
-var Contact = (function () {
+var Contact = /** @class */ (function () {
     function Contact() {
     }
     return Contact;
@@ -85,7 +85,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * On the left is the list of contacts.
  * On the right is the ui-view viewport where contact details appear.
  */
-var Contacts = (function () {
+var Contacts = /** @class */ (function () {
     function Contacts() {
     }
     return Contacts;
@@ -103,8 +103,8 @@ exports.Contacts = Contacts;
 Object.defineProperty(exports, "__esModule", { value: true });
 var angular = __webpack_require__(8);
 var angular_1 = __webpack_require__(81);
-var core_1 = __webpack_require__(3);
-var core_2 = __webpack_require__(4);
+var core_1 = __webpack_require__(4);
+var core_2 = __webpack_require__(3);
 /**
  * The EditContact component
  *
@@ -128,7 +128,7 @@ var core_2 = __webpack_require__(4);
  *   when creating a new contact, this returns to the `contacts` list.
  *   the `reload: true` option re-fetches the contacts resolve data from the server
  */
-var EditContact = (function () {
+var EditContact = /** @class */ (function () {
     // Note: you can inject StateService from @uirouter/core
     function EditContact($state, DialogService, Contacts, view, $trans) {
         this.$state = $state;
@@ -280,7 +280,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * At the top is a "new contact" button.
  * Each list item is a clickable link to the `contacts.contact` details substate
  */
-var ContactList = (function () {
+var ContactList = /** @class */ (function () {
     function ContactList() {
     }
     return ContactList;
@@ -299,7 +299,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * This component renders a read only view of the details for a single contact.
  */
-var ContactDetail = (function () {
+var ContactDetail = /** @class */ (function () {
     function ContactDetail() {
     }
     return ContactDetail;
@@ -318,7 +318,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var contacts_states_1 = __webpack_require__(245);
 exports.CONTACTS_STATES = [contacts_states_1.contactsState, contacts_states_1.newContactState, contacts_states_1.viewContactState, contacts_states_1.editContactState];
 /** The NgModule for Contacts feature */
-var ContactsModule = (function () {
+var ContactsModule = /** @class */ (function () {
     function ContactsModule() {
     }
     return ContactsModule;
@@ -340,7 +340,7 @@ exports.ContactsModule = ContactsModule;
  */
 /* tslint:disable */
 Object.defineProperty(exports, "__esModule", { value: true });
-var i0 = __webpack_require__(4);
+var i0 = __webpack_require__(3);
 var i1 = __webpack_require__(250);
 var i2 = __webpack_require__(246);
 var i3 = __webpack_require__(80);
@@ -385,10 +385,10 @@ exports.ContactsNgFactory = i0.ɵccf('contacts', i6.Contacts, View_Contacts_Host
  */
 /* tslint:disable */
 Object.defineProperty(exports, "__esModule", { value: true });
-var i0 = __webpack_require__(4);
-var i1 = __webpack_require__(54);
+var i0 = __webpack_require__(3);
+var i1 = __webpack_require__(53);
 var i2 = __webpack_require__(24);
-var i3 = __webpack_require__(56);
+var i3 = __webpack_require__(55);
 var i4 = __webpack_require__(36);
 var i5 = __webpack_require__(82);
 var i6 = __webpack_require__(11);
@@ -402,7 +402,7 @@ function View_ContactList_1(_l) {
                 'click']], function (_v, en, $event) {
             var ad = true;
             if (('click' === en)) {
-                var pd_0 = (i0.ɵnov(_v, 4).go() !== false);
+                var pd_0 = (i0.ɵnov(_v, 4).go($event.button, $event.ctrlKey, $event.metaKey) !== false);
                 ad = (pd_0 && ad);
             }
             return ad;
@@ -427,7 +427,7 @@ function View_ContactList_0(_l) {
             i0.ɵted(-1, null, ['\n    '])), (_l()(), i0.ɵeld(3, 0, null, null, 14, 'li', [], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ['\n      '])), (_l()(), i0.ɵted(-1, null, ['\n      '])), (_l()(), i0.ɵeld(6, 0, null, null, 10, 'a', [['uiSref', '.new']], null, [[null, 'click']], function (_v, en, $event) {
             var ad = true;
             if (('click' === en)) {
-                var pd_0 = (i0.ɵnov(_v, 8).go() !== false);
+                var pd_0 = (i0.ɵnov(_v, 8).go($event.button, $event.ctrlKey, $event.metaKey) !== false);
                 ad = (pd_0 && ad);
             }
             return ad;
@@ -469,10 +469,10 @@ exports.ContactListNgFactory = i0.ɵccf('contact-list', i7.ContactList, View_Con
  */
 /* tslint:disable */
 Object.defineProperty(exports, "__esModule", { value: true });
-var i0 = __webpack_require__(4);
+var i0 = __webpack_require__(3);
 var i1 = __webpack_require__(244);
-var i2 = __webpack_require__(55);
-var i3 = __webpack_require__(54);
+var i2 = __webpack_require__(54);
+var i3 = __webpack_require__(53);
 var i4 = __webpack_require__(24);
 var i5 = __webpack_require__(35);
 var i6 = __webpack_require__(25);
@@ -851,7 +851,7 @@ function View_EditContact_0(_l) {
             ['uiSref', '^']], null, [[null, 'click']], function (_v, en, $event) {
             var ad = true;
             if (('click' === en)) {
-                var pd_0 = (i0.ɵnov(_v, 123).go() !== false);
+                var pd_0 = (i0.ɵnov(_v, 123).go($event.button, $event.ctrlKey, $event.metaKey) !== false);
                 ad = (pd_0 && ad);
             }
             return ad;
@@ -1017,10 +1017,10 @@ exports.EditContactNgFactory = i0.ɵccf('edit-contact', i1.EditContact, View_Edi
  */
 /* tslint:disable */
 Object.defineProperty(exports, "__esModule", { value: true });
-var i0 = __webpack_require__(4);
+var i0 = __webpack_require__(3);
 var i1 = __webpack_require__(253);
 var i2 = __webpack_require__(247);
-var i3 = __webpack_require__(54);
+var i3 = __webpack_require__(53);
 var i4 = __webpack_require__(24);
 var i5 = __webpack_require__(80);
 var i6 = __webpack_require__(16);
@@ -1034,7 +1034,7 @@ function View_Contact_0(_l) {
                 ['uiSref', 'mymessages.compose']], null, [[null, 'click']], function (_v, en, $event) {
                 var ad = true;
                 if (('click' === en)) {
-                    var pd_0 = (i0.ɵnov(_v, 8).go() !== false);
+                    var pd_0 = (i0.ɵnov(_v, 8).go($event.button, $event.ctrlKey, $event.metaKey) !== false);
                     ad = (pd_0 && ad);
                 }
                 return ad;
@@ -1046,7 +1046,7 @@ function View_Contact_0(_l) {
                 ['uiSref', '.edit']], null, [[null, 'click']], function (_v, en, $event) {
                 var ad = true;
                 if (('click' === en)) {
-                    var pd_0 = (i0.ɵnov(_v, 19).go() !== false);
+                    var pd_0 = (i0.ɵnov(_v, 19).go($event.button, $event.ctrlKey, $event.metaKey) !== false);
                     ad = (pd_0 && ad);
                 }
                 return ad;
@@ -1089,7 +1089,7 @@ exports.ContactNgFactory = i0.ɵccf('contact', i7.Contact, View_Contact_Host_0, 
  */
 /* tslint:disable */
 Object.defineProperty(exports, "__esModule", { value: true });
-var i0 = __webpack_require__(4);
+var i0 = __webpack_require__(3);
 var i1 = __webpack_require__(247);
 var styles_ContactDetail = [];
 exports.RenderType_ContactDetail = i0.ɵcrt({ encapsulation: 2,
@@ -1154,7 +1154,7 @@ exports.ContactDetailNgFactory = i0.ɵccf('contact-detail', i1.ContactDetail, Vi
  */
 /* tslint:disable */
 Object.defineProperty(exports, "__esModule", { value: true });
-var i0 = __webpack_require__(4);
+var i0 = __webpack_require__(3);
 var i1 = __webpack_require__(11);
 var i2 = __webpack_require__(16);
 var i3 = __webpack_require__(24);

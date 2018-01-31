@@ -14,7 +14,7 @@ exports.mymessagesModule = angular.module('mymessages', ['ui.router']);
 
 /***/ }),
 
-/***/ 123:
+/***/ 124:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31,7 +31,7 @@ exports.guid = function () { return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".split
 
 /***/ }),
 
-/***/ 125:
+/***/ 126:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60,10 +60,10 @@ exports.guid = function () { return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".split
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 // Google analytics
-__webpack_require__(126);
-var static_1 = __webpack_require__(53);
-var core_1 = __webpack_require__(3);
-var visualizer_1 = __webpack_require__(124);
+__webpack_require__(127);
+var static_1 = __webpack_require__(52);
+var core_1 = __webpack_require__(4);
+var visualizer_1 = __webpack_require__(125);
 var angularJSModule_1 = __webpack_require__(83);
 var angularModule_ngfactory_1 = __webpack_require__(232);
 var platform_browser_1 = __webpack_require__(34);
@@ -88,7 +88,7 @@ angularJSModule_1.sampleAppModuleAngularJS.run(['$uiRouter', function ($uiRouter
 
 /***/ }),
 
-/***/ 126:
+/***/ 127:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -174,7 +174,7 @@ var global_module_1 = __webpack_require__(17);
 /**
  * This service stores and retrieves user preferences in session storage
  */
-var AppConfig = (function () {
+var AppConfig = /** @class */ (function () {
     function AppConfig() {
         this.sort = '+date';
         this.emailAddress = undefined;
@@ -209,7 +209,7 @@ var global_module_1 = __webpack_require__(17);
 /**
  * This service emulates an Authentication Service.
  */
-var AuthService = (function () {
+var AuthService = /** @class */ (function () {
     function AuthService(AppConfig, $q, $timeout) {
         this.AppConfig = AppConfig;
         this.$q = $q;
@@ -293,7 +293,7 @@ var global_module_1 = __webpack_require__(17);
  * See ../util/sessionStorage.js for more details, if curious
  */
 /** A fake Contacts REST client API */
-var Contacts = (function (_super) {
+var Contacts = /** @class */ (function (_super) {
     __extends(Contacts, _super);
     function Contacts($http, $timeout, $q, AppConfig) {
         // http://beta.json-generator.com/api/json/get/V1g6UwwGx
@@ -303,7 +303,7 @@ var Contacts = (function (_super) {
 }(sessionStorage_1.SessionStorage));
 exports.Contacts = Contacts;
 /** A fake Folders REST client API */
-var Folders = (function (_super) {
+var Folders = /** @class */ (function (_super) {
     __extends(Folders, _super);
     function Folders($http, $timeout, $q, AppConfig) {
         return _super.call(this, $http, $timeout, $q, 'folders', 'data/folders.json', AppConfig) || this;
@@ -311,7 +311,7 @@ var Folders = (function (_super) {
     return Folders;
 }(sessionStorage_1.SessionStorage));
 exports.Folders = Folders;
-var Messages = (function (_super) {
+var Messages = /** @class */ (function (_super) {
     __extends(Messages, _super);
     function Messages($http, $timeout, $q, AppConfig) {
         var _this = 
@@ -342,7 +342,7 @@ global_module_1.globalModule.service('Messages', Messages);
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var util_1 = __webpack_require__(123);
+var util_1 = __webpack_require__(124);
 /**
  * This class simulates a RESTful resource, but the API calls fetch data from
  * Session Storage instead of an HTTP call.
@@ -355,7 +355,7 @@ var util_1 = __webpack_require__(123);
  *
  * For an example, please see dataSources.js
  */
-var SessionStorage = (function () {
+var SessionStorage = /** @class */ (function () {
     /**
      * Creates a new SessionStorage object
      *
@@ -498,7 +498,7 @@ global_module_1.globalModule.directive('dialog', dialogDirective);
 Object.defineProperty(exports, "__esModule", { value: true });
 var angular = __webpack_require__(8);
 var global_module_1 = __webpack_require__(17);
-var DialogService = (function () {
+var DialogService = /** @class */ (function () {
     function DialogService($document, $compile, $rootScope) {
         var body = $document.find("body");
         var elem = angular.element("<div class='dialog' dialog='opts'></div>");
@@ -585,7 +585,7 @@ var home_module_1 = __webpack_require__(23);
 /**
  * The controller for the `app` component.
  */
-var AuthedController = (function () {
+var AuthedController = /** @class */ (function () {
     function AuthedController(AppConfig, AuthService, $state) {
         this.AuthService = AuthService;
         this.$state = $state;
@@ -732,7 +732,7 @@ var home_module_1 = __webpack_require__(23);
  * The `login` method validates the credentials.
  * Then it sends the user back to the `returnTo` state, which is provided as a resolve data.
  */
-var LoginController = (function () {
+var LoginController = /** @class */ (function () {
     function LoginController(AppConfig, AuthService, $state) {
         var _this = this;
         this.usernames = AuthService.usernames;
@@ -825,7 +825,7 @@ var mymessages_module_1 = __webpack_require__(10);
 /**
  * The controller for the Compose component
  */
-var ComposeController = (function () {
+var ComposeController = /** @class */ (function () {
     function ComposeController($state, DialogService, AppConfig, Messages) {
         this.$state = $state;
         this.DialogService = DialogService;
@@ -928,7 +928,7 @@ mymessages_module_1.mymessagesModule.component('folderList', folderListComponent
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var util_1 = __webpack_require__(123);
+var util_1 = __webpack_require__(124);
 var mymessages_module_1 = __webpack_require__(10);
 /** Helper function to prefix a message with "fwd: " or "re: " */
 var prefixSubject = function (prefix, message) { return prefix + message.subject; };
@@ -944,7 +944,7 @@ var makeResponseMsg = function (subjectPrefix, origMsg) { return ({
 /**
  * The controller for the Message component
  */
-var MessageController = (function () {
+var MessageController = /** @class */ (function () {
     function MessageController($state, DialogService, Messages) {
         this.$state = $state;
         this.DialogService = DialogService;
@@ -1295,7 +1295,7 @@ __webpack_require__(231);
 Object.defineProperty(exports, "__esModule", { value: true });
 var mymessages_module_1 = __webpack_require__(10);
 /** Provides services related to a message list */
-var MessageListUI = (function () {
+var MessageListUI = /** @class */ (function () {
     function MessageListUI($filter, AppConfig) {
         this.$filter = $filter;
         this.AppConfig = AppConfig;
@@ -1326,30 +1326,30 @@ mymessages_module_1.mymessagesModule.service('MessageListUI', MessageListUI);
  */
 /* tslint:disable */
 Object.defineProperty(exports, "__esModule", { value: true });
-var i0 = __webpack_require__(4);
+var i0 = __webpack_require__(3);
 var i1 = __webpack_require__(233);
 var i2 = __webpack_require__(80);
 var i3 = __webpack_require__(234);
 var i4 = __webpack_require__(235);
 var i5 = __webpack_require__(11);
 var i6 = __webpack_require__(34);
-var i7 = __webpack_require__(53);
+var i7 = __webpack_require__(52);
 var i8 = __webpack_require__(65);
 var i9 = __webpack_require__(24);
-var i10 = __webpack_require__(42);
-var i11 = __webpack_require__(51);
+var i10 = __webpack_require__(41);
+var i11 = __webpack_require__(50);
 var i12 = __webpack_require__(35);
 var i13 = __webpack_require__(25);
-var i14 = __webpack_require__(43);
-var i15 = __webpack_require__(45);
-var i16 = __webpack_require__(47);
-var i17 = __webpack_require__(46);
+var i14 = __webpack_require__(42);
+var i15 = __webpack_require__(44);
+var i16 = __webpack_require__(46);
+var i17 = __webpack_require__(45);
 var i18 = __webpack_require__(36);
-var i19 = __webpack_require__(55);
+var i19 = __webpack_require__(54);
 var i20 = __webpack_require__(26);
 var i21 = __webpack_require__(236);
 var i22 = __webpack_require__(79);
-var i23 = __webpack_require__(57);
+var i23 = __webpack_require__(56);
 exports.SampleAppModuleAngularNgFactory = i0.ɵcmf(i1.SampleAppModuleAngular, [], function (_l) {
     return i0.ɵmod([i0.ɵmpd(512, i0.ComponentFactoryResolver, i0.ɵCodegenComponentFactoryResolver, [[8, [i2.UIViewNgFactory, i3.UIViewNgUpgradeNgFactory, i4.PrefsComponentNgFactory]],
             [3, i0.ComponentFactoryResolver], i0.NgModuleRef]), i0.ɵmpd(5120, i0.LOCALE_ID, i0.ɵm, [[3, i0.LOCALE_ID]]), i0.ɵmpd(4608, i5.NgLocalization, i5.NgLocaleLocalization, [i0.LOCALE_ID]), i0.ɵmpd(4608, i0.Compiler, i0.Compiler, []), i0.ɵmpd(5120, i0.APP_ID, i0.ɵf, []), i0.ɵmpd(5120, i0.IterableDiffers, i0.ɵk, []),
@@ -1407,7 +1407,7 @@ function getContactsService($injector) {
 }
 exports.getContactsService = getContactsService;
 // The main NgModule for the Angular portion of the hybrid app
-var SampleAppModuleAngular = (function () {
+var SampleAppModuleAngular = /** @class */ (function () {
     function SampleAppModuleAngular() {
     }
     SampleAppModuleAngular.prototype.ngDoBootstrap = function () {
@@ -1432,20 +1432,20 @@ exports.SampleAppModuleAngular = SampleAppModuleAngular;
  */
 /* tslint:disable */
 Object.defineProperty(exports, "__esModule", { value: true });
-var i0 = __webpack_require__(4);
+var i0 = __webpack_require__(3);
 var i1 = __webpack_require__(65);
 var i2 = __webpack_require__(80);
 var i3 = __webpack_require__(11);
-var i4 = __webpack_require__(53);
+var i4 = __webpack_require__(52);
 var i5 = __webpack_require__(24);
-var i6 = __webpack_require__(42);
-var i7 = __webpack_require__(51);
+var i6 = __webpack_require__(41);
+var i7 = __webpack_require__(50);
 var i8 = __webpack_require__(35);
 var i9 = __webpack_require__(25);
-var i10 = __webpack_require__(43);
-var i11 = __webpack_require__(45);
-var i12 = __webpack_require__(47);
-var i13 = __webpack_require__(46);
+var i10 = __webpack_require__(42);
+var i11 = __webpack_require__(44);
+var i12 = __webpack_require__(46);
+var i13 = __webpack_require__(45);
 var i14 = __webpack_require__(36);
 var i15 = __webpack_require__(26);
 var i16 = __webpack_require__(16);
@@ -1494,9 +1494,9 @@ exports.UIViewNgUpgradeNgFactory = i0.ɵccf('ui-view-ng-upgrade', i1.UIViewNgUpg
  */
 /* tslint:disable */
 Object.defineProperty(exports, "__esModule", { value: true });
-var i0 = __webpack_require__(4);
+var i0 = __webpack_require__(3);
 var i1 = __webpack_require__(79);
-var i2 = __webpack_require__(55);
+var i2 = __webpack_require__(54);
 var styles_PrefsComponent = [];
 exports.RenderType_PrefsComponent = i0.ɵcrt({ encapsulation: 2,
     styles: styles_PrefsComponent, data: {} });
@@ -1594,7 +1594,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var prefs_states_1 = __webpack_require__(237);
 var PREFS_STATES = [prefs_states_1.prefsState];
 /** The NgModule for the Preferences feature */
-var PrefsModule = (function () {
+var PrefsModule = /** @class */ (function () {
     function PrefsModule() {
     }
     return PrefsModule;
@@ -1632,8 +1632,8 @@ exports.prefsState = {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(4);
-var PrefsComponent = (function () {
+var core_1 = __webpack_require__(3);
+var PrefsComponent = /** @class */ (function () {
     function PrefsComponent(AppConfig) {
         this.AppConfig = AppConfig;
     }
@@ -1672,7 +1672,7 @@ exports.PrefsComponent = PrefsComponent;
  */
 /* tslint:disable */
 Object.defineProperty(exports, "__esModule", { value: true });
-var i0 = __webpack_require__(4);
+var i0 = __webpack_require__(3);
 var i1 = __webpack_require__(11);
 var i2 = __webpack_require__(16);
 var i3 = __webpack_require__(24);
@@ -1720,8 +1720,8 @@ exports.UIViewNgFactory = i0.ɵccf('ui-view, [ui-view]', i2.UIView, View_UIView_
 Object.defineProperty(exports, "__esModule", { value: true });
 // External dependencies
 var angular = __webpack_require__(8);
-var angularjs_1 = __webpack_require__(58);
-var angular_hybrid_1 = __webpack_require__(101);
+var angularjs_1 = __webpack_require__(57);
+var angular_hybrid_1 = __webpack_require__(102);
 // Feature Modules
 var index_1 = __webpack_require__(204);
 var index_2 = __webpack_require__(212);
@@ -1753,5 +1753,5 @@ exports.sampleAppModuleAngularJS.run(traceRunBlock);
 
 /***/ })
 
-},[125]);
+},[126]);
 //# sourceMappingURL=sampleapp.js.map
