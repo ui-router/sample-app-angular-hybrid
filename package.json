@@ -44,7 +44,7 @@
   "devDependencies": {
     "@angular/cli": "1.6.6",
     "@types/angular": "1.6.42",
-    "@types/react": "16.0.35",
+    "@types/react": "16.0.36",
     "@types/react-dom": "16.0.3",
     "awesome-typescript-loader": "3.4.1",
     "bootstrap": "3.3.6",
