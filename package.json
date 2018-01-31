@@ -47,19 +47,29 @@
     "@types/react": "16.0.35",
     "@types/react-dom": "16.0.3",
     "awesome-typescript-loader": "3.4.1",
-    "bootstrap": "3.3.6",
     "browser-sync": "2.23.6",
     "cypress": "1.4.1",
     "d3": "4.13.0",
-    "font-awesome": "4.7.0",
     "npm-run-all": "4.1.2",
     "shx": "0.2.2",
     "source-map-loader": "0.2.3",
-    "systemjs": "0.20.19",
-    "systemjs-plugin-css": "0.1.36",
     "typescript": "~2.6.2",
     "wait-on": "2.1.0",
     "webpack": "3.10.0",
     "webpack-dev-server": "2.11.1"
+  },
+  "greenkeeper": {
+    "ignore": [
+      "@angular/common",
+      "@angular/compiler",
+      "@angular/compiler-cli",
+      "@angular/core",
+      "@angular/forms",
+      "@angular/http",
+      "@angular/platform-browser",
+      "@angular/platform-browser-dynamic",
+      "@angular/router",
+      "@angular/upgrade"
+    ]
   }
 }
