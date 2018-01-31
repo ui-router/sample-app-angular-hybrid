@@ -42,7 +42,7 @@
     "zone.js": "0.8.20"
   },
   "devDependencies": {
-    "@angular/cli": "1.6.6",
+    "@angular/cli": "1.6.7",
     "@types/angular": "1.6.42",
     "@types/react": "16.0.35",
     "@types/react-dom": "16.0.3",
