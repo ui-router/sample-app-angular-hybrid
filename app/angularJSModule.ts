@@ -3,10 +3,13 @@
  * and exports it.
  */
 
+import { downgradeComponent } from '@angular/upgrade/static';
 // External dependencies
 import * as angular from "angular";
 import uiRouter from "@uirouter/angularjs";
 import { upgradeModule } from "@uirouter/angular-hybrid";
+import { MyAngularComponent } from './angularModule';
+import { ContactDetail } from './contacts/contactDetail.component';
 
 // Feature Modules
 import { globalModule } from "./global/index";
@@ -40,3 +43,4 @@ sampleAppModuleAngularJS.config(otherwiseConfigBlock);
 // Besides "TRANSITION", you can also enable tracing for : "RESOLVE", "HOOK", "INVOKE", "UIVIEW", "VIEWCONFIG"
 const traceRunBlock = ['$trace', $trace => { $trace.enable(1); }];
 sampleAppModuleAngularJS.run(traceRunBlock);
+sampleAppModuleAngularJS.directive('downgradedCmp', downgradeComponent({component: MyAngularComponent}));

@@ -1,9 +1,10 @@
-import { NgModule, NgModuleFactoryLoader, SystemJsNgModuleLoader } from '@angular/core';
+import { Component, NgModule, NgModuleFactoryLoader, OnInit, SystemJsNgModuleLoader } from '@angular/core';
 import { UpgradeModule } from '@angular/upgrade/static';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { UIRouterModule } from '@uirouter/angular';
 import { UIRouterUpgradeModule } from '@uirouter/angular-hybrid';
+import { Observable } from 'rxjs/Observable';
 
 import { PrefsModule } from './prefs/prefs.module';
 
@@ -23,6 +24,21 @@ export function getContactsService($injector) {
   return $injector.get('Contacts');
 }
 
+
+@Component({
+  template: `
+    <h1>Hello, AngularJS from Angular</h1>
+    <h1 *ngIf="visible">Will this appear?</h1>
+  `,
+})
+export class MyAngularComponent implements OnInit {
+  visible = false;
+  ngOnInit(): void {
+    setInterval(() => this.visible = !this.visible, 1000);
+  }
+}
+
+
 // The main NgModule for the Angular portion of the hybrid app
 @NgModule({
   imports: [
@@ -38,6 +54,8 @@ export function getContactsService($injector) {
     // This forChild module registers the contacts future state and enables the lazy loaded contacts module
     UIRouterModule.forChild({ states: [contactsFutureState] }),
   ],
+  declarations: [MyAngularComponent],
+  entryComponents: [MyAngularComponent],
   providers: [
     // Provide the SystemJsNgModuleLoader when using Angular lazy loading
     { provide: NgModuleFactoryLoader, useClass: SystemJsNgModuleLoader },
@@ -52,3 +70,4 @@ export class SampleAppModuleAngular {
     /* no body: this disables normal (non-hybrid) Angular bootstrapping */
   }
 }
+
