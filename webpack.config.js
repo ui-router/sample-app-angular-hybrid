@@ -40,8 +40,8 @@ module.exports = {
 
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'vendor.bundle.js'}),
-    // new AngularCompilerPlugin({ "tsConfigPath": 'tsconfig.json', "mainPath": 'app/main.ts', "sourceMap": true, "skipCodeGeneration": true, }),
-   new AotPlugin({ tsConfigPath: 'tsconfig.json', mainPath: 'app/main.ts' }),
+    new AngularCompilerPlugin({ "tsConfigPath": 'tsconfig.json', "mainPath": 'app/main.ts', "sourceMap": true, "skipCodeGeneration": true, }),
+   // new AotPlugin({ tsConfigPath: 'tsconfig.json', mainPath: 'app/main.ts' }),
   ],
 
   module: {
