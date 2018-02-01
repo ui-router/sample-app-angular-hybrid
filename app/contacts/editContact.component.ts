@@ -61,12 +61,12 @@ export class EditContact {
   deregister;
   canExit: boolean;
 
-  // Note: you can inject StateService from @uirouter/core
-  constructor(public $state: StateService,
+  // Note: you can inject StateService and TransitionService from @uirouter/core
+  constructor(@Inject(StateService) public $state: StateService,
               @Inject('DialogService') public DialogService,
               @Inject('Contacts') public Contacts,
               @Optional() @Inject(UIView.PARENT_INJECT) view,
-              public $trans: TransitionService) {
+              @Inject(TransitionService) public $trans: TransitionService) {
     this.state = view && view.context && view.context.name;
   }
 
