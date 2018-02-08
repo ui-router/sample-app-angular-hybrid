@@ -1,11 +1,11 @@
 {
   "files": [
-    "app/main.ts",
-    "app/contacts/contacts.module.ts"
+    "src/main.ts"
   ],
   "compilerOptions": {
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "baseUrl": "src",
     "module": "commonjs",
     "moduleResolution": "node",
     "target": "es5",
