@@ -22,19 +22,20 @@ module.exports = {
     extensions: ['.js', '.ts']
   },
 
-  plugins: [
-    new AngularCompilerPlugin({
-      "tsConfigPath": 'tsconfig.json',
-      "entryModule": 'angularModule#SampleAppModuleAngular',
-      "sourceMap": true,
-      "skipCodeGeneration": true,
-    }),
-   // new AotPlugin({ tsConfigPath: 'tsconfig.json', mainPath: 'app/main.ts' }),
-  ],
+  // plugins: [
+  //   new AngularCompilerPlugin({
+  //     "tsConfigPath": 'tsconfig.json',
+  //     "entryModule": 'angularModule#SampleAppModuleAngular',
+  //     "sourceMap": true,
+  //     "skipCodeGeneration": true,
+  //   }),
+  //  // new AotPlugin({ tsConfigPath: 'tsconfig.json', mainPath: 'app/main.ts' }),
+  // ],
 
   module: {
     rules: [
-      { test: /(?:\.ngfactory\.js|\.ngstyle\.js|\.ts)$/,  use: [ "@ngtools/webpack" ] },
+      { test: /\.ts$/,  use: [ "ts-loader" ] },
+      // { test: /(?:\.ngfactory\.js|\.ngstyle\.js|\.ts)$/,  use: [ "@ngtools/webpack" ] },
     ]
   },
 

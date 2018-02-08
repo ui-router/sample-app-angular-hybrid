@@ -9,7 +9,7 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "target": "es5",
-    "rootDir": "app",
+    "rootDir": "src",
     "outDir": "transpiled/app",
     "declaration": false,
     "sourceMap": true,

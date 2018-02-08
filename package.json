@@ -53,6 +53,7 @@
     "npm-run-all": "4.1.2",
     "shx": "0.2.2",
     "source-map-loader": "0.2.3",
+    "ts-loader": "^3.5.0",
     "typescript": "2.6.2",
     "wait-on": "2.1.0",
     "webpack": "3.10.0",
