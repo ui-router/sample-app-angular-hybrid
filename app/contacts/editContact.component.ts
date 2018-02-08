@@ -62,11 +62,11 @@ export class EditContact {
   canExit: boolean;
 
   // Note: you can inject StateService and TransitionService from @uirouter/core
-  constructor(@Inject(StateService) public $state: StateService,
+  constructor(public $state: StateService,
               @Inject('DialogService') public DialogService,
               @Inject('Contacts') public Contacts,
               @Optional() @Inject(UIView.PARENT_INJECT) view,
-              @Inject(TransitionService) public $trans: TransitionService) {
+              public $trans: TransitionService) {
     this.state = view && view.context && view.context.name;
   }
 
