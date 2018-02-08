@@ -5,9 +5,3 @@ node_modules/
 .*
 transpiled
 _bundles
-
-cypress/screenshots
-cypress/videos
-cypress/fixtures
-cypress/plugins
-cypress/support

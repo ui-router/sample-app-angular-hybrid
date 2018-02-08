@@ -6,24 +6,9 @@
     "start": "npm run serve",
     "serve": "webpack-dev-server --open --progress",
     "clean": "shx rm -rf _bundles transpiled",
-    "build": "npm run clean && webpack",
-    "test": "run-s build e2e",
-    "e2e": "run-p -r browser-sync cypress",
-    "browser-sync": "browser-sync --port 4000 --no-open",
-    "cypress": "wait-on tcp:4000 && cypress run",
-    "gh-pages": "git checkout gh-pages && git rebase master && rm -rf node_modules && yarn install && webpack && git add -f _bundles && git commit -m 'publish gh-pages' && git push origin gh-pages:gh-pages --force && git checkout master"
+    "build": "npm run clean && webpack"
   },
-  "contributors": [
-    {
-      "name": "Chris Thielen",
-      "web": "https://github.com/christopherthielen"
-    }
-  ],
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ui-router/sample-app-angular-hybrid.git"
-  },
   "dependencies": {
     "@angular/common": "^5.2.3",
     "@angular/compiler": "^5.2.3",
@@ -35,8 +20,6 @@
     "@angular/platform-browser-dynamic": "^5.2.3",
     "@angular/router": "^5.2.3",
     "@angular/upgrade": "^5.2.3",
-    "@uirouter/angular-hybrid": "3.1.9",
-    "@uirouter/visualizer": "5.1.3",
     "angular": "1.6.9",
     "rxjs": "5.5.6",
     "zone.js": "0.8.20"
