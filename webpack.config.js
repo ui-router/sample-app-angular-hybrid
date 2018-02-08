@@ -1,8 +1,6 @@
 var webpack = require('webpack');
 
 var AngularCompilerPlugin = require('@ngtools/webpack').AngularCompilerPlugin;
-var AotPlugin = require('@ngtools/webpack').AotPlugin;
-
 var path = require('path');
 
 module.exports = {
@@ -40,14 +38,17 @@ module.exports = {
 
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'vendor.bundle.js'}),
-    new AngularCompilerPlugin({ "tsConfigPath": 'tsconfig.json', "mainPath": 'app/main.ts', "sourceMap": true, "skipCodeGeneration": true, }),
-   // new AotPlugin({ tsConfigPath: 'tsconfig.json', mainPath: 'app/main.ts' }),
+    new AngularCompilerPlugin({
+      "tsConfigPath": 'tsconfig.json',
+      "mainPath": 'app/main.ts',
+      "sourceMap": true,
+    }),
   ],
 
   module: {
     rules: [
       { test: /\.tsx?$/,  use: [ "source-map-loader" ], enforce: 'pre' },
-      { test: /(?:\.ngfactory\.js|\.ngstyle\.js|\.ts)$/,  use: [ "@ngtools/webpack" ] },
+      { test: /(?:\.ngfactory\.js|\.ngstyle\.js|\.ts)$/, use: [ "@ngtools/webpack" ] },
     ]
   },
 

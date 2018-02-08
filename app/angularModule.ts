@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { UIRouterModule } from '@uirouter/angular';
 import { UIRouterUpgradeModule } from '@uirouter/angular-hybrid';
+import { sampleAppModuleAngularJS } from './angularJSModule';
 
 import { PrefsModule } from './prefs/prefs.module';
 
@@ -48,7 +49,9 @@ export function getContactsService($injector) {
   ]
 })
 export class SampleAppModuleAngular {
+  constructor(private upgrade: UpgradeModule) { }
+
   ngDoBootstrap() {
-    /* no body: this disables normal (non-hybrid) Angular bootstrapping */
+    this.upgrade.bootstrap(document.body, [sampleAppModuleAngularJS.name]);
   }
 }
