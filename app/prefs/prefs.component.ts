@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 
 @Component({
   selector: 'prefs-component',
@@ -17,7 +17,7 @@ import { Component } from '@angular/core';
 export class PrefsComponent {
   prefs;
 
-  constructor(public AppConfig) { }
+  constructor(@Inject('AppConfig') public AppConfig) { }
 
   ngOnInit() {
     this.prefs = {
