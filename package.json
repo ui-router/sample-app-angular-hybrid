@@ -37,12 +37,12 @@
     "@angular/upgrade": "^5.2.3",
     "@uirouter/angular-hybrid": "3.1.9",
     "@uirouter/visualizer": "5.1.3",
-    "angular": "<2",
+    "angular": "1.6.9",
     "rxjs": "5.5.6",
     "zone.js": "0.8.20"
   },
   "devDependencies": {
-    "@angular/cli": "1.6.7",
+    "@angular/cli": "1.6.8",
     "@types/angular": "1.6.42",
     "@types/react": "16.0.36",
     "@types/react-dom": "16.0.3",
