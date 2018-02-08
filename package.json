@@ -57,19 +57,5 @@
     "wait-on": "2.1.0",
     "webpack": "3.10.0",
     "webpack-dev-server": "2.11.1"
-  },
-  "greenkeeper": {
-    "ignore": [
-      "@angular/common",
-      "@angular/compiler",
-      "@angular/compiler-cli",
-      "@angular/core",
-      "@angular/forms",
-      "@angular/http",
-      "@angular/platform-browser",
-      "@angular/platform-browser-dynamic",
-      "@angular/router",
-      "@angular/upgrade"
-    ]
   }
 }
