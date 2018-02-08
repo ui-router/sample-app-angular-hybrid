@@ -27,15 +27,15 @@
     "@ngtools/json-schema" "^1.1.0"
     rxjs "^5.5.6"
 
-"@angular/cli@1.6.7":
-  version "1.6.7"
-  resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-1.6.7.tgz#e2323753c144b5de6c699bbebee688105a394641"
+"@angular/cli@1.6.8":
+  version "1.6.8"
+  resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-1.6.8.tgz#963b48086ee3e9584a136d3c45893260f516dd75"
   dependencies:
     "@angular-devkit/build-optimizer" "0.0.42"
     "@angular-devkit/core" "0.0.29"
     "@angular-devkit/schematics" "0.0.52"
     "@ngtools/json-schema" "1.1.0"
-    "@ngtools/webpack" "1.9.7"
+    "@ngtools/webpack" "1.9.8"
     "@schematics/angular" "0.1.17"
     autoprefixer "^7.2.3"
     chalk "~2.2.0"
@@ -79,7 +79,7 @@
     style-loader "^0.13.1"
     stylus "^0.54.5"
     stylus-loader "^3.0.1"
-    uglifyjs-webpack-plugin "^1.1.5"
+    uglifyjs-webpack-plugin "^1.1.8"
     url-loader "^0.6.2"
     webpack "~3.10.0"
     webpack-dev-middleware "~1.12.0"
@@ -172,9 +172,9 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@ngtools/json-schema/-/json-schema-1.1.0.tgz#c3a0c544d62392acc2813a42c8a0dc6f58f86922"
 
-"@ngtools/webpack@1.9.7":
-  version "1.9.7"
-  resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-1.9.7.tgz#ef15b90142ddf2a2c9072fe3d58c6bf500163fe5"
+"@ngtools/webpack@1.9.8":
+  version "1.9.8"
+  resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-1.9.8.tgz#c9d1d1884b86ea9a5fbbd6f65080dc3ac37c8d97"
   dependencies:
     chalk "~2.2.0"
     enhanced-resolve "^3.1.0"
@@ -6874,7 +6874,7 @@ uglifyjs-webpack-plugin@^0.4.6:
     uglify-js "^2.8.29"
     webpack-sources "^1.0.1"
 
-uglifyjs-webpack-plugin@^1.1.5:
+uglifyjs-webpack-plugin@^1.1.8:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/uglifyjs-webpack-plugin/-/uglifyjs-webpack-plugin-1.1.8.tgz#1302fb9471a7daf3d0a5174da6d65f0f415e75ad"
   dependencies:
