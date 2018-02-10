@@ -55,7 +55,7 @@
     "source-map-loader": "0.2.3",
     "typescript": "2.6.2",
     "wait-on": "2.1.0",
-    "webpack": "3.10.0",
+    "webpack": "3.11.0",
     "webpack-dev-server": "2.11.1"
   }
 }
