@@ -46,7 +46,7 @@
     "@ngtools/webpack": "*",
     "@types/angular": "1.6.42",
     "@types/react": "16.0.36",
-    "@types/react-dom": "16.0.3",
+    "@types/react-dom": "16.0.4",
     "awesome-typescript-loader": "3.4.1",
     "browser-sync": "2.23.6",
     "cypress": "1.4.2",
