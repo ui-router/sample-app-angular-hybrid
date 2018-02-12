@@ -276,32 +276,32 @@
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@types/sinon/-/sinon-4.0.0.tgz#9a93ffa4ee1329e85166278a5ed99f81dc4c8362"
 
-"@uirouter/angular-hybrid@3.1.9":
-  version "3.1.9"
-  resolved "https://registry.yarnpkg.com/@uirouter/angular-hybrid/-/angular-hybrid-3.1.9.tgz#351fdd482407a6a05abacd0f8967e00808001525"
+"@uirouter/angular-hybrid@3.1.10":
+  version "3.1.10"
+  resolved "https://registry.yarnpkg.com/@uirouter/angular-hybrid/-/angular-hybrid-3.1.10.tgz#8bfaa9e2c98ad45feffb324b91fbabb3b38c3734"
   dependencies:
     "@types/angular" "1.6.42"
     "@types/jquery" "3.3.0"
-    "@uirouter/angular" "1.0.0"
-    "@uirouter/angularjs" "1.0.14"
-    "@uirouter/core" "5.0.16"
+    "@uirouter/angular" "1.0.1"
+    "@uirouter/angularjs" "1.0.15"
+    "@uirouter/core" "5.0.17"
 
-"@uirouter/angular@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@uirouter/angular/-/angular-1.0.0.tgz#031e0eff9dd84307238a106098cb73e22d120948"
+"@uirouter/angular@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@uirouter/angular/-/angular-1.0.1.tgz#50e4f58832e2d5d310ca35ce1b9eed7aa6035811"
   dependencies:
-    "@uirouter/core" "5.0.16"
+    "@uirouter/core" "5.0.17"
     "@uirouter/rx" "0.4.5"
 
-"@uirouter/angularjs@1.0.14":
-  version "1.0.14"
-  resolved "https://registry.yarnpkg.com/@uirouter/angularjs/-/angularjs-1.0.14.tgz#00e6b4652d6df9a4fbdffff9c31e0d17b4841d78"
+"@uirouter/angularjs@1.0.15":
+  version "1.0.15"
+  resolved "https://registry.yarnpkg.com/@uirouter/angularjs/-/angularjs-1.0.15.tgz#06d7a350576301f8897f5132b37e69756872139e"
   dependencies:
-    "@uirouter/core" "5.0.16"
+    "@uirouter/core" "5.0.17"
 
-"@uirouter/core@5.0.16":
-  version "5.0.16"
-  resolved "https://registry.yarnpkg.com/@uirouter/core/-/core-5.0.16.tgz#c6f9e2041df1b6ad3bc28b089e55241a1cb4610f"
+"@uirouter/core@5.0.17":
+  version "5.0.17"
+  resolved "https://registry.yarnpkg.com/@uirouter/core/-/core-5.0.17.tgz#c85d422b1e9a45df885be8b84f9b7f53233a7973"
 
 "@uirouter/rx@0.4.5":
   version "0.4.5"
