@@ -129,7 +129,7 @@ angularJSModule_1.sampleAppModuleAngularJS.config(function ($transitionsProvider
 
 /***/ }),
 
-/***/ 17:
+/***/ 18:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -150,7 +150,7 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-__export(__webpack_require__(17));
+__export(__webpack_require__(18));
 __webpack_require__(205);
 __webpack_require__(206);
 __webpack_require__(207);
@@ -168,7 +168,7 @@ __webpack_require__(211);
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var angular = __webpack_require__(8);
-var global_module_1 = __webpack_require__(17);
+var global_module_1 = __webpack_require__(18);
 /**
  * This service stores and retrieves user preferences in session storage
  */
@@ -203,7 +203,7 @@ global_module_1.globalModule.service('AppConfig', AppConfig);
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var global_module_1 = __webpack_require__(17);
+var global_module_1 = __webpack_require__(18);
 /**
  * This service emulates an Authentication Service.
  */
@@ -274,7 +274,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var sessionStorage_1 = __webpack_require__(208);
-var global_module_1 = __webpack_require__(17);
+var global_module_1 = __webpack_require__(18);
 /**
  * Fake REST Services (Contacts, Folders, Messages) used in the mymessages submodule.
  *
@@ -470,7 +470,7 @@ exports.SessionStorage = SessionStorage;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var global_module_1 = __webpack_require__(17);
+var global_module_1 = __webpack_require__(18);
 var dialogDirective = function ($timeout, $q) {
     return {
         link: function (scope, elem) {
@@ -497,7 +497,7 @@ global_module_1.globalModule.directive('dialog', dialogDirective);
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var angular = __webpack_require__(8);
-var global_module_1 = __webpack_require__(17);
+var global_module_1 = __webpack_require__(18);
 var DialogService = /** @class */ (function () {
     function DialogService($document, $compile, $rootScope) {
         var body = $document.find("body");
@@ -525,7 +525,7 @@ global_module_1.globalModule.service('DialogService', DialogService);
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var global_module_1 = __webpack_require__(17);
+var global_module_1 = __webpack_require__(18);
 /**
  * This file contains a Transition Hook which protects a
  * route that requires authentication.
@@ -1337,13 +1337,13 @@ mymessages_module_1.mymessagesModule.service('MessageListUI', MessageListUI);
 Object.defineProperty(exports, "__esModule", { value: true });
 var i0 = __webpack_require__(3);
 var i1 = __webpack_require__(233);
-var i2 = __webpack_require__(81);
+var i2 = __webpack_require__(82);
 var i3 = __webpack_require__(234);
 var i4 = __webpack_require__(235);
 var i5 = __webpack_require__(11);
 var i6 = __webpack_require__(23);
 var i7 = __webpack_require__(52);
-var i8 = __webpack_require__(66);
+var i8 = __webpack_require__(67);
 var i9 = __webpack_require__(25);
 var i10 = __webpack_require__(41);
 var i11 = __webpack_require__(51);
@@ -1357,7 +1357,7 @@ var i18 = __webpack_require__(36);
 var i19 = __webpack_require__(54);
 var i20 = __webpack_require__(27);
 var i21 = __webpack_require__(236);
-var i22 = __webpack_require__(80);
+var i22 = __webpack_require__(81);
 var i23 = __webpack_require__(56);
 var SampleAppModuleAngularNgFactory = i0.ɵcmf(i1.SampleAppModuleAngular, [], function (_l) { return i0.ɵmod([i0.ɵmpd(512, i0.ComponentFactoryResolver, i0.ɵCodegenComponentFactoryResolver, [[8, [i2.UIViewNgFactory, i3.UIViewNgUpgradeNgFactory, i4.PrefsComponentNgFactory]], [3, i0.ComponentFactoryResolver], i0.NgModuleRef]), i0.ɵmpd(5120, i0.LOCALE_ID, i0.ɵq, [[3, i0.LOCALE_ID]]), i0.ɵmpd(4608, i5.NgLocalization, i5.NgLocaleLocalization, [i0.LOCALE_ID, [2, i5.ɵa]]), i0.ɵmpd(4608, i0.Compiler, i0.Compiler, []), i0.ɵmpd(5120, i0.APP_ID, i0.ɵi, []), i0.ɵmpd(5120, i0.IterableDiffers, i0.ɵn, []), i0.ɵmpd(5120, i0.KeyValueDiffers, i0.ɵo, []), i0.ɵmpd(4608, i6.DomSanitizer, i6.ɵe, [i5.DOCUMENT]), i0.ɵmpd(6144, i0.Sanitizer, null, [i6.DomSanitizer]), i0.ɵmpd(4608, i6.HAMMER_GESTURE_CONFIG, i6.HammerGestureConfig, []), i0.ɵmpd(5120, i6.EVENT_MANAGER_PLUGINS, function (p0_0, p0_1, p1_0, p2_0, p2_1) { return [new i6.ɵDomEventsPlugin(p0_0, p0_1), new i6.ɵKeyEventsPlugin(p1_0), new i6.ɵHammerGesturesPlugin(p2_0, p2_1)]; }, [i5.DOCUMENT, i0.NgZone, i5.DOCUMENT, i5.DOCUMENT, i6.HAMMER_GESTURE_CONFIG]), i0.ɵmpd(4608, i6.EventManager, i6.EventManager, [i6.EVENT_MANAGER_PLUGINS, i0.NgZone]), i0.ɵmpd(135680, i6.ɵDomSharedStylesHost, i6.ɵDomSharedStylesHost, [i5.DOCUMENT]), i0.ɵmpd(4608, i6.ɵDomRendererFactory2, i6.ɵDomRendererFactory2, [i6.EventManager, i6.ɵDomSharedStylesHost]), i0.ɵmpd(6144, i0.RendererFactory2, null, [i6.ɵDomRendererFactory2]), i0.ɵmpd(6144, i6.ɵSharedStylesHost, null, [i6.ɵDomSharedStylesHost]), i0.ɵmpd(4608, i0.Testability, i0.Testability, [i0.NgZone]), i0.ɵmpd(4608, i6.Meta, i6.Meta, [i5.DOCUMENT]), i0.ɵmpd(4608, i6.Title, i6.Title, [i5.DOCUMENT]), i0.ɵmpd(5120, "$injector", i7.ɵa, []), i0.ɵmpd(5120, "$rootScope", i7.ɵb, ["$injector"]), i0.ɵmpd(5120, "$compile", i7.ɵc, ["$injector"]), i0.ɵmpd(5120, "$parse", i7.ɵd, ["$injector"]), i0.ɵmpd(5120, "$uiRouter", i8.getUIRouter, ["$injector"]), i0.ɵmpd(5120, i9.UIRouter, i8.uiRouterUpgradeFactory, ["$uiRouter", i0.Injector]), i0.ɵmpd(5120, i10.StateRegistry, i11.fnStateRegistry, [i9.UIRouter]), i0.ɵmpd(5120, "UIView.PARENT_INJECT", i8.getParentUIViewInject, [i10.StateRegistry]), i0.ɵmpd(5120, i12.StateService, i11.fnStateService, [i9.UIRouter]), i0.ɵmpd(5120, i13.TransitionService, i11.fnTransitionService, [i9.UIRouter]), i0.ɵmpd(5120, i14.UrlMatcherFactory, i11.fnUrlMatcherFactory, [i9.UIRouter]), i0.ɵmpd(5120, i15.UrlRouter, i11.fnUrlRouter, [i9.UIRouter]), i0.ɵmpd(5120, i16.UrlService, i11.fnUrlService, [i9.UIRouter]), i0.ɵmpd(5120, i17.ViewService, i11.fnViewService, [i9.UIRouter]), i0.ɵmpd(5120, i18.UIRouterGlobals, i11.fnGlobals, [i9.UIRouter]), i0.ɵmpd(4608, i19.ɵi, i19.ɵi, []), i0.ɵmpd(4608, i0.NgModuleFactoryLoader, i0.SystemJsNgModuleLoader, [i0.Compiler, [2, i0.SystemJsNgModuleLoaderConfig]]), i0.ɵmpd(5120, "DialogService", i1.getDialogService, ["$injector"]), i0.ɵmpd(5120, "Contacts", i1.getContactsService, ["$injector"]), i0.ɵmpd(512, i5.CommonModule, i5.CommonModule, []), i0.ɵmpd(1024, i0.ErrorHandler, i6.ɵa, []), i0.ɵmpd(1024, i0.APP_INITIALIZER, function (p0_0) { return [i6.ɵh(p0_0)]; }, [[2, i0.NgProbeToken]]), i0.ɵmpd(512, i0.ApplicationInitStatus, i0.ApplicationInitStatus, [[2, i0.APP_INITIALIZER]]), i0.ɵmpd(131584, i0.ApplicationRef, i0.ApplicationRef, [i0.NgZone, i0.ɵConsole, i0.Injector, i0.ErrorHandler, i0.ComponentFactoryResolver, i0.ApplicationInitStatus]), i0.ɵmpd(512, i0.ApplicationModule, i0.ApplicationModule, [i0.ApplicationRef]), i0.ɵmpd(512, i6.BrowserModule, i6.BrowserModule, [[3, i6.BrowserModule]]), i0.ɵmpd(512, i7.UpgradeModule, i7.UpgradeModule, [i0.Injector, i0.NgZone]), i0.ɵmpd(512, i20.UIRouterModule, i20.UIRouterModule, []), i0.ɵmpd(512, i8.UIRouterUpgradeModule, i8.UIRouterUpgradeModule, []), i0.ɵmpd(512, i19.ɵba, i19.ɵba, []), i0.ɵmpd(512, i19.FormsModule, i19.FormsModule, []), i0.ɵmpd(512, i21.PrefsModule, i21.PrefsModule, []), i0.ɵmpd(512, i1.SampleAppModuleAngular, i1.SampleAppModuleAngular, [i7.UpgradeModule]), i0.ɵmpd(1024, i20.UIROUTER_ROOT_MODULE, function () { return [{}]; }, []), i0.ɵmpd(1024, i20.UIROUTER_MODULE_TOKEN, function () { return [{ states: [{ parent: "app", name: "prefs", url: "/prefs", component: i22.PrefsComponent, data: { requiresAuth: true } }] }, { states: [{ name: "contacts.**", url: "/contacts", loadChildren: "./contacts/contacts.module#ContactsModule" }] }]; }, []), i0.ɵmpd(1024, i23.ROUTES, function () { return [[{ parent: "app", name: "prefs", url: "/prefs", component: i22.PrefsComponent, data: { requiresAuth: true } }], [{ name: "contacts.**", url: "/contacts", loadChildren: "./contacts/contacts.module#ContactsModule" }]]; }, [])]); });
 exports.SampleAppModuleAngularNgFactory = SampleAppModuleAngularNgFactory;
@@ -1373,6 +1373,7 @@ exports.SampleAppModuleAngularNgFactory = SampleAppModuleAngularNgFactory;
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(3);
 var static_1 = __webpack_require__(52);
+var angular_hybrid_1 = __webpack_require__(66);
 var angularJSModule_1 = __webpack_require__(57);
 // Create a "future state" (a placeholder) for the Contacts
 // Angular module which will be lazy loaded by UI-Router
@@ -1417,8 +1418,8 @@ exports.SampleAppModuleAngular = SampleAppModuleAngular;
  */ 
 Object.defineProperty(exports, "__esModule", { value: true });
 var i0 = __webpack_require__(3);
-var i1 = __webpack_require__(66);
-var i2 = __webpack_require__(81);
+var i1 = __webpack_require__(67);
+var i2 = __webpack_require__(82);
 var i3 = __webpack_require__(11);
 var i4 = __webpack_require__(52);
 var i5 = __webpack_require__(25);
@@ -1462,7 +1463,7 @@ exports.UIViewNgUpgradeNgFactory = UIViewNgUpgradeNgFactory;
 Object.defineProperty(exports, "__esModule", { value: true });
 var i0 = __webpack_require__(3);
 var i1 = __webpack_require__(54);
-var i2 = __webpack_require__(80);
+var i2 = __webpack_require__(81);
 var styles_PrefsComponent = [];
 var RenderType_PrefsComponent = i0.ɵcrt({ encapsulation: 2, styles: styles_PrefsComponent, data: {} });
 exports.RenderType_PrefsComponent = RenderType_PrefsComponent;
@@ -1522,7 +1523,7 @@ exports.PrefsModule = PrefsModule;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var prefs_component_1 = __webpack_require__(80);
+var prefs_component_1 = __webpack_require__(81);
 /**
  * This state allows the user to set their application preferences
  */
@@ -1563,7 +1564,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // External dependencies
 var angular = __webpack_require__(8);
 var angularjs_1 = __webpack_require__(58);
-var angular_hybrid_1 = __webpack_require__(101);
+var angular_hybrid_1 = __webpack_require__(66);
 // Feature Modules
 var index_1 = __webpack_require__(204);
 var index_2 = __webpack_require__(212);
@@ -1599,7 +1600,7 @@ exports.sampleAppModuleAngularJS.run(traceRunBlock);
 
 /***/ }),
 
-/***/ 80:
+/***/ 81:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1632,7 +1633,7 @@ exports.PrefsComponent = PrefsComponent;
 
 /***/ }),
 
-/***/ 81:
+/***/ 82:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

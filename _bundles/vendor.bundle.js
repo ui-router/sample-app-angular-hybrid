@@ -83,7 +83,7 @@
 /******/ 		// start chunk loading
 /******/ 		var head = document.getElementsByTagName('head')[0];
 /******/ 		var script = document.createElement('script');
-/******/ 		script.type = 'text/javascript';
+/******/ 		script.type = "text/javascript";
 /******/ 		script.charset = 'utf-8';
 /******/ 		script.async = true;
 /******/ 		script.timeout = 120000;
@@ -1249,11 +1249,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_share___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_operator_share__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_Subscription__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_Subscription___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_Subscription__);
 /**
- * @license Angular v5.2.3
+ * @license Angular v5.2.4
  * (c) 2010-2018 Google, Inc. https://angular.io/
  * License: MIT
  */
+
 
 
 
@@ -1967,7 +1970,7 @@ var Version = /** @class */ (function () {
 /**
  * \@stable
  */
-var VERSION = new Version('5.2.3');
+var VERSION = new Version('5.2.4');
 
 /**
  * @fileoverview added by tsickle
@@ -2081,6 +2084,7 @@ var __self = typeof self !== 'undefined' && typeof WorkerGlobalScope !== 'undefi
     self instanceof WorkerGlobalScope && self;
 var __global = typeof global !== 'undefined' && global;
 var _global = __window || __global || __self;
+var promise = Promise.resolve(0);
 var _symbolIterator = null;
 /**
  * @return {?}
@@ -2110,7 +2114,13 @@ function getSymbolIterator() {
  * @return {?}
  */
 function scheduleMicroTask(fn) {
-    Zone.current.scheduleMicroTask('scheduleMicrotask', fn);
+    if (typeof Zone === 'undefined') {
+        // use promise to schedule microTask instead of use Zone
+        promise.then(function () { fn && fn.apply(null, null); });
+    }
+    else {
+        Zone.current.scheduleMicroTask('scheduleMicrotask', fn);
+    }
 }
 /**
  * @param {?} a
@@ -5589,7 +5599,11 @@ var EventEmitter = /** @class */ (function (_super) {
                     this.__isAsync ? function () { setTimeout(function () { return complete(); }); } : function () { complete(); };
             }
         }
-        return _super.prototype.subscribe.call(this, schedulerFn, errorFn, completeFn);
+        var /** @type {?} */ sink = _super.prototype.subscribe.call(this, schedulerFn, errorFn, completeFn);
+        if (generatorOrNext instanceof __WEBPACK_IMPORTED_MODULE_5_rxjs_Subscription__["Subscription"]) {
+            generatorOrNext.add(sink);
+        }
+        return sink;
     };
     return EventEmitter;
 }(__WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__["Subject"]));
@@ -20543,7 +20557,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(9));
 __export(__webpack_require__(128));
 __export(__webpack_require__(129));
-__export(__webpack_require__(87));
+__export(__webpack_require__(88));
 __export(__webpack_require__(130));
 __export(__webpack_require__(140));
 __export(__webpack_require__(141));
@@ -20562,7 +20576,7 @@ __export(__webpack_require__(146));
 
 var root_1 = __webpack_require__(15);
 var toSubscriber_1 = __webpack_require__(147);
-var observable_1 = __webpack_require__(68);
+var observable_1 = __webpack_require__(69);
 var pipe_1 = __webpack_require__(106);
 /**
  * A representation of any set of values over any amount of time. This is the most basic building block
@@ -20894,9 +20908,9 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var isFunction_1 = __webpack_require__(102);
-var Subscription_1 = __webpack_require__(21);
+var Subscription_1 = __webpack_require__(17);
 var Observer_1 = __webpack_require__(105);
-var rxSubscriber_1 = __webpack_require__(67);
+var rxSubscriber_1 = __webpack_require__(68);
 /**
  * Implements the {@link Observer} interface and extends the
  * {@link Subscription} class. While the {@link Observer} is the public API for
@@ -21274,7 +21288,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_tslib__ = __webpack_require__(14);
 /**
- * @license Angular v5.2.3
+ * @license Angular v5.2.4
  * (c) 2010-2018 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -27800,7 +27814,7 @@ function isPlatformWorkerUi(platformId) {
 /**
  * \@stable
  */
-var VERSION = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["Version"]('5.2.3');
+var VERSION = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["Version"]('5.2.4');
 
 /**
  * @fileoverview added by tsickle
@@ -28490,7 +28504,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_core__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__statebuilders_views__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__statebuilders_views__ = __webpack_require__(74);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mergeInjector__ = __webpack_require__(158);
 /** @ng2api @module directives */
 /** */
@@ -28741,8 +28755,207 @@ var UIView = /** @class */ (function () {
 //# sourceMappingURL=uiView.js.map
 
 /***/ }),
-/* 17 */,
-/* 18 */
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var isArray_1 = __webpack_require__(31);
+var isObject_1 = __webpack_require__(103);
+var isFunction_1 = __webpack_require__(102);
+var tryCatch_1 = __webpack_require__(148);
+var errorObject_1 = __webpack_require__(104);
+var UnsubscriptionError_1 = __webpack_require__(149);
+/**
+ * Represents a disposable resource, such as the execution of an Observable. A
+ * Subscription has one important method, `unsubscribe`, that takes no argument
+ * and just disposes the resource held by the subscription.
+ *
+ * Additionally, subscriptions may be grouped together through the `add()`
+ * method, which will attach a child Subscription to the current Subscription.
+ * When a Subscription is unsubscribed, all its children (and its grandchildren)
+ * will be unsubscribed as well.
+ *
+ * @class Subscription
+ */
+var Subscription = (function () {
+    /**
+     * @param {function(): void} [unsubscribe] A function describing how to
+     * perform the disposal of resources when the `unsubscribe` method is called.
+     */
+    function Subscription(unsubscribe) {
+        /**
+         * A flag to indicate whether this Subscription has already been unsubscribed.
+         * @type {boolean}
+         */
+        this.closed = false;
+        this._parent = null;
+        this._parents = null;
+        this._subscriptions = null;
+        if (unsubscribe) {
+            this._unsubscribe = unsubscribe;
+        }
+    }
+    /**
+     * Disposes the resources held by the subscription. May, for instance, cancel
+     * an ongoing Observable execution or cancel any other type of work that
+     * started when the Subscription was created.
+     * @return {void}
+     */
+    Subscription.prototype.unsubscribe = function () {
+        var hasErrors = false;
+        var errors;
+        if (this.closed) {
+            return;
+        }
+        var _a = this, _parent = _a._parent, _parents = _a._parents, _unsubscribe = _a._unsubscribe, _subscriptions = _a._subscriptions;
+        this.closed = true;
+        this._parent = null;
+        this._parents = null;
+        // null out _subscriptions first so any child subscriptions that attempt
+        // to remove themselves from this subscription will noop
+        this._subscriptions = null;
+        var index = -1;
+        var len = _parents ? _parents.length : 0;
+        // if this._parent is null, then so is this._parents, and we
+        // don't have to remove ourselves from any parent subscriptions.
+        while (_parent) {
+            _parent.remove(this);
+            // if this._parents is null or index >= len,
+            // then _parent is set to null, and the loop exits
+            _parent = ++index < len && _parents[index] || null;
+        }
+        if (isFunction_1.isFunction(_unsubscribe)) {
+            var trial = tryCatch_1.tryCatch(_unsubscribe).call(this);
+            if (trial === errorObject_1.errorObject) {
+                hasErrors = true;
+                errors = errors || (errorObject_1.errorObject.e instanceof UnsubscriptionError_1.UnsubscriptionError ?
+                    flattenUnsubscriptionErrors(errorObject_1.errorObject.e.errors) : [errorObject_1.errorObject.e]);
+            }
+        }
+        if (isArray_1.isArray(_subscriptions)) {
+            index = -1;
+            len = _subscriptions.length;
+            while (++index < len) {
+                var sub = _subscriptions[index];
+                if (isObject_1.isObject(sub)) {
+                    var trial = tryCatch_1.tryCatch(sub.unsubscribe).call(sub);
+                    if (trial === errorObject_1.errorObject) {
+                        hasErrors = true;
+                        errors = errors || [];
+                        var err = errorObject_1.errorObject.e;
+                        if (err instanceof UnsubscriptionError_1.UnsubscriptionError) {
+                            errors = errors.concat(flattenUnsubscriptionErrors(err.errors));
+                        }
+                        else {
+                            errors.push(err);
+                        }
+                    }
+                }
+            }
+        }
+        if (hasErrors) {
+            throw new UnsubscriptionError_1.UnsubscriptionError(errors);
+        }
+    };
+    /**
+     * Adds a tear down to be called during the unsubscribe() of this
+     * Subscription.
+     *
+     * If the tear down being added is a subscription that is already
+     * unsubscribed, is the same reference `add` is being called on, or is
+     * `Subscription.EMPTY`, it will not be added.
+     *
+     * If this subscription is already in an `closed` state, the passed
+     * tear down logic will be executed immediately.
+     *
+     * @param {TeardownLogic} teardown The additional logic to execute on
+     * teardown.
+     * @return {Subscription} Returns the Subscription used or created to be
+     * added to the inner subscriptions list. This Subscription can be used with
+     * `remove()` to remove the passed teardown logic from the inner subscriptions
+     * list.
+     */
+    Subscription.prototype.add = function (teardown) {
+        if (!teardown || (teardown === Subscription.EMPTY)) {
+            return Subscription.EMPTY;
+        }
+        if (teardown === this) {
+            return this;
+        }
+        var subscription = teardown;
+        switch (typeof teardown) {
+            case 'function':
+                subscription = new Subscription(teardown);
+            case 'object':
+                if (subscription.closed || typeof subscription.unsubscribe !== 'function') {
+                    return subscription;
+                }
+                else if (this.closed) {
+                    subscription.unsubscribe();
+                    return subscription;
+                }
+                else if (typeof subscription._addParent !== 'function' /* quack quack */) {
+                    var tmp = subscription;
+                    subscription = new Subscription();
+                    subscription._subscriptions = [tmp];
+                }
+                break;
+            default:
+                throw new Error('unrecognized teardown ' + teardown + ' added to Subscription.');
+        }
+        var subscriptions = this._subscriptions || (this._subscriptions = []);
+        subscriptions.push(subscription);
+        subscription._addParent(this);
+        return subscription;
+    };
+    /**
+     * Removes a Subscription from the internal list of subscriptions that will
+     * unsubscribe during the unsubscribe process of this Subscription.
+     * @param {Subscription} subscription The subscription to remove.
+     * @return {void}
+     */
+    Subscription.prototype.remove = function (subscription) {
+        var subscriptions = this._subscriptions;
+        if (subscriptions) {
+            var subscriptionIndex = subscriptions.indexOf(subscription);
+            if (subscriptionIndex !== -1) {
+                subscriptions.splice(subscriptionIndex, 1);
+            }
+        }
+    };
+    Subscription.prototype._addParent = function (parent) {
+        var _a = this, _parent = _a._parent, _parents = _a._parents;
+        if (!_parent || _parent === parent) {
+            // If we don't have a parent, or the new parent is the same as the
+            // current parent, then set this._parent to the new parent.
+            this._parent = parent;
+        }
+        else if (!_parents) {
+            // If there's already one parent, but not multiple, allocate an Array to
+            // store the rest of the parent Subscriptions.
+            this._parents = [parent];
+        }
+        else if (_parents.indexOf(parent) === -1) {
+            // Only add the new parent to the _parents list if it's not already there.
+            _parents.push(parent);
+        }
+    };
+    Subscription.EMPTY = (function (empty) {
+        empty.closed = true;
+        return empty;
+    }(new Subscription()));
+    return Subscription;
+}());
+exports.Subscription = Subscription;
+function flattenUnsubscriptionErrors(errors) {
+    return errors.reduce(function (errs, err) { return errs.concat((err instanceof UnsubscriptionError_1.UnsubscriptionError) ? err.errors : err); }, []);
+}
+//# sourceMappingURL=Subscription.js.map
+
+/***/ }),
+/* 18 */,
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28764,7 +28977,7 @@ var TransitionHookScope;
 //# sourceMappingURL=interface.js.map
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28919,7 +29132,7 @@ exports.TargetState = TargetState;
 //# sourceMappingURL=targetState.js.map
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29125,205 +29338,6 @@ exports.Param = Param;
 //# sourceMappingURL=param.js.map
 
 /***/ }),
-/* 21 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var isArray_1 = __webpack_require__(31);
-var isObject_1 = __webpack_require__(103);
-var isFunction_1 = __webpack_require__(102);
-var tryCatch_1 = __webpack_require__(148);
-var errorObject_1 = __webpack_require__(104);
-var UnsubscriptionError_1 = __webpack_require__(149);
-/**
- * Represents a disposable resource, such as the execution of an Observable. A
- * Subscription has one important method, `unsubscribe`, that takes no argument
- * and just disposes the resource held by the subscription.
- *
- * Additionally, subscriptions may be grouped together through the `add()`
- * method, which will attach a child Subscription to the current Subscription.
- * When a Subscription is unsubscribed, all its children (and its grandchildren)
- * will be unsubscribed as well.
- *
- * @class Subscription
- */
-var Subscription = (function () {
-    /**
-     * @param {function(): void} [unsubscribe] A function describing how to
-     * perform the disposal of resources when the `unsubscribe` method is called.
-     */
-    function Subscription(unsubscribe) {
-        /**
-         * A flag to indicate whether this Subscription has already been unsubscribed.
-         * @type {boolean}
-         */
-        this.closed = false;
-        this._parent = null;
-        this._parents = null;
-        this._subscriptions = null;
-        if (unsubscribe) {
-            this._unsubscribe = unsubscribe;
-        }
-    }
-    /**
-     * Disposes the resources held by the subscription. May, for instance, cancel
-     * an ongoing Observable execution or cancel any other type of work that
-     * started when the Subscription was created.
-     * @return {void}
-     */
-    Subscription.prototype.unsubscribe = function () {
-        var hasErrors = false;
-        var errors;
-        if (this.closed) {
-            return;
-        }
-        var _a = this, _parent = _a._parent, _parents = _a._parents, _unsubscribe = _a._unsubscribe, _subscriptions = _a._subscriptions;
-        this.closed = true;
-        this._parent = null;
-        this._parents = null;
-        // null out _subscriptions first so any child subscriptions that attempt
-        // to remove themselves from this subscription will noop
-        this._subscriptions = null;
-        var index = -1;
-        var len = _parents ? _parents.length : 0;
-        // if this._parent is null, then so is this._parents, and we
-        // don't have to remove ourselves from any parent subscriptions.
-        while (_parent) {
-            _parent.remove(this);
-            // if this._parents is null or index >= len,
-            // then _parent is set to null, and the loop exits
-            _parent = ++index < len && _parents[index] || null;
-        }
-        if (isFunction_1.isFunction(_unsubscribe)) {
-            var trial = tryCatch_1.tryCatch(_unsubscribe).call(this);
-            if (trial === errorObject_1.errorObject) {
-                hasErrors = true;
-                errors = errors || (errorObject_1.errorObject.e instanceof UnsubscriptionError_1.UnsubscriptionError ?
-                    flattenUnsubscriptionErrors(errorObject_1.errorObject.e.errors) : [errorObject_1.errorObject.e]);
-            }
-        }
-        if (isArray_1.isArray(_subscriptions)) {
-            index = -1;
-            len = _subscriptions.length;
-            while (++index < len) {
-                var sub = _subscriptions[index];
-                if (isObject_1.isObject(sub)) {
-                    var trial = tryCatch_1.tryCatch(sub.unsubscribe).call(sub);
-                    if (trial === errorObject_1.errorObject) {
-                        hasErrors = true;
-                        errors = errors || [];
-                        var err = errorObject_1.errorObject.e;
-                        if (err instanceof UnsubscriptionError_1.UnsubscriptionError) {
-                            errors = errors.concat(flattenUnsubscriptionErrors(err.errors));
-                        }
-                        else {
-                            errors.push(err);
-                        }
-                    }
-                }
-            }
-        }
-        if (hasErrors) {
-            throw new UnsubscriptionError_1.UnsubscriptionError(errors);
-        }
-    };
-    /**
-     * Adds a tear down to be called during the unsubscribe() of this
-     * Subscription.
-     *
-     * If the tear down being added is a subscription that is already
-     * unsubscribed, is the same reference `add` is being called on, or is
-     * `Subscription.EMPTY`, it will not be added.
-     *
-     * If this subscription is already in an `closed` state, the passed
-     * tear down logic will be executed immediately.
-     *
-     * @param {TeardownLogic} teardown The additional logic to execute on
-     * teardown.
-     * @return {Subscription} Returns the Subscription used or created to be
-     * added to the inner subscriptions list. This Subscription can be used with
-     * `remove()` to remove the passed teardown logic from the inner subscriptions
-     * list.
-     */
-    Subscription.prototype.add = function (teardown) {
-        if (!teardown || (teardown === Subscription.EMPTY)) {
-            return Subscription.EMPTY;
-        }
-        if (teardown === this) {
-            return this;
-        }
-        var subscription = teardown;
-        switch (typeof teardown) {
-            case 'function':
-                subscription = new Subscription(teardown);
-            case 'object':
-                if (subscription.closed || typeof subscription.unsubscribe !== 'function') {
-                    return subscription;
-                }
-                else if (this.closed) {
-                    subscription.unsubscribe();
-                    return subscription;
-                }
-                else if (typeof subscription._addParent !== 'function' /* quack quack */) {
-                    var tmp = subscription;
-                    subscription = new Subscription();
-                    subscription._subscriptions = [tmp];
-                }
-                break;
-            default:
-                throw new Error('unrecognized teardown ' + teardown + ' added to Subscription.');
-        }
-        var subscriptions = this._subscriptions || (this._subscriptions = []);
-        subscriptions.push(subscription);
-        subscription._addParent(this);
-        return subscription;
-    };
-    /**
-     * Removes a Subscription from the internal list of subscriptions that will
-     * unsubscribe during the unsubscribe process of this Subscription.
-     * @param {Subscription} subscription The subscription to remove.
-     * @return {void}
-     */
-    Subscription.prototype.remove = function (subscription) {
-        var subscriptions = this._subscriptions;
-        if (subscriptions) {
-            var subscriptionIndex = subscriptions.indexOf(subscription);
-            if (subscriptionIndex !== -1) {
-                subscriptions.splice(subscriptionIndex, 1);
-            }
-        }
-    };
-    Subscription.prototype._addParent = function (parent) {
-        var _a = this, _parent = _a._parent, _parents = _a._parents;
-        if (!_parent || _parent === parent) {
-            // If we don't have a parent, or the new parent is the same as the
-            // current parent, then set this._parent to the new parent.
-            this._parent = parent;
-        }
-        else if (!_parents) {
-            // If there's already one parent, but not multiple, allocate an Array to
-            // store the rest of the parent Subscriptions.
-            this._parents = [parent];
-        }
-        else if (_parents.indexOf(parent) === -1) {
-            // Only add the new parent to the _parents list if it's not already there.
-            _parents.push(parent);
-        }
-    };
-    Subscription.EMPTY = (function (empty) {
-        empty.closed = true;
-        return empty;
-    }(new Subscription()));
-    return Subscription;
-}());
-exports.Subscription = Subscription;
-function flattenUnsubscriptionErrors(errors) {
-    return errors.reduce(function (errs, err) { return errs.concat((err instanceof UnsubscriptionError_1.UnsubscriptionError) ? err.errors : err); }, []);
-}
-//# sourceMappingURL=Subscription.js.map
-
-/***/ }),
 /* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -29336,10 +29350,10 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Observable_1 = __webpack_require__(5);
 var Subscriber_1 = __webpack_require__(7);
-var Subscription_1 = __webpack_require__(21);
-var ObjectUnsubscribedError_1 = __webpack_require__(72);
+var Subscription_1 = __webpack_require__(17);
+var ObjectUnsubscribedError_1 = __webpack_require__(73);
 var SubjectSubscription_1 = __webpack_require__(110);
-var rxSubscriber_1 = __webpack_require__(67);
+var rxSubscriber_1 = __webpack_require__(68);
 /**
  * @class SubjectSubscriber<T>
  */
@@ -29555,7 +29569,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_tslib__ = __webpack_require__(14);
 /**
- * @license Angular v5.2.3
+ * @license Angular v5.2.4
  * (c) 2010-2018 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -34747,7 +34761,7 @@ var By = /** @class */ (function () {
 /**
  * \@stable
  */
-var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('5.2.3');
+var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('5.2.4');
 
 /**
  * @fileoverview added by tsickle
@@ -34995,7 +35009,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @module transition
  */
 /** for typedoc */
-var interface_1 = __webpack_require__(18);
+var interface_1 = __webpack_require__(19);
 var transition_1 = __webpack_require__(38);
 var hookRegistry_1 = __webpack_require__(62);
 var coreResolvables_1 = __webpack_require__(131);
@@ -35005,8 +35019,8 @@ var resolve_1 = __webpack_require__(134);
 var views_1 = __webpack_require__(135);
 var updateGlobals_1 = __webpack_require__(136);
 var url_1 = __webpack_require__(137);
-var lazyLoad_1 = __webpack_require__(92);
-var transitionEventType_1 = __webpack_require__(93);
+var lazyLoad_1 = __webpack_require__(93);
+var transitionEventType_1 = __webpack_require__(94);
 var transitionHook_1 = __webpack_require__(29);
 var predicates_1 = __webpack_require__(1);
 var common_1 = __webpack_require__(0);
@@ -35518,7 +35532,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @module transition
  */
 /** for typedoc */
-var interface_1 = __webpack_require__(18);
+var interface_1 = __webpack_require__(19);
 var common_1 = __webpack_require__(0);
 var strings_1 = __webpack_require__(12);
 var predicates_1 = __webpack_require__(1);
@@ -35526,7 +35540,7 @@ var hof_1 = __webpack_require__(2);
 var trace_1 = __webpack_require__(13);
 var coreservices_1 = __webpack_require__(6);
 var rejectFactory_1 = __webpack_require__(28);
-var targetState_1 = __webpack_require__(19);
+var targetState_1 = __webpack_require__(20);
 var defaultOptions = {
     current: common_1.noop,
     transition: null,
@@ -36026,9 +36040,9 @@ var isArrayLike_1 = __webpack_require__(108);
 var isPromise_1 = __webpack_require__(109);
 var isObject_1 = __webpack_require__(103);
 var Observable_1 = __webpack_require__(5);
-var iterator_1 = __webpack_require__(71);
+var iterator_1 = __webpack_require__(72);
 var InnerSubscriber_1 = __webpack_require__(152);
-var observable_1 = __webpack_require__(68);
+var observable_1 = __webpack_require__(69);
 function subscribeToResult(outerSubscriber, result, outerValue, outerIndex) {
     var destination = new InnerSubscriber_1.InnerSubscriber(outerSubscriber, outerValue, outerIndex);
     if (destination.closed) {
@@ -36156,11 +36170,11 @@ var pathUtils_1 = __webpack_require__(39);
 var pathNode_1 = __webpack_require__(63);
 var transitionService_1 = __webpack_require__(26);
 var rejectFactory_1 = __webpack_require__(28);
-var targetState_1 = __webpack_require__(19);
-var param_1 = __webpack_require__(20);
+var targetState_1 = __webpack_require__(20);
+var param_1 = __webpack_require__(21);
 var glob_1 = __webpack_require__(60);
 var resolveContext_1 = __webpack_require__(40);
-var lazyLoad_1 = __webpack_require__(92);
+var lazyLoad_1 = __webpack_require__(93);
 var hof_1 = __webpack_require__(2);
 /**
  * Provides state related service functions
@@ -36718,7 +36732,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @coreapi
  * @module core
  */ /** */
-var stateParams_1 = __webpack_require__(86);
+var stateParams_1 = __webpack_require__(87);
 var queue_1 = __webpack_require__(61);
 /**
  * Global router state
@@ -36796,12 +36810,12 @@ var strings_1 = __webpack_require__(12);
 var common_1 = __webpack_require__(0);
 var predicates_1 = __webpack_require__(1);
 var hof_1 = __webpack_require__(2);
-var interface_1 = __webpack_require__(18); // has or is using
+var interface_1 = __webpack_require__(19); // has or is using
 var transitionHook_1 = __webpack_require__(29);
 var hookRegistry_1 = __webpack_require__(62);
-var hookBuilder_1 = __webpack_require__(83);
+var hookBuilder_1 = __webpack_require__(84);
 var pathUtils_1 = __webpack_require__(39);
-var param_1 = __webpack_require__(20);
+var param_1 = __webpack_require__(21);
 var resolvable_1 = __webpack_require__(30);
 var resolveContext_1 = __webpack_require__(40);
 /** @hidden */
@@ -37437,7 +37451,7 @@ exports.Transition = Transition;
 Object.defineProperty(exports, "__esModule", { value: true });
 var common_1 = __webpack_require__(0);
 var hof_1 = __webpack_require__(2);
-var targetState_1 = __webpack_require__(19);
+var targetState_1 = __webpack_require__(20);
 var pathNode_1 = __webpack_require__(63);
 /**
  * This class contains functions which convert TargetStates, Nodes and paths from one type to another.
@@ -37620,7 +37634,7 @@ var common_1 = __webpack_require__(0);
 var hof_1 = __webpack_require__(2);
 var trace_1 = __webpack_require__(13);
 var coreservices_1 = __webpack_require__(6);
-var interface_1 = __webpack_require__(84);
+var interface_1 = __webpack_require__(85);
 var resolvable_1 = __webpack_require__(30);
 var pathUtils_1 = __webpack_require__(39);
 var strings_1 = __webpack_require__(12);
@@ -37826,9 +37840,9 @@ var UIInjectorImpl = /** @class */ (function () {
  * @module state
  */ /** for typedoc */
 Object.defineProperty(exports, "__esModule", { value: true });
-var stateMatcher_1 = __webpack_require__(89);
-var stateBuilder_1 = __webpack_require__(88);
-var stateQueueManager_1 = __webpack_require__(90);
+var stateMatcher_1 = __webpack_require__(90);
+var stateBuilder_1 = __webpack_require__(89);
+var stateQueueManager_1 = __webpack_require__(91);
 var common_1 = __webpack_require__(0);
 var hof_1 = __webpack_require__(2);
 var StateRegistry = /** @class */ (function () {
@@ -37991,8 +38005,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var common_1 = __webpack_require__(0);
 var predicates_1 = __webpack_require__(1);
 var urlMatcher_1 = __webpack_require__(43);
-var param_1 = __webpack_require__(20);
-var paramTypes_1 = __webpack_require__(85);
+var param_1 = __webpack_require__(21);
+var paramTypes_1 = __webpack_require__(86);
 /**
  * Factory for [[UrlMatcher]] instances.
  *
@@ -38122,7 +38136,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var common_1 = __webpack_require__(0);
 var hof_1 = __webpack_require__(2);
 var predicates_1 = __webpack_require__(1);
-var param_1 = __webpack_require__(20);
+var param_1 = __webpack_require__(21);
 var strings_1 = __webpack_require__(12);
 /** @hidden */
 function quoteRegExp(str, param) {
@@ -38650,8 +38664,8 @@ var common_1 = __webpack_require__(0);
 var predicates_1 = __webpack_require__(1);
 var urlMatcher_1 = __webpack_require__(43);
 var hof_1 = __webpack_require__(2);
-var urlRule_1 = __webpack_require__(91);
-var targetState_1 = __webpack_require__(19);
+var urlRule_1 = __webpack_require__(92);
+var targetState_1 = __webpack_require__(20);
 var common_2 = __webpack_require__(9);
 /** @hidden */
 function appendBasePath(url, isHtml5, absolute, baseHref) {
@@ -39552,11 +39566,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__uirouter_core__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__uirouter_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__uirouter_core__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_uiView__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__statebuilders_views__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__uiRouterConfig__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__statebuilders_views__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__uiRouterConfig__ = __webpack_require__(78);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__uiRouterNgModule__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__statebuilders_lazyLoad__ = __webpack_require__(120);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__uirouter_rx__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__uirouter_rx__ = __webpack_require__(79);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__location_locationService__ = __webpack_require__(182);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__location_locationConfig__ = __webpack_require__(183);
 /**
@@ -39764,7 +39778,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(23);
 /**
- * @license Angular v5.2.3
+ * @license Angular v5.2.4
  * (c) 2010-2018 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -40429,7 +40443,7 @@ function downgradeInjectable(token) {
 /**
  * @stable
  */
-var VERSION = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["Version"]('5.2.3');
+var VERSION = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["Version"]('5.2.4');
 
 /**
  * @license
@@ -41579,13 +41593,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_observable_forkJoin__ = __webpack_require__(177);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_observable_forkJoin___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_observable_forkJoin__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_observable_fromPromise__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_observable_fromPromise__ = __webpack_require__(76);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_observable_fromPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_observable_fromPromise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__ = __webpack_require__(23);
 /**
- * @license Angular v5.2.3
+ * @license Angular v5.2.4
  * (c) 2010-2018 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -49576,7 +49590,7 @@ var FormBuilder = /** @class */ (function () {
 /**
  * \@stable
  */
-var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('5.2.3');
+var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('5.2.4');
 
 /**
  * @fileoverview added by tsickle
@@ -49770,9 +49784,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__uirouter_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__uirouter_core__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__ = __webpack_require__(115);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_observable_of__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_observable_of__ = __webpack_require__(75);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_observable_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_observable_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_observable_fromPromise__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_observable_fromPromise__ = __webpack_require__(76);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_observable_fromPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_fromPromise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_observable_combineLatest__ = __webpack_require__(167);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_observable_combineLatest___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_observable_combineLatest__);
@@ -50074,7 +50088,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__ = __webpack_require__(75);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_operator_concatMap__ = __webpack_require__(184);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_operator_concatMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_operator_concatMap__);
@@ -50092,9 +50106,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_rxjs_operator_concatAll___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12_rxjs_operator_concatAll__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_rxjs_operator_first__ = __webpack_require__(189);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_rxjs_operator_first___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_rxjs_operator_first__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_rxjs_util_EmptyError__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_rxjs_util_EmptyError__ = __webpack_require__(80);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_rxjs_util_EmptyError___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_rxjs_util_EmptyError__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_rxjs_observable_fromPromise__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_rxjs_observable_fromPromise__ = __webpack_require__(76);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_rxjs_observable_fromPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15_rxjs_observable_fromPromise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_rxjs_operator_every__ = __webpack_require__(191);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_rxjs_operator_every___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_16_rxjs_operator_every__);
@@ -50108,7 +50122,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_rxjs_operator_filter__ = __webpack_require__(202);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_rxjs_operator_filter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_21_rxjs_operator_filter__);
 /**
- * @license Angular v5.2.3
+ * @license Angular v5.2.4
  * (c) 2010-2018 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -54884,14 +54898,15 @@ var Router = /** @class */ (function () {
      */
     function () {
         var _this = this;
-        // Zone.current.wrap is needed because of the issue with RxJS scheduler,
-        // which does not work properly with zone.js in IE and Safari
+        // Don't need to use Zone.wrap any more, because zone.js
+        // already patch onPopState, so location change callback will
+        // run into ngZone
         if (!this.locationSubscription) {
-            this.locationSubscription = /** @type {?} */ (this.location.subscribe(Zone.current.wrap(function (change) {
+            this.locationSubscription = /** @type {?} */ (this.location.subscribe(function (change) {
                 var /** @type {?} */ rawUrlTree = _this.urlSerializer.parse(change['url']);
                 var /** @type {?} */ source = change['type'] === 'popstate' ? 'popstate' : 'hashchange';
                 setTimeout(function () { _this.scheduleNavigation(rawUrlTree, source, { replaceUrl: true }); }, 0);
-            })));
+            }));
         }
     };
     Object.defineProperty(Router.prototype, "url", {
@@ -57513,7 +57528,7 @@ function provideRouterInitializer() {
 /**
  * \@stable
  */
-var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('5.2.3');
+var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('5.2.4');
 
 /**
  * @fileoverview added by tsickle
@@ -57578,7 +57593,7 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('5.2.3'
 /**
  * State-based routing for AngularJS 1.x
  * This bundle requires the ui-router-core.js bundle from the @uirouter/core package.
- * @version v1.0.14
+ * @version v1.0.15
  * @link https://ui-router.github.io
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
@@ -59560,8 +59575,8 @@ ng.module('ui.router.state').provider('$uiViewScroll', $ViewScrollProvider);
 var index = 'ui.router';
 
 Object.keys(core).forEach(function (key) { exports[key] = core[key]; });
-exports.default = index;
 exports.core = core;
+exports.default = index;
 exports.watchDigests = watchDigests;
 exports.getLocals = getLocals;
 exports.getNg1ViewConfigFactory = getNg1ViewConfigFactory;
@@ -59792,11 +59807,8 @@ exports.Glob = Glob;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+/** @module common */
 var common_1 = __webpack_require__(0);
-/**
- * @module common
- */
-/** for typedoc */
 var Queue = /** @class */ (function () {
     function Queue(_items, _limit) {
         if (_items === void 0) { _items = []; }
@@ -59858,7 +59870,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @module transition
  */ /** for typedoc */
 var common_1 = __webpack_require__(9);
-var interface_1 = __webpack_require__(18);
+var interface_1 = __webpack_require__(19);
 /**
  * Determines if the given state matches the matchCriteria
  *
@@ -60021,7 +60033,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /** @module path */ /** for typedoc */
 var common_1 = __webpack_require__(0);
 var hof_1 = __webpack_require__(2);
-var param_1 = __webpack_require__(20);
+var param_1 = __webpack_require__(21);
 /**
  * @internalapi
  *
@@ -60313,6 +60325,23 @@ exports.locationPluginFactory = locationPluginFactory;
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_hybrid__ = __webpack_require__(67);
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "upgradeModule", function() { return __WEBPACK_IMPORTED_MODULE_0__angular_hybrid__["upgradeModule"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "objectFactory", function() { return __WEBPACK_IMPORTED_MODULE_0__angular_hybrid__["objectFactory"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UIViewNgUpgrade", function() { return __WEBPACK_IMPORTED_MODULE_0__angular_hybrid__["UIViewNgUpgrade"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "uiRouterUpgradeFactory", function() { return __WEBPACK_IMPORTED_MODULE_0__angular_hybrid__["uiRouterUpgradeFactory"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "getUIRouter", function() { return __WEBPACK_IMPORTED_MODULE_0__angular_hybrid__["getUIRouter"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "getParentUIViewInject", function() { return __WEBPACK_IMPORTED_MODULE_0__angular_hybrid__["getParentUIViewInject"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UIRouterUpgradeModule", function() { return __WEBPACK_IMPORTED_MODULE_0__angular_hybrid__["UIRouterUpgradeModule"]; });
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+/* 67 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "upgradeModule", function() { return upgradeModule; });
 /* harmony export (immutable) */ __webpack_exports__["objectFactory"] = objectFactory;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UIViewNgUpgrade", function() { return UIViewNgUpgrade; });
@@ -60329,7 +60358,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__uirouter_angular__ = __webpack_require__(123);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__uirouter_angularjs__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__uirouter_angularjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__uirouter_angularjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__uirouter_rx__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__uirouter_rx__ = __webpack_require__(79);
 
 
 
@@ -60479,6 +60508,13 @@ function getParentUIViewInject(r) {
 var UIRouterUpgradeModule = /** @class */ (function () {
     function UIRouterUpgradeModule() {
     }
+    UIRouterUpgradeModule.forChild = function (module) {
+        if (module === void 0) { module = {}; }
+        return {
+            ngModule: UIRouterUpgradeModule,
+            providers: Object(__WEBPACK_IMPORTED_MODULE_4__uirouter_angular__["makeChildProviders"])(module),
+        };
+    };
     UIRouterUpgradeModule.decorators = [
         { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"], args: [{
                     imports: [__WEBPACK_IMPORTED_MODULE_4__uirouter_angular__["UIRouterModule"], __WEBPACK_IMPORTED_MODULE_2__angular_upgrade_static__["UpgradeModule"]],
@@ -60569,7 +60605,7 @@ upgradeModule.run(['$view', '$templateFactory', function ($view, $templateFactor
 //# sourceMappingURL=angular-hybrid.js.map
 
 /***/ }),
-/* 67 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60585,7 +60621,7 @@ exports.$$rxSubscriber = exports.rxSubscriber;
 //# sourceMappingURL=rxSubscriber.js.map
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60617,12 +60653,12 @@ exports.$$observable = exports.observable;
 //# sourceMappingURL=observable.js.map
 
 /***/ }),
-/* 69 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var mergeMap_1 = __webpack_require__(70);
+var mergeMap_1 = __webpack_require__(71);
 var identity_1 = __webpack_require__(153);
 /**
  * Converts a higher-order Observable into a first-order Observable which
@@ -60676,7 +60712,7 @@ exports.mergeAll = mergeAll;
 //# sourceMappingURL=mergeAll.js.map
 
 /***/ }),
-/* 70 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60855,7 +60891,7 @@ exports.MergeMapSubscriber = MergeMapSubscriber;
 //# sourceMappingURL=mergeMap.js.map
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60899,7 +60935,7 @@ exports.$$iterator = exports.iterator;
 //# sourceMappingURL=iterator.js.map
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60932,7 +60968,7 @@ exports.ObjectUnsubscribedError = ObjectUnsubscribedError;
 //# sourceMappingURL=ObjectUnsubscribedError.js.map
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -60989,7 +61025,7 @@ var Ng2ViewConfig = /** @class */ (function () {
 //# sourceMappingURL=views.js.map
 
 /***/ }),
-/* 74 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60999,7 +61035,7 @@ exports.of = ArrayObservable_1.ArrayObservable.of;
 //# sourceMappingURL=of.js.map
 
 /***/ }),
-/* 75 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61009,13 +61045,13 @@ exports.fromPromise = PromiseObservable_1.PromiseObservable.create;
 //# sourceMappingURL=fromPromise.js.map
 
 /***/ }),
-/* 76 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var isScheduler_1 = __webpack_require__(49);
-var of_1 = __webpack_require__(74);
+var of_1 = __webpack_require__(75);
 var from_1 = __webpack_require__(117);
 var concatAll_1 = __webpack_require__(118);
 /* tslint:enable:max-line-length */
@@ -61126,7 +61162,7 @@ exports.concat = concat;
 //# sourceMappingURL=concat.js.map
 
 /***/ }),
-/* 77 */
+/* 78 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -61153,7 +61189,7 @@ function applyRootModuleConfig(uiRouter, injector, module) {
 //# sourceMappingURL=uiRouterConfig.js.map
 
 /***/ }),
-/* 78 */
+/* 79 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -61165,7 +61201,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 79 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61199,9 +61235,9 @@ exports.EmptyError = EmptyError;
 //# sourceMappingURL=EmptyError.js.map
 
 /***/ }),
-/* 80 */,
 /* 81 */,
-/* 82 */
+/* 82 */,
+/* 83 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -61301,13 +61337,13 @@ var UISrefActive = /** @class */ (function () {
         });
     }
     Object.defineProperty(UISrefActive.prototype, "active", {
-        set: function (val) { this._classes = val.split('\s+'); },
+        set: function (val) { this._classes = val.split(/\s+/); },
         enumerable: true,
         configurable: true
     });
     ;
     Object.defineProperty(UISrefActive.prototype, "activeEq", {
-        set: function (val) { this._classesEq = val.split('\s+'); },
+        set: function (val) { this._classesEq = val.split(/\s+/); },
         enumerable: true,
         configurable: true
     });
@@ -61336,7 +61372,7 @@ var UISrefActive = /** @class */ (function () {
 //# sourceMappingURL=uiSrefActive.js.map
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61348,7 +61384,7 @@ var UISrefActive = /** @class */ (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var common_1 = __webpack_require__(0);
 var predicates_1 = __webpack_require__(1);
-var interface_1 = __webpack_require__(18);
+var interface_1 = __webpack_require__(19);
 var transitionHook_1 = __webpack_require__(29);
 /**
  * This class returns applicable TransitionHooks for a specific Transition instance.
@@ -61461,7 +61497,7 @@ function tupleSort(reverseDepthSort) {
 //# sourceMappingURL=hookBuilder.js.map
 
 /***/ }),
-/* 84 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61482,7 +61518,7 @@ exports.resolvePolicies = {
 //# sourceMappingURL=interface.js.map
 
 /***/ }),
-/* 85 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61645,7 +61681,7 @@ initDefaultTypes();
 //# sourceMappingURL=paramTypes.js.map
 
 /***/ }),
-/* 86 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61695,7 +61731,7 @@ exports.StateParams = StateParams;
 //# sourceMappingURL=stateParams.js.map
 
 /***/ }),
-/* 87 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61705,13 +61741,13 @@ function __export(m) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 /** @module resolve */ /** for typedoc */
-__export(__webpack_require__(84));
+__export(__webpack_require__(85));
 __export(__webpack_require__(30));
 __export(__webpack_require__(40));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 88 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61997,7 +62033,7 @@ exports.StateBuilder = StateBuilder;
 //# sourceMappingURL=stateBuilder.js.map
 
 /***/ }),
-/* 89 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62069,7 +62105,7 @@ exports.StateMatcher = StateMatcher;
 //# sourceMappingURL=stateMatcher.js.map
 
 /***/ }),
-/* 90 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62167,7 +62203,7 @@ exports.StateQueueManager = StateQueueManager;
 //# sourceMappingURL=stateQueueManager.js.map
 
 /***/ }),
-/* 91 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62382,7 +62418,7 @@ exports.BaseUrlRule = BaseUrlRule;
 //# sourceMappingURL=urlRule.js.map
 
 /***/ }),
-/* 92 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62485,7 +62521,7 @@ exports.lazyLoadState = lazyLoadState;
 //# sourceMappingURL=lazyLoad.js.map
 
 /***/ }),
-/* 93 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62520,7 +62556,7 @@ exports.TransitionEventType = TransitionEventType;
 //# sourceMappingURL=transitionEventType.js.map
 
 /***/ }),
-/* 94 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62581,7 +62617,7 @@ exports.$q = {
 //# sourceMappingURL=q.js.map
 
 /***/ }),
-/* 95 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62687,7 +62723,7 @@ exports.$injector = {
 //# sourceMappingURL=injector.js.map
 
 /***/ }),
-/* 96 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62734,7 +62770,7 @@ exports.HashLocationService = HashLocationService;
 //# sourceMappingURL=hashLocationService.js.map
 
 /***/ }),
-/* 97 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62774,7 +62810,7 @@ exports.MemoryLocationService = MemoryLocationService;
 //# sourceMappingURL=memoryLocationService.js.map
 
 /***/ }),
-/* 98 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62855,7 +62891,7 @@ exports.PushStateLocationService = PushStateLocationService;
 //# sourceMappingURL=pushStateLocationService.js.map
 
 /***/ }),
-/* 99 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62886,7 +62922,7 @@ exports.MemoryLocationConfig = MemoryLocationConfig;
 //# sourceMappingURL=memoryLocationConfig.js.map
 
 /***/ }),
-/* 100 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62937,23 +62973,6 @@ var BrowserLocationConfig = /** @class */ (function () {
 }());
 exports.BrowserLocationConfig = BrowserLocationConfig;
 //# sourceMappingURL=browserLocationConfig.js.map
-
-/***/ }),
-/* 101 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_hybrid__ = __webpack_require__(66);
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "upgradeModule", function() { return __WEBPACK_IMPORTED_MODULE_0__angular_hybrid__["upgradeModule"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "objectFactory", function() { return __WEBPACK_IMPORTED_MODULE_0__angular_hybrid__["objectFactory"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UIViewNgUpgrade", function() { return __WEBPACK_IMPORTED_MODULE_0__angular_hybrid__["UIViewNgUpgrade"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "uiRouterUpgradeFactory", function() { return __WEBPACK_IMPORTED_MODULE_0__angular_hybrid__["uiRouterUpgradeFactory"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "getUIRouter", function() { return __WEBPACK_IMPORTED_MODULE_0__angular_hybrid__["getUIRouter"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "getParentUIViewInject", function() { return __WEBPACK_IMPORTED_MODULE_0__angular_hybrid__["getParentUIViewInject"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UIRouterUpgradeModule", function() { return __WEBPACK_IMPORTED_MODULE_0__angular_hybrid__["UIRouterUpgradeModule"]; });
-
-//# sourceMappingURL=index.js.map
 
 /***/ }),
 /* 102 */
@@ -63130,7 +63149,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Subscription_1 = __webpack_require__(21);
+var Subscription_1 = __webpack_require__(17);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @ignore
@@ -63293,9 +63312,9 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Subject_1 = __webpack_require__(22);
 var queue_1 = __webpack_require__(159);
-var Subscription_1 = __webpack_require__(21);
+var Subscription_1 = __webpack_require__(17);
 var observeOn_1 = __webpack_require__(114);
-var ObjectUnsubscribedError_1 = __webpack_require__(72);
+var ObjectUnsubscribedError_1 = __webpack_require__(73);
 var SubjectSubscription_1 = __webpack_require__(110);
 /**
  * @class ReplaySubject<T>
@@ -63521,7 +63540,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Subject_1 = __webpack_require__(22);
-var ObjectUnsubscribedError_1 = __webpack_require__(72);
+var ObjectUnsubscribedError_1 = __webpack_require__(73);
 /**
  * @class BehaviorSubject<T>
  */
@@ -63707,7 +63726,7 @@ exports.from = FromObservable_1.FromObservable.create;
 
 "use strict";
 
-var mergeAll_1 = __webpack_require__(69);
+var mergeAll_1 = __webpack_require__(70);
 /**
  * Converts a higher-order Observable into a first-order Observable by
  * concatenating the inner Observables in order.
@@ -63770,7 +63789,7 @@ exports.concatAll = concatAll;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return _UIROUTER_DIRECTIVES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return UIROUTER_DIRECTIVES; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uiSref__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uiSrefActive__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uiSrefActive__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__uiView__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__uiSrefStatus__ = __webpack_require__(55);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_2__uiView__["UIView"]; });
@@ -63877,7 +63896,7 @@ function ng2LazyLoadBuilder(state, parent) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_core__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__uiRouterNgModule__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__uiRouterConfig__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__uiRouterConfig__ = __webpack_require__(78);
 /** @ng2api @module core */
 /** */
 
@@ -64042,7 +64061,7 @@ function multiProviderParentChildDelta(parent, child, token) {
 
 "use strict";
 
-var mergeMap_1 = __webpack_require__(70);
+var mergeMap_1 = __webpack_require__(71);
 /* tslint:enable:max-line-length */
 /**
  * Projects each source value to an Observable which is merged in the output
@@ -64139,7 +64158,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "makeChildProviders", function() { return __WEBPACK_IMPORTED_MODULE_1__uiRouterNgModule__["makeChildProviders"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "locationStrategy", function() { return __WEBPACK_IMPORTED_MODULE_1__uiRouterNgModule__["locationStrategy"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UIRouterModule", function() { return __WEBPACK_IMPORTED_MODULE_1__uiRouterNgModule__["UIRouterModule"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__uiRouterConfig__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__uiRouterConfig__ = __webpack_require__(78);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "applyModuleConfig", function() { return __WEBPACK_IMPORTED_MODULE_2__uiRouterConfig__["a"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "applyRootModuleConfig", function() { return __WEBPACK_IMPORTED_MODULE_2__uiRouterConfig__["b"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_directives__ = __webpack_require__(119);
@@ -64150,7 +64169,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UISref", function() { return __WEBPACK_IMPORTED_MODULE_3__directives_directives__["c"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UISrefStatus", function() { return __WEBPACK_IMPORTED_MODULE_3__directives_directives__["e"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UISrefActive", function() { return __WEBPACK_IMPORTED_MODULE_3__directives_directives__["d"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__statebuilders_views__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__statebuilders_views__ = __webpack_require__(74);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ng2ViewsBuilder", function() { return __WEBPACK_IMPORTED_MODULE_4__statebuilders_views__["b"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Ng2ViewConfig", function() { return __WEBPACK_IMPORTED_MODULE_4__statebuilders_views__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__statebuilders_lazyLoad__ = __webpack_require__(120);
@@ -64183,11 +64202,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 	if(true)
 		module.exports = factory();
 	else if(typeof define === 'function' && define.amd)
-		define("ui-router-visualizer", [], factory);
+		define("@uirouter/visualizer", [], factory);
 	else if(typeof exports === 'object')
-		exports["ui-router-visualizer"] = factory();
+		exports["@uirouter/visualizer"] = factory();
 	else
-		root["ui-router-visualizer"] = factory();
+		root["@uirouter/visualizer"] = factory();
 })(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -70227,7 +70246,7 @@ if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
 
-var options = {"hmr":false}
+var options = {"hmr":false,"attrs":{"nonce":"uiroutervisualizer"}}
 options.transform = transform
 // add the styles to the DOM
 var update = __webpack_require__(33)(content, options);
@@ -71160,7 +71179,7 @@ if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
 
-var options = {"hmr":false}
+var options = {"hmr":false,"attrs":{"nonce":"uiroutervisualizer"}}
 options.transform = transform
 // add the styles to the DOM
 var update = __webpack_require__(33)(content, options);
@@ -71246,9 +71265,9 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-__export(__webpack_require__(20));
-__export(__webpack_require__(85));
+__export(__webpack_require__(21));
 __export(__webpack_require__(86));
+__export(__webpack_require__(87));
 __export(__webpack_require__(64));
 //# sourceMappingURL=index.js.map
 
@@ -71277,13 +71296,13 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-__export(__webpack_require__(88));
-__export(__webpack_require__(59));
 __export(__webpack_require__(89));
+__export(__webpack_require__(59));
 __export(__webpack_require__(90));
+__export(__webpack_require__(91));
 __export(__webpack_require__(41));
 __export(__webpack_require__(35));
-__export(__webpack_require__(19));
+__export(__webpack_require__(20));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
@@ -71296,7 +71315,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /** @module hooks */ /** */
 var transition_1 = __webpack_require__(38);
 var router_1 = __webpack_require__(25);
-var resolve_1 = __webpack_require__(87);
+var resolve_1 = __webpack_require__(88);
 var common_1 = __webpack_require__(9);
 function addCoreResolvables(trans) {
     trans.addResolvable(resolve_1.Resolvable.fromData(router_1.UIRouter, trans.router), '');
@@ -71317,16 +71336,14 @@ var isTransition = common_1.inArray(TRANSITION_TOKENS);
 // This function removes resolves for '$transition$' and `Transition` from the treeChanges.
 // Do not use this on current transitions, only on old ones.
 exports.treeChangesCleanup = function (trans) {
+    var nodes = common_1.values(trans.treeChanges()).reduce(common_1.unnestR, []).reduce(common_1.uniqR, []);
     // If the resolvable is a Transition, return a new resolvable with null data
     var replaceTransitionWithNull = function (r) {
         return isTransition(r.token) ? resolve_1.Resolvable.fromData(r.token, null) : r;
     };
-    var cleanPath = function (path) { return path.map(function (node) {
-        var resolvables = node.resolvables.map(replaceTransitionWithNull);
-        return common_1.extend(node.clone(), { resolvables: resolvables });
-    }); };
-    var treeChanges = trans.treeChanges();
-    common_1.mapObj(treeChanges, cleanPath, treeChanges);
+    nodes.forEach(function (node) {
+        node.resolvables = node.resolvables.map(replaceTransitionWithNull);
+    });
 };
 //# sourceMappingURL=coreResolvables.js.map
 
@@ -71340,7 +71357,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /** @module hooks */ /** */
 var predicates_1 = __webpack_require__(1);
 var coreservices_1 = __webpack_require__(6);
-var targetState_1 = __webpack_require__(19);
+var targetState_1 = __webpack_require__(20);
 /**
  * A [[TransitionHookFn]] that redirects to a different state or params
  *
@@ -71715,13 +71732,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @preferred
  * @module transition
  */ /** for typedoc */
-__export(__webpack_require__(18));
-__export(__webpack_require__(83));
+__export(__webpack_require__(19));
+__export(__webpack_require__(84));
 __export(__webpack_require__(62));
 __export(__webpack_require__(28));
 __export(__webpack_require__(38));
 __export(__webpack_require__(29));
-__export(__webpack_require__(93));
+__export(__webpack_require__(94));
 __export(__webpack_require__(26));
 //# sourceMappingURL=index.js.map
 
@@ -71738,7 +71755,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(43));
 __export(__webpack_require__(42));
 __export(__webpack_require__(44));
-__export(__webpack_require__(91));
+__export(__webpack_require__(92));
 __export(__webpack_require__(46));
 //# sourceMappingURL=index.js.map
 
@@ -71783,14 +71800,14 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-__export(__webpack_require__(94));
 __export(__webpack_require__(95));
-__export(__webpack_require__(47));
 __export(__webpack_require__(96));
+__export(__webpack_require__(47));
 __export(__webpack_require__(97));
 __export(__webpack_require__(98));
 __export(__webpack_require__(99));
 __export(__webpack_require__(100));
+__export(__webpack_require__(101));
 __export(__webpack_require__(65));
 __export(__webpack_require__(145));
 //# sourceMappingURL=index.js.map
@@ -71807,14 +71824,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @module vanilla
  */
 /** */
-var browserLocationConfig_1 = __webpack_require__(100);
-var hashLocationService_1 = __webpack_require__(96);
+var browserLocationConfig_1 = __webpack_require__(101);
+var hashLocationService_1 = __webpack_require__(97);
 var utils_1 = __webpack_require__(65);
-var pushStateLocationService_1 = __webpack_require__(98);
-var memoryLocationService_1 = __webpack_require__(97);
-var memoryLocationConfig_1 = __webpack_require__(99);
-var injector_1 = __webpack_require__(95);
-var q_1 = __webpack_require__(94);
+var pushStateLocationService_1 = __webpack_require__(99);
+var memoryLocationService_1 = __webpack_require__(98);
+var memoryLocationConfig_1 = __webpack_require__(100);
+var injector_1 = __webpack_require__(96);
+var q_1 = __webpack_require__(95);
 var coreservices_1 = __webpack_require__(6);
 function servicesPlugin(router) {
     coreservices_1.services.$injector = injector_1.$injector;
@@ -71864,7 +71881,7 @@ exports.UIRouterPluginBase = UIRouterPluginBase;
 "use strict";
 
 var Subscriber_1 = __webpack_require__(7);
-var rxSubscriber_1 = __webpack_require__(67);
+var rxSubscriber_1 = __webpack_require__(68);
 var Observer_1 = __webpack_require__(105);
 function toSubscriber(nextOrObserver, error, complete) {
     if (nextOrObserver) {
@@ -71959,7 +71976,7 @@ exports.noop = noop;
 var Observable_1 = __webpack_require__(5);
 var ArrayObservable_1 = __webpack_require__(32);
 var isScheduler_1 = __webpack_require__(49);
-var mergeAll_1 = __webpack_require__(69);
+var mergeAll_1 = __webpack_require__(70);
 /* tslint:enable:max-line-length */
 /**
  * Creates an output Observable which concurrently emits all values from every
@@ -72240,7 +72257,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 var Subject_1 = __webpack_require__(22);
 var Observable_1 = __webpack_require__(5);
 var Subscriber_1 = __webpack_require__(7);
-var Subscription_1 = __webpack_require__(21);
+var Subscription_1 = __webpack_require__(17);
 var refCount_1 = __webpack_require__(111);
 /**
  * @class ConnectableObservable<T>
@@ -72738,7 +72755,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Subscription_1 = __webpack_require__(21);
+var Subscription_1 = __webpack_require__(17);
 /**
  * A unit of work to be executed in a {@link Scheduler}. An action is typically
  * created from within a Scheduler and an RxJS user does not need to concern
@@ -73654,7 +73671,7 @@ var MapSubscriber = (function (_super) {
 "use strict";
 
 var concat_1 = __webpack_require__(173);
-var concat_2 = __webpack_require__(76);
+var concat_2 = __webpack_require__(77);
 exports.concatStatic = concat_2.concat;
 /* tslint:enable:max-line-length */
 /**
@@ -73722,8 +73739,8 @@ exports.concat = concat;
 
 "use strict";
 
-var concat_1 = __webpack_require__(76);
-var concat_2 = __webpack_require__(76);
+var concat_1 = __webpack_require__(77);
+var concat_2 = __webpack_require__(77);
 exports.concatStatic = concat_2.concat;
 /* tslint:enable:max-line-length */
 /**
@@ -73803,10 +73820,10 @@ var PromiseObservable_1 = __webpack_require__(116);
 var IteratorObservable_1 = __webpack_require__(175);
 var ArrayObservable_1 = __webpack_require__(32);
 var ArrayLikeObservable_1 = __webpack_require__(176);
-var iterator_1 = __webpack_require__(71);
+var iterator_1 = __webpack_require__(72);
 var Observable_1 = __webpack_require__(5);
 var observeOn_1 = __webpack_require__(114);
-var observable_1 = __webpack_require__(68);
+var observable_1 = __webpack_require__(69);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @extends {Ignored}
@@ -73926,7 +73943,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var root_1 = __webpack_require__(15);
 var Observable_1 = __webpack_require__(5);
-var iterator_1 = __webpack_require__(71);
+var iterator_1 = __webpack_require__(72);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @extends {Ignored}
@@ -74608,7 +74625,7 @@ exports.concatMap = concatMap;
 
 "use strict";
 
-var mergeMap_1 = __webpack_require__(70);
+var mergeMap_1 = __webpack_require__(71);
 /* tslint:enable:max-line-length */
 /**
  * Projects each source value to an Observable which is merged in the output
@@ -75005,7 +75022,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Subscriber_1 = __webpack_require__(7);
-var EmptyError_1 = __webpack_require__(79);
+var EmptyError_1 = __webpack_require__(80);
 /**
  * Emits only the first value (or the first value that meets some condition)
  * emitted by the source Observable.
@@ -75301,7 +75318,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Subscriber_1 = __webpack_require__(7);
-var EmptyError_1 = __webpack_require__(79);
+var EmptyError_1 = __webpack_require__(80);
 /* tslint:enable:max-line-length */
 /**
  * Returns an Observable that emits only the last item emitted by the source Observable.
@@ -75420,7 +75437,7 @@ var LastSubscriber = (function (_super) {
 
 "use strict";
 
-var mergeAll_1 = __webpack_require__(69);
+var mergeAll_1 = __webpack_require__(70);
 /**
  * Converts a higher-order Observable into a first-order Observable which
  * concurrently delivers all values that are emitted on the inner Observables.
@@ -76171,10 +76188,10 @@ __webpack_require__(54);
 __webpack_require__(240);
 __webpack_require__(56);
 __webpack_require__(4);
-__webpack_require__(101);
+__webpack_require__(66);
 __webpack_require__(58);
 __webpack_require__(123);
-__webpack_require__(78);
+__webpack_require__(79);
 module.exports = __webpack_require__(125);
 
 
@@ -79255,7 +79272,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__ = __webpack_require__(23);
 /**
- * @license Angular v5.2.3
+ * @license Angular v5.2.4
  * (c) 2010-2018 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -81975,7 +81992,7 @@ var JsonpModule = /** @class */ (function () {
 /**
  * @deprecated use \@angular/common/http instead
  */
-var VERSION = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["Version"]('5.2.3');
+var VERSION = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["Version"]('5.2.4');
 
 /**
  * @fileoverview added by tsickle
