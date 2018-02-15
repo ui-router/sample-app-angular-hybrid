@@ -226,10 +226,6 @@
   version "3.2.16"
   resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.2.16.tgz#04419c404a3194350e7d3f339a90e72c88db3111"
 
-"@types/jquery@3.3.0":
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.3.0.tgz#6316ac20a1a13c5d521a2dc661befc7184f73f5b"
-
 "@types/lodash@4.14.87":
   version "4.14.87"
   resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.87.tgz#55f92183b048c2c64402afe472f8333f4e319a6b"
@@ -276,12 +272,10 @@
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@types/sinon/-/sinon-4.0.0.tgz#9a93ffa4ee1329e85166278a5ed99f81dc4c8362"
 
-"@uirouter/angular-hybrid@3.1.10":
-  version "3.1.10"
-  resolved "https://registry.yarnpkg.com/@uirouter/angular-hybrid/-/angular-hybrid-3.1.10.tgz#8bfaa9e2c98ad45feffb324b91fbabb3b38c3734"
+"@uirouter/angular-hybrid@4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@uirouter/angular-hybrid/-/angular-hybrid-4.0.0.tgz#fbdb443a125f78b9efd11bbf4ece735f43ed3eec"
   dependencies:
-    "@types/angular" "1.6.42"
-    "@types/jquery" "3.3.0"
     "@uirouter/angular" "1.0.1"
     "@uirouter/angularjs" "1.0.15"
     "@uirouter/core" "5.0.17"
@@ -315,9 +309,9 @@
     rollup-plugin-uglify "^1.0.2"
     rollup-plugin-visualizer "^0.2.1"
 
-"@uirouter/visualizer@5.1.3":
-  version "5.1.3"
-  resolved "https://registry.yarnpkg.com/@uirouter/visualizer/-/visualizer-5.1.3.tgz#c62d57ee7f11f3414cd05232d4b7a698a2416a9b"
+"@uirouter/visualizer@6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@uirouter/visualizer/-/visualizer-6.0.0.tgz#8812198ab5c89d7dd252665573bc027f2dd2ff98"
   dependencies:
     d3-hierarchy "^1.1.5"
     d3-interpolate "^1.1.5"
