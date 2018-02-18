@@ -1,7 +1,7 @@
 {
   "files": [
-    "app/main.ts",
-    "app/contacts/contacts.module.ts"
+    "src/app/main.ts",
+    "src/app/contacts/contacts.module.ts"
   ],
   "compilerOptions": {
     "emitDecoratorMetadata": true,

@@ -5,7 +5,7 @@ var path = require('path');
 
 module.exports = {
   entry: {
-    "sampleapp": "./app/main.ts",
+    "sampleapp": "./src/app/main.ts",
 
     "vendor": [
       'angular',
@@ -40,7 +40,7 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'vendor.bundle.js'}),
     new AngularCompilerPlugin({
       "tsConfigPath": 'tsconfig.json',
-      "mainPath": 'app/main.ts',
+      "mainPath": 'src/app/main.ts',
       "sourceMap": true,
     }),
   ],
