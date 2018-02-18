@@ -34,10 +34,11 @@ class MessageController {
   folder;
   message;
   nextMessageGetter;
-  
+
   // data
   actions;
 
+  static $inject = ['$state', 'DialogService', 'Messages'];
   constructor(public $state, public DialogService, public Messages) { }
 
   /**

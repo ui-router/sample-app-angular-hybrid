@@ -8,6 +8,7 @@ class AuthedController {
   emailAddress;
   isAuthenticated;
 
+  static $inject = ['AppConfig', 'AuthService', '$state'];
   constructor(AppConfig, public AuthService, public $state) {
     this.emailAddress = AppConfig.emailAddress;
     this.isAuthenticated = AuthService.isAuthenticated();
@@ -23,7 +24,7 @@ class AuthedController {
 
 /**
  * This is the main app component for an authenticated user.
- * 
+ *
  * This component renders the outermost chrome (application header and tabs, the compose  and logout button)
  * It has a `ui-view` viewport for nested states to fill in.
  */

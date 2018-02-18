@@ -19,6 +19,7 @@ class LoginController {
 
   login;
 
+  static $inject = ['AppConfig', 'AuthService', '$state'];
   constructor(AppConfig, AuthService, $state) {
     this.usernames = AuthService.usernames;
 

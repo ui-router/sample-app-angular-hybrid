@@ -3,7 +3,8 @@ import { globalModule } from './global.module';
 
 export class DialogService {
   confirm;
-  
+
+  static $inject = ['$document', '$compile', '$rootScope'];
   constructor($document, $compile, $rootScope) {
     let body = $document.find("body");
     let elem = angular.element("<div class='dialog' dialog='opts'></div>");

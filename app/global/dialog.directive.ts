@@ -1,6 +1,7 @@
 import { globalModule } from './global.module';
 
-const dialogDirective = function($timeout, $q) {
+dialogDirective.$inject = ['$timeout', '$q'];
+function dialogDirective($timeout, $q) {
   return {
     link: (scope, elem) => {
       $timeout(() => elem.addClass('active'));
@@ -24,6 +25,6 @@ const dialogDirective = function($timeout, $q) {
       </div>
 `
   }
-};
+}
 
 globalModule.directive('dialog', dialogDirective);

@@ -8,6 +8,7 @@ export class AuthService {
   // data
   usernames: string[] = ['myself@angular.dev', 'devgal@angular.dev', 'devguy@angular.dev'];
 
+  static $inject = ['AppConfig', '$q', '$timeout'];
   constructor(public AppConfig: AppConfig, public $q, public $timeout) { }
 
   /**

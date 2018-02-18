@@ -48,6 +48,6 @@ export class SampleAppModuleAngular {
   constructor(private upgrade: UpgradeModule) { }
 
   ngDoBootstrap() {
-    this.upgrade.bootstrap(document.body, [sampleAppModuleAngularJS.name]);
+    this.upgrade.bootstrap(document.body, [sampleAppModuleAngularJS.name], { strictDi: true });
   }
 }

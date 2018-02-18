@@ -2,6 +2,7 @@ import { mymessagesModule } from '../mymessages.module';
 
 /** Provides services related to a message list */
 class MessageListUI {
+  static $inject = ['$filter', 'AppConfig'];
   constructor(public $filter, public AppConfig) { }
 
   /** This is a UI helper which finds the nearest messageId in the messages list to the messageId parameter */

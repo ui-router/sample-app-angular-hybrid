@@ -4,7 +4,8 @@ import { mymessagesModule } from '../mymessages.module';
 /**
  * A directive (for a table header) which changes the app's sort order
  */
-const sortMessagesDirective = (AppConfig) => {
+sortMessagesDirective.$inject = ['AppConfig'];
+function sortMessagesDirective(AppConfig) {
   return {
     restrict: 'A',
     link: function(scope, elem, attrs) {

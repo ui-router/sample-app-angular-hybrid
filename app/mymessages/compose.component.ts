@@ -8,12 +8,13 @@ class ComposeController {
   // bound
   $stateParams;
   $transition$;
-  
+
   // data
   pristineMessage;
   message;
   canExit: boolean;
 
+  static $inject = ['$state', 'DialogService', 'AppConfig', 'Messages'];
   constructor(public $state, public DialogService, public AppConfig, public Messages) { }
 
   /**

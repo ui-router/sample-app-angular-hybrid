@@ -1,21 +1,24 @@
 import { mymessagesModule } from './mymessages.module';
 
+messageTableController.$inject = ['AppConfig'];
+function messageTableController(AppConfig) {
+  this.AppConfig = AppConfig;
+  this.colVisible = (name) => this.columns.indexOf(name) !== -1;
+}
+
 /**
  * A component that displays a folder of messages as a table
- * 
+ *
  * If a row is clicked, the details of the message is shown using a relative ui-sref to `.message`.
- * 
+ *
  * ui-sref-active is used to highlight the selected row.
- * 
+ *
  * Shows/hides specific columns based on the `columns` input binding.
  */
 const messageTableComponent = {
   bindings: { columns: '<', messages: '<' },
 
-  controller: function(AppConfig) {
-    this.AppConfig = AppConfig;
-    this.colVisible = (name) => this.columns.indexOf(name) !== -1;
-  },
+  controller: messageTableController,
 
   template: `
     <table>

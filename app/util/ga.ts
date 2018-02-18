@@ -10,9 +10,12 @@ import { sampleAppModuleAngularJS } from "../angularJSModule";
 window['ga']('create', 'UA-73329341-1', 'auto');
 window['ga']('send', 'pageview');
 
-sampleAppModuleAngularJS.config($transitionsProvider => {
+sampleAppModuleAngularJS.config(googleAnalyticsConfigBlock);
+
+googleAnalyticsConfigBlock.$inject = ['$transitionsProvider'];
+function googleAnalyticsConfigBlock($transitionsProvider) {
   const vpv = (vpath) =>
-      window['ga']('send', 'pageview', vpath);
+    window['ga']('send', 'pageview', vpath);
 
   const path = (trans) => {
     const formattedRoute = trans.$to().url.format(trans.params());
@@ -29,4 +32,4 @@ sampleAppModuleAngularJS.config($transitionsProvider => {
 
   $transitionsProvider.onSuccess({}, (trans) => vpv(path(trans)), { priority: -10000 });
   $transitionsProvider.onError({}, (trans) => error(trans), { priority: -10000 });
-});
+}

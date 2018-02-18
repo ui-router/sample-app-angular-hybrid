@@ -20,6 +20,7 @@ import { globalModule } from './global.module';
 
 /** A fake Contacts REST client API */
 export class Contacts extends SessionStorage {
+  static $inject = ['$http', '$timeout', '$q', 'AppConfig'];
   constructor($http, $timeout, $q, AppConfig: AppConfig) {
     // http://beta.json-generator.com/api/json/get/V1g6UwwGx
     super($http, $timeout, $q, "contacts", "data/contacts.json", AppConfig);
@@ -28,12 +29,14 @@ export class Contacts extends SessionStorage {
 
 /** A fake Folders REST client API */
 export class Folders extends SessionStorage {
+  static $inject = ['$http', '$timeout', '$q', 'AppConfig'];
   constructor($http, $timeout, $q, AppConfig) {
     super($http, $timeout, $q, 'folders', 'data/folders.json', AppConfig);
   }
 }
 
 export class Messages extends SessionStorage {
+  static $inject = ['$http', '$timeout', '$q', 'AppConfig'];
   constructor($http, $timeout, $q, public AppConfig: AppConfig) {
     // http://beta.json-generator.com/api/json/get/VJl5GbIze
     super($http, $timeout, $q, 'messages', 'data/messages.json', AppConfig);

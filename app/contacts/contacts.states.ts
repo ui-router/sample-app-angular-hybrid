@@ -6,6 +6,7 @@ import {EditContact} from "./editContact.component";
 
 
 // Resolve all the contacts.  The resolved contacts are injected into the controller.
+resolveContacts.$inject = ['Contacts'];
 export function resolveContacts(Contacts) {
   return Contacts.all();
 }
@@ -27,6 +28,7 @@ export const contactsState: Ng2StateDeclaration = {
   component: Contacts
 };
 
+resolveContact.$inject = ['Contacts', '$transition$'];
 export function resolveContact(Contacts, $transition$) {
   return Contacts.get($transition$.params().contactId);
 }
