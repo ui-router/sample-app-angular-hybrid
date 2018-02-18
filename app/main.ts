@@ -40,7 +40,7 @@ sampleAppModuleAngularJS.config([ '$urlServiceProvider', ($urlService: UrlServic
 // Manually bootstrap the Angular app
 platformBrowserDynamic().bootstrapModule(SampleAppModuleAngular).then(platformRef => {
   // Intialize the Angular Module
-  // (get() any UIRouter service from DI to initialize it)
+  // get() the UIRouter instance from DI to initialize the router
   const urlService: UrlService = platformRef.injector.get(UIRouter).urlService;
 
   // Instruct UIRouter to listen to URL changes
