@@ -2,14 +2,15 @@ import { NgModule, NgModuleFactoryLoader, SystemJsNgModuleLoader } from '@angula
 import { UpgradeModule } from '@angular/upgrade/static';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { UIRouterUpgradeModule, NgHybridStateDeclaration } from '@uirouter/angular-hybrid';
-import { sampleAppModuleAngularJS } from './angularJSModule';
+import { UIRouterUpgradeModule } from '@uirouter/angular-hybrid';
+import { UIRouterModule } from '@uirouter/angular';
+import { sampleAppModuleAngularJS } from './app.angularjs.module';
 
 import { PrefsModule } from './prefs/prefs.module';
 
 // Create a "future state" (a placeholder) for the Contacts
 // Angular module which will be lazy loaded by UI-Router
-export const contactsFutureState: NgHybridStateDeclaration = {
+export const contactsFutureState = {
   name: 'contacts.**',
   url: '/contacts',
   loadChildren: './contacts/contacts.module#ContactsModule',
@@ -29,9 +30,10 @@ export function getContactsService($injector) {
     BrowserModule,
     // Provide angular upgrade capabilities
     UpgradeModule,
+    UIRouterUpgradeModule,
     // Provides the @uirouter/angular directives and registers
     // the future state for the lazy loaded contacts module
-    UIRouterUpgradeModule.forChild({ states: [contactsFutureState] }),
+    UIRouterModule.forChild({ states: [contactsFutureState] }),
     // The preferences feature module
     PrefsModule,
   ],
@@ -44,7 +46,7 @@ export function getContactsService($injector) {
     { provide: 'Contacts', deps: ['$injector'], useFactory: getContactsService },
   ]
 })
-export class SampleAppModuleAngular {
+export class AppModule {
   constructor(private upgrade: UpgradeModule) { }
 
   ngDoBootstrap() {

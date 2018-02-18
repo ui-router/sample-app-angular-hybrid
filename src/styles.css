@@ -1,0 +1,331 @@
+/* You can add global styles to this file, and also import other style files */
+
+button.btn i + span {
+  margin-left: 0.75em;
+}
+
+.flex-h {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.flex-v {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.flex-h > * {
+  flex: 1 1;
+}
+
+.flex.grow {
+  flex: 1 0 auto;
+}
+
+.flex.nogrow {
+  flex: 0 1 auto;
+}
+
+
+.home.buttons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 45%;
+}
+
+.home.buttons button {
+  padding: 2em;
+  margin: 0;
+  border: 3px solid black;
+  border-radius: 1em;
+  text-shadow: 0.1em 0.1em 0.1em black;
+}
+
+.home.buttons button i {
+  padding: 0;
+  margin: 0;
+  text-shadow: 0.1em 0.1em 0.1em black;
+}
+
+.navheader {
+  margin: 0.3em 0.3em 0 0.3em;
+}
+
+.navheader .nav-tabs li.active a:focus {
+  background-color: #f7f7f7;
+}
+
+.navheader .nav-tabs li.active a {
+  border-color: lightgray lightgray rgba(0,0,0,0) lightgray ;
+  background-color: #f7f7f7;
+}
+
+.navheader .nav-tabs li a {
+  border-width: 1px;
+  border-radius: 10px 10px 0 0;
+}
+
+.navheader .logged-in-user div.hoverdrop {
+  display: none;
+  position: absolute;
+  width: 100%;
+}
+
+.navheader .logged-in-user:hover div.hoverdrop {
+  display: flex;
+  flex-direction:row-reverse;
+}
+
+/* my messages */
+
+.my-messages {
+  width: 100%;
+  display: flex;
+  max-height: 200px;
+}
+
+.my-messages .folderlist {
+  flex: 0 0 auto;
+  overflow-y: scroll;
+  max-height: 200px;
+}
+
+
+
+
+/* selection lists */
+.selectlist {
+  margin: 0;
+  padding: 1.5em 0;
+  background-color: #DDD;
+}
+.selectlist a {
+  display: block;
+  color: black;
+  padding: 0.15em 1.5em;
+  text-decoration: none;
+  font-size: small;
+}
+.selectlist .selected {
+  background-color: cornflowerblue;
+}
+.selectlist .selected a {
+  color: white;
+}
+.selectlist i.fa {
+  width: 1.35em;
+}
+
+
+
+/* folder list */
+.selectlist .folder.selected i.fa:before {
+  content: "\f115";
+}
+.selectlist .folder:not(.selected) i.fa:before {
+  content: "\f114";
+}
+
+
+
+.ellipsis {
+  text-overflow: ellipsis;
+}
+
+
+
+
+/* message list */
+
+.messagelist {
+  flex: 1 0 12em;
+  overflow-y: scroll;
+  max-height: 200px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.messagelist table {
+  table-layout: fixed;
+  width:100%;
+}
+
+.messagelist thead td {
+  font-weight: bold;
+}
+
+.messagelist thead td.st-sort-ascent:after {
+  content: " \f0de";
+  font-family: "FontAwesome";
+}
+
+.messagelist thead td.st-sort-descent:after {
+  content: " \f0dd";
+  font-family: "FontAwesome";
+}
+
+.messagelist table td {
+  padding: 0.25em 0.75em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: small;
+  cursor: default;
+}
+
+.messagelist i.fa-circle {
+  color: cornflowerblue;
+  font-size: 50%;
+}
+
+.messagelist table tr.active {
+  background-color: cornflowerblue;
+  color: white;
+}
+
+.messagelist table td:nth-child(1){ width: 1.75em; }
+.messagelist table td:nth-child(2){ width: 21%; }
+.messagelist table td:nth-child(3){ width: 62%; }
+.messagelist table td:nth-child(4){ width: 15%; }
+
+.messagelist thead tr:first-child {
+  /*position:absolute;*/
+}
+
+.messagelist tbody tr:first-child td{
+  /*padding-top:28px;*/
+}
+
+
+
+
+/* message content */
+
+.message .header,.body {
+  padding: 1em 2em;
+}
+
+.message .header {
+  background-color: darkgray;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+
+.message .header .line2 {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+
+.compose .header label {
+  padding: 0 1em;
+  flex: 0 0 6em;
+}
+
+.compose .body {
+  background-color: lightgray;
+  height: 100%;
+}
+.compose .body textarea {
+  width: 100%;
+  border: 0;
+  outline: 0;
+}
+
+.compose .body .buttons {
+  padding: 1em 0;
+  float: right;
+}
+
+
+
+
+
+.contact {
+  padding: 1em 3em;
+}
+
+.contact .details > div {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.contact .details h3 {
+  margin-top: 0;
+}
+
+.contact .details label {
+  width: 8em;
+  flex: 0 1 auto;
+}
+
+.contact .details input {
+  flex: 1 1 auto;
+}
+
+
+
+
+
+.dialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+}
+
+.dialog .backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: opacity 0.25s ease;
+  background: #000;
+  opacity: 0;
+}
+
+.dialog.active .backdrop {
+  opacity: 0.5;
+}
+
+.dialog .wrapper {
+  z-index: 1041;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dialog .content {
+  transition: top 0.25s ease;
+  flex: 1 1 auto;
+  background: white;
+  padding: 2em;
+  position: relative;
+  top: -200px;
+}
+
+.dialog.active .content {
+  top: 4em;
+}
+
+
+.bounce-horizontal {
+  animation: bounce-horizontal 0.5s alternate infinite;
+}
+
+@keyframes bounce-horizontal {
+  0% { left: 1.5em; }
+  100% { left: 0.5em; }
+}

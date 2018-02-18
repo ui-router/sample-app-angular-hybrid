@@ -1,4 +1,4 @@
-import { sampleAppModuleAngularJS } from "../angularJSModule";
+import { sampleAppModuleAngularJS } from "../app.angularjs.module";
 
 /** Google analytics */
 
