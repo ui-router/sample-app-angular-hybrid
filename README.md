@@ -15,21 +15,30 @@ This sample app is intended to demonstrate a non-trivial ui-router application.
 - REST data retrieval (simulated)
 - Lazy loaded sub module (Contacts)
 
----
 
 ### Running
 
 `npm install`
 `npm start`
 
+### Angular-CLI
+
+The sample app has also been migrated to use the Angular CLI instead of custom webpack config.
+This can be seen in the [`angular-cli` branch](https://github.com/ui-router/sample-app-angular-hybrid/tree/angular-cli).
+Because it uses the CLI, it can also be live edited using stackblitz:
+
+https://stackblitz.com/github/ui-router/sample-app-angular-hybrid/tree/angular-cli
+
+---
+
 ### Visualizer
 
-We're using the [State and Transition Visualizer](http://github.com/ui-router/visualizer) to visually represent 
+We're using the [State and Transition Visualizer](http://github.com/ui-router/visualizer) to visually represent
 the current state tree, as well as the transitions between states.  Explore how transitions work by hovering
-over them, and clicking to expand details (params and resolves).  
+over them, and clicking to expand details (params and resolves).
 
 Note how states are _entered_ when they were previously not active, _exited_ and re-_entered_ when parameters change,
- and how parent states whose parameters did not change are _retained_.  Each of these (_exited, entered, retained_) 
+ and how parent states whose parameters did not change are _retained_.  Each of these (_exited, entered, retained_)
  correspond to a Transition Hook.
 
 ### Structure
@@ -43,9 +52,9 @@ Use what works for you.
 We organized ours in the following way:
 
 - Sub-module (feature) organization
-  - Each feature gets its own directory. 
+  - Each feature gets its own directory.
   - Features contain states and components
-  - Specific types of helper code (directives, services, etc) _used only within a feature_ may live in a subdirectory 
+  - Specific types of helper code (directives, services, etc) _used only within a feature_ may live in a subdirectory
   named after its type (`/mymessages/directives`)
 - Leveraging ES6 modules
   - Each state is defined in its own file
@@ -56,16 +65,16 @@ We organized ours in the following way:
   - The `feature.module.js` imports all states for the feature and registers then with the `$stateProvider`
 - A single angular module is defined for the entire application
   - Created, then exported from `bootstrap/ngmodule.js`
-  - The ng module is imported into some other module whenever services, config blocks, directives, etc need 
+  - The ng module is imported into some other module whenever services, config blocks, directives, etc need
   to be registered with angular.
-  
+
 ### UI-Router Patterns
-  
+
 - Defining custom, app-specific global behaviors
   - Add metadata to a state, or state tree
   - Check for metadata in transition hooks
   - Example: `routerhooks/redirectTo.js`
-    - If a transition directly to a state with a `redirectTo` property is started, 
+    - If a transition directly to a state with a `redirectTo` property is started,
     the transition will be redirected to the state which the property names.
   - Example: `routerhooks/authRequired.js`
     - If a transition to a state with a truthy `data.authRequired: true` property is started
