@@ -45,7 +45,7 @@
     "@angular/cli": "1.7.0",
     "@ngtools/webpack": "*",
     "@types/angular": "1.6.42",
-    "awesome-typescript-loader": "3.4.1",
+    "awesome-typescript-loader": "3.5.0",
     "browser-sync": "2.23.6",
     "cypress": "2.0.2",
     "d3": "4.13.0",
