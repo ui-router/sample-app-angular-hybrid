@@ -25,16 +25,16 @@
     "url": "https://github.com/ui-router/sample-app-angular-hybrid.git"
   },
   "dependencies": {
-    "@angular/common": "^5.2.4",
-    "@angular/compiler": "^5.2.4",
-    "@angular/compiler-cli": "^5.2.4",
-    "@angular/core": "^5.2.4",
-    "@angular/forms": "^5.2.4",
-    "@angular/http": "^5.2.4",
-    "@angular/platform-browser": "^5.2.4",
-    "@angular/platform-browser-dynamic": "^5.2.4",
-    "@angular/router": "^5.2.4",
-    "@angular/upgrade": "^5.2.4",
+    "@angular/common": "^5.2.8",
+    "@angular/compiler": "^5.2.8",
+    "@angular/compiler-cli": "^5.2.8",
+    "@angular/core": "^5.2.8",
+    "@angular/forms": "^5.2.8",
+    "@angular/http": "^5.2.8",
+    "@angular/platform-browser": "^5.2.8",
+    "@angular/platform-browser-dynamic": "^5.2.8",
+    "@angular/router": "^5.2.8",
+    "@angular/upgrade": "^5.2.8",
     "@uirouter/angular-hybrid": "4.0.0",
     "@uirouter/visualizer": "6.0.0",
     "angular": "1.6.9",
@@ -42,11 +42,11 @@
     "zone.js": "0.8.20"
   },
   "devDependencies": {
-    "@angular/cli": "1.7.0",
-    "@ngtools/webpack": "*",
-    "@types/angular": "1.6.42",
+    "@angular/cli": "1.7.3",
+    "@ngtools/webpack": "1.10.2",
+    "@types/angular": "1.6.43",
     "browser-sync": "2.23.6",
-    "cypress": "2.0.4",
+    "cypress": "2.1.0",
     "d3": "4.13.0",
     "npm-run-all": "4.1.2",
     "shx": "0.2.2",
@@ -54,6 +54,6 @@
     "typescript": "2.6.2",
     "wait-on": "2.1.0",
     "webpack": "3.11.0",
-    "webpack-dev-server": "3.1.0"
+    "webpack-dev-server": "3.1.1"
   }
 }
