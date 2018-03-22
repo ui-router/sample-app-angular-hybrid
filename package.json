@@ -47,7 +47,7 @@
     "@types/angular": "1.6.43",
     "browser-sync": "2.23.6",
     "cypress": "2.1.0",
-    "d3": "4.13.0",
+    "d3": "5.0.0",
     "npm-run-all": "4.1.2",
     "shx": "0.2.2",
     "source-map-loader": "0.2.3",
