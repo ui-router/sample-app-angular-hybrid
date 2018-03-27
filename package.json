@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@angular/cli": "1.7.3",
-    "@ngtools/webpack": "1.10.2",
+    "@ngtools/webpack": "6.0.0-beta.7",
     "@types/angular": "1.6.43",
     "browser-sync": "2.23.6",
     "cypress": "2.1.0",
