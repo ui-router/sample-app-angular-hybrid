@@ -42,7 +42,7 @@
     "zone.js": "0.8.20"
   },
   "devDependencies": {
-    "@angular/cli": "1.7.3",
+    "@angular/cli": "1.7.4",
     "@ngtools/webpack": "1.10.2",
     "@types/angular": "1.6.43",
     "browser-sync": "2.23.6",
