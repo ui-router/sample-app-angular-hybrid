@@ -7,10 +7,8 @@
     "serve": "webpack-dev-server --open --progress",
     "clean": "shx rm -rf _bundles transpiled",
     "build": "npm run clean && webpack",
-    "test": "run-s build e2e",
-    "e2e": "run-p -r browser-sync cypress",
-    "browser-sync": "browser-sync --port 4000 --no-open",
-    "cypress": "wait-on tcp:4000 && cypress run",
+    "test": "npm run build && cypress-runner run --path .",
+    "test:open": "npm run build && cypress-runner open --path .",
     "gh-pages": "git checkout gh-pages && git rebase master && rm -rf node_modules && yarn install && webpack && git add -f _bundles && git commit -m 'publish gh-pages' && git push origin gh-pages:gh-pages --force && git checkout master"
   },
   "contributors": [
@@ -45,15 +43,12 @@
     "@angular/cli": "1.7.3",
     "@ngtools/webpack": "1.10.2",
     "@types/angular": "1.6.43",
-    "browser-sync": "2.23.6",
-    "cypress": "2.1.0",
+    "@uirouter/cypress-runner": "^1.0.4",
     "d3": "4.13.0",
-    "npm-run-all": "4.1.2",
     "shx": "0.2.2",
     "source-map-loader": "0.2.3",
     "typescript": "2.6.2",
-    "wait-on": "2.1.0",
     "webpack": "3.11.0",
-    "webpack-dev-server": "3.1.1"
+    "webpack-dev-server": "^2.0.0"
   }
 }
