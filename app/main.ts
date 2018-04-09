@@ -23,6 +23,7 @@
 
 // Google analytics
 import './util/ga';
+import 'zone.js';
 
 ////////////// HYBRID BOOTSTRAP ///////////////
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';

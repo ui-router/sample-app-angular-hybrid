@@ -3,10 +3,10 @@
   "description": "Architecture overview demo for Angular UI-Router",
   "version": "1.0.2",
   "scripts": {
+    "clean": "shx rm -rf _bundles transpiled",
     "start": "npm run serve",
     "serve": "webpack-dev-server --open --progress",
-    "clean": "shx rm -rf _bundles transpiled",
-    "build": "npm run clean && webpack",
+    "build": "npm run clean && webpack --mode=production --progress",
     "test": "npm run build && cypress-runner run --path .",
     "test:open": "npm run build && cypress-runner open --path .",
     "gh-pages": "git checkout gh-pages && git rebase master && rm -rf node_modules && yarn install && webpack && git add -f _bundles && git commit -m 'publish gh-pages' && git push origin gh-pages:gh-pages --force && git checkout master"
@@ -40,14 +40,15 @@
     "zone.js": "0.8.20"
   },
   "devDependencies": {
-    "@angular/cli": "1.7.3",
-    "@ngtools/webpack": "1.10.2",
+    "@angular/cli": "1.7.4",
+    "@ngtools/webpack": "6.0.0-rc.2.4",
     "@types/angular": "1.6.43",
     "@uirouter/cypress-runner": "^1.0.4",
     "shx": "0.2.2",
     "source-map-loader": "0.2.3",
-    "typescript": "2.6.2",
-    "webpack": "3.11.0",
-    "webpack-dev-server": "^2.0.0"
+    "typescript": "2.8.1",
+    "webpack": "4.5.0",
+    "webpack-cli": "^2.0.14",
+    "webpack-dev-server": "^3.1.3"
   }
 }

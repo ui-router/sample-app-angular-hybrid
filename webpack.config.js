@@ -3,28 +3,16 @@ var webpack = require('webpack');
 var AngularCompilerPlugin = require('@ngtools/webpack').AngularCompilerPlugin;
 var path = require('path');
 
+var DEV_SERVER = process.argv[1].indexOf('webpack-dev-server') !== -1;
+var DEV = DEV_SERVER || process.env.DEV;
+
 module.exports = {
+  mode: DEV ? 'development' : 'production',
   entry: {
     "sampleapp": "./app/main.ts",
-
-    "vendor": [
-      'angular',
-      'zone.js',
-      '@angular/common',
-      '@angular/core',
-      '@angular/forms',
-      '@angular/http',
-      '@angular/router',
-      '@uirouter/core',
-      '@uirouter/angular-hybrid',
-      '@uirouter/angularjs',
-      '@uirouter/angular',
-      '@uirouter/rx',
-      '@uirouter/visualizer',
-    ]
   },
 
-  devtool: 'source-map',
+  devtool: DEV ? 'eval' :'source-map',
 
   output: {
     path: path.join(__dirname, "_bundles"),
@@ -36,8 +24,11 @@ module.exports = {
     extensions: ['.js', '.ts']
   },
 
+  optimization: {
+    splitChunks: { chunks: 'all', },
+  },
+
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'vendor.bundle.js'}),
     new AngularCompilerPlugin({
       "tsConfigPath": 'tsconfig.json',
       "mainPath": 'app/main.ts',
