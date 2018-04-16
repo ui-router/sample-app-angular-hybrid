@@ -24,6 +24,7 @@
 // Google analytics
 import './util/ga';
 import 'zone.js';
+import { NgZone } from '@angular/core';
 
 ////////////// HYBRID BOOTSTRAP ///////////////
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
@@ -45,8 +46,12 @@ platformBrowserDynamic().bootstrapModule(SampleAppModuleAngular).then(platformRe
   const urlService: UrlService = platformRef.injector.get(UIRouter).urlService;
 
   // Instruct UIRouter to listen to URL changes
-  urlService.listen();
-  urlService.sync();
+  function startUIRouter() {
+    urlService.listen();
+    urlService.sync();
+  }
+
+  platformRef.injector.get<NgZone>(NgZone).run(startUIRouter);
 });
 
 // Show ui-router-visualizer
