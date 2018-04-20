@@ -47,7 +47,7 @@
     "shx": "^0.2.2",
     "source-map-loader": "^0.2.3",
     "typescript": "^2.8.1",
-    "webpack": "^4.5.0",
+    "webpack": "^4.6.0",
     "webpack-cli": "^2.0.14",
     "webpack-dev-server": "^3.1.3"
   }
