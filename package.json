@@ -32,7 +32,7 @@
     "@angular/platform-browser": "^5.2.9",
     "@angular/platform-browser-dynamic": "^5.2.9",
     "@angular/router": "^5.2.9",
-    "@angular/upgrade": "^5.2.9",
+    "@angular/upgrade": "^5.2.10",
     "@uirouter/angular-hybrid": "^4.0.0",
     "@uirouter/visualizer": "^6.0.0",
     "angular": "^1.6.9",
