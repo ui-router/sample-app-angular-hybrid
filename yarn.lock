@@ -20,11 +20,11 @@
     rxjs "^5.5.6"
     source-map "^0.5.6"
 
-"@angular-devkit/core@0.5.4":
-  version "0.5.4"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-0.5.4.tgz#94b7462f5039cf811c7e06db0c87bb2299d61c71"
+"@angular-devkit/core@0.5.7":
+  version "0.5.7"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-0.5.7.tgz#77cff4d1d0a29040c8771b99cb849909691c3653"
   dependencies:
-    ajv "~5.5.1"
+    ajv "~6.4.0"
     chokidar "^1.7.0"
     rxjs "^6.0.0-beta.3"
     source-map "^0.5.6"
@@ -200,11 +200,11 @@
     tree-kill "^1.0.0"
     webpack-sources "^1.1.0"
 
-"@ngtools/webpack@^6.0.0-rc.2.4":
-  version "6.0.0-rc.2.4"
-  resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-6.0.0-rc.2.4.tgz#b3f727f2f4f750e411e220a478237f720ef22e9c"
+"@ngtools/webpack@^6.0.0-rc.5":
+  version "6.0.0-rc.5"
+  resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-6.0.0-rc.5.tgz#841c7cc8cde31e195e46703fcd925330f3cb2727"
   dependencies:
-    "@angular-devkit/core" "0.5.4"
+    "@angular-devkit/core" "0.5.7"
     tree-kill "^1.0.0"
     webpack-sources "^1.1.0"
 
@@ -397,7 +397,7 @@ ajv@^5.0.0, ajv@^5.1.0, ajv@~5.5.1:
     fast-json-stable-stringify "^2.0.0"
     json-schema-traverse "^0.3.0"
 
-ajv@^6.1.0, ajv@^6.1.1:
+ajv@^6.1.0, ajv@^6.1.1, ajv@~6.4.0:
   version "6.4.0"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.4.0.tgz#d3aff78e9277549771daf0164cff48482b754fc6"
   dependencies:
