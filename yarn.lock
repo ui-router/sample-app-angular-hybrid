@@ -6274,15 +6274,9 @@ rxjs@^5.0.0-beta.11, rxjs@^5.4.2, rxjs@^5.5.2, rxjs@^5.5.6:
   dependencies:
     symbol-observable "1.0.1"
 
-rxjs@^5.5.8:
-  version "5.5.10"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.5.10.tgz#fde02d7a614f6c8683d0d1957827f492e09db045"
-  dependencies:
-    symbol-observable "1.0.1"
-
-rxjs@^6.0.0-beta.3:
-  version "6.0.0-tactical-rc.1"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.0.0-tactical-rc.1.tgz#1fe1f1204132d1c71c72f249a487f8e76a5ec1d5"
+rxjs@^6.0.0, rxjs@^6.0.0-beta.3:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.0.0.tgz#d647e029b5854617f994c82fe57a4c6747b352da"
   dependencies:
     tslib "^1.9.0"
 
