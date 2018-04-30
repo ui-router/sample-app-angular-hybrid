@@ -20,9 +20,9 @@
     rxjs "^5.5.6"
     source-map "^0.5.6"
 
-"@angular-devkit/core@0.5.8":
-  version "0.5.8"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-0.5.8.tgz#7bc885cdc400378649766c605ce72a5492fd7ee9"
+"@angular-devkit/core@0.5.10":
+  version "0.5.10"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-0.5.10.tgz#351c26a54fe26dd39b08ba87913e5b4e70eeb238"
   dependencies:
     ajv "~6.4.0"
     chokidar "^1.7.0"
@@ -200,11 +200,11 @@
     tree-kill "^1.0.0"
     webpack-sources "^1.1.0"
 
-"@ngtools/webpack@^6.0.0-rc.6":
-  version "6.0.0-rc.6"
-  resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-6.0.0-rc.6.tgz#ae558c454d8330630ad62a39692a45406e4dac29"
+"@ngtools/webpack@^6.0.0-rc.8":
+  version "6.0.0-rc.8"
+  resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-6.0.0-rc.8.tgz#4efdfa0ec01475dd349442f5770e8af4ae6e5662"
   dependencies:
-    "@angular-devkit/core" "0.5.8"
+    "@angular-devkit/core" "0.5.10"
     tree-kill "^1.0.0"
     webpack-sources "^1.1.0"
 
