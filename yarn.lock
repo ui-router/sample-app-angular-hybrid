@@ -158,11 +158,11 @@
   dependencies:
     tslib "^1.7.1"
 
-"@angular/upgrade@^5.2.10":
-  version "5.2.10"
-  resolved "https://registry.yarnpkg.com/@angular/upgrade/-/upgrade-5.2.10.tgz#43c25a69a506c826fdb0c98a65703623009c7f5a"
+"@angular/upgrade@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@angular/upgrade/-/upgrade-6.0.0.tgz#932e39709b17a455018c3dfe63a5b8e794027f05"
   dependencies:
-    tslib "^1.7.1"
+    tslib "^1.9.0"
 
 "@cypress/listr-verbose-renderer@0.4.1":
   version "0.4.1"
