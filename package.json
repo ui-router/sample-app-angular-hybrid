@@ -42,7 +42,7 @@
   "devDependencies": {
     "@angular/cli": "^1.7.4",
     "@ngtools/webpack": "^6.0.0",
-    "@types/angular": "^1.6.43",
+    "@types/angular": "^1.6.45",
     "@uirouter/cypress-runner": "^1.0.7",
     "shx": "^0.2.2",
     "source-map-loader": "^0.2.3",
