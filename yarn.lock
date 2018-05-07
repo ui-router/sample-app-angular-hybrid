@@ -134,11 +134,11 @@
   dependencies:
     tslib "^1.7.1"
 
-"@angular/http@^5.2.10":
-  version "5.2.10"
-  resolved "https://registry.yarnpkg.com/@angular/http/-/http-5.2.10.tgz#d80d60fc205b043f72bd61ba22e7aa386d6a51ec"
+"@angular/http@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@angular/http/-/http-6.0.0.tgz#f409e35cd2f4990b43a37beab915ffdcd9c7c992"
   dependencies:
-    tslib "^1.7.1"
+    tslib "^1.9.0"
 
 "@angular/platform-browser-dynamic@^5.2.10":
   version "5.2.10"
