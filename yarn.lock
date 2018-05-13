@@ -220,30 +220,30 @@
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@types/sinon/-/sinon-4.0.0.tgz#9a93ffa4ee1329e85166278a5ed99f81dc4c8362"
 
-"@uirouter/angular-hybrid@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@uirouter/angular-hybrid/-/angular-hybrid-4.0.1.tgz#ead0fa30f3a61eddd228a7872b14e5164bc0d9fd"
+"@uirouter/angular-hybrid@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@uirouter/angular-hybrid/-/angular-hybrid-5.0.0.tgz#abff6c1e306cb26836667275beb4026832b80330"
   dependencies:
-    "@uirouter/angular" "1.1.0"
-    "@uirouter/angularjs" "1.0.16"
-    "@uirouter/core" "5.0.18"
+    "@uirouter/angular" "2.0.0"
+    "@uirouter/angularjs" "1.0.17"
+    "@uirouter/core" "5.0.19"
 
-"@uirouter/angular@1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@uirouter/angular/-/angular-1.1.0.tgz#f33923726d673cb8717d0e09b3c1227e1b4892c0"
+"@uirouter/angular@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@uirouter/angular/-/angular-2.0.0.tgz#fb5649e4c12fb1a6cca484495639d2d0c8b11399"
   dependencies:
-    "@uirouter/core" "5.0.18"
-    "@uirouter/rx" "0.4.5"
+    "@uirouter/core" "5.0.19"
+    "@uirouter/rx" "0.5.0"
 
-"@uirouter/angularjs@1.0.16":
-  version "1.0.16"
-  resolved "https://registry.yarnpkg.com/@uirouter/angularjs/-/angularjs-1.0.16.tgz#f374998d1166ae274a30569b97d63fcd72383ad9"
+"@uirouter/angularjs@1.0.17":
+  version "1.0.17"
+  resolved "https://registry.yarnpkg.com/@uirouter/angularjs/-/angularjs-1.0.17.tgz#ec9818e9aa79f3a11d0657cb0e5f567d682fc450"
   dependencies:
-    "@uirouter/core" "5.0.18"
+    "@uirouter/core" "5.0.19"
 
-"@uirouter/core@5.0.18":
-  version "5.0.18"
-  resolved "https://registry.yarnpkg.com/@uirouter/core/-/core-5.0.18.tgz#6dd85654ebc7e25eba2c1b32f069829db351abab"
+"@uirouter/core@5.0.19":
+  version "5.0.19"
+  resolved "https://registry.yarnpkg.com/@uirouter/core/-/core-5.0.19.tgz#fe2888190393a8c92584c354e65ab8322c1b0db4"
 
 "@uirouter/cypress-runner@^1.0.7":
   version "1.0.7"
@@ -256,7 +256,7 @@
     wait-on "^2.1.0"
     yargs "^11.0.0"
 
-"@uirouter/rx@0.4.5", "@uirouter/rx@0.5.0":
+"@uirouter/rx@0.5.0":
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/@uirouter/rx/-/rx-0.5.0.tgz#a0577408488e9523732ef5985a631f7b607fed5b"
 
