@@ -220,9 +220,9 @@
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@types/sinon/-/sinon-4.0.0.tgz#9a93ffa4ee1329e85166278a5ed99f81dc4c8362"
 
-"@uirouter/angular-hybrid@^5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@uirouter/angular-hybrid/-/angular-hybrid-5.0.0.tgz#abff6c1e306cb26836667275beb4026832b80330"
+"@uirouter/angular-hybrid@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@uirouter/angular-hybrid/-/angular-hybrid-6.0.0.tgz#ebcb26526a5167da7d6c393bca756c592564b4ca"
   dependencies:
     "@uirouter/angular" "2.0.0"
     "@uirouter/angularjs" "1.0.17"
