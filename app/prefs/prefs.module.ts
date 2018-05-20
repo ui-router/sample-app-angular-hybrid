@@ -1,9 +1,9 @@
+import { UIRouterUpgradeModule } from '@uirouter/angular-hybrid';
 import { PrefsComponent } from './prefs.component';
 import { prefsState } from './prefs.states';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { UIRouterModule } from '@uirouter/angular';
 
 let PREFS_STATES = [ prefsState ];
 
@@ -12,7 +12,7 @@ let PREFS_STATES = [ prefsState ];
   imports: [
     CommonModule,
     FormsModule,
-    UIRouterModule.forChild({ states: PREFS_STATES })
+    UIRouterUpgradeModule.forChild({ states: PREFS_STATES })
   ],
   declarations: [ PrefsComponent ],
 })

@@ -31,7 +31,7 @@ export function getContactsService($injector) {
     UpgradeModule,
     // Provides the @uirouter/angular directives and registers
     // the future state for the lazy loaded contacts module
-    UIRouterUpgradeModule.forChild({ states: [contactsFutureState] }),
+    UIRouterUpgradeModule.forRoot({ states: [contactsFutureState] }),
     // The preferences feature module
     PrefsModule,
   ],
