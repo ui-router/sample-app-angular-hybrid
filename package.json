@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@angular/cli": "^6.0.3",
-    "@ngtools/webpack": "^6.0.1",
+    "@ngtools/webpack": "^6.0.3",
     "@types/angular": "^1.6.45",
     "@uirouter/cypress-runner": "^1.0.7",
     "shx": "^0.2.2",
