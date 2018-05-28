@@ -23,7 +23,7 @@
     "url": "https://github.com/ui-router/sample-app-angular-hybrid.git"
   },
   "dependencies": {
-    "@angular/common": "^6.0.2",
+    "@angular/common": "^6.0.3",
     "@angular/compiler": "^6.0.2",
     "@angular/compiler-cli": "^6.0.2",
     "@angular/core": "^6.0.1",
