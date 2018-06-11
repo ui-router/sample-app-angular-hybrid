@@ -35,7 +35,7 @@
     "@angular/upgrade": "^6.0.3",
     "@uirouter/angular-hybrid": "^6.0.0",
     "@uirouter/visualizer": "^6.0.0",
-    "angular": "^1.7.0",
+    "angular": "^1.7.1",
     "rxjs": "^6.2.0",
     "rxjs-compat": "^6.2.0",
     "zone.js": "^0.8.26"
