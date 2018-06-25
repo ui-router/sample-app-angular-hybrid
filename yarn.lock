@@ -48,14 +48,14 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/compiler-cli@^6.0.3":
-  version "6.0.3"
-  resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-6.0.3.tgz#4cdda9f28e3387811423c980f3e195ac2322057d"
+"@angular/compiler-cli@^6.0.6":
+  version "6.0.6"
+  resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-6.0.6.tgz#d0d01cbfb8fcea161b686c0fdf8990556858ddba"
   dependencies:
     chokidar "^1.4.2"
     minimist "^1.2.0"
     reflect-metadata "^0.1.2"
-    tsickle "^0.27.2"
+    tsickle "^0.29.0"
 
 "@angular/compiler@^6.0.5":
   version "6.0.5"
@@ -6251,9 +6251,9 @@ trim-right@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/trim-right/-/trim-right-1.0.1.tgz#cb2e1203067e0c8de1f614094b9fe45704ea6003"
 
-tsickle@^0.27.2:
-  version "0.27.5"
-  resolved "https://registry.yarnpkg.com/tsickle/-/tsickle-0.27.5.tgz#41e1a41a5acf971cbb2b0558a9590779234d591f"
+tsickle@^0.29.0:
+  version "0.29.0"
+  resolved "https://registry.yarnpkg.com/tsickle/-/tsickle-0.29.0.tgz#812806554bb46c1aa16eb0fe2a051da95ca8f5a4"
   dependencies:
     minimist "^1.2.0"
     mkdirp "^0.5.1"
