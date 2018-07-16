@@ -99,9 +99,9 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/upgrade@^6.0.7":
-  version "6.0.7"
-  resolved "https://registry.yarnpkg.com/@angular/upgrade/-/upgrade-6.0.7.tgz#5e5d0c135fd652c164fbe314694df1ac6889db69"
+"@angular/upgrade@^6.0.9":
+  version "6.0.9"
+  resolved "https://registry.yarnpkg.com/@angular/upgrade/-/upgrade-6.0.9.tgz#d04ec65f951fbddf50a51d681b477e9a6370200e"
   dependencies:
     tslib "^1.9.0"
 
