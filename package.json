@@ -34,7 +34,7 @@
     "@angular/router": "^6.0.9",
     "@angular/upgrade": "^6.0.9",
     "@uirouter/angular-hybrid": "^6.0.1",
-    "@uirouter/visualizer": "^6.0.0",
+    "@uirouter/visualizer": "^6.0.2",
     "angular": "^1.7.2",
     "rxjs": "^6.2.2",
     "rxjs-compat": "^6.2.2",
