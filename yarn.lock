@@ -82,9 +82,9 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/http@^6.1.0":
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/@angular/http/-/http-6.1.0.tgz#8712f418d5b9f9047c306da95e31465178e1beef"
+"@angular/http@^6.1.1":
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/@angular/http/-/http-6.1.1.tgz#9ae2c36c15c793ab82830ecb8e1e69c10ae8dade"
   dependencies:
     tslib "^1.9.0"
 
