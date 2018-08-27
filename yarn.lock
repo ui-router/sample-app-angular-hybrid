@@ -76,9 +76,9 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/forms@^6.1.1":
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-6.1.1.tgz#41aec34576d4e3fed5791b65dc6d638d180cd11e"
+"@angular/forms@^6.1.4":
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-6.1.4.tgz#d0b83f9cd4cb35f58ee67766d17aae0cbd7de561"
   dependencies:
     tslib "^1.9.0"
 
