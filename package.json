@@ -41,7 +41,7 @@
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
-    "@angular/cli": "^6.2.2",
+    "@angular/cli": "^6.2.3",
     "@ngtools/webpack": "^6.2.2",
     "@types/angular": "^1.6.50",
     "@uirouter/cypress-runner": "^1.0.9",
