@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@angular/common": "^6.1.7",
-    "@angular/compiler": "^6.1.7",
+    "@angular/compiler": "^6.1.8",
     "@angular/compiler-cli": "^6.1.8",
     "@angular/core": "^6.1.8",
     "@angular/forms": "^6.1.8",
