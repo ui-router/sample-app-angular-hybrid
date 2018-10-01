@@ -36,7 +36,7 @@
     "@uirouter/angular-hybrid": "^6.0.2",
     "@uirouter/visualizer": "^6.0.2",
     "angular": "^1.7.4",
-    "rxjs": "^6.3.2",
+    "rxjs": "^6.3.3",
     "rxjs-compat": "^6.3.2",
     "zone.js": "^0.8.26"
   },
