@@ -28,7 +28,7 @@
     "@angular/compiler-cli": "^6.1.9",
     "@angular/core": "^6.1.9",
     "@angular/forms": "^6.1.9",
-    "@angular/http": "^6.1.8",
+    "@angular/http": "^6.1.9",
     "@angular/platform-browser": "^6.1.9",
     "@angular/platform-browser-dynamic": "^6.1.8",
     "@angular/router": "^6.1.9",
