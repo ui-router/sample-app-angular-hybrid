@@ -18,6 +18,15 @@
     rxjs "~6.2.0"
     source-map "^0.5.6"
 
+"@angular-devkit/core@0.8.5":
+  version "0.8.5"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-0.8.5.tgz#efa9b7268fd0496a5737de77d0b7f859188d8d5b"
+  dependencies:
+    ajv "~6.4.0"
+    chokidar "^2.0.3"
+    rxjs "~6.2.0"
+    source-map "^0.5.6"
+
 "@angular-devkit/schematics@0.8.4":
   version "0.8.4"
   resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-0.8.4.tgz#e19f6fc8b1e88277d921a286914dc9d01f139738"
@@ -120,11 +129,11 @@
     debug "^3.1.0"
     lodash.once "^4.1.1"
 
-"@ngtools/webpack@^6.2.4":
-  version "6.2.4"
-  resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-6.2.4.tgz#68f97eba33400df0604b7ec33532ec49c3cebfda"
+"@ngtools/webpack@^6.2.5":
+  version "6.2.5"
+  resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-6.2.5.tgz#cbaef09ada2ddfb8c84042485377f0682cd5752b"
   dependencies:
-    "@angular-devkit/core" "0.8.4"
+    "@angular-devkit/core" "0.8.5"
     rxjs "~6.2.0"
     tree-kill "^1.0.0"
     webpack-sources "^1.1.0"
