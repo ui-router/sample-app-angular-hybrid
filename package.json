@@ -30,7 +30,7 @@
     "@angular/forms": "^6.1.10",
     "@angular/http": "^6.1.10",
     "@angular/platform-browser": "^6.1.10",
-    "@angular/platform-browser-dynamic": "^6.1.10",
+    "@angular/platform-browser-dynamic": "^7.0.0",
     "@angular/router": "^6.1.9",
     "@angular/upgrade": "^6.1.10",
     "@uirouter/angular-hybrid": "^6.0.2",
