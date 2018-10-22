@@ -74,9 +74,9 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/http@^6.1.10":
-  version "6.1.10"
-  resolved "https://registry.yarnpkg.com/@angular/http/-/http-6.1.10.tgz#91239b27990b992cdb312056d3f11cc804bfeaf4"
+"@angular/http@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@angular/http/-/http-7.0.0.tgz#8add9bc7d548a0ff7dfe1fdb66d0024d4fc62dfa"
   dependencies:
     tslib "^1.9.0"
 
