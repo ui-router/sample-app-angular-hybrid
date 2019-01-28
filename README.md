@@ -3,7 +3,6 @@
 https://ui-router.github.io/sample-app-angular-hybrid/#!/mymessages/inbox/5648b50d5d8be25776881a3f
 
 [![Travis badge](https://travis-ci.org/ui-router/sample-app-angular-hybrid.svg?branch=master)](https://travis-ci.org/ui-router/sample-app-angular-hybrid)
-[![Greenkeeper badge](https://badges.greenkeeper.io/ui-router/sample-app-angular-hybrid.svg)](https://greenkeeper.io/)
 
 This sample app is intended to demonstrate a non-trivial ui-router application.
 
