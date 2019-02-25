@@ -92,6 +92,17 @@
     rxjs "6.3.3"
     source-map "0.7.3"
 
+"@angular-devkit/core@7.3.3":
+  version "7.3.3"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-7.3.3.tgz#cd6d5a8eca25ef07b6394bc2b08133d90d08d39f"
+  integrity sha512-fosULDtMoDWrOyUzTmBkJccOy7zodo02kENyKai7vOv9EWfv9jytkVdNc+jl0ys9OE2QadvSYBo49jhnZxFXfQ==
+  dependencies:
+    ajv "6.9.1"
+    chokidar "2.0.4"
+    fast-json-stable-stringify "2.0.0"
+    rxjs "6.3.3"
+    source-map "0.7.3"
+
 "@angular-devkit/schematics@7.3.1":
   version "7.3.1"
   resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-7.3.1.tgz#7dc704005b966ea6c1ee62f380120183bb76eee6"
@@ -215,12 +226,23 @@
     debug "^3.1.0"
     lodash.once "^4.1.1"
 
-"@ngtools/webpack@7.3.1", "@ngtools/webpack@^7.3.1":
+"@ngtools/webpack@7.3.1":
   version "7.3.1"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-7.3.1.tgz#4ff68007fd68fdc26f22e19115182f96fb6f7335"
   integrity sha512-EGQRjgDf5XP+Fm1MdZNRFiPd9e1vhl11BhjkwqkAsewic4eoz6fqXfj/Osz1hQy8xU+2dPPf/byQ/+nY3E02Zg==
   dependencies:
     "@angular-devkit/core" "7.3.1"
+    enhanced-resolve "4.1.0"
+    rxjs "6.3.3"
+    tree-kill "1.2.1"
+    webpack-sources "1.3.0"
+
+"@ngtools/webpack@^7.3.3":
+  version "7.3.3"
+  resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-7.3.3.tgz#f63eb3d5674f4a850edc76d7de590da98c2d2615"
+  integrity sha512-G/1P00XHWVrKT3qoSyy7yAPT5/fuja84YifcGg/2SwmNNo4hTXxWhqec0/uHwgQr6nYhGDyzwwXYeKKyQkcfgw==
+  dependencies:
+    "@angular-devkit/core" "7.3.3"
     enhanced-resolve "4.1.0"
     rxjs "6.3.3"
     tree-kill "1.2.1"
@@ -763,6 +785,16 @@ ajv@6.7.0:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
+ajv@6.9.1, ajv@^6.1.0, ajv@^6.5.5:
+  version "6.9.1"
+  resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.9.1.tgz#a4d3683d74abc5670e75f0b16520f70a20ea8dc1"
+  integrity sha512-XDN92U311aINL77ieWHmqCcNlwjoP5cHXDxIxbf2MaPYuCXOHS7gHH8jktxeK5omgd52XbSTX6a4Piwd1pQmzA==
+  dependencies:
+    fast-deep-equal "^2.0.1"
+    fast-json-stable-stringify "^2.0.0"
+    json-schema-traverse "^0.4.1"
+    uri-js "^4.2.2"
+
 ajv@^4.9.1:
   version "4.11.8"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-4.11.8.tgz#82ffb02b29e662ae53bdc20af15947706739c536"
@@ -779,16 +811,6 @@ ajv@^5.0.0, ajv@^5.1.0:
     fast-deep-equal "^1.0.0"
     fast-json-stable-stringify "^2.0.0"
     json-schema-traverse "^0.3.0"
-
-ajv@^6.1.0, ajv@^6.5.5:
-  version "6.9.1"
-  resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.9.1.tgz#a4d3683d74abc5670e75f0b16520f70a20ea8dc1"
-  integrity sha512-XDN92U311aINL77ieWHmqCcNlwjoP5cHXDxIxbf2MaPYuCXOHS7gHH8jktxeK5omgd52XbSTX6a4Piwd1pQmzA==
-  dependencies:
-    fast-deep-equal "^2.0.1"
-    fast-json-stable-stringify "^2.0.0"
-    json-schema-traverse "^0.4.1"
-    uri-js "^4.2.2"
 
 amdefine@>=0.0.4:
   version "1.0.1"
