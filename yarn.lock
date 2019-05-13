@@ -5846,10 +5846,10 @@ rx@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/rx/-/rx-4.1.0.tgz#a5f13ff79ef3b740fe30aa803fb09f98805d4782"
 
-rxjs-compat@^6.5.1:
-  version "6.5.1"
-  resolved "https://registry.yarnpkg.com/rxjs-compat/-/rxjs-compat-6.5.1.tgz#de928292c633a9a5f2f54a4431e6f9c468001c68"
-  integrity sha512-k0aaMAYFg+DCIUxo3yJcUamFRenWLR23e/VJCQvKOxwSd9DQlwcSn2ov+7b23rKaX4weKG7OrzEBWGqQPkQ07A==
+rxjs-compat@^6.5.2:
+  version "6.5.2"
+  resolved "https://registry.yarnpkg.com/rxjs-compat/-/rxjs-compat-6.5.2.tgz#e469070adf6260bdad195e9d4a39f444ae28b458"
+  integrity sha512-TRMkTp4FgSxE2HtGvxmgRukh3JqdFM7ejAj1Ti/VdodbPGfWvZR5+KdLKRV9jVDFyu2SknM8RD+PR54KGnoLjg==
 
 rxjs@6.3.3:
   version "6.3.3"
