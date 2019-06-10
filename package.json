@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.13.9",
-    "@angular/cli": "^7.3.9",
+    "@angular/cli": "^8.0.2",
     "@ngtools/webpack": "^7.3.9",
     "@types/angular": "^1.6.54",
     "@uirouter/cypress-runner": "^1.0.10",
