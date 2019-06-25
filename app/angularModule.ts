@@ -12,7 +12,7 @@ import { PrefsModule } from './prefs/prefs.module';
 export const contactsFutureState: NgHybridStateDeclaration = {
   name: 'contacts.**',
   url: '/contacts',
-  loadChildren: './contacts/contacts.module#ContactsModule',
+  loadChildren: () => import('./contacts/contacts.module').then(m => m.ContactsModule),
 };
 
 export function getDialogService($injector) {

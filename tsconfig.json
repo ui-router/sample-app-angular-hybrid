@@ -4,12 +4,13 @@
     "app/contacts/contacts.module.ts"
   ],
   "compilerOptions": {
+    "downlevelIteration": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "module": "commonjs",
+    "module": "esnext",
     "moduleResolution": "node",
-    "target": "es5",
+    "target": "es2015",
     "outDir": "transpiled/app",
     "declaration": false,
     "sourceMap": true,

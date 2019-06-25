@@ -28,7 +28,6 @@
     "@angular/compiler-cli": "^8.0.2",
     "@angular/core": "^8.0.2",
     "@angular/forms": "^8.0.2",
-    "@angular/http": "^7.2.4",
     "@angular/platform-browser": "^8.0.2",
     "@angular/platform-browser-dynamic": "^8.0.2",
     "@angular/router": "^8.0.2",
@@ -39,14 +38,15 @@
     "rxjs": "^6.5.2",
     "rxjs-compat": "^6.5.2",
     "tslib": "^1.10.0",
-    "zone.js": "^0.9.1"
+    "zone.js": "~0.9.1"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.13.9",
-    "@angular/cli": "^7.3.9",
+    "@angular-devkit/build-angular": "~0.800.0",
+    "@angular/cli": "^8.0.4",
     "@ngtools/webpack": "^8.0.4",
     "@types/angular": "^1.6.54",
     "@uirouter/cypress-runner": "^1.0.10",
+    "codelyzer": "^5.0.1",
     "shx": "^0.3.2",
     "source-map-loader": "^0.2.4",
     "typescript": "3.4.5",
