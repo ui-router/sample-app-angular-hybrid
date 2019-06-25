@@ -348,19 +348,19 @@
     "@types/source-list-map" "*"
     source-map "^0.6.1"
 
-"@uirouter/angular-hybrid@6.0.3":
-  version "6.0.3"
-  resolved "https://registry.yarnpkg.com/@uirouter/angular-hybrid/-/angular-hybrid-6.0.3.tgz#c5d0c37717f171184f0be9c1e98c4c96db04f7ce"
-  integrity sha512-ARkdjgCtOUWY9f3VJei8a7H64olGFDbyQwLrT7i2qlkaoO0HPb6st21/ubio+ObQszf6icDGcUVr31kPcHxM1Q==
+"@uirouter/angular-hybrid@8.0.0":
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/@uirouter/angular-hybrid/-/angular-hybrid-8.0.0.tgz#18155934ef81943280492eaf400b894cbdfb25c7"
+  integrity sha512-J2w61kNQE/UeQcSi08qfMiSrlWF5TOrxkl6zTK8jAvc6oZ8GH+Jhdk/h3phxwPSjdTJv8kWyv3cXNqG7uUoWmA==
   dependencies:
-    "@uirouter/angular" "2.0.4"
+    "@uirouter/angular" "3.0.0"
     "@uirouter/angularjs" "1.0.22"
     "@uirouter/core" "5.0.23"
 
-"@uirouter/angular@2.0.4":
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/@uirouter/angular/-/angular-2.0.4.tgz#c057990cfeb17929517280b389dcc48e367e35ad"
-  integrity sha512-ZaKgX+S2ZipewtQZz+W8zGUdTF6tQY2rfi1n45ze5UP4M/wBpXthw3zat21qWM0yD53gycKNTB8Jv1cKmiTeEA==
+"@uirouter/angular@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@uirouter/angular/-/angular-3.0.0.tgz#2305fbf6abfa55a561578365a4e80e6d89b33abe"
+  integrity sha512-HgAl0tk+RxuspC6vSNINMlzjTJgo+TFSpJ37OQgY7WEU7OrEDCdftVITJHyU/J87UES1ajalJljeq0/fI8Sv7g==
   dependencies:
     "@uirouter/core" "5.0.23"
     "@uirouter/rx" "0.5.0"
