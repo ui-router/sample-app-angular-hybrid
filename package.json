@@ -13,6 +13,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@angular-devkit/core": "0.0.29",
     "@angular/animations": "^5.2.0",
     "@angular/common": "^5.2.0",
     "@angular/compiler": "^5.2.0",
@@ -23,8 +24,8 @@
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
     "@angular/upgrade": "^5.2.4",
-    "@uirouter/angular-hybrid": "^3.0.0",
     "@uirouter/angular": "*",
+    "@uirouter/angular-hybrid": "^3.0.0",
     "@uirouter/angularjs": "*",
     "@uirouter/core": "*",
     "@uirouter/rx": "*",
@@ -35,7 +36,7 @@
     "zone.js": "^0.8.19"
   },
   "devDependencies": {
-    "@angular/cli": "1.6.8",
+    "@angular/cli": "^8.0.0",
     "@angular/compiler-cli": "^5.2.0",
     "@angular/language-service": "^5.2.0",
     "@types/jasmine": "~2.8.3",
