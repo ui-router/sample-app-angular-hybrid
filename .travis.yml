@@ -1,22 +1,19 @@
 language: node_js
 node_js:
 - 10.16.0
-cache:
-  directories:
-  - "$HOME/.npm"
-  - node_modules
-before_script:
-- greenkeeper-lockfile-update
 before_install:
-- curl -o- -L https://yarnpkg.com/install.sh | bash
-- export PATH="$HOME/.yarn/bin:$PATH"
-- yarn global add greenkeeper-lockfile@1
-after_script: greenkeeper-lockfile-upload
+- sh -e /etc/init.d/xvfb start
+- export PATH=$HOME/.yarn/bin:$PATH
+- curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.5.1
 notifications:
   slack:
-    on_success: change
+    on_success: never
     rooms:
       secure: Hv1r3NZ+Kcbi/XloPZsGf1wZlv1d8FN4KBGRPXD7uMufsFc9NE5zoTuRGMW7txvT3hwMzdDUyjWhvo4E+afBBEKddQQdMVtVY9crCracJa0lI6e0we+yDtUqWD7wKFvs4xth3+sEZmbr2i2/pY+Zzq6ADC6ugW+xgy+4SlZufbhKHtaF6APdo184q2tFVZsCJfbA8La4lmfKh+XhtfyUw0s8+9dwBx57cGE+67b8734ffLLDIEZUkcKvXsUADnch6oxGDcfpza48PoPlDfKGRWjzdxVj9QFvhyQuHUUExXK6GSpasEyAq9sz8m8lKnUpDNQG2FbEvi0K5eYLOU+PyY5+r6MIZBm17c6rCeA/abRxxKfqZVusPxi6pHPFFHZs1DDzeURHcEHeFgJbztR7MJZbleOte73gThJlwTHkwMEbjvFcy3FnP1ZrF+7wJT5L+w1O3qGy7ya7Zy5ncEtgW4jJ8fJYzdGu+hU7GJRVGvo9qBWbLaCGNheKxfyWgl56aVNg9EsuxJk2V+4WZl0gNOsAT2YBht+eHPciJR0+GHJ4nYC+XPR6R5c2jba/r5FV16G3BshxdBJhvrLdqVpKhRTTHV2lcwn4qmdCKkrle7DTU1r6SIx33d9yT11lEm8ypL5t9ki2FqO3XB3s1R7qB7FizDyrVbUa+jq6iHXUeUs=
-env:
-  global:
-    secure: W69gLpjphNtiwVBLjlg0tR64YwOTjjWFm7oh4EkwSVF2dxoirkrLWYdJ2uXam+FTqHV8Sqo585/wnHpzbP1vIuHaO7spO8aSvcMHKific7p8fZK6JVm9uKafOEMI2DOU5tDIVJe/zwfQJTA66MGpi/j0+CNSfp6b7NRtQCq+IkEuuQBWfHuyS7394PTVSJhSFP7iXL7k9en5SVangrKMkpVna1cJXEfUQrNm6OChaeysCf3OCkQqsY+ElW72PUe8VjLO/7HK4kediQz+scJe9N6MRSGmJD5ZvIrx3oe1i6Ds1T0qT4Jlubn408fynxBSGPMcPDRKsB7PT+BB+m5ag0TPvq/leUfm0N7EZnS64vTVn32yK2eZy3rltkJePA3P3ShG04zedUNtXC5Jy+luN4bn/RD0GvQ/aMAZUaSHe1U6HPFyRFUPKY/zbZluLflK/Jv690H1aEJfdiATfEt2HYq57rs5ax8UMs+fkA6jiclA7AQN4faZ9kU780dAFo3nj2dbSvhyoNP/FYCxwgv930yyaF2Yt1lr50Z+8xzPQWkz149oEiygzYMzCDQo7WSBsVyroPnNekuqi4OoukDitQ7KeM8xcCBmaLTYU0IxtBqNAi/ozo2s5H/+x7oxHf9FGhEAwtqTbUkokfq9BZ0DHn0I0KJ7kVY1OEIMInRMZrs=
+sudo: false
+git:
+  depth: 3
+cache:
+  directories:
+  - node_modules
+  - ".downstream_cache"
