@@ -213,10 +213,10 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/upgrade@^8.1.1":
-  version "8.1.1"
-  resolved "https://registry.yarnpkg.com/@angular/upgrade/-/upgrade-8.1.1.tgz#96335c045e6c4b06ee987049d25fb7cc054ba082"
-  integrity sha512-j+GWIY7DZCxw60lz8frfpuLBCFA7JkLgoDjIwlq52AAcNxmGB3Sev6NWgjHpaqQxEgwJ9XUUjMxv/PMITsipGQ==
+"@angular/upgrade@^8.2.9":
+  version "8.2.9"
+  resolved "https://registry.yarnpkg.com/@angular/upgrade/-/upgrade-8.2.9.tgz#2580be4d9327ba3c1cd6c5ad054ef2e18ae5efb7"
+  integrity sha512-V7cJb6uZukiVDDzA8VKWrqjQuwDTOqLCw52N9WlrFh5honzRj3x4yqFI8uq8bljaSRyj7SFjfOx10xaFx3NPJQ==
   dependencies:
     tslib "^1.9.0"
 
