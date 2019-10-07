@@ -355,34 +355,34 @@
     "@types/source-list-map" "*"
     source-map "^0.6.1"
 
-"@uirouter/angular-hybrid@8.0.0":
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/@uirouter/angular-hybrid/-/angular-hybrid-8.0.0.tgz#18155934ef81943280492eaf400b894cbdfb25c7"
-  integrity sha512-J2w61kNQE/UeQcSi08qfMiSrlWF5TOrxkl6zTK8jAvc6oZ8GH+Jhdk/h3phxwPSjdTJv8kWyv3cXNqG7uUoWmA==
+"@uirouter/angular-hybrid@9.0.0":
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/@uirouter/angular-hybrid/-/angular-hybrid-9.0.0.tgz#27cfe576cc66f63c5b2f6cd6edf799672f8f161a"
+  integrity sha512-zaEfYwdfW1TARpsbnvTxlX9b6RfTWpbdhvz7mEHtvreWf/bd4u6rf4GgWUaI5wm10KyMhut1kXYCMEgRBfLo2Q==
   dependencies:
-    "@uirouter/angular" "3.0.0"
-    "@uirouter/angularjs" "1.0.22"
-    "@uirouter/core" "5.0.23"
+    "@uirouter/angular" "5.0.0"
+    "@uirouter/angularjs" "1.0.23"
+    "@uirouter/core" "6.0.1"
 
-"@uirouter/angular@3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@uirouter/angular/-/angular-3.0.0.tgz#2305fbf6abfa55a561578365a4e80e6d89b33abe"
-  integrity sha512-HgAl0tk+RxuspC6vSNINMlzjTJgo+TFSpJ37OQgY7WEU7OrEDCdftVITJHyU/J87UES1ajalJljeq0/fI8Sv7g==
+"@uirouter/angular@5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@uirouter/angular/-/angular-5.0.0.tgz#621e552c7688078363c297b407b589e570bd6154"
+  integrity sha512-H59jDcHtz9J4qGMNvx73O55pYm2Edx6fhRpBmRlDSi7ugHOB4aWUk7m6d74OzJgYYXteE1r5Zr77TVDv0mv1uA==
   dependencies:
-    "@uirouter/core" "5.0.23"
-    "@uirouter/rx" "0.5.0"
+    "@uirouter/core" "^6.0.1"
+    "@uirouter/rx" "^0.6.0"
 
-"@uirouter/angularjs@1.0.22":
-  version "1.0.22"
-  resolved "https://registry.yarnpkg.com/@uirouter/angularjs/-/angularjs-1.0.22.tgz#581ab38794a2d7c2790851087072c4066b2b6c46"
-  integrity sha512-d0SvdbXAav+Z6gCJd7gmn2eXEUtO3RvYcSLwtPaE8+7QiWHpSKNfGdD4D3noXhO2yUTz/AwaxsiRFMCwgVI0UQ==
+"@uirouter/angularjs@1.0.23":
+  version "1.0.23"
+  resolved "https://registry.yarnpkg.com/@uirouter/angularjs/-/angularjs-1.0.23.tgz#aeec0f96b0c42187c5044ef244ba6ccb75a5d835"
+  integrity sha512-r4hLSw7R3mwXGC5Sq7yxNlBK1sSzQUm/1MzigwwYRHoMO5uKcBPUhxFYx5U7kufP2Xl1165KeZvRsLCh0/Z1ng==
   dependencies:
-    "@uirouter/core" "5.0.23"
+    "@uirouter/core" "6.0.1"
 
-"@uirouter/core@5.0.23":
-  version "5.0.23"
-  resolved "https://registry.yarnpkg.com/@uirouter/core/-/core-5.0.23.tgz#363b4bea635a1b48900dc7e65793a65a3b58a79e"
-  integrity sha512-rwFOH++z/KY8y+h0IOpQ5uC8Nim6E0EBCQrIjhVCr+XKYXgpK+VdtuOLFdogvbJ3AAi5Z7ei00qdEr7Did5CAg==
+"@uirouter/core@6.0.1", "@uirouter/core@^6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@uirouter/core/-/core-6.0.1.tgz#93b02a5d178a7ab7313f34b7b3f019a000d23396"
+  integrity sha512-mHCutiHtDDRKYmrJ92XPKDoSb2bgqaDyUpHdF4hUE+riwgkCvGdBjL8u+VDTcV3slBAk6B0LBIOIajjWkkObbQ==
 
 "@uirouter/cypress-runner@^1.0.13":
   version "1.0.13"
@@ -396,9 +396,10 @@
     wait-on "^3.3.0"
     yargs "^14.0.0"
 
-"@uirouter/rx@0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@uirouter/rx/-/rx-0.5.0.tgz#a0577408488e9523732ef5985a631f7b607fed5b"
+"@uirouter/rx@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@uirouter/rx/-/rx-0.6.0.tgz#aeb616460d7c45f459504f66a8cea81c088dec61"
+  integrity sha512-+29mPy9qMOu6DveemTm8SEV5ueF5RPe5UgXST+gWg+qitExsmbaNpaSq6lL+3UJdDw+mdonGIBHt31cHD5/aEQ==
 
 "@uirouter/visualizer@^6.0.2":
   version "6.0.2"
