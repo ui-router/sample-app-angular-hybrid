@@ -46,7 +46,7 @@
     "@ngtools/webpack": "^8.3.12",
     "@types/angular": "^1.6.56",
     "@uirouter/cypress-runner": "^1.0.13",
-    "codelyzer": "^5.1.2",
+    "codelyzer": "^5.2.0",
     "shx": "^0.3.2",
     "source-map-loader": "^0.2.4",
     "typescript": "3.4.5",
