@@ -34,7 +34,7 @@
     "@angular/upgrade": "^8.2.9",
     "@uirouter/angular-hybrid": "9.0.0",
     "@uirouter/visualizer": "^6.0.2",
-    "angular": "^1.7.8",
+    "angular": "^1.7.9",
     "rxjs": "^6.5.3",
     "rxjs-compat": "^6.5.3",
     "tslib": "^1.10.0",
