@@ -1,3 +1,4 @@
+import { LocationUpgradeModule } from '@angular/common/upgrade';
 import { NgModule, NgModuleFactoryLoader, SystemJsNgModuleLoader } from '@angular/core';
 import { UpgradeModule } from '@angular/upgrade/static';
 import { BrowserModule } from '@angular/platform-browser';
@@ -27,6 +28,7 @@ export function getContactsService($injector) {
 @NgModule({
   imports: [
     BrowserModule,
+    LocationUpgradeModule.config({ useHash: true }),
     // Provide angular upgrade capabilities
     UpgradeModule,
     // Provides the @uirouter/angular directives and registers

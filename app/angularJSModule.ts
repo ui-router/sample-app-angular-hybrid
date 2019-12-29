@@ -8,6 +8,10 @@ import * as angular from "angular";
 import uiRouter from "@uirouter/angularjs";
 import { upgradeModule } from "@uirouter/angular-hybrid";
 
+// $location shim from Angular 8+
+import { $locationShim } from '@angular/common/upgrade';
+import { downgradeInjectable } from '@angular/upgrade/static';
+
 // Feature Modules
 import { globalModule } from "./global/index";
 import { homeModule } from "./home/index";
@@ -26,10 +30,11 @@ export const sampleAppModuleAngularJS = angular.module("sampleapp", [
 ]);
 
 // Apply some global configuration...
+sampleAppModuleAngularJS.factory('$location', downgradeInjectable($locationShim));
 
 // If the user enters a URL that doesn't match any known URL (state), send them to `/welcome`
 const otherwiseConfigBlock = ['$urlRouterProvider', '$locationProvider', ($urlRouterProvider, $locationProvider) => {
-  $locationProvider.hashPrefix('');
+  // $locationProvider.hashPrefix('');
   $urlRouterProvider.otherwise("/welcome");
 }];
 sampleAppModuleAngularJS.config(otherwiseConfigBlock);
