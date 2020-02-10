@@ -114,6 +114,17 @@
     rxjs "6.4.0"
     source-map "0.7.3"
 
+"@angular-devkit/core@8.3.25":
+  version "8.3.25"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-8.3.25.tgz#8133a18be811424f10a10f37c712165b0f69f3fc"
+  integrity sha512-l7Gqy1tMrTpRmPVlovcFX8UA3mtXRlgO8kcSsbJ9MKRKNTCcxlfsWEYY5igyDBUVh6ADkgSIu0nuk31ZGTe0lw==
+  dependencies:
+    ajv "6.10.2"
+    fast-json-stable-stringify "2.0.0"
+    magic-string "0.25.3"
+    rxjs "6.4.0"
+    source-map "0.7.3"
+
 "@angular-devkit/schematics@8.3.24":
   version "8.3.24"
   resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-8.3.24.tgz#583b1841d032eccf31cc86dbd15c5ac15a50cf95"
@@ -286,12 +297,12 @@
     tree-kill "1.2.1"
     webpack-sources "1.3.0"
 
-"@ngtools/webpack@^8.3.24":
-  version "8.3.24"
-  resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-8.3.24.tgz#e5a916b3bbb78eaae5cac3745398167c0b01c875"
-  integrity sha512-OpR7t/99qNOpADayCuM67agBVdYkdbFyEEcOLaDFYh3LsefHOSSxtAGv8M77e7dguvtaljHTiVkMxgcXFsZM0Q==
+"@ngtools/webpack@^8.3.25":
+  version "8.3.25"
+  resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-8.3.25.tgz#f33dfb114463662b16b719031fd99ebf21354cf1"
+  integrity sha512-yHvgxXUXlgdWijtzcRjTaUqzK+6TVK/8p7PreBR00GsLxhl4U1jQSC6yDaZUCjOaEkiczFWl4hEuC4wTU/hLdg==
   dependencies:
-    "@angular-devkit/core" "8.3.24"
+    "@angular-devkit/core" "8.3.25"
     enhanced-resolve "4.1.0"
     rxjs "6.4.0"
     tree-kill "1.2.2"
