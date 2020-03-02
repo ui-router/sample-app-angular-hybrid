@@ -45,7 +45,7 @@
     "@angular/cli": "^8.3.24",
     "@ngtools/webpack": "^8.3.25",
     "@types/angular": "^1.6.57",
-    "@uirouter/cypress-runner": "^1.0.15",
+    "@uirouter/cypress-runner": "^1.1.0",
     "codelyzer": "^5.2.1",
     "shx": "^0.3.2",
     "source-map-loader": "^0.2.4",
