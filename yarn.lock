@@ -97,6 +97,17 @@
     "@angular-devkit/core" "9.1.9"
     rxjs "6.5.4"
 
+"@angular-devkit/core@9.1.10":
+  version "9.1.10"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-9.1.10.tgz#4b2f1d3c9889dbe60e3936e54a070ce678893d36"
+  integrity sha512-HPY/ifVqNd0Muh2RG1wyWQAxPhLgscDyhE5rBty6LVr7i5VwqJpSD5F0NTOemV8SXAyZ5orn1MVWO/TmL6ktrw==
+  dependencies:
+    ajv "6.12.0"
+    fast-json-stable-stringify "2.1.0"
+    magic-string "0.25.7"
+    rxjs "6.5.4"
+    source-map "0.7.3"
+
 "@angular-devkit/core@9.1.9":
   version "9.1.9"
   resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-9.1.9.tgz#e6283912093179313ccfc69856841e9b6b318231"
@@ -1062,12 +1073,22 @@
     merge-source-map "^1.1.0"
     schema-utils "^2.6.4"
 
-"@ngtools/webpack@9.1.9", "@ngtools/webpack@^9.1.4":
+"@ngtools/webpack@9.1.9":
   version "9.1.9"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-9.1.9.tgz#2098afd6f1f028238468262df2ad10afa81b82a5"
   integrity sha512-7UzRL54JcK1m2PvgpchV26TF9OYipj/8+dygdjaidqOyQujWpHncdtq/ScbUsoJ44nHjIRJPhaGE00NLpWZvnA==
   dependencies:
     "@angular-devkit/core" "9.1.9"
+    enhanced-resolve "4.1.1"
+    rxjs "6.5.4"
+    webpack-sources "1.4.3"
+
+"@ngtools/webpack@^9.1.10":
+  version "9.1.10"
+  resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-9.1.10.tgz#cf5819db1bb83c28168a51cf6fa8102d895db3ce"
+  integrity sha512-/oRnmMfYiR0sxSuEj4hJwPgY1fxBC3iRR5ar09n0ILI5cH+zCPiC4+QhChQFkXhOYW3MjSRY6USW4Tg0pwR0gQ==
+  dependencies:
+    "@angular-devkit/core" "9.1.10"
     enhanced-resolve "4.1.1"
     rxjs "6.5.4"
     webpack-sources "1.4.3"
@@ -7569,14 +7590,7 @@ rxjs@6.5.4:
   dependencies:
     tslib "^1.9.0"
 
-rxjs@^6.3.3, rxjs@^6.5.3:
-  version "6.5.5"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.5.5.tgz#c5c884e3094c8cfee31bf27eb87e54ccfc87f9ec"
-  integrity sha512-WfQI+1gohdf0Dai/Bbmk5L5ItH5tYqm3ki2c5GdWhKjalzjg93N3avFjVStyZZz+A2Em+ZxKH5bNghw9UeylGQ==
-  dependencies:
-    tslib "^1.9.0"
-
-rxjs@^6.5.5:
+rxjs@^6.3.3, rxjs@^6.5.3, rxjs@^6.5.5:
   version "6.6.0"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.6.0.tgz#af2901eedf02e3a83ffa7f886240ff9018bbec84"
   integrity sha512-3HMA8z/Oz61DUHe+SdOiQyzIf4tOx5oQHmMir7IZEu6TMqCLHT4LRcmNaUS0NwOz8VLvmmBduMsoaUvMaIiqzg==
