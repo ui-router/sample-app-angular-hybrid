@@ -117,10 +117,12 @@
     ora "4.0.3"
     rxjs "6.5.4"
 
-"@angular/animations@9.1.4":
-  version "9.1.4"
-  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-9.1.4.tgz#22f64a062103d4903f2c7d862889a88fc6553bc7"
-  integrity sha512-gMo/DbCm5BDArladMAeC7/75T2DvhLr4CSUGJt/P/aimTEG2ywoAALs3pzwSSe4qxrHiR0OIksVW3l4km3iXEw==
+"@angular/animations@10.0.3":
+  version "10.0.3"
+  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-10.0.3.tgz#c6d802f7ff6666e8cf44042bdc7ee9e84787024d"
+  integrity sha512-s7hob0TmSRqsgEWdB0EYsKY8eF8iD6Sj44XntecAhEc/IxVQGIIZiNwGvW43Lb8iEdbvdF+GJfgxu5I8ZWMX3Q==
+  dependencies:
+    tslib "^2.0.0"
 
 "@angular/cli@^9.1.5":
   version "9.1.11"
@@ -8611,6 +8613,11 @@ tslib@^1.10.0, tslib@^1.13.0, tslib@^1.9.0:
   version "1.13.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.13.0.tgz#c881e13cc7015894ed914862d276436fa9a47043"
   integrity sha512-i/6DQjL8Xf3be4K/E6Wgpekn5Qasl1usyw++dAA35Ue5orEn65VIxOA+YvNNl9HV3qv70T7CNwjODHZrLwvd1Q==
+
+tslib@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.0.0.tgz#18d13fc2dce04051e20f074cc8387fd8089ce4f3"
+  integrity sha512-lTqkx847PI7xEDYJntxZH89L2/aXInsyF2luSafe/+0fHOMjlBNXdH6th7f70qxLDhul7KZK0zC8V5ZIyHl0/g==
 
 tty-browserify@0.0.0:
   version "0.0.0"
