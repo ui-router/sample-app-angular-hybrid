@@ -1169,7 +1169,7 @@
     merge-source-map "^1.1.0"
     schema-utils "^2.6.4"
 
-"@ngtools/webpack@10.0.3":
+"@ngtools/webpack@10.0.3", "@ngtools/webpack@^10.0.3":
   version "10.0.3"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-10.0.3.tgz#2f8b2674108f7c36ffcdfc9e9aa024abfe3c7e04"
   integrity sha512-0TuvYMCLtsApLtCHXeDBYGEoAQXzsRLpgFxPM5W7CGcj0ecthZO4NYrMAt+J8ky//KmbxqQSFHWmss2cbirIPA==
@@ -1177,16 +1177,6 @@
     "@angular-devkit/core" "10.0.3"
     enhanced-resolve "4.1.1"
     rxjs "6.5.5"
-    webpack-sources "1.4.3"
-
-"@ngtools/webpack@^9.1.4":
-  version "9.1.11"
-  resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-9.1.11.tgz#cbb6cf9766ef2bada9051394b8f340ce15b61f69"
-  integrity sha512-CcPJbCF5tiWJ4sBpC+gPPEyHK0acaouC7CzjT4EmqtiJPIJxCnfT7wOGyA+nItXViOdqydCxKOLt4FFNxfMz6Q==
-  dependencies:
-    "@angular-devkit/core" "9.1.11"
-    enhanced-resolve "4.1.1"
-    rxjs "6.5.4"
     webpack-sources "1.4.3"
 
 "@nodelib/fs.scandir@2.1.3":
