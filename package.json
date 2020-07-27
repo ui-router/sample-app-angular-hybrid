@@ -34,7 +34,7 @@
     "@angular/router": "^10.0.4",
     "@angular/upgrade": "^10.0.4",
     "@uirouter/angular": "7.0.0",
-    "@uirouter/angular-hybrid": "11.0.0",
+    "@uirouter/angular-hybrid": "11.0.2",
     "@uirouter/angularjs": "1.0.26",
     "@uirouter/core": "6.0.5",
     "@uirouter/rx": "0.6.5",

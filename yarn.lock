@@ -1277,10 +1277,10 @@
     "@types/webpack-sources" "*"
     source-map "^0.6.0"
 
-"@uirouter/angular-hybrid@11.0.0":
-  version "11.0.0"
-  resolved "https://registry.yarnpkg.com/@uirouter/angular-hybrid/-/angular-hybrid-11.0.0.tgz#9eccf59ccd0078e14beecc947eccb3f6d2d3a0cf"
-  integrity sha512-mvUroz+qC+PfEgcSWkL06bVUXJjO8o4fP+1zJTrPrpoonuxG/Zychi2nnWFkCxL59jE631kNjh5xkN/RZFzJKw==
+"@uirouter/angular-hybrid@11.0.2":
+  version "11.0.2"
+  resolved "https://registry.yarnpkg.com/@uirouter/angular-hybrid/-/angular-hybrid-11.0.2.tgz#cbd91495c33ff5d379072f66c9702cef69f88a4a"
+  integrity sha512-ABF1xwZxG5w+kh0KH6Ff9yUL59Lt++P2PFEssgtpwa0X+U3O8ysRMqwap1BKDoLHnfjwMebKTV3ZkUUMgPk7Xw==
   dependencies:
     tslib "^1.10.0"
 
