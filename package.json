@@ -35,7 +35,7 @@
     "@angular/upgrade": "^10.0.4",
     "@uirouter/angular": "7.0.0",
     "@uirouter/angular-hybrid": "11.0.0",
-    "@uirouter/angularjs": "1.0.26",
+    "@uirouter/angularjs": "1.0.27",
     "@uirouter/core": "6.0.5",
     "@uirouter/rx": "0.6.5",
     "@uirouter/visualizer": "^7.0.0",
