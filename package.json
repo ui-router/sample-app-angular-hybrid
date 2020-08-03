@@ -40,7 +40,7 @@
     "@uirouter/rx": "0.6.5",
     "@uirouter/visualizer": "^7.0.0",
     "angular": "^1.7.9",
-    "rxjs": "^6.5.5",
+    "rxjs": "^6.6.2",
     "rxjs-compat": "^6.6.2",
     "tslib": "^1.13.0",
     "zone.js": "~0.10.3"
