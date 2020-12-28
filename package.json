@@ -39,7 +39,7 @@
     "@uirouter/core": "6.0.7",
     "@uirouter/rx": "0.6.5",
     "@uirouter/visualizer": "^7.2.1",
-    "angular": "^1.8.1",
+    "angular": "^1.8.2",
     "rxjs": "^6.6.3",
     "rxjs-compat": "^6.6.3",
     "tslib": "^1.13.0",
