@@ -116,6 +116,17 @@
     rxjs "6.6.3"
     source-map "0.7.3"
 
+"@angular-devkit/core@11.0.6":
+  version "11.0.6"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-11.0.6.tgz#b3ea815ecdea5f77dae58f3f410b268453d7eb8b"
+  integrity sha512-nhvU5hH01r9qcexAqvIFU233treWWeW3ncs9UFYjD9Hys9sDSvqC3+bvGvl9vCG5FsyY7oDsjaVAipyUc+SFAg==
+  dependencies:
+    ajv "6.12.6"
+    fast-json-stable-stringify "2.1.0"
+    magic-string "0.25.7"
+    rxjs "6.6.3"
+    source-map "0.7.3"
+
 "@angular-devkit/schematics@11.0.5":
   version "11.0.5"
   resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-11.0.5.tgz#e5d89451daa644eccce93970709f7cdf44c11982"
@@ -1254,12 +1265,21 @@
     merge-source-map "^1.1.0"
     schema-utils "^2.7.0"
 
-"@ngtools/webpack@11.0.5", "@ngtools/webpack@^11.0.5":
+"@ngtools/webpack@11.0.5":
   version "11.0.5"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-11.0.5.tgz#9d1abb9f9a5e72c014b5ed3e0c2cefe2a4175b30"
   integrity sha512-hM0LdOSlC6c7ij+BvIpAFbe7dpJhL+A51L5v6YbMA6aM0Sb/y+HpE2u34AHEQvute7cLe4EyOyvJ9jSinVAJhQ==
   dependencies:
     "@angular-devkit/core" "11.0.5"
+    enhanced-resolve "5.3.1"
+    webpack-sources "2.0.1"
+
+"@ngtools/webpack@^11.0.6":
+  version "11.0.6"
+  resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-11.0.6.tgz#1a1d7775022e7e6263f8d9ee2872d995163b3fc0"
+  integrity sha512-vf5YNEpXWRa0fKC/BRq5sVVj2WnEqW8jn14YQRHwVt5ppUeyu8IKUF69p6W1MwZMgMqMaw/vPQ8LI5cFbyf3uw==
+  dependencies:
+    "@angular-devkit/core" "11.0.6"
     enhanced-resolve "5.3.1"
     webpack-sources "2.0.1"
 
@@ -3817,16 +3837,7 @@ enhanced-resolve@5.3.1:
     graceful-fs "^4.2.4"
     tapable "^2.0.0"
 
-enhanced-resolve@^4.1.1:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-4.2.0.tgz#5d43bda4a0fd447cb0ebbe71bef8deff8805ad0d"
-  integrity sha512-S7eiFb/erugyd1rLb6mQ3Vuq+EXHv5cpCkNqqIkYkBgN2QdFnyCZzFBleqwGEx4lgNGYij81BWnCrFNK7vxvjQ==
-  dependencies:
-    graceful-fs "^4.1.2"
-    memory-fs "^0.5.0"
-    tapable "^1.0.0"
-
-enhanced-resolve@^4.3.0:
+enhanced-resolve@^4.1.1, enhanced-resolve@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-4.3.0.tgz#3b806f3bfafc1ec7de69551ef93cca46c1704126"
   integrity sha512-3e87LvavsdxyoCfGusJnrZ5G8SLPOFeHSNpZI/ATL9a5leXo2k0w6MKnbqhdBad9qTobSfB20Ld7UmgoNbAZkQ==
