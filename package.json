@@ -53,7 +53,7 @@
     "@uirouter/cypress-runner": "^1.1.0",
     "codelyzer": "^6.0.0",
     "fibers": "5.0.0",
-    "html-webpack-plugin": "4.3.0",
+    "html-webpack-plugin": "4.5.2",
     "node-sass": "4.14.1",
     "shx": "^0.3.2",
     "source-map-loader": "^1.1.3",
