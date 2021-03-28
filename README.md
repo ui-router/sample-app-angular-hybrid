@@ -1,11 +1,6 @@
 ## UI-Router 1.0 Hybrid Angular-CLI/AngularJS Sample Application
 
-You can run and edit this live in your browser using https://stackblitz.com/github/ui-router/sample-app-angular-cli-hybrid
-
-This repo was cloned from https://github.com/ui-router/sample-app-angular-hybrid, then migrated to use the Angular CLI.
-
-[![Travis badge](https://travis-ci.org/ui-router/sample-app-angular-cli-hybrid.svg?branch=master)](https://travis-ci.org/ui-router/sample-app-angular-hybrid)
-[![Greenkeeper badge](https://badges.greenkeeper.io/ui-router/sample-app-angular-cli-hybrid.svg)](https://greenkeeper.io/)
+You can run and edit this live in your browser using https://stackblitz.com/github/ui-router/sample-app-angular-hybrid
 
 This sample app is intended to demonstrate a non-trivial ui-router application.
 
@@ -23,6 +18,11 @@ This sample app is intended to demonstrate a non-trivial ui-router application.
 
 `npm install`
 `npm start`
+
+### Webpack without Angular-CLI
+
+The sample app uses the Angular CLI.
+However, there is also a [branch which demonstrates a custom webpack config](https://github.com/ui-router/sample-app-angular-hybrid/tree/custom-webpack-config)) but no angular-cli.
 
 ### Visualizer
 
