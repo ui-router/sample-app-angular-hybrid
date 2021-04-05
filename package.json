@@ -30,7 +30,7 @@
     "@uirouter/visualizer": "^7.2.1",
     "angular": "1.8.2",
     "core-js": "^2.4.1",
-    "postcss": "8.2.8",
+    "postcss": "8.2.9",
     "rxjs": "^6.6.7",
     "rxjs-compat": "^6.0.0-rc.0",
     "tslib": "1.14.1",
