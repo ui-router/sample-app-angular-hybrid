@@ -1,4 +1,4 @@
-import { NgModule, NgModuleFactoryLoader, SystemJsNgModuleLoader } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { UpgradeModule } from '@angular/upgrade/static';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -38,9 +38,6 @@ export function getContactsService($injector) {
     PrefsModule,
   ],
   providers: [
-    // Provide the SystemJsNgModuleLoader when using Angular lazy loading
-    { provide: NgModuleFactoryLoader, useClass: SystemJsNgModuleLoader },
-
     // Register some AngularJS services as Angular providers
     { provide: 'DialogService', deps: ['$injector'], useFactory: getDialogService },
     { provide: 'Contacts', deps: ['$injector'], useFactory: getContactsService },
