@@ -109,7 +109,6 @@
       }
     }
   },
-  "defaultProject": "angular-cli-app",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
