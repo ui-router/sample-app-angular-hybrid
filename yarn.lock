@@ -2096,10 +2096,10 @@
   dependencies:
     "@types/node" "*"
 
-"@uirouter/angular-hybrid@^13.0.0":
-  version "13.0.0"
-  resolved "https://registry.yarnpkg.com/@uirouter/angular-hybrid/-/angular-hybrid-13.0.0.tgz#5c17424174c53c2434f93c0a4ce8ff2c324eee71"
-  integrity sha512-DvhMyRcRrN/t/mNrfVb9u/8VJrMKEWQgRL3bwwpmIqOkSjnamQOHvF0HMeH68djchIaAt9PH/qJ0r6wvfZgkOQ==
+"@uirouter/angular-hybrid@^14.0.0":
+  version "14.0.0"
+  resolved "https://registry.yarnpkg.com/@uirouter/angular-hybrid/-/angular-hybrid-14.0.0.tgz#0a309b0c0ed4c6dbbf0636bbf2455168cbd1a697"
+  integrity sha512-YtBN5G0ibfAeM+6xuzbNNARazI1bAroDm8Wk0/AHuqYozbwKlcVgI5fBandrQYQkv0sindz4otP4cjSgfTpA2A==
   dependencies:
     tslib "^2.3.0"
 
