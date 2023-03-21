@@ -11,6 +11,11 @@
     "e2e": "run-p -r start cypress",
     "cypress": "wait-on tcp:4000 && cypress run"
   },
+  "checkPeerDependencies": {
+    "ignore": [
+      "ajv"
+    ]
+  },
   "license": "MIT",
   "dependencies": {
     "@angular/animations": "15.2.3",
