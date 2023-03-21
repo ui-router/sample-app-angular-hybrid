@@ -1,7 +1,5 @@
 {
-  "rulesDirectory": [
-    "node_modules/codelyzer"
-  ],
+  "rulesDirectory": [],
   "rules": {
     "arrow-return-shorthand": true,
     "callable-types": true,
