@@ -13,7 +13,8 @@
   },
   "checkPeerDependencies": {
     "ignore": [
-      "ajv"
+      "ajv",
+      "terser"
     ]
   },
   "license": "MIT",
