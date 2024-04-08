@@ -2567,14 +2567,12 @@
   dependencies:
     tslib "^2.3.0"
 
-"@uirouter/angularjs@1.0.30":
-  version "1.0.30"
-  resolved "https://registry.yarnpkg.com/@uirouter/angularjs/-/angularjs-1.0.30.tgz#5cea4076300ce5ec6926e2c6e3707745753baefc"
-  integrity sha512-qkc3RFZc91S5K0gc/QVAXc9LGDPXjR04vDgG/11j8+yyZEuQojXxKxdLhKIepiPzqLmGRVqzBmBc27gtqaEeZg==
-  dependencies:
-    "@uirouter/core" "6.0.8"
+"@uirouter/angularjs@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@uirouter/angularjs/-/angularjs-1.1.0.tgz#00dd5eb8363c5c39b509705e7e569c0b3bebd675"
+  integrity sha512-AhgxXhMfN6FU2HxDQqwDPbzmd6kTgvYCgV/kgoCAXfxAH6cFQrifViToC90Wdg6djBynHwA3L/KYP+iOYHkw6A==
 
-"@uirouter/core@6.0.8", "@uirouter/core@6.1.0":
+"@uirouter/core@^6.1.0":
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/@uirouter/core/-/core-6.1.0.tgz#ca90ae476c85805e7d70add461e91738ae383bd5"
   integrity sha512-WFYh5NPAqRX4L2qlI4k62tgR6pxoqOBSW1CM1uBWCau4mAmgasYd5etJ9RoSJrSnCpCQ2km2Jltf0n5ql684MQ==

@@ -29,8 +29,8 @@
     "@angular/upgrade": "^17.3.2",
     "@uirouter/angular": "^13.0.0",
     "@uirouter/angular-hybrid": "^16.0.0",
-    "@uirouter/angularjs": "1.0.30",
-    "@uirouter/core": "6.1.0",
+    "@uirouter/angularjs": "^1.1.0",
+    "@uirouter/core": "^6.1.0",
     "@uirouter/rx": "1.0.0",
     "@uirouter/visualizer": "^7.2.1",
     "angular": "1.8.3",
@@ -40,9 +40,6 @@
     "rxjs-compat": "^6.6.7",
     "tslib": "2.6.2",
     "zone.js": "~0.14.4"
-  },
-  "resolutions": {
-    "@uirouter/core": "6.1.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^17.3.2",
