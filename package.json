@@ -19,15 +19,15 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@angular/animations": "^17.3.2",
-    "@angular/common": "^17.3.2",
-    "@angular/compiler": "^17.3.2",
-    "@angular/core": "^17.3.2",
-    "@angular/forms": "^17.3.2",
-    "@angular/platform-browser": "^17.3.2",
-    "@angular/platform-browser-dynamic": "^17.3.2",
-    "@angular/router": "^17.3.2",
-    "@angular/upgrade": "^17.3.2",
+    "@angular/animations": "^18.0.6",
+    "@angular/common": "^18.0.6",
+    "@angular/compiler": "^18.0.6",
+    "@angular/core": "^18.0.6",
+    "@angular/forms": "^18.0.6",
+    "@angular/platform-browser": "^18.0.6",
+    "@angular/platform-browser-dynamic": "^18.0.6",
+    "@angular/router": "^18.0.6",
+    "@angular/upgrade": "^18.0.6",
     "@uirouter/angular": "^13.0.0",
     "@uirouter/angular-hybrid": "^16.0.0",
     "@uirouter/angularjs": "^1.1.0",
@@ -43,10 +43,10 @@
     "zone.js": "~0.14.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^17.3.2",
-    "@angular/cli": "^17.3.2",
-    "@angular/compiler-cli": "^17.3.2",
-    "@angular/language-service": "^17.3.2",
+    "@angular-devkit/build-angular": "^18.0.7",
+    "@angular/cli": "^18.0.7",
+    "@angular/compiler-cli": "^18.0.6",
+    "@angular/language-service": "^18.0.6",
     "@types/angular": "^1.8.3",
     "@types/jasmine": "~3.10.2",
     "@types/jasminewd2": "~2.0.10",
@@ -64,7 +64,7 @@
     "shx": "0.3.3",
     "ts-node": "~10.9.2",
     "tslint": "~6.1.0",
-    "typescript": "5.2.2",
+    "typescript": "5.4.5",
     "wait-on": "6.0.0"
   }
 }
