@@ -28,8 +28,8 @@
     "@angular/platform-browser-dynamic": "^18.0.6",
     "@angular/router": "^18.0.6",
     "@angular/upgrade": "^18.0.6",
-    "@uirouter/angular": "^13.0.0",
-    "@uirouter/angular-hybrid": "^16.0.0",
+    "@uirouter/angular": "^14.0.0",
+    "@uirouter/angular-hybrid": "^18.0.0",
     "@uirouter/angularjs": "^1.1.0",
     "@uirouter/core": "^6.1.0",
     "@uirouter/rx": "1.0.0",
@@ -66,5 +66,6 @@
     "tslint": "~6.1.0",
     "typescript": "5.4.5",
     "wait-on": "6.0.0"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }
