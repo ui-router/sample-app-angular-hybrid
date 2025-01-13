@@ -2,12 +2,13 @@ import {Component, Input} from "@angular/core";
 
 /**
  * This component renders a list of contacts.
- * 
+ *
  * At the top is a "new contact" button.
  * Each list item is a clickable link to the `contacts.contact` details substate
  */
 @Component({
   selector: 'contact-list',
+  standalone: false,
   template: `
   <ul class="selectlist list-unstyled">
     <li>
