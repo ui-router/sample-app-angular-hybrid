@@ -13,6 +13,7 @@ import { Component, Inject } from '@angular/core';
           <button class="btn btn-primary" (click)="savePrefs()">Save</button>
       </div>
   `,
+  standalone: false,
 })
 export class PrefsComponent {
   prefs;

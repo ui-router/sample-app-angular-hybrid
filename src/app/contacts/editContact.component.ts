@@ -28,6 +28,7 @@ import {Component, Input, Inject, Optional} from "@angular/core";
  */
 @Component({
   selector: 'edit-contact',
+  standalone: false,
   template: `
     <div class="contact">
       <div class="details">
@@ -43,9 +44,9 @@ import {Component, Input, Inject, Optional} from "@angular/core";
         <div><label>Zip</label><input type="text" [(ngModel)]="contact.address.zip"></div>
         <div><label>Image</label><input type="text" [(ngModel)]="contact.picture"></div>
       </div>
-    
+
       <hr>
-    
+
       <div>
         <!-- This button's ui-sref relatively targets the parent state, i.e., contacts.contact -->
         <button class="btn btn-primary" uiSref="^"><i class="fa fa-close"></i><span>Cancel</span></button>

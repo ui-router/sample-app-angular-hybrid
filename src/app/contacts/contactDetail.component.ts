@@ -5,6 +5,7 @@ import {Component, Input} from "@angular/core";
  */
 @Component({
   selector: 'contact-detail',
+  standalone: false,
   template: `
   <div class="flex-h">
     <div class="details">
