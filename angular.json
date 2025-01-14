@@ -60,18 +60,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-cli-app:build"
+            "buildTarget": "angular-cli-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-cli-app:build:production"
+              "buildTarget": "angular-cli-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-cli-app:build"
+            "buildTarget": "angular-cli-app:build"
           }
         },
         "test": {
