@@ -29,7 +29,7 @@
     "@angular/router": "^19.0.5",
     "@angular/upgrade": "^19.0.5",
     "@uirouter/angular": "^16.0.0",
-    "@uirouter/angular-hybrid": "^19.0.0",
+    "@uirouter/angular-hybrid": "^18.0.0",
     "@uirouter/angularjs": "^1.1.1",
     "@uirouter/core": "^6.1.1",
     "@uirouter/rx": "1.0.0",
