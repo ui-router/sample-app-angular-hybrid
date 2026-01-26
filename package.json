@@ -6,10 +6,9 @@
     "ng": "ng",
     "start": "ng serve --port 4000",
     "build": "ng build --configuration production",
-    "test": "run-s e2e",
-    "lint": "ng lint",
-    "e2e": "run-p -r start cypress",
-    "cypress": "wait-on tcp:4000 && cypress run"
+    "test": "npm run build && playwright install chromium && playwright test",
+    "test:ui": "npm run build && playwright test --ui",
+    "lint": "ng lint"
   },
   "checkPeerDependencies": {
     "ignore": [
@@ -47,11 +46,11 @@
     "@angular/cli": "^20.3.3",
     "@angular/compiler-cli": "^20.3.2",
     "@angular/language-service": "^20.3.2",
+    "@playwright/test": "^1.49.0",
     "@types/angular": "^1.8.9",
     "@types/jasmine": "~3.10.2",
     "@types/jasminewd2": "~2.0.10",
     "@types/node": "^16.11.11",
-    "cypress": "10.3.0",
     "jasmine-core": "~3.10.1",
     "jasmine-spec-reporter": "~7.0.0",
     "karma": "~6.3.9",
@@ -59,13 +58,11 @@
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.7.0",
-    "npm-run-all": "4.1.5",
-    "protractor": "~7.0.0",
+    "serve": "^14.2.0",
     "shx": "0.3.3",
     "ts-node": "~10.9.2",
     "tslint": "~6.1.0",
-    "typescript": "~5.9.2",
-    "wait-on": "6.0.0"
+    "typescript": "~5.9.2"
   },
   "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }
