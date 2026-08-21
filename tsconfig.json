@@ -1,7 +1,6 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "downlevelIteration": true,
     "importHelpers": true,
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
@@ -17,7 +16,7 @@
       "dom"
     ],
     "module": "es2020",
-    "baseUrl": "./",
+    "strict": false,
     "useDefineForClassFields": false
   }
 }
